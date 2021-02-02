@@ -30,7 +30,9 @@ namespace proba5._5
                 }
             }
         }
-
+        /// <summary>
+        /// repa
+        /// </summary>
         ///////////Budapest_Beolvasás_Listába
         public static void BudapestUsersListabaOlvasas()
         {
