@@ -41,6 +41,9 @@ namespace proba5._5
             this.button_Frissites = new System.Windows.Forms.Button();
             this.button_ElemTorles = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
+            this.button_ListaBoxKijelzo_clear = new System.Windows.Forms.Button();
+            this.textBox_Csv = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox_Felhasznalolistazas
@@ -53,6 +56,7 @@ namespace proba5._5
             this.listBox_Felhasznalolistazas.Name = "listBox_Felhasznalolistazas";
             this.listBox_Felhasznalolistazas.Size = new System.Drawing.Size(386, 277);
             this.listBox_Felhasznalolistazas.TabIndex = 1;
+            this.listBox_Felhasznalolistazas.DoubleClick += new System.EventHandler(this.Elemkiir);
             // 
             // checkBox_Adminuserek
             // 
@@ -130,6 +134,7 @@ namespace proba5._5
             this.button_Kereses.TabIndex = 9;
             this.button_Kereses.Text = "Keresés";
             this.button_Kereses.UseVisualStyleBackColor = true;
+            this.button_Kereses.Click += new System.EventHandler(this.button_Kereses_Click);
             // 
             // button_Frissites
             // 
@@ -140,6 +145,7 @@ namespace proba5._5
             this.button_Frissites.TabIndex = 10;
             this.button_Frissites.Text = "Frissítés";
             this.button_Frissites.UseVisualStyleBackColor = true;
+            this.button_Frissites.Click += new System.EventHandler(this.button_Frissites_Click);
             // 
             // button_ElemTorles
             // 
@@ -154,17 +160,51 @@ namespace proba5._5
             // button_Export
             // 
             this.button_Export.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Export.Location = new System.Drawing.Point(235, 429);
+            this.button_Export.Location = new System.Drawing.Point(235, 426);
             this.button_Export.Name = "button_Export";
             this.button_Export.Size = new System.Drawing.Size(210, 23);
             this.button_Export.TabIndex = 12;
             this.button_Export.Text = "Lista exportálása csv.-be";
             this.button_Export.UseVisualStyleBackColor = true;
+            this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
+            // 
+            // button_ListaBoxKijelzo_clear
+            // 
+            this.button_ListaBoxKijelzo_clear.Location = new System.Drawing.Point(16, 179);
+            this.button_ListaBoxKijelzo_clear.Name = "button_ListaBoxKijelzo_clear";
+            this.button_ListaBoxKijelzo_clear.Size = new System.Drawing.Size(112, 27);
+            this.button_ListaBoxKijelzo_clear.TabIndex = 13;
+            this.button_ListaBoxKijelzo_clear.Text = "Kijelző törlése";
+            this.button_ListaBoxKijelzo_clear.UseVisualStyleBackColor = true;
+            this.button_ListaBoxKijelzo_clear.Click += new System.EventHandler(this.button_ListaBoxKijelzo_clear_Click);
+            // 
+            // textBox_Csv
+            // 
+            this.textBox_Csv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_Csv.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox_Csv.Location = new System.Drawing.Point(451, 429);
+            this.textBox_Csv.Name = "textBox_Csv";
+            this.textBox_Csv.Size = new System.Drawing.Size(122, 20);
+            this.textBox_Csv.TabIndex = 14;
+            this.textBox_Csv.Text = "Felhasználók";
+            this.textBox_Csv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(579, 432);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = ".CSV";
             // 
             // ListazasTorles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox_Csv);
+            this.Controls.Add(this.button_ListaBoxKijelzo_clear);
             this.Controls.Add(this.button_Export);
             this.Controls.Add(this.button_ElemTorles);
             this.Controls.Add(this.button_Frissites);
@@ -198,5 +238,8 @@ namespace proba5._5
         private System.Windows.Forms.Button button_Frissites;
         private System.Windows.Forms.Button button_ElemTorles;
         private System.Windows.Forms.Button button_Export;
+        private System.Windows.Forms.Button button_ListaBoxKijelzo_clear;
+        private System.Windows.Forms.TextBox textBox_Csv;
+        private System.Windows.Forms.Label label2;
     }
 }
