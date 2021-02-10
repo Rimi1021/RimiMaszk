@@ -102,6 +102,7 @@ namespace proba5._5
             this.button_Listazas.TabIndex = 6;
             this.button_Listazas.Text = "Listázás";
             this.button_Listazas.UseVisualStyleBackColor = true;
+            this.button_Listazas.Click += new System.EventHandler(this.button_Listazas_Click);
             // 
             // label1
             // 
