@@ -30,9 +30,7 @@ namespace proba5._5
                 }
             }
         }
-        /// <summary>
-        /// repa
-        /// </summary>
+        
         ///////////Budapest_Beolvasás_Listába
         public static void BudapestUsersListabaOlvasas()
         {
@@ -47,6 +45,48 @@ namespace proba5._5
                     while (LekerdezesParancs.Read())
                     {
                         SzerverData.BPUserLista.Add(new DolgozokBP(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["nev"]), Convert.ToString(LekerdezesParancs["jelszo"])));
+                    }
+                    Csatlakozas.Close();
+                }
+            }
+        }
+
+        //////////Győr_Beolvasás_Listába
+        
+        public static void GyorUsersListabaOlvasas()
+        {
+            string Lekeredezes = "SELECT * FROM DolgozokGY";
+            using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+            {
+                using (SqlCommand Parancs = new SqlCommand(Lekeredezes, Csatlakozas))
+                {
+                    Csatlakozas.Open();
+                    SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
+                    Parancs.Dispose();
+                    while (LekerdezesParancs.Read())
+                    {
+                        SzerverData.GyorUserLista.Add(new DolgozokGYOR(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["nev"]), Convert.ToString(LekerdezesParancs["jelszo"])));
+                    }
+                    Csatlakozas.Close();
+                }
+            }
+        }
+
+        //////////Debrecen_Beolvasás_Listába
+
+        public static void DebrecenUsersListabaOlvasas()
+        {
+            string Lekeredezes = "SELECT * FROM DolgozokD";
+            using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+            {
+                using (SqlCommand Parancs = new SqlCommand(Lekeredezes, Csatlakozas))
+                {
+                    Csatlakozas.Open();
+                    SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
+                    Parancs.Dispose();
+                    while (LekerdezesParancs.Read())
+                    {
+                        SzerverData.DebUserLista.Add(new DolgozokDebrecen(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["nev"]), Convert.ToString(LekerdezesParancs["jelszo"])));
                     }
                     Csatlakozas.Close();
                 }

@@ -70,7 +70,7 @@ namespace proba5._5
                     {
                         using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
                         {
-                            string Feltoltes = "INSERT INTO DolgozokAdmin VALUES (@nevAdat,@jelszoAdat)"; //Adatok feltöltése
+                            string Feltoltes = "INSERT INTO DolgozokBP VALUES (@nevAdat,@jelszoAdat)"; //Adatok feltöltése
                             using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
                             {
                                 
@@ -104,7 +104,7 @@ namespace proba5._5
                 {
                     try
                     {
-                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoGY))
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
                         {
                             string Feltoltes = "INSERT INTO DolgozokGY VALUES (@nevAdat,@jelszoAdat)"; //Adatok feltöltése
                             using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
@@ -140,7 +140,7 @@ namespace proba5._5
                 {
                     try
                     {
-                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoDeb))
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
                         {
                             string Feltoltes = "INSERT INTO DolgozokD VALUES (@nevAdat,@jelszoAdat)"; //Adatok feltöltése
                             using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))

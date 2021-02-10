@@ -90,15 +90,15 @@ namespace proba5._5
                     }
                 }
                 ///////////////////Budapest RadioButton
-                /*if (radioButton_Budapest2.Checked == true)
+                else if (radioButton_Budapest2.Checked == true)
                 {
-                    ListakbaOlvasas.AdminListabaOlvasas();
+                    ListakbaOlvasas.BudapestUsersListabaOlvasas();
                     int index = 0;
                     bool vane = false;
                     bool vanejlszo = false;
-                    for (int i = 0; i < SzerverData.AdminUserLista.Count; i++)
+                    for (int i = 0; i < SzerverData.BPUserLista.Count; i++)
                     {
-                        if (textBox_nev.Text == SzerverData.AdminUserLista[i].Nev)
+                        if (textBox_nev.Text == SzerverData.BPUserLista[i].Nev)
                         {
                             index = i;
                             vane = true;
@@ -106,9 +106,9 @@ namespace proba5._5
                     }
                     if (vane == true)
                     {
-                        for (int i = 0; i < SzerverData.AdminUserLista.Count; i++)
+                        for (int i = 0; i < SzerverData.BPUserLista.Count; i++)
                         {
-                            if (textBox_jelszo.Text == SzerverData.AdminUserLista[index].Jelszo)
+                            if (textBox_jelszo.Text == SzerverData.BPUserLista[index].Jelszo)
                             {
                                 vanejlszo = true;
                             }
@@ -116,10 +116,10 @@ namespace proba5._5
                     }
                     if (vane == true && vanejlszo == true)
                     {
-                        Admin AdminForm = new Admin();
+                        BudapestForm BPForm = new BudapestForm();
                         this.Hide();
-                        AdminForm.Show();
-                        AdminForm.BringToFront();
+                        BPForm.Show();
+                        BPForm.BringToFront();
                     }
                     else
                     {
@@ -128,7 +128,89 @@ namespace proba5._5
                             return;
                         }
                     }
-                }*/
+                }
+
+                ///////////////////Győr RadioButton
+                else if (radioButton_Gyor2.Checked == true)
+                {
+                    ListakbaOlvasas.GyorUsersListabaOlvasas();
+                    int index = 0;
+                    bool vane = false;
+                    bool vanejlszo = false;
+                    for (int i = 0; i < SzerverData.GyorUserLista.Count; i++)
+                    {
+                        if (textBox_nev.Text == SzerverData.GyorUserLista[i].Nev)
+                        {
+                            index = i;
+                            vane = true;
+                        }
+                    }
+                    if (vane == true)
+                    {
+                        for (int i = 0; i < SzerverData.GyorUserLista.Count; i++)
+                        {
+                            if (textBox_jelszo.Text == SzerverData.GyorUserLista[index].Jelszo)
+                            {
+                                vanejlszo = true;
+                            }
+                        }
+                    }
+                    if (vane == true && vanejlszo == true)
+                    {
+                        GyorForm GyForm = new GyorForm();
+                        this.Hide();
+                        GyForm.Show();
+                        GyForm.BringToFront();
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Kérem ellenőrizze le újból a belépési adatait", "Hibás felhasználónév vagy jelszó", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            return;
+                        }
+                    }
+                }
+
+                ///////////////////Debrecen RadioButton
+                else if (radioButton_Debrecen2.Checked == true)
+                {
+                    ListakbaOlvasas.DebrecenUsersListabaOlvasas();
+                    int index = 0;
+                    bool vane = false;
+                    bool vanejlszo = false;
+                    for (int i = 0; i < SzerverData.DebUserLista.Count; i++)
+                    {
+                        if (textBox_nev.Text == SzerverData.DebUserLista[i].Nev)
+                        {
+                            index = i;
+                            vane = true;
+                        }
+                    }
+                    if (vane == true)
+                    {
+                        for (int i = 0; i < SzerverData.DebUserLista.Count; i++)
+                        {
+                            if (textBox_jelszo.Text == SzerverData.DebUserLista[index].Jelszo)
+                            {
+                                vanejlszo = true;
+                            }
+                        }
+                    }
+                    if (vane == true && vanejlszo == true)
+                    {
+                        DebrecenForm DForm = new DebrecenForm();
+                        this.Hide();
+                        DForm.Show();
+                        DForm.BringToFront();
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Kérem ellenőrizze le újból a belépési adatait", "Hibás felhasználónév vagy jelszó", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            return;
+                        }
+                    }
+                }
             }
         }
     }
