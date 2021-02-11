@@ -17,6 +17,10 @@ namespace proba5._5
         public ListazasTorles()
         {
             InitializeComponent();
+            SzerverData.AdminUserLista.Clear();
+            SzerverData.BPUserLista.Clear();
+            SzerverData.GyorUserLista.Clear();
+            SzerverData.DebUserLista.Clear();
         }
 
         private void button_Listazas_Click(object sender, EventArgs e)
@@ -92,6 +96,7 @@ namespace proba5._5
             if (listBox_Felhasznalolistazas.SelectedItem != null) //Ha van kiválasztva lista item a dupla klikkeléskor
             {
                 MessageBox.Show(listBox_Felhasznalolistazas.SelectedItem.ToString()); //Kiíratom a kijelölt listaelem adatait
+                textBox_Kijelotelemtorles.Text = listBox_Felhasznalolistazas.SelectedItem.ToString();
             }
             else //Különben eset, ha az elem üres lenne
             {
@@ -167,19 +172,19 @@ namespace proba5._5
                 }
                 if (Admin == true)
                 {
-                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.AdminUserLista[index].Id}; {SzerverData.AdminUserLista[index].Nev};{SzerverData.AdminUserLista[index].Jelszo} ADMINJOG");
+                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.AdminUserLista[index].Id};{SzerverData.AdminUserLista[index].Nev};{SzerverData.AdminUserLista[index].Jelszo} ADMINJOG");
                 }
                 else if (Deb == true)
                 {
-                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.DebUserLista[index].Id}; {SzerverData.DebUserLista[index].Nev};{SzerverData.DebUserLista[index].Jelszo} Debreceni felhasználó");
+                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.DebUserLista[index].Id};{SzerverData.DebUserLista[index].Nev};{SzerverData.DebUserLista[index].Jelszo} Debreceni felhasználó");
                 }
                 else if (BP == true)
                 {
-                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.BPUserLista[index].Id}; {SzerverData.BPUserLista[index].Nev};{SzerverData.BPUserLista[index].Jelszo} Budapesti felhasználó");
+                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.BPUserLista[index].Id};{SzerverData.BPUserLista[index].Nev};{SzerverData.BPUserLista[index].Jelszo} Budapesti felhasználó");
                 }
                 else if (Gy ==  true)
                 {
-                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.GyorUserLista[index].Id}; {SzerverData.GyorUserLista[index].Nev};{SzerverData.GyorUserLista[index].Jelszo} Győri felhasználó");
+                    listBox_Felhasznalolistazas.Items.Add($"{SzerverData.GyorUserLista[index].Id};{SzerverData.GyorUserLista[index].Nev};{SzerverData.GyorUserLista[index].Jelszo} Győri felhasználó");
                 }
                 else
                 {
@@ -191,5 +196,53 @@ namespace proba5._5
                 MessageBox.Show("Írja be a keresendő felhasználónevet");
             }
         }
+
+        private void button_ElemTorles_Click(object sender, EventArgs e)
+        {
+            ListakbaOlvasas.AdminListabaOlvasas();
+            ListakbaOlvasas.BudapestUsersListabaOlvasas();
+            ListakbaOlvasas.GyorUsersListabaOlvasas();
+            ListakbaOlvasas.DebrecenUsersListabaOlvasas();
+            if (textBox_Kijelotelemtorles.Text != "")
+            {
+                string ListaElemID = textBox_Kijelotelemtorles.Text.ToString().Split(';')[0]; //Kiszedjük a listából az elem ID értékét!
+                string Felhasznalo = textBox_Kijelotelemtorles.Text.ToString().Split(';')[1];
+                for (int i = 0; i < SzerverData.AdminUserLista.Count; i++)
+                {
+                    if (Felhasznalo == SzerverData.AdminUserLista[i].Nev)
+                    {
+                        try
+                        {
+                            string Torles = "DELETE FROM DolgozokAdmin WHERE id=" + ListaElemID + ""; //Adatok törlésének parancsa (kijelölt adat)
+                            SqlConnection CsatlakozasiFolyamat = new SqlConnection(SzerverData.SzerverInfoAdmin); //Csatlakozunk a szerverhez
+                            CsatlakozasiFolyamat.Open(); //Megnyitja a folyamotat, használatra
+                            SqlCommand Parancsvegrehajtas = new SqlCommand(Torles, CsatlakozasiFolyamat);
+                            Parancsvegrehajtas.ExecuteNonQuery();
+                            Parancsvegrehajtas.Dispose();
+                            MessageBox.Show("Az adatbázis elemének: (" + textBox_Kijelotelemtorles.ToString() + ") törlése megtörtént...");
+                            CsatlakozasiFolyamat.Close(); //Bezárjuk a folyamatot
+                                                          //Törlés a Listából, miután töröltük az adatbázisból!!! fordítva nem lehet
+                            listBox_Felhasznalolistazas.Items.Remove(listBox_Felhasznalolistazas.SelectedItem);
+                        }
+                        catch 
+                        {
+                            if (MessageBox.Show("A törlés sikertelen", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                            {
+                                return;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Kattintson kétszer a törlendő elemre, majd válassza az elem törlés gombot", "Az elem törlése sikertelen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    return;
+                }
+            }
+        }
     }
+    
 }

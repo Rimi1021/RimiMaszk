@@ -44,6 +44,7 @@ namespace proba5._5
             this.button_ListaBoxKijelzo_clear = new System.Windows.Forms.Button();
             this.textBox_Csv = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox_Kijelotelemtorles = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox_Felhasznalolistazas
@@ -156,6 +157,7 @@ namespace proba5._5
             this.button_ElemTorles.TabIndex = 11;
             this.button_ElemTorles.Text = "Kijelölt felhasználó törlése";
             this.button_ElemTorles.UseVisualStyleBackColor = true;
+            this.button_ElemTorles.Click += new System.EventHandler(this.button_ElemTorles_Click);
             // 
             // button_Export
             // 
@@ -198,10 +200,18 @@ namespace proba5._5
             this.label2.TabIndex = 15;
             this.label2.Text = ".CSV";
             // 
+            // textBox_Kijelotelemtorles
+            // 
+            this.textBox_Kijelotelemtorles.Location = new System.Drawing.Point(451, 403);
+            this.textBox_Kijelotelemtorles.Name = "textBox_Kijelotelemtorles";
+            this.textBox_Kijelotelemtorles.Size = new System.Drawing.Size(206, 20);
+            this.textBox_Kijelotelemtorles.TabIndex = 16;
+            // 
             // ListazasTorles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox_Kijelotelemtorles);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_Csv);
             this.Controls.Add(this.button_ListaBoxKijelzo_clear);
@@ -241,5 +251,6 @@ namespace proba5._5
         private System.Windows.Forms.Button button_ListaBoxKijelzo_clear;
         private System.Windows.Forms.TextBox textBox_Csv;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_Kijelotelemtorles;
     }
 }
