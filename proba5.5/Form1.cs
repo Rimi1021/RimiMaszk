@@ -38,7 +38,7 @@ namespace proba5._5
                 }
             }
         }
-
+        public static string profilnev = "";
         private void button_Bejelentkezes_Click(object sender, EventArgs e)
         {
             if (radioButton_Debrecen2.Checked == false && radioButton_Gyor2.Checked == false &&
@@ -62,6 +62,7 @@ namespace proba5._5
                         {
                             index = i;
                             vane = true;
+                            profilnev = SzerverData.AdminUserLista[i].Nev;
                         }
                     }
                     if (vane == true)
@@ -170,7 +171,7 @@ namespace proba5._5
                         }
                     }
                 }
-
+                
                 ///////////////////Debrecen RadioButton
                 else if (radioButton_Debrecen2.Checked == true)
                 {

@@ -21,6 +21,7 @@ namespace proba5._5
             aruvisszavetel1.Hide();
             eladas1.Hide();
             Design();
+            Profilkepalattinev();
         }
 
         private void button_felhasznalohozzaadas_Click1(object sender, EventArgs e)
@@ -79,6 +80,10 @@ namespace proba5._5
             SubMenuMutat(panel_Userlenyilo);
         }
 
+        private void Profilkepalattinev() 
+        {
+            label_provilnev.Text = Form1.profilnev;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             SubMenuHide();
