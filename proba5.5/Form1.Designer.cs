@@ -62,6 +62,9 @@ namespace proba5._5
             // 
             // textBox_nev
             // 
+            this.textBox_nev.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_nev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.textBox_nev.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_nev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -82,18 +85,24 @@ namespace proba5._5
             // 
             // textBox_jelszo
             // 
+            this.textBox_jelszo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_jelszo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.textBox_jelszo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_jelszo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox_jelszo.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox_jelszo.Location = new System.Drawing.Point(320, 224);
             this.textBox_jelszo.Name = "textBox_jelszo";
+            this.textBox_jelszo.PasswordChar = '*';
             this.textBox_jelszo.Size = new System.Drawing.Size(292, 19);
             this.textBox_jelszo.TabIndex = 4;
             this.textBox_jelszo.Text = "Passwor";
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -105,6 +114,7 @@ namespace proba5._5
             // 
             // button_Bejelentkezes
             // 
+            this.button_Bejelentkezes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_Bejelentkezes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.button_Bejelentkezes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button_Bejelentkezes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -122,6 +132,7 @@ namespace proba5._5
             // 
             // button_kilepes
             // 
+            this.button_kilepes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_kilepes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.button_kilepes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button_kilepes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -139,6 +150,9 @@ namespace proba5._5
             // 
             // radioButton_Admin2
             // 
+            this.radioButton_Admin2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton_Admin2.AutoSize = true;
             this.radioButton_Admin2.ForeColor = System.Drawing.SystemColors.Control;
             this.radioButton_Admin2.Location = new System.Drawing.Point(319, 124);
@@ -151,6 +165,9 @@ namespace proba5._5
             // 
             // radioButton_Budapest2
             // 
+            this.radioButton_Budapest2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton_Budapest2.AutoSize = true;
             this.radioButton_Budapest2.ForeColor = System.Drawing.SystemColors.Control;
             this.radioButton_Budapest2.Location = new System.Drawing.Point(388, 124);
@@ -163,6 +180,9 @@ namespace proba5._5
             // 
             // radioButton_Gyor2
             // 
+            this.radioButton_Gyor2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton_Gyor2.AutoSize = true;
             this.radioButton_Gyor2.ForeColor = System.Drawing.SystemColors.Control;
             this.radioButton_Gyor2.Location = new System.Drawing.Point(464, 124);
@@ -175,6 +195,9 @@ namespace proba5._5
             // 
             // radioButton_Debrecen2
             // 
+            this.radioButton_Debrecen2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton_Debrecen2.AutoSize = true;
             this.radioButton_Debrecen2.ForeColor = System.Drawing.SystemColors.Control;
             this.radioButton_Debrecen2.Location = new System.Drawing.Point(517, 124);
