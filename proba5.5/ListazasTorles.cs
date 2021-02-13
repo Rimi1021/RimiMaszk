@@ -17,60 +17,69 @@ namespace proba5._5
         public ListazasTorles()
         {
             InitializeComponent();
-            SzerverData.AdminUserLista.Clear();
-            SzerverData.BPUserLista.Clear();
-            SzerverData.GyorUserLista.Clear();
-            SzerverData.DebUserLista.Clear();
+            // SzerverData.AdminUserLista.Clear();
+            // SzerverData.BPUserLista.Clear();
+            // SzerverData.GyorUserLista.Clear();
+            // SzerverData.DebUserLista.Clear();
         }
 
         private void button_Listazas_Click(object sender, EventArgs e)
         {
-            checkboxvizsgalat();
+            // listaba olvases + 
+            // checkboxvizsgalat();
+            listBox_Felhasznalolistazas.Items.Clear();
+            
             if (checkBox_Debuserek.Checked == false && checkBox_Gyoruserek.Checked == false && checkBox_BPuserek.Checked == false && checkBox_Adminuserek.Checked == false)
             {
+
                 if (MessageBox.Show("A listázás sikertelen", "Nincs kijelölt checkbox", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     return;
                 }
             }
-            SzerverData.AdminUserLista.Clear();
-            SzerverData.BPUserLista.Clear();
-            SzerverData.GyorUserLista.Clear();
-            SzerverData.DebUserLista.Clear();
+
+            checkboxvizsgalat();
+
+            // SzerverData.AdminUserLista.Clear();
+            // SzerverData.BPUserLista.Clear();
+            //SzerverData.GyorUserLista.Clear();
+            // SzerverData.DebUserLista.Clear();
         }
 
+
+        // ujra beolvassa a SzerverData listakat a checkbox alapjan
         public void checkboxvizsgalat() 
         {
             if (checkBox_Adminuserek.Checked == true)
             {
-                ListakbaOlvasas.AdminListabaOlvasas();
+                // ListakbaOlvasas.AdminListabaOlvasas();
                 for (int i = 0; i < SzerverData.AdminUserLista.Count; i++)
                 {
-                    listBox_Felhasznalolistazas.Items.Add(SzerverData.AdminUserLista[i].Id + "; " + SzerverData.AdminUserLista[i].Nev + "; " + SzerverData.AdminUserLista[i].Jelszo);
+                    listBox_Felhasznalolistazas.Items.Add(SzerverData.AdminUserLista[i].Id + ";" + SzerverData.AdminUserLista[i].Nev + ";" + SzerverData.AdminUserLista[i].Jelszo);
                 }
             }
             if (checkBox_BPuserek.Checked == true)
             {
-                ListakbaOlvasas.BudapestUsersListabaOlvasas();
+                // ListakbaOlvasas.BudapestUsersListabaOlvasas();
                 for (int i = 0; i < SzerverData.BPUserLista.Count; i++)
                 {
-                    listBox_Felhasznalolistazas.Items.Add(SzerverData.BPUserLista[i].Id + "; " + SzerverData.BPUserLista[i].Nev + "; " + SzerverData.BPUserLista[i].Jelszo);
+                    listBox_Felhasznalolistazas.Items.Add(SzerverData.BPUserLista[i].Id + ";" + SzerverData.BPUserLista[i].Nev + ";" + SzerverData.BPUserLista[i].Jelszo);
                 }
             }
             if (checkBox_Gyoruserek.Checked == true)
             {
-                ListakbaOlvasas.GyorUsersListabaOlvasas();
+                // ListakbaOlvasas.GyorUsersListabaOlvasas();
                 for (int i = 0; i < SzerverData.GyorUserLista.Count; i++)
                 {
-                    listBox_Felhasznalolistazas.Items.Add(SzerverData.GyorUserLista[i].Id + "; " + SzerverData.GyorUserLista[i].Nev + "; " + SzerverData.GyorUserLista[i].Jelszo);
+                    listBox_Felhasznalolistazas.Items.Add(SzerverData.GyorUserLista[i].Id + ";" + SzerverData.GyorUserLista[i].Nev + ";" + SzerverData.GyorUserLista[i].Jelszo);
                 }
             }
             if (checkBox_Debuserek.Checked == true)
             {
-                ListakbaOlvasas.DebrecenUsersListabaOlvasas();
+                // ListakbaOlvasas.DebrecenUsersListabaOlvasas();
                 for (int i = 0; i < SzerverData.DebUserLista.Count; i++)
                 {
-                    listBox_Felhasznalolistazas.Items.Add(SzerverData.DebUserLista[i].Id + "; " + SzerverData.DebUserLista[i].Nev + "; " + SzerverData.DebUserLista[i].Jelszo);
+                    listBox_Felhasznalolistazas.Items.Add(SzerverData.DebUserLista[i].Id + ";" + SzerverData.DebUserLista[i].Nev + ";" + SzerverData.DebUserLista[i].Jelszo);
                 }
             }
         }
@@ -83,10 +92,10 @@ namespace proba5._5
         private void button_Frissites_Click(object sender, EventArgs e)
         {
             listBox_Felhasznalolistazas.Items.Clear();
-            SzerverData.AdminUserLista.Clear();
-            SzerverData.BPUserLista.Clear();
-            SzerverData.GyorUserLista.Clear();
-            SzerverData.DebUserLista.Clear();
+            // SzerverData.AdminUserLista.Clear();
+            // SzerverData.BPUserLista.Clear();
+            // SzerverData.GyorUserLista.Clear();
+            // SzerverData.DebUserLista.Clear();
             checkboxvizsgalat();
             MessageBox.Show("A frissítés megtörtént");
         }
@@ -129,10 +138,10 @@ namespace proba5._5
             if (textBox_NevKereses.Text != null)
             {
                 listBox_Felhasznalolistazas.Items.Clear();
-                ListakbaOlvasas.AdminListabaOlvasas();
-                ListakbaOlvasas.BudapestUsersListabaOlvasas();
-                ListakbaOlvasas.GyorUsersListabaOlvasas();
-                ListakbaOlvasas.DebrecenUsersListabaOlvasas();
+                //ListakbaOlvasas.AdminListabaOlvasas();
+                //ListakbaOlvasas.BudapestUsersListabaOlvasas();
+                //ListakbaOlvasas.GyorUsersListabaOlvasas();
+                //ListakbaOlvasas.DebrecenUsersListabaOlvasas();
                 bool Admin = false;
                 bool BP = false;
                 bool Deb = false;
@@ -199,18 +208,18 @@ namespace proba5._5
 
         private void button_ElemTorles_Click(object sender, EventArgs e)
         {
-            ListakbaOlvasas.AdminListabaOlvasas();
-            ListakbaOlvasas.BudapestUsersListabaOlvasas();
-            ListakbaOlvasas.GyorUsersListabaOlvasas();
-            ListakbaOlvasas.DebrecenUsersListabaOlvasas();
             if (textBox_Kijelotelemtorles.Text != "")
             {
                 string ListaElemID = textBox_Kijelotelemtorles.Text.ToString().Split(';')[0]; //Kiszedjük a listából az elem ID értékét!
                 string Felhasznalo = textBox_Kijelotelemtorles.Text.ToString().Split(';')[1];
+
                 for (int i = 0; i < SzerverData.AdminUserLista.Count; i++)
                 {
                     if (Felhasznalo == SzerverData.AdminUserLista[i].Nev)
                     {
+
+                        // System.Diagnostics.Debug.WriteLine("megtortenik");
+
                         try
                         {
                             string Torles = "DELETE FROM DolgozokAdmin WHERE id=" + ListaElemID + ""; //Adatok törlésének parancsa (kijelölt adat)
@@ -231,7 +240,9 @@ namespace proba5._5
                                 return;
                             }
                         }
-                        
+
+                        // remove from AdminUserLista
+                        SzerverData.AdminUserLista.RemoveAll(s => s.Id == Convert.ToInt32(ListaElemID));
                     }
                 }
             }

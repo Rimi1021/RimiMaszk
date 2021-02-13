@@ -16,6 +16,12 @@ namespace proba5._5
         public Form1()
         {
             InitializeComponent();
+
+            // listak feltoltese
+            ListakbaOlvasas.AdminListabaOlvasas();
+            ListakbaOlvasas.BudapestUsersListabaOlvasas();
+            ListakbaOlvasas.GyorUsersListabaOlvasas();
+            ListakbaOlvasas.DebrecenUsersListabaOlvasas();
         }
 
         private void button_kilepes_Click(object sender, EventArgs e)
@@ -52,7 +58,7 @@ namespace proba5._5
                 ///////////// AdminRadibutton
                 if (radioButton_Admin2.Checked == true)
                 {
-                    ListakbaOlvasas.AdminListabaOlvasas();
+                    // ListakbaOlvasas.AdminListabaOlvasas();
                     int index = 0;
                     bool vane = false;
                     bool vanejlszo = false;
@@ -93,7 +99,7 @@ namespace proba5._5
                 ///////////////////Budapest RadioButton
                 else if (radioButton_Budapest2.Checked == true)
                 {
-                    ListakbaOlvasas.BudapestUsersListabaOlvasas();
+                    // ListakbaOlvasas.BudapestUsersListabaOlvasas();
                     int index = 0;
                     bool vane = false;
                     bool vanejlszo = false;
@@ -134,7 +140,7 @@ namespace proba5._5
                 ///////////////////Győr RadioButton
                 else if (radioButton_Gyor2.Checked == true)
                 {
-                    ListakbaOlvasas.GyorUsersListabaOlvasas();
+                    // ListakbaOlvasas.GyorUsersListabaOlvasas();
                     int index = 0;
                     bool vane = false;
                     bool vanejlszo = false;
@@ -175,7 +181,7 @@ namespace proba5._5
                 ///////////////////Debrecen RadioButton
                 else if (radioButton_Debrecen2.Checked == true)
                 {
-                    ListakbaOlvasas.DebrecenUsersListabaOlvasas();
+                    // ListakbaOlvasas.DebrecenUsersListabaOlvasas();
                     int index = 0;
                     bool vane = false;
                     bool vanejlszo = false;

@@ -55,6 +55,12 @@ namespace proba5._5
                                 Csatlakozas.Close(); //Csatlakozási folyamat lezárása
                             }
                         }
+                        // clear
+                        SzerverData.AdminUserLista.Clear();
+                        // listakbaolvasas
+                        ListakbaOlvasas.AdminListabaOlvasas();
+                        
+
                     }
                     catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
                     {

@@ -84,6 +84,8 @@ namespace proba5._5
         {
             label_provilnev.Text = Form1.profilnev;
         }
+
+        // listazas torles event handler
         private void button1_Click(object sender, EventArgs e)
         {
             SubMenuHide();
