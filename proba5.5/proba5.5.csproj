@@ -120,6 +120,7 @@
     <Compile Include="ListazasTorles.Designer.cs">
       <DependentUpon>ListazasTorles.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaszkAruk.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raktar.cs">
