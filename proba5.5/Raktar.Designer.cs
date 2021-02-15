@@ -58,7 +58,38 @@ namespace proba5._5
             this.label5 = new System.Windows.Forms.Label();
             this.label_Akciosar_1_1 = new System.Windows.Forms.Label();
             this.button_Hianycikk = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox_Hianycikk = new System.Windows.Forms.ListBox();
+            this.button_2_2plusz = new System.Windows.Forms.Button();
+            this.textBox_2_2 = new System.Windows.Forms.TextBox();
+            this.button2_2minusz = new System.Windows.Forms.Button();
+            this.textBox_akcio_2_2 = new System.Windows.Forms.TextBox();
+            this.label_Ardb_2_2 = new System.Windows.Forms.Label();
+            this.label_Akciosar_2_2 = new System.Windows.Forms.Label();
+            this.button_3_3plusz = new System.Windows.Forms.Button();
+            this.button_4_4plusz = new System.Windows.Forms.Button();
+            this.button_5_5plusz = new System.Windows.Forms.Button();
+            this.button_6_6plusz = new System.Windows.Forms.Button();
+            this.textBox_3_3 = new System.Windows.Forms.TextBox();
+            this.textBox_4_4 = new System.Windows.Forms.TextBox();
+            this.textBox_5_5 = new System.Windows.Forms.TextBox();
+            this.textBox_6_6 = new System.Windows.Forms.TextBox();
+            this.button3_3minusz = new System.Windows.Forms.Button();
+            this.button4_4minusz = new System.Windows.Forms.Button();
+            this.button5_5minusz = new System.Windows.Forms.Button();
+            this.button6_6minusz = new System.Windows.Forms.Button();
+            this.textBox_akcio_3_3 = new System.Windows.Forms.TextBox();
+            this.textBox_akcio_4_4 = new System.Windows.Forms.TextBox();
+            this.textBox_akcio_5_5 = new System.Windows.Forms.TextBox();
+            this.textBox_akcio_6_6 = new System.Windows.Forms.TextBox();
+            this.label_Ardb_3_3 = new System.Windows.Forms.Label();
+            this.label_Ardb_4_4 = new System.Windows.Forms.Label();
+            this.label_Ardb_5_5 = new System.Windows.Forms.Label();
+            this.label_Ardb_6_6 = new System.Windows.Forms.Label();
+            this.label_Akciosar_3_3 = new System.Windows.Forms.Label();
+            this.label_Akciosar_4_4 = new System.Windows.Forms.Label();
+            this.label_Akciosar_5_5 = new System.Windows.Forms.Label();
+            this.label_Akciosar_6_6 = new System.Windows.Forms.Label();
+            this.button_Veglegesit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -204,7 +235,7 @@ namespace proba5._5
             // label_db2
             // 
             this.label_db2.AutoSize = true;
-            this.label_db2.Location = new System.Drawing.Point(107, 175);
+            this.label_db2.Location = new System.Drawing.Point(107, 179);
             this.label_db2.Name = "label_db2";
             this.label_db2.Size = new System.Drawing.Size(22, 13);
             this.label_db2.TabIndex = 14;
@@ -301,7 +332,7 @@ namespace proba5._5
             // label_Ardb_1_1
             // 
             this.label_Ardb_1_1.AutoSize = true;
-            this.label_Ardb_1_1.Location = new System.Drawing.Point(278, 141);
+            this.label_Ardb_1_1.Location = new System.Drawing.Point(275, 140);
             this.label_Ardb_1_1.Name = "label_Ardb_1_1";
             this.label_Ardb_1_1.Size = new System.Drawing.Size(39, 13);
             this.label_Ardb_1_1.TabIndex = 25;
@@ -337,20 +368,311 @@ namespace proba5._5
             this.button_Hianycikk.Text = "Hiánycikk";
             this.button_Hianycikk.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listBox_Hianycikk
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(388, 60);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(271, 381);
-            this.listBox1.TabIndex = 29;
+            this.listBox_Hianycikk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_Hianycikk.FormattingEnabled = true;
+            this.listBox_Hianycikk.Location = new System.Drawing.Point(388, 60);
+            this.listBox_Hianycikk.Name = "listBox_Hianycikk";
+            this.listBox_Hianycikk.Size = new System.Drawing.Size(271, 381);
+            this.listBox_Hianycikk.TabIndex = 29;
+            // 
+            // button_2_2plusz
+            // 
+            this.button_2_2plusz.Location = new System.Drawing.Point(134, 172);
+            this.button_2_2plusz.Name = "button_2_2plusz";
+            this.button_2_2plusz.Size = new System.Drawing.Size(25, 23);
+            this.button_2_2plusz.TabIndex = 30;
+            this.button_2_2plusz.Text = "+";
+            this.button_2_2plusz.UseVisualStyleBackColor = true;
+            // 
+            // textBox_2_2
+            // 
+            this.textBox_2_2.Location = new System.Drawing.Point(166, 174);
+            this.textBox_2_2.Name = "textBox_2_2";
+            this.textBox_2_2.Size = new System.Drawing.Size(25, 20);
+            this.textBox_2_2.TabIndex = 31;
+            // 
+            // button2_2minusz
+            // 
+            this.button2_2minusz.Location = new System.Drawing.Point(196, 172);
+            this.button2_2minusz.Name = "button2_2minusz";
+            this.button2_2minusz.Size = new System.Drawing.Size(25, 23);
+            this.button2_2minusz.TabIndex = 32;
+            this.button2_2minusz.Text = "-";
+            this.button2_2minusz.UseVisualStyleBackColor = true;
+            // 
+            // textBox_akcio_2_2
+            // 
+            this.textBox_akcio_2_2.Location = new System.Drawing.Point(230, 175);
+            this.textBox_akcio_2_2.Name = "textBox_akcio_2_2";
+            this.textBox_akcio_2_2.Size = new System.Drawing.Size(25, 20);
+            this.textBox_akcio_2_2.TabIndex = 33;
+            // 
+            // label_Ardb_2_2
+            // 
+            this.label_Ardb_2_2.AutoSize = true;
+            this.label_Ardb_2_2.Location = new System.Drawing.Point(275, 171);
+            this.label_Ardb_2_2.Name = "label_Ardb_2_2";
+            this.label_Ardb_2_2.Size = new System.Drawing.Size(39, 13);
+            this.label_Ardb_2_2.TabIndex = 34;
+            this.label_Ardb_2_2.Text = "ÁR/db";
+            // 
+            // label_Akciosar_2_2
+            // 
+            this.label_Akciosar_2_2.AutoSize = true;
+            this.label_Akciosar_2_2.Location = new System.Drawing.Point(326, 172);
+            this.label_Akciosar_2_2.Name = "label_Akciosar_2_2";
+            this.label_Akciosar_2_2.Size = new System.Drawing.Size(34, 13);
+            this.label_Akciosar_2_2.TabIndex = 35;
+            this.label_Akciosar_2_2.Text = "Nincs";
+            // 
+            // button_3_3plusz
+            // 
+            this.button_3_3plusz.Location = new System.Drawing.Point(135, 207);
+            this.button_3_3plusz.Name = "button_3_3plusz";
+            this.button_3_3plusz.Size = new System.Drawing.Size(25, 23);
+            this.button_3_3plusz.TabIndex = 36;
+            this.button_3_3plusz.Text = "+";
+            this.button_3_3plusz.UseVisualStyleBackColor = true;
+            // 
+            // button_4_4plusz
+            // 
+            this.button_4_4plusz.Location = new System.Drawing.Point(135, 250);
+            this.button_4_4plusz.Name = "button_4_4plusz";
+            this.button_4_4plusz.Size = new System.Drawing.Size(25, 23);
+            this.button_4_4plusz.TabIndex = 37;
+            this.button_4_4plusz.Text = "+";
+            this.button_4_4plusz.UseVisualStyleBackColor = true;
+            // 
+            // button_5_5plusz
+            // 
+            this.button_5_5plusz.Location = new System.Drawing.Point(135, 292);
+            this.button_5_5plusz.Name = "button_5_5plusz";
+            this.button_5_5plusz.Size = new System.Drawing.Size(25, 23);
+            this.button_5_5plusz.TabIndex = 38;
+            this.button_5_5plusz.Text = "+";
+            this.button_5_5plusz.UseVisualStyleBackColor = true;
+            // 
+            // button_6_6plusz
+            // 
+            this.button_6_6plusz.Location = new System.Drawing.Point(135, 332);
+            this.button_6_6plusz.Name = "button_6_6plusz";
+            this.button_6_6plusz.Size = new System.Drawing.Size(25, 23);
+            this.button_6_6plusz.TabIndex = 39;
+            this.button_6_6plusz.Text = "+";
+            this.button_6_6plusz.UseVisualStyleBackColor = true;
+            // 
+            // textBox_3_3
+            // 
+            this.textBox_3_3.Location = new System.Drawing.Point(166, 207);
+            this.textBox_3_3.Name = "textBox_3_3";
+            this.textBox_3_3.Size = new System.Drawing.Size(25, 20);
+            this.textBox_3_3.TabIndex = 40;
+            // 
+            // textBox_4_4
+            // 
+            this.textBox_4_4.Location = new System.Drawing.Point(166, 252);
+            this.textBox_4_4.Name = "textBox_4_4";
+            this.textBox_4_4.Size = new System.Drawing.Size(25, 20);
+            this.textBox_4_4.TabIndex = 41;
+            // 
+            // textBox_5_5
+            // 
+            this.textBox_5_5.Location = new System.Drawing.Point(166, 292);
+            this.textBox_5_5.Name = "textBox_5_5";
+            this.textBox_5_5.Size = new System.Drawing.Size(25, 20);
+            this.textBox_5_5.TabIndex = 42;
+            // 
+            // textBox_6_6
+            // 
+            this.textBox_6_6.Location = new System.Drawing.Point(166, 334);
+            this.textBox_6_6.Name = "textBox_6_6";
+            this.textBox_6_6.Size = new System.Drawing.Size(25, 20);
+            this.textBox_6_6.TabIndex = 43;
+            // 
+            // button3_3minusz
+            // 
+            this.button3_3minusz.Location = new System.Drawing.Point(197, 205);
+            this.button3_3minusz.Name = "button3_3minusz";
+            this.button3_3minusz.Size = new System.Drawing.Size(25, 23);
+            this.button3_3minusz.TabIndex = 44;
+            this.button3_3minusz.Text = "-";
+            this.button3_3minusz.UseVisualStyleBackColor = true;
+            // 
+            // button4_4minusz
+            // 
+            this.button4_4minusz.Location = new System.Drawing.Point(197, 250);
+            this.button4_4minusz.Name = "button4_4minusz";
+            this.button4_4minusz.Size = new System.Drawing.Size(25, 23);
+            this.button4_4minusz.TabIndex = 45;
+            this.button4_4minusz.Text = "-";
+            this.button4_4minusz.UseVisualStyleBackColor = true;
+            // 
+            // button5_5minusz
+            // 
+            this.button5_5minusz.Location = new System.Drawing.Point(197, 289);
+            this.button5_5minusz.Name = "button5_5minusz";
+            this.button5_5minusz.Size = new System.Drawing.Size(25, 23);
+            this.button5_5minusz.TabIndex = 46;
+            this.button5_5minusz.Text = "-";
+            this.button5_5minusz.UseVisualStyleBackColor = true;
+            // 
+            // button6_6minusz
+            // 
+            this.button6_6minusz.Location = new System.Drawing.Point(197, 332);
+            this.button6_6minusz.Name = "button6_6minusz";
+            this.button6_6minusz.Size = new System.Drawing.Size(25, 23);
+            this.button6_6minusz.TabIndex = 47;
+            this.button6_6minusz.Text = "-";
+            this.button6_6minusz.UseVisualStyleBackColor = true;
+            // 
+            // textBox_akcio_3_3
+            // 
+            this.textBox_akcio_3_3.Location = new System.Drawing.Point(230, 207);
+            this.textBox_akcio_3_3.Name = "textBox_akcio_3_3";
+            this.textBox_akcio_3_3.Size = new System.Drawing.Size(25, 20);
+            this.textBox_akcio_3_3.TabIndex = 48;
+            // 
+            // textBox_akcio_4_4
+            // 
+            this.textBox_akcio_4_4.Location = new System.Drawing.Point(230, 252);
+            this.textBox_akcio_4_4.Name = "textBox_akcio_4_4";
+            this.textBox_akcio_4_4.Size = new System.Drawing.Size(25, 20);
+            this.textBox_akcio_4_4.TabIndex = 49;
+            // 
+            // textBox_akcio_5_5
+            // 
+            this.textBox_akcio_5_5.Location = new System.Drawing.Point(230, 289);
+            this.textBox_akcio_5_5.Name = "textBox_akcio_5_5";
+            this.textBox_akcio_5_5.Size = new System.Drawing.Size(25, 20);
+            this.textBox_akcio_5_5.TabIndex = 50;
+            // 
+            // textBox_akcio_6_6
+            // 
+            this.textBox_akcio_6_6.Location = new System.Drawing.Point(230, 334);
+            this.textBox_akcio_6_6.Name = "textBox_akcio_6_6";
+            this.textBox_akcio_6_6.Size = new System.Drawing.Size(25, 20);
+            this.textBox_akcio_6_6.TabIndex = 51;
+            // 
+            // label_Ardb_3_3
+            // 
+            this.label_Ardb_3_3.AutoSize = true;
+            this.label_Ardb_3_3.Location = new System.Drawing.Point(275, 207);
+            this.label_Ardb_3_3.Name = "label_Ardb_3_3";
+            this.label_Ardb_3_3.Size = new System.Drawing.Size(39, 13);
+            this.label_Ardb_3_3.TabIndex = 52;
+            this.label_Ardb_3_3.Text = "ÁR/db";
+            // 
+            // label_Ardb_4_4
+            // 
+            this.label_Ardb_4_4.AutoSize = true;
+            this.label_Ardb_4_4.Location = new System.Drawing.Point(275, 255);
+            this.label_Ardb_4_4.Name = "label_Ardb_4_4";
+            this.label_Ardb_4_4.Size = new System.Drawing.Size(39, 13);
+            this.label_Ardb_4_4.TabIndex = 53;
+            this.label_Ardb_4_4.Text = "ÁR/db";
+            // 
+            // label_Ardb_5_5
+            // 
+            this.label_Ardb_5_5.AutoSize = true;
+            this.label_Ardb_5_5.Location = new System.Drawing.Point(275, 292);
+            this.label_Ardb_5_5.Name = "label_Ardb_5_5";
+            this.label_Ardb_5_5.Size = new System.Drawing.Size(39, 13);
+            this.label_Ardb_5_5.TabIndex = 54;
+            this.label_Ardb_5_5.Text = "ÁR/db";
+            // 
+            // label_Ardb_6_6
+            // 
+            this.label_Ardb_6_6.AutoSize = true;
+            this.label_Ardb_6_6.Location = new System.Drawing.Point(275, 337);
+            this.label_Ardb_6_6.Name = "label_Ardb_6_6";
+            this.label_Ardb_6_6.Size = new System.Drawing.Size(39, 13);
+            this.label_Ardb_6_6.TabIndex = 55;
+            this.label_Ardb_6_6.Text = "ÁR/db";
+            // 
+            // label_Akciosar_3_3
+            // 
+            this.label_Akciosar_3_3.AutoSize = true;
+            this.label_Akciosar_3_3.Location = new System.Drawing.Point(326, 207);
+            this.label_Akciosar_3_3.Name = "label_Akciosar_3_3";
+            this.label_Akciosar_3_3.Size = new System.Drawing.Size(34, 13);
+            this.label_Akciosar_3_3.TabIndex = 56;
+            this.label_Akciosar_3_3.Text = "Nincs";
+            // 
+            // label_Akciosar_4_4
+            // 
+            this.label_Akciosar_4_4.AutoSize = true;
+            this.label_Akciosar_4_4.Location = new System.Drawing.Point(323, 257);
+            this.label_Akciosar_4_4.Name = "label_Akciosar_4_4";
+            this.label_Akciosar_4_4.Size = new System.Drawing.Size(34, 13);
+            this.label_Akciosar_4_4.TabIndex = 57;
+            this.label_Akciosar_4_4.Text = "Nincs";
+            // 
+            // label_Akciosar_5_5
+            // 
+            this.label_Akciosar_5_5.AutoSize = true;
+            this.label_Akciosar_5_5.Location = new System.Drawing.Point(326, 292);
+            this.label_Akciosar_5_5.Name = "label_Akciosar_5_5";
+            this.label_Akciosar_5_5.Size = new System.Drawing.Size(34, 13);
+            this.label_Akciosar_5_5.TabIndex = 58;
+            this.label_Akciosar_5_5.Text = "Nincs";
+            // 
+            // label_Akciosar_6_6
+            // 
+            this.label_Akciosar_6_6.AutoSize = true;
+            this.label_Akciosar_6_6.Location = new System.Drawing.Point(326, 337);
+            this.label_Akciosar_6_6.Name = "label_Akciosar_6_6";
+            this.label_Akciosar_6_6.Size = new System.Drawing.Size(34, 13);
+            this.label_Akciosar_6_6.TabIndex = 59;
+            this.label_Akciosar_6_6.Text = "Nincs";
+            // 
+            // button_Veglegesit
+            // 
+            this.button_Veglegesit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Veglegesit.Location = new System.Drawing.Point(10, 375);
+            this.button_Veglegesit.Name = "button_Veglegesit";
+            this.button_Veglegesit.Size = new System.Drawing.Size(245, 33);
+            this.button_Veglegesit.TabIndex = 60;
+            this.button_Veglegesit.Text = "Áru felvitel megerősítése";
+            this.button_Veglegesit.UseVisualStyleBackColor = true;
             // 
             // Raktar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button_Veglegesit);
+            this.Controls.Add(this.label_Akciosar_6_6);
+            this.Controls.Add(this.label_Akciosar_5_5);
+            this.Controls.Add(this.label_Akciosar_4_4);
+            this.Controls.Add(this.label_Akciosar_3_3);
+            this.Controls.Add(this.label_Ardb_6_6);
+            this.Controls.Add(this.label_Ardb_5_5);
+            this.Controls.Add(this.label_Ardb_4_4);
+            this.Controls.Add(this.label_Ardb_3_3);
+            this.Controls.Add(this.textBox_akcio_6_6);
+            this.Controls.Add(this.textBox_akcio_5_5);
+            this.Controls.Add(this.textBox_akcio_4_4);
+            this.Controls.Add(this.textBox_akcio_3_3);
+            this.Controls.Add(this.button6_6minusz);
+            this.Controls.Add(this.button5_5minusz);
+            this.Controls.Add(this.button4_4minusz);
+            this.Controls.Add(this.button3_3minusz);
+            this.Controls.Add(this.textBox_6_6);
+            this.Controls.Add(this.textBox_5_5);
+            this.Controls.Add(this.textBox_4_4);
+            this.Controls.Add(this.textBox_3_3);
+            this.Controls.Add(this.button_6_6plusz);
+            this.Controls.Add(this.button_5_5plusz);
+            this.Controls.Add(this.button_4_4plusz);
+            this.Controls.Add(this.button_3_3plusz);
+            this.Controls.Add(this.label_Akciosar_2_2);
+            this.Controls.Add(this.label_Ardb_2_2);
+            this.Controls.Add(this.textBox_akcio_2_2);
+            this.Controls.Add(this.button2_2minusz);
+            this.Controls.Add(this.textBox_2_2);
+            this.Controls.Add(this.button_2_2plusz);
+            this.Controls.Add(this.listBox_Hianycikk);
             this.Controls.Add(this.button_Hianycikk);
             this.Controls.Add(this.label_Akciosar_1_1);
             this.Controls.Add(this.label5);
@@ -418,6 +740,37 @@ namespace proba5._5
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label_Akciosar_1_1;
         private System.Windows.Forms.Button button_Hianycikk;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox_Hianycikk;
+        private System.Windows.Forms.Button button_2_2plusz;
+        private System.Windows.Forms.TextBox textBox_2_2;
+        private System.Windows.Forms.Button button2_2minusz;
+        private System.Windows.Forms.TextBox textBox_akcio_2_2;
+        private System.Windows.Forms.Label label_Ardb_2_2;
+        private System.Windows.Forms.Label label_Akciosar_2_2;
+        private System.Windows.Forms.Button button_3_3plusz;
+        private System.Windows.Forms.Button button_4_4plusz;
+        private System.Windows.Forms.Button button_5_5plusz;
+        private System.Windows.Forms.Button button_6_6plusz;
+        private System.Windows.Forms.TextBox textBox_3_3;
+        private System.Windows.Forms.TextBox textBox_4_4;
+        private System.Windows.Forms.TextBox textBox_5_5;
+        private System.Windows.Forms.TextBox textBox_6_6;
+        private System.Windows.Forms.Button button3_3minusz;
+        private System.Windows.Forms.Button button4_4minusz;
+        private System.Windows.Forms.Button button5_5minusz;
+        private System.Windows.Forms.Button button6_6minusz;
+        private System.Windows.Forms.TextBox textBox_akcio_3_3;
+        private System.Windows.Forms.TextBox textBox_akcio_4_4;
+        private System.Windows.Forms.TextBox textBox_akcio_5_5;
+        private System.Windows.Forms.TextBox textBox_akcio_6_6;
+        private System.Windows.Forms.Label label_Ardb_3_3;
+        private System.Windows.Forms.Label label_Ardb_4_4;
+        private System.Windows.Forms.Label label_Ardb_5_5;
+        private System.Windows.Forms.Label label_Ardb_6_6;
+        private System.Windows.Forms.Label label_Akciosar_3_3;
+        private System.Windows.Forms.Label label_Akciosar_4_4;
+        private System.Windows.Forms.Label label_Akciosar_5_5;
+        private System.Windows.Forms.Label label_Akciosar_6_6;
+        private System.Windows.Forms.Button button_Veglegesit;
     }
 }
