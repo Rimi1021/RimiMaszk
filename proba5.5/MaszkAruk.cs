@@ -106,9 +106,28 @@ namespace proba5._5
             }
         }
 
-        public void akciometodus(double akcio)
+        public double Akcio
         {
-            _Ar_db = _Ar_db / 100 * akcio;
+            get
+            {
+                return _Akcio;
+            }
+            set
+            {
+                if (value >= 1 && value <= 90) _Ar_db = value;
+                else throw new Exception("Az akció 1-90 értéket vehet fel!");
+            }
+        }
+        public MaszkAruk(int Id, string Maszknev, string Maszktipus, int KeszletraktarBudapest, int KeszletraktarGyor, int KeszletraktarDebrecen, double Ar_db, double Akcio)
+        {
+            this.Id = Id;
+            this.Maszknev = Maszknev;
+            this.Maszktipus = Maszktipus;
+            this.KeszletraktarBudapest = KeszletraktarBudapest;
+            this.KeszletraktarGyor = KeszletraktarGyor;
+            this.KeszletraktarDebrecen = KeszletraktarDebrecen;
+            this.Ar_db = Ar_db;
+            this.Akcio = Akcio;
         }
     }
 }

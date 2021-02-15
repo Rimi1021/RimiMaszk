@@ -92,10 +92,14 @@ namespace proba5._5
         private void button_Frissites_Click(object sender, EventArgs e)
         {
             listBox_Felhasznalolistazas.Items.Clear();
-            // SzerverData.AdminUserLista.Clear();
-            // SzerverData.BPUserLista.Clear();
-            // SzerverData.GyorUserLista.Clear();
-            // SzerverData.DebUserLista.Clear();
+            SzerverData.AdminUserLista.Clear();
+            SzerverData.BPUserLista.Clear();
+            SzerverData.GyorUserLista.Clear();
+            SzerverData.DebUserLista.Clear();
+            ListakbaOlvasas.AdminListabaOlvasas();
+            ListakbaOlvasas.DebrecenUsersListabaOlvasas();
+            ListakbaOlvasas.BudapestUsersListabaOlvasas();
+            ListakbaOlvasas.GyorUsersListabaOlvasas();
             checkboxvizsgalat();
             MessageBox.Show("A frissítés megtörtént");
         }
@@ -155,7 +159,7 @@ namespace proba5._5
                         index = i;
                     }
                 }
-                for (int i = 0; i < SzerverData.BPUserLista.Count; i++)
+                for (int i = 0; i < SzerverData.BPUserLista.Count; i++)  
                 {
                     if (textBox_NevKereses.Text == SzerverData.BPUserLista[i].Nev)
                     {
@@ -212,38 +216,165 @@ namespace proba5._5
             {
                 string ListaElemID = textBox_Kijelotelemtorles.Text.ToString().Split(';')[0]; //Kiszedjük a listából az elem ID értékét!
                 string Felhasznalo = textBox_Kijelotelemtorles.Text.ToString().Split(';')[1];
-
+                //string jelszo = textBox_Kijelotelemtorles.Text.ToString().Split(';')[2];
+                bool adminbavan = false;
+                bool gyorbevan = false;
+                bool bpbevan = false;
+                bool debrecenbevan = false;
+                ////// Elsőnek megvizsgáljuk hol található a dolgozó
                 for (int i = 0; i < SzerverData.AdminUserLista.Count; i++)
+                  {
+                      if (Felhasznalo == SzerverData.AdminUserLista[i].Nev)
+                      {
+                          adminbavan = true;
+                      }
+                  }
+                if (adminbavan != true)
                 {
-                    if (Felhasznalo == SzerverData.AdminUserLista[i].Nev)
+                    for (int i = 0; i < SzerverData.GyorUserLista.Count; i++)
                     {
-
-                        // System.Diagnostics.Debug.WriteLine("megtortenik");
-
-                        try
+                        if (Felhasznalo == SzerverData.GyorUserLista[i].Nev)
                         {
-                            string Torles = "DELETE FROM DolgozokAdmin WHERE id=" + ListaElemID + ""; //Adatok törlésének parancsa (kijelölt adat)
-                            SqlConnection CsatlakozasiFolyamat = new SqlConnection(SzerverData.SzerverInfoAdmin); //Csatlakozunk a szerverhez
-                            CsatlakozasiFolyamat.Open(); //Megnyitja a folyamotat, használatra
-                            SqlCommand Parancsvegrehajtas = new SqlCommand(Torles, CsatlakozasiFolyamat);
-                            Parancsvegrehajtas.ExecuteNonQuery();
-                            Parancsvegrehajtas.Dispose();
-                            MessageBox.Show("Az adatbázis elemének: (" + textBox_Kijelotelemtorles.ToString() + ") törlése megtörtént...");
-                            CsatlakozasiFolyamat.Close(); //Bezárjuk a folyamatot
-                                                          //Törlés a Listából, miután töröltük az adatbázisból!!! fordítva nem lehet
-                            listBox_Felhasznalolistazas.Items.Remove(listBox_Felhasznalolistazas.SelectedItem);
+                            gyorbevan = true;
                         }
-                        catch 
-                        {
-                            if (MessageBox.Show("A törlés sikertelen", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
-                            {
-                                return;
-                            }
-                        }
-
-                        // remove from AdminUserLista
-                        SzerverData.AdminUserLista.RemoveAll(s => s.Id == Convert.ToInt32(ListaElemID));
                     }
+                }
+                else if (adminbavan != true && gyorbevan != true)
+                {
+                    for (int i = 0; i < SzerverData.BPUserLista.Count; i++)
+                    {
+                        if (Felhasznalo == SzerverData.BPUserLista[i].Nev)
+                        {
+                            bpbevan = true;
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < SzerverData.DebUserLista.Count; i++)
+                    {
+                        if (Felhasznalo == SzerverData.DebUserLista[i].Nev)
+                        {
+                            debrecenbevan = true;
+                        }
+                    }
+                }
+                /////A vizsgálat után megvizsgáljuk a melyik bool igaz
+                if (adminbavan == true)
+                {
+                    // System.Diagnostics.Debug.WriteLine("megtortenikadmin");
+
+                    try
+                    {
+                        string Torles = "DELETE FROM DolgozokAdmin WHERE id=" + ListaElemID + ""; //Adatok törlésének parancsa (kijelölt adat)
+                        SqlConnection CsatlakozasiFolyamat = new SqlConnection(SzerverData.SzerverInfoAdmin); //Csatlakozunk a szerverhez
+                        CsatlakozasiFolyamat.Open(); //Megnyitja a folyamotat, használatra
+                        SqlCommand Parancsvegrehajtas = new SqlCommand(Torles, CsatlakozasiFolyamat);
+                        Parancsvegrehajtas.ExecuteNonQuery();
+                        Parancsvegrehajtas.Dispose();
+                        MessageBox.Show("Az adatbázis elemének: (" + textBox_Kijelotelemtorles.ToString() + ") törlése megtörtént...");
+                        CsatlakozasiFolyamat.Close(); //Bezárjuk a folyamatot
+                                                      //Törlés a Listából, miután töröltük az adatbázisból!!! fordítva nem lehet
+                        listBox_Felhasznalolistazas.Items.Remove(listBox_Felhasznalolistazas.SelectedItem);
+                        adminbavan = false;
+                    }
+                    catch
+                    {
+                        if (MessageBox.Show("A törlés sikertelen", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            return;
+                        }
+                    }
+
+                    // remove from AdminUserLista
+                    SzerverData.AdminUserLista.RemoveAll(s => s.Id == Convert.ToInt32(ListaElemID));
+                }
+                else if (bpbevan == true)
+                {
+                    // System.Diagnostics.Debug.WriteLine("megtortenikbudapest");
+
+                    try
+                    {
+                        string Torles = "DELETE FROM DolgozokBP WHERE id=" + ListaElemID + ""; //Adatok törlésének parancsa (kijelölt adat)
+                        SqlConnection CsatlakozasiFolyamat = new SqlConnection(SzerverData.SzerverInfoAdmin); //Csatlakozunk a szerverhez
+                        CsatlakozasiFolyamat.Open(); //Megnyitja a folyamotat, használatra
+                        SqlCommand Parancsvegrehajtas = new SqlCommand(Torles, CsatlakozasiFolyamat);
+                        Parancsvegrehajtas.ExecuteNonQuery();
+                        Parancsvegrehajtas.Dispose();
+                        MessageBox.Show("Az adatbázis elemének: (" + textBox_Kijelotelemtorles.ToString() + ") törlése megtörtént...");
+                        CsatlakozasiFolyamat.Close(); //Bezárjuk a folyamatot
+                                                      //Törlés a Listából, miután töröltük az adatbázisból!!! fordítva nem lehet
+                        listBox_Felhasznalolistazas.Items.Remove(listBox_Felhasznalolistazas.SelectedItem);
+                        bpbevan = false;
+                    }
+                    catch
+                    {
+                        if (MessageBox.Show("A törlés sikertelen", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            return;
+                        }
+                    }
+
+                    // remove from AdminUserLista
+                    SzerverData.BPUserLista.RemoveAll(s => s.Id == Convert.ToInt32(ListaElemID));
+                }
+                else if (gyorbevan == true)
+                {
+                    // System.Diagnostics.Debug.WriteLine("megtortenikgyor");
+
+                    try
+                    {
+                        string Torles = "DELETE FROM DolgozokGY WHERE id=" + ListaElemID + ""; //Adatok törlésének parancsa (kijelölt adat)
+                        SqlConnection CsatlakozasiFolyamat = new SqlConnection(SzerverData.SzerverInfoAdmin); //Csatlakozunk a szerverhez
+                        CsatlakozasiFolyamat.Open(); //Megnyitja a folyamotat, használatra
+                        SqlCommand Parancsvegrehajtas = new SqlCommand(Torles, CsatlakozasiFolyamat);
+                        Parancsvegrehajtas.ExecuteNonQuery();
+                        Parancsvegrehajtas.Dispose();
+                        MessageBox.Show("Az adatbázis elemének: (" + textBox_Kijelotelemtorles.ToString() + ") törlése megtörtént...");
+                        CsatlakozasiFolyamat.Close(); //Bezárjuk a folyamatot
+                                                      //Törlés a Listából, miután töröltük az adatbázisból!!! fordítva nem lehet
+                        listBox_Felhasznalolistazas.Items.Remove(listBox_Felhasznalolistazas.SelectedItem);
+                        gyorbevan = false;
+                    }
+                    catch
+                    {
+                        if (MessageBox.Show("A törlés sikertelen", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            return;
+                        }
+                    }
+
+                    // remove from AdminUserLista
+                    SzerverData.GyorUserLista.RemoveAll(s => s.Id == Convert.ToInt32(ListaElemID));
+                }
+                else if (debrecenbevan == true)
+                {
+                    // System.Diagnostics.Debug.WriteLine("megtortenikDebrecen");
+
+                    try
+                    {
+                        string Torles = "DELETE FROM DolgozokD WHERE id=" + ListaElemID + ""; //Adatok törlésének parancsa (kijelölt adat)
+                        SqlConnection CsatlakozasiFolyamat = new SqlConnection(SzerverData.SzerverInfoAdmin); //Csatlakozunk a szerverhez
+                        CsatlakozasiFolyamat.Open(); //Megnyitja a folyamotat, használatra
+                        SqlCommand Parancsvegrehajtas = new SqlCommand(Torles, CsatlakozasiFolyamat);
+                        Parancsvegrehajtas.ExecuteNonQuery();
+                        Parancsvegrehajtas.Dispose();
+                        MessageBox.Show("Az adatbázis elemének: (" + textBox_Kijelotelemtorles.ToString() + ") törlése megtörtént...");
+                        CsatlakozasiFolyamat.Close(); //Bezárjuk a folyamatot
+                                                      //Törlés a Listából, miután töröltük az adatbázisból!!! fordítva nem lehet
+                        listBox_Felhasznalolistazas.Items.Remove(listBox_Felhasznalolistazas.SelectedItem);
+                        debrecenbevan = false;
+                    }
+                    catch
+                    {
+                        if (MessageBox.Show("A törlés sikertelen", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            return;
+                        }
+                    }
+
+                    // remove from AdminUserLista
+                    SzerverData.DebUserLista.RemoveAll(s => s.Id == Convert.ToInt32(ListaElemID));
                 }
             }
             else
