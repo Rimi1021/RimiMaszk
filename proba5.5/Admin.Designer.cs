@@ -43,24 +43,26 @@ namespace proba5._5
             this.button_felhasznalohozzaadas = new System.Windows.Forms.Button();
             this.button_Users = new System.Windows.Forms.Button();
             this.panel_Logo = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label_provilnev = new System.Windows.Forms.Label();
+            this.pictureBox_Profile = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_AruAtcsoportositas = new System.Windows.Forms.Button();
             this.raktar1 = new proba5._5.Raktar();
             this.eladas1 = new proba5._5.Eladas();
             this.aruvisszavetel1 = new proba5._5.Aruvisszavetel();
             this.listazasTorles1 = new proba5._5.ListazasTorles();
             this.felhasznalohozzaAdas1 = new proba5._5.FelhasznalohozzaAdas();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label_provilnev = new System.Windows.Forms.Label();
-            this.pictureBox_Profile = new System.Windows.Forms.PictureBox();
+            this.aruatcsoportositas1 = new proba5._5.Aruatcsoportositas();
             this.panel_SideMenuPanel.SuspendLayout();
             this.panel_Lenyilo2.SuspendLayout();
             this.panel_Userlenyilo.SuspendLayout();
             this.panel_Logo.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profile)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_SideMenuPanel
@@ -117,13 +119,14 @@ namespace proba5._5
             // panel_Lenyilo2
             // 
             this.panel_Lenyilo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel_Lenyilo2.Controls.Add(this.button_AruAtcsoportositas);
             this.panel_Lenyilo2.Controls.Add(this.button_Raktar);
             this.panel_Lenyilo2.Controls.Add(this.button_Visszavetel);
             this.panel_Lenyilo2.Controls.Add(this.button_Eladas);
             this.panel_Lenyilo2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Lenyilo2.Location = new System.Drawing.Point(0, 248);
             this.panel_Lenyilo2.Name = "panel_Lenyilo2";
-            this.panel_Lenyilo2.Size = new System.Drawing.Size(183, 107);
+            this.panel_Lenyilo2.Size = new System.Drawing.Size(183, 134);
             this.panel_Lenyilo2.TabIndex = 4;
             // 
             // button_Raktar
@@ -260,6 +263,45 @@ namespace proba5._5
             this.panel_Logo.Size = new System.Drawing.Size(183, 95);
             this.panel_Logo.TabIndex = 0;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.label_provilnev, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_Profile, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(183, 95);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label_provilnev
+            // 
+            this.label_provilnev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_provilnev.Font = new System.Drawing.Font("Microsoft JhengHei", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_provilnev.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_provilnev.Location = new System.Drawing.Point(3, 66);
+            this.label_provilnev.Name = "label_provilnev";
+            this.label_provilnev.Size = new System.Drawing.Size(177, 29);
+            this.label_provilnev.TabIndex = 0;
+            this.label_provilnev.Text = "label1";
+            this.label_provilnev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox_Profile
+            // 
+            this.pictureBox_Profile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox_Profile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Profile.Image")));
+            this.pictureBox_Profile.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox_Profile.Name = "pictureBox_Profile";
+            this.pictureBox_Profile.Size = new System.Drawing.Size(177, 60);
+            this.pictureBox_Profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_Profile.TabIndex = 1;
+            this.pictureBox_Profile.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel1);
@@ -272,6 +314,7 @@ namespace proba5._5
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.aruatcsoportositas1);
             this.panel1.Controls.Add(this.raktar1);
             this.panel1.Controls.Add(this.eladas1);
             this.panel1.Controls.Add(this.aruvisszavetel1);
@@ -282,6 +325,22 @@ namespace proba5._5
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(673, 455);
             this.panel1.TabIndex = 2;
+            // 
+            // button_AruAtcsoportositas
+            // 
+            this.button_AruAtcsoportositas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_AruAtcsoportositas.FlatAppearance.BorderSize = 0;
+            this.button_AruAtcsoportositas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AruAtcsoportositas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_AruAtcsoportositas.Location = new System.Drawing.Point(0, 96);
+            this.button_AruAtcsoportositas.Name = "button_AruAtcsoportositas";
+            this.button_AruAtcsoportositas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button_AruAtcsoportositas.Size = new System.Drawing.Size(183, 32);
+            this.button_AruAtcsoportositas.TabIndex = 3;
+            this.button_AruAtcsoportositas.Text = "Áru átcsoportosítás";
+            this.button_AruAtcsoportositas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_AruAtcsoportositas.UseVisualStyleBackColor = true;
+            this.button_AruAtcsoportositas.Click += new System.EventHandler(this.button_AruAtcsoportositas_Click);
             // 
             // raktar1
             // 
@@ -323,44 +382,13 @@ namespace proba5._5
             this.felhasznalohozzaAdas1.Size = new System.Drawing.Size(673, 455);
             this.felhasznalohozzaAdas1.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // aruatcsoportositas1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label_provilnev, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox_Profile, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(183, 95);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // label_provilnev
-            // 
-            this.label_provilnev.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_provilnev.Font = new System.Drawing.Font("Microsoft JhengHei", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_provilnev.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_provilnev.Location = new System.Drawing.Point(3, 66);
-            this.label_provilnev.Name = "label_provilnev";
-            this.label_provilnev.Size = new System.Drawing.Size(177, 29);
-            this.label_provilnev.TabIndex = 0;
-            this.label_provilnev.Text = "label1";
-            this.label_provilnev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox_Profile
-            // 
-            this.pictureBox_Profile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox_Profile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Profile.Image")));
-            this.pictureBox_Profile.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox_Profile.Name = "pictureBox_Profile";
-            this.pictureBox_Profile.Size = new System.Drawing.Size(177, 60);
-            this.pictureBox_Profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_Profile.TabIndex = 1;
-            this.pictureBox_Profile.TabStop = false;
+            this.aruatcsoportositas1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aruatcsoportositas1.Location = new System.Drawing.Point(0, 0);
+            this.aruatcsoportositas1.Name = "aruatcsoportositas1";
+            this.aruatcsoportositas1.Size = new System.Drawing.Size(673, 455);
+            this.aruatcsoportositas1.TabIndex = 5;
             // 
             // Admin
             // 
@@ -377,10 +405,10 @@ namespace proba5._5
             this.panel_Lenyilo2.ResumeLayout(false);
             this.panel_Userlenyilo.ResumeLayout(false);
             this.panel_Logo.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profile)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -410,5 +438,7 @@ namespace proba5._5
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label_provilnev;
         private System.Windows.Forms.PictureBox pictureBox_Profile;
+        private System.Windows.Forms.Button button_AruAtcsoportositas;
+        private Aruatcsoportositas aruatcsoportositas1;
     }
 }

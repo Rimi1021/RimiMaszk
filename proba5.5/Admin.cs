@@ -20,6 +20,7 @@ namespace proba5._5
             raktar1.Hide();
             aruvisszavetel1.Hide();
             eladas1.Hide();
+            aruatcsoportositas1.Hide();
             Design();
             Profilkepalattinev();
         }
@@ -165,6 +166,17 @@ namespace proba5._5
                     return; //Nem csinálunk semmit csak visszatérünk az eredeti állapothoz.
                 }
             }
+        }
+
+        private void button_AruAtcsoportositas_Click(object sender, EventArgs e)
+        {
+            felhasznalohozzaAdas1.Hide();
+            listazasTorles1.Hide();
+            raktar1.Hide();
+            aruvisszavetel1.Hide();
+            eladas1.Hide();
+            aruatcsoportositas1.Show();
+            aruatcsoportositas1.BringToFront();
         }
     }
 }

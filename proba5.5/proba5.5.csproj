@@ -67,6 +67,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Aruatcsoportositas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aruatcsoportositas.Designer.cs">
+      <DependentUpon>Aruatcsoportositas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Aruvisszavetel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="SzerverData.cs" />
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aruatcsoportositas.resx">
+      <DependentUpon>Aruatcsoportositas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aruvisszavetel.resx">
       <DependentUpon>Aruvisszavetel.cs</DependentUpon>
