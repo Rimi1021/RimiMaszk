@@ -34,6 +34,7 @@ namespace proba5._5
             this.button_Kijelentkezes = new System.Windows.Forms.Button();
             this.button_Kilepes = new System.Windows.Forms.Button();
             this.panel_Lenyilo2 = new System.Windows.Forms.Panel();
+            this.button_AruAtcsoportositas = new System.Windows.Forms.Button();
             this.button_Raktar = new System.Windows.Forms.Button();
             this.button_Visszavetel = new System.Windows.Forms.Button();
             this.button_Eladas = new System.Windows.Forms.Button();
@@ -48,13 +49,12 @@ namespace proba5._5
             this.pictureBox_Profile = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_AruAtcsoportositas = new System.Windows.Forms.Button();
+            this.aruatcsoportositas1 = new proba5._5.Aruatcsoportositas();
             this.raktar1 = new proba5._5.Raktar();
             this.eladas1 = new proba5._5.Eladas();
             this.aruvisszavetel1 = new proba5._5.Aruvisszavetel();
             this.listazasTorles1 = new proba5._5.ListazasTorles();
             this.felhasznalohozzaAdas1 = new proba5._5.FelhasznalohozzaAdas();
-            this.aruatcsoportositas1 = new proba5._5.Aruatcsoportositas();
             this.panel_SideMenuPanel.SuspendLayout();
             this.panel_Lenyilo2.SuspendLayout();
             this.panel_Userlenyilo.SuspendLayout();
@@ -129,6 +129,22 @@ namespace proba5._5
             this.panel_Lenyilo2.Size = new System.Drawing.Size(183, 134);
             this.panel_Lenyilo2.TabIndex = 4;
             // 
+            // button_AruAtcsoportositas
+            // 
+            this.button_AruAtcsoportositas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_AruAtcsoportositas.FlatAppearance.BorderSize = 0;
+            this.button_AruAtcsoportositas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AruAtcsoportositas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_AruAtcsoportositas.Location = new System.Drawing.Point(0, 96);
+            this.button_AruAtcsoportositas.Name = "button_AruAtcsoportositas";
+            this.button_AruAtcsoportositas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button_AruAtcsoportositas.Size = new System.Drawing.Size(183, 32);
+            this.button_AruAtcsoportositas.TabIndex = 3;
+            this.button_AruAtcsoportositas.Text = "Áru átcsoportosítás";
+            this.button_AruAtcsoportositas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_AruAtcsoportositas.UseVisualStyleBackColor = true;
+            this.button_AruAtcsoportositas.Click += new System.EventHandler(this.button_AruAtcsoportositas_Click);
+            // 
             // button_Raktar
             // 
             this.button_Raktar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -140,7 +156,7 @@ namespace proba5._5
             this.button_Raktar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.button_Raktar.Size = new System.Drawing.Size(183, 32);
             this.button_Raktar.TabIndex = 2;
-            this.button_Raktar.Text = "Raktár";
+            this.button_Raktar.Text = "Raktár Menedzsment ";
             this.button_Raktar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Raktar.UseVisualStyleBackColor = true;
             this.button_Raktar.Click += new System.EventHandler(this.button_Raktar_Click);
@@ -156,7 +172,7 @@ namespace proba5._5
             this.button_Visszavetel.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.button_Visszavetel.Size = new System.Drawing.Size(183, 32);
             this.button_Visszavetel.TabIndex = 1;
-            this.button_Visszavetel.Text = "Áru visszavétel";
+            this.button_Visszavetel.Text = "Ár/akció beállítás";
             this.button_Visszavetel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Visszavetel.UseVisualStyleBackColor = true;
             this.button_Visszavetel.Click += new System.EventHandler(this.button_Visszavetel_Click);
@@ -326,21 +342,13 @@ namespace proba5._5
             this.panel1.Size = new System.Drawing.Size(673, 455);
             this.panel1.TabIndex = 2;
             // 
-            // button_AruAtcsoportositas
+            // aruatcsoportositas1
             // 
-            this.button_AruAtcsoportositas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_AruAtcsoportositas.FlatAppearance.BorderSize = 0;
-            this.button_AruAtcsoportositas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AruAtcsoportositas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_AruAtcsoportositas.Location = new System.Drawing.Point(0, 96);
-            this.button_AruAtcsoportositas.Name = "button_AruAtcsoportositas";
-            this.button_AruAtcsoportositas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button_AruAtcsoportositas.Size = new System.Drawing.Size(183, 32);
-            this.button_AruAtcsoportositas.TabIndex = 3;
-            this.button_AruAtcsoportositas.Text = "Áru átcsoportosítás";
-            this.button_AruAtcsoportositas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_AruAtcsoportositas.UseVisualStyleBackColor = true;
-            this.button_AruAtcsoportositas.Click += new System.EventHandler(this.button_AruAtcsoportositas_Click);
+            this.aruatcsoportositas1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aruatcsoportositas1.Location = new System.Drawing.Point(0, 0);
+            this.aruatcsoportositas1.Name = "aruatcsoportositas1";
+            this.aruatcsoportositas1.Size = new System.Drawing.Size(673, 455);
+            this.aruatcsoportositas1.TabIndex = 5;
             // 
             // raktar1
             // 
@@ -381,14 +389,6 @@ namespace proba5._5
             this.felhasznalohozzaAdas1.Name = "felhasznalohozzaAdas1";
             this.felhasznalohozzaAdas1.Size = new System.Drawing.Size(673, 455);
             this.felhasznalohozzaAdas1.TabIndex = 0;
-            // 
-            // aruatcsoportositas1
-            // 
-            this.aruatcsoportositas1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aruatcsoportositas1.Location = new System.Drawing.Point(0, 0);
-            this.aruatcsoportositas1.Name = "aruatcsoportositas1";
-            this.aruatcsoportositas1.Size = new System.Drawing.Size(673, 455);
-            this.aruatcsoportositas1.TabIndex = 5;
             // 
             // Admin
             // 

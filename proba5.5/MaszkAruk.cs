@@ -16,6 +16,7 @@ namespace proba5._5
         private double _Ar_db;
         private double _Akcio;
         private int _Id;
+        private int _Utonvan;
         public int Id
         {
             get
@@ -26,6 +27,18 @@ namespace proba5._5
             {
                 if (value >= 0) _Id = value;
                 else throw new Exception("A ID nem lehet negatív érték!");
+            }
+        }
+        public int Utonvan
+        {
+            get
+            {
+                return _Utonvan;
+            }
+            set
+            {
+                if (value != 1) _Utonvan = value;
+                else throw new Exception("Az útvonal csak 1-es értéket vehet fel, ami azt jelöli hogy úton van az áru!");
             }
         }
 

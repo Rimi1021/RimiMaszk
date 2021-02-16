@@ -229,6 +229,8 @@ namespace proba5._5
                           adminbavan = true;
                       }
                   }
+
+                // ha  nincs az adminbanm nezd meg a gyorben
                 if (adminbavan != true)
                 {
                     for (int i = 0; i < SzerverData.GyorUserLista.Count; i++)
@@ -239,7 +241,9 @@ namespace proba5._5
                         }
                     }
                 }
-                else if (adminbavan != true && gyorbevan != true)
+
+                // ha nincs gyorbe, nezd meg a bpbe
+                if (gyorbevan != true)
                 {
                     for (int i = 0; i < SzerverData.BPUserLista.Count; i++)
                     {
@@ -249,7 +253,9 @@ namespace proba5._5
                         }
                     }
                 }
-                else
+
+                // ha nincs bpbe, nezd meg debrecenbe
+                if (bpbevan != true)
                 {
                     for (int i = 0; i < SzerverData.DebUserLista.Count; i++)
                     {
@@ -259,6 +265,9 @@ namespace proba5._5
                         }
                     }
                 }
+
+                
+
                 /////A vizsgálat után megvizsgáljuk a melyik bool igaz
                 if (adminbavan == true)
                 {
