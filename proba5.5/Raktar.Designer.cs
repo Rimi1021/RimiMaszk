@@ -30,12 +30,12 @@ namespace proba5._5
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonBP = new System.Windows.Forms.RadioButton();
+            this.radioButtonGY = new System.Windows.Forms.RadioButton();
+            this.radioButtonD = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox_Maszktipus = new System.Windows.Forms.ComboBox();
+            this.button_Listaz = new System.Windows.Forms.Button();
             this.label_db1 = new System.Windows.Forms.Label();
             this.label_db2 = new System.Windows.Forms.Label();
             this.label_db3 = new System.Windows.Forms.Label();
@@ -73,12 +73,12 @@ namespace proba5._5
             this.label_megrendeltdb4 = new System.Windows.Forms.Label();
             this.label_megrendeltdb5 = new System.Windows.Forms.Label();
             this.label_megrendeltdb6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button_Arufelvitel1 = new System.Windows.Forms.Button();
+            this.button_Arufelvitel2 = new System.Windows.Forms.Button();
+            this.button_Arufelvitel3 = new System.Windows.Forms.Button();
+            this.button_Arufelvitel4 = new System.Windows.Forms.Button();
+            this.button_Arufelvitel5 = new System.Windows.Forms.Button();
+            this.button_Arufelvitel6 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -101,38 +101,38 @@ namespace proba5._5
             this.label1.TabIndex = 0;
             this.label1.Text = "LOCATION";
             // 
-            // radioButton1
+            // radioButtonBP
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(116, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Budapest";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonBP.AutoSize = true;
+            this.radioButtonBP.Location = new System.Drawing.Point(116, 19);
+            this.radioButtonBP.Name = "radioButtonBP";
+            this.radioButtonBP.Size = new System.Drawing.Size(70, 17);
+            this.radioButtonBP.TabIndex = 1;
+            this.radioButtonBP.TabStop = true;
+            this.radioButtonBP.Text = "Budapest";
+            this.radioButtonBP.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonGY
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(183, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Győr";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonGY.AutoSize = true;
+            this.radioButtonGY.Location = new System.Drawing.Point(183, 19);
+            this.radioButtonGY.Name = "radioButtonGY";
+            this.radioButtonGY.Size = new System.Drawing.Size(47, 17);
+            this.radioButtonGY.TabIndex = 2;
+            this.radioButtonGY.TabStop = true;
+            this.radioButtonGY.Text = "Győr";
+            this.radioButtonGY.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonD
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(227, 19);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(72, 17);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Debrecen";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonD.AutoSize = true;
+            this.radioButtonD.Location = new System.Drawing.Point(227, 19);
+            this.radioButtonD.Name = "radioButtonD";
+            this.radioButtonD.Size = new System.Drawing.Size(72, 17);
+            this.radioButtonD.TabIndex = 3;
+            this.radioButtonD.TabStop = true;
+            this.radioButtonD.Text = "Debrecen";
+            this.radioButtonD.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -144,23 +144,30 @@ namespace proba5._5
             this.label2.TabIndex = 4;
             this.label2.Text = "Maszktípus";
             // 
-            // comboBox1
+            // comboBox_Maszktipus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(116, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox_Maszktipus.FormattingEnabled = true;
+            this.comboBox_Maszktipus.Items.AddRange(new object[] {
+            "Gazmaszk",
+            "Szelepes",
+            "Fashion",
+            "Szuros",
+            "Egyszerhasznalatos",
+            "Mintas"});
+            this.comboBox_Maszktipus.Location = new System.Drawing.Point(116, 60);
+            this.comboBox_Maszktipus.Name = "comboBox_Maszktipus";
+            this.comboBox_Maszktipus.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Maszktipus.TabIndex = 5;
             // 
-            // button1
+            // button_Listaz
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(243, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Listáz";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Listaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Listaz.Location = new System.Drawing.Point(243, 51);
+            this.button_Listaz.Name = "button_Listaz";
+            this.button_Listaz.Size = new System.Drawing.Size(69, 30);
+            this.button_Listaz.TabIndex = 6;
+            this.button_Listaz.Text = "Listáz";
+            this.button_Listaz.UseVisualStyleBackColor = true;
             // 
             // label_db1
             // 
@@ -254,7 +261,7 @@ namespace proba5._5
             this.button_Hianycikk.Name = "button_Hianycikk";
             this.button_Hianycikk.Size = new System.Drawing.Size(271, 27);
             this.button_Hianycikk.TabIndex = 28;
-            this.button_Hianycikk.Text = "Hiánycikk";
+            this.button_Hianycikk.Text = "Hiánycikkek";
             this.button_Hianycikk.UseVisualStyleBackColor = true;
             // 
             // listBox_Hianycikk
@@ -427,9 +434,9 @@ namespace proba5._5
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(3, 429);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.Size = new System.Drawing.Size(115, 13);
             this.label3.TabIndex = 61;
-            this.label3.Text = "Érkezett áru felvitele";
+            this.label3.Text = "Megadott áruk felvitele";
             // 
             // label4
             // 
@@ -462,7 +469,7 @@ namespace proba5._5
             this.label_megrendeltdb1.AutoSize = true;
             this.label_megrendeltdb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_megrendeltdb1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb1.Location = new System.Drawing.Point(264, 142);
+            this.label_megrendeltdb1.Location = new System.Drawing.Point(271, 140);
             this.label_megrendeltdb1.Name = "label_megrendeltdb1";
             this.label_megrendeltdb1.Size = new System.Drawing.Size(28, 13);
             this.label_megrendeltdb1.TabIndex = 65;
@@ -473,7 +480,7 @@ namespace proba5._5
             this.label_megrendeltdb2.AutoSize = true;
             this.label_megrendeltdb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_megrendeltdb2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb2.Location = new System.Drawing.Point(264, 180);
+            this.label_megrendeltdb2.Location = new System.Drawing.Point(269, 178);
             this.label_megrendeltdb2.Name = "label_megrendeltdb2";
             this.label_megrendeltdb2.Size = new System.Drawing.Size(28, 13);
             this.label_megrendeltdb2.TabIndex = 66;
@@ -484,7 +491,7 @@ namespace proba5._5
             this.label_megrendeltdb3.AutoSize = true;
             this.label_megrendeltdb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_megrendeltdb3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb3.Location = new System.Drawing.Point(264, 218);
+            this.label_megrendeltdb3.Location = new System.Drawing.Point(270, 213);
             this.label_megrendeltdb3.Name = "label_megrendeltdb3";
             this.label_megrendeltdb3.Size = new System.Drawing.Size(28, 13);
             this.label_megrendeltdb3.TabIndex = 67;
@@ -495,7 +502,7 @@ namespace proba5._5
             this.label_megrendeltdb4.AutoSize = true;
             this.label_megrendeltdb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_megrendeltdb4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb4.Location = new System.Drawing.Point(264, 255);
+            this.label_megrendeltdb4.Location = new System.Drawing.Point(271, 253);
             this.label_megrendeltdb4.Name = "label_megrendeltdb4";
             this.label_megrendeltdb4.Size = new System.Drawing.Size(28, 13);
             this.label_megrendeltdb4.TabIndex = 68;
@@ -506,7 +513,7 @@ namespace proba5._5
             this.label_megrendeltdb5.AutoSize = true;
             this.label_megrendeltdb5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_megrendeltdb5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb5.Location = new System.Drawing.Point(264, 299);
+            this.label_megrendeltdb5.Location = new System.Drawing.Point(269, 293);
             this.label_megrendeltdb5.Name = "label_megrendeltdb5";
             this.label_megrendeltdb5.Size = new System.Drawing.Size(28, 13);
             this.label_megrendeltdb5.TabIndex = 69;
@@ -517,83 +524,84 @@ namespace proba5._5
             this.label_megrendeltdb6.AutoSize = true;
             this.label_megrendeltdb6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_megrendeltdb6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb6.Location = new System.Drawing.Point(264, 340);
+            this.label_megrendeltdb6.Location = new System.Drawing.Point(269, 333);
             this.label_megrendeltdb6.Name = "label_megrendeltdb6";
             this.label_megrendeltdb6.Size = new System.Drawing.Size(28, 13);
             this.label_megrendeltdb6.TabIndex = 70;
             this.label_megrendeltdb6.Text = "100";
             // 
-            // button2
+            // button_Arufelvitel1
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.Location = new System.Drawing.Point(307, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 71;
-            this.button2.Text = "Áru felvitel";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button_Arufelvitel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Arufelvitel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_Arufelvitel1.Location = new System.Drawing.Point(307, 135);
+            this.button_Arufelvitel1.Name = "button_Arufelvitel1";
+            this.button_Arufelvitel1.Size = new System.Drawing.Size(75, 23);
+            this.button_Arufelvitel1.TabIndex = 71;
+            this.button_Arufelvitel1.Text = "Áru felvitel";
+            this.button_Arufelvitel1.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel1.Click += new System.EventHandler(this.button_Arufelvitel1_Click);
             // 
-            // button3
+            // button_Arufelvitel2
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.Location = new System.Drawing.Point(307, 175);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 72;
-            this.button3.Text = "Áru felvitel";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button_Arufelvitel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Arufelvitel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_Arufelvitel2.Location = new System.Drawing.Point(307, 173);
+            this.button_Arufelvitel2.Name = "button_Arufelvitel2";
+            this.button_Arufelvitel2.Size = new System.Drawing.Size(75, 23);
+            this.button_Arufelvitel2.TabIndex = 72;
+            this.button_Arufelvitel2.Text = "Áru felvitel";
+            this.button_Arufelvitel2.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button_Arufelvitel3
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button4.Location = new System.Drawing.Point(307, 210);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 73;
-            this.button4.Text = "Áru felvitel";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button_Arufelvitel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Arufelvitel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_Arufelvitel3.Location = new System.Drawing.Point(307, 208);
+            this.button_Arufelvitel3.Name = "button_Arufelvitel3";
+            this.button_Arufelvitel3.Size = new System.Drawing.Size(75, 23);
+            this.button_Arufelvitel3.TabIndex = 73;
+            this.button_Arufelvitel3.Text = "Áru felvitel";
+            this.button_Arufelvitel3.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button_Arufelvitel4
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button5.Location = new System.Drawing.Point(307, 250);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 74;
-            this.button5.Text = "Áru felvitel";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button_Arufelvitel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Arufelvitel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_Arufelvitel4.Location = new System.Drawing.Point(307, 244);
+            this.button_Arufelvitel4.Name = "button_Arufelvitel4";
+            this.button_Arufelvitel4.Size = new System.Drawing.Size(75, 23);
+            this.button_Arufelvitel4.TabIndex = 74;
+            this.button_Arufelvitel4.Text = "Áru felvitel";
+            this.button_Arufelvitel4.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // button_Arufelvitel5
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button6.Location = new System.Drawing.Point(307, 289);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 75;
-            this.button6.Text = "Áru felvitel";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button_Arufelvitel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Arufelvitel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_Arufelvitel5.Location = new System.Drawing.Point(307, 287);
+            this.button_Arufelvitel5.Name = "button_Arufelvitel5";
+            this.button_Arufelvitel5.Size = new System.Drawing.Size(75, 23);
+            this.button_Arufelvitel5.TabIndex = 75;
+            this.button_Arufelvitel5.Text = "Áru felvitel";
+            this.button_Arufelvitel5.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // button_Arufelvitel6
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button7.Location = new System.Drawing.Point(307, 329);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 76;
-            this.button7.Text = "Áru felvitel";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button_Arufelvitel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Arufelvitel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button_Arufelvitel6.Location = new System.Drawing.Point(307, 327);
+            this.button_Arufelvitel6.Name = "button_Arufelvitel6";
+            this.button_Arufelvitel6.Size = new System.Drawing.Size(75, 23);
+            this.button_Arufelvitel6.TabIndex = 76;
+            this.button_Arufelvitel6.Text = "Áru felvitel";
+            this.button_Arufelvitel6.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -601,9 +609,9 @@ namespace proba5._5
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(3, 442);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 77;
-            this.label5.Text = "Nincs megrendelve áru";
+            this.label5.Text = "Nincs Áru";
             // 
             // panel2
             // 
@@ -704,13 +712,13 @@ namespace proba5._5
             this.Controls.Add(this.label_maszknev3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label_maszknev2);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button_Arufelvitel6);
             this.Controls.Add(this.label_maszknev1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_Arufelvitel5);
+            this.Controls.Add(this.button_Arufelvitel4);
+            this.Controls.Add(this.button_Arufelvitel3);
+            this.Controls.Add(this.button_Arufelvitel2);
+            this.Controls.Add(this.button_Arufelvitel1);
             this.Controls.Add(this.label_megrendeltdb6);
             this.Controls.Add(this.label_megrendeltdb5);
             this.Controls.Add(this.label_megrendeltdb4);
@@ -748,12 +756,12 @@ namespace proba5._5
             this.Controls.Add(this.label_db3);
             this.Controls.Add(this.label_db2);
             this.Controls.Add(this.label_db1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button_Listaz);
+            this.Controls.Add(this.comboBox_Maszktipus);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonD);
+            this.Controls.Add(this.radioButtonGY);
+            this.Controls.Add(this.radioButtonBP);
             this.Controls.Add(this.label1);
             this.Name = "Raktar";
             this.Size = new System.Drawing.Size(673, 455);
@@ -765,12 +773,12 @@ namespace proba5._5
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButtonBP;
+        private System.Windows.Forms.RadioButton radioButtonGY;
+        private System.Windows.Forms.RadioButton radioButtonD;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox_Maszktipus;
+        private System.Windows.Forms.Button button_Listaz;
         private System.Windows.Forms.Label label_db1;
         private System.Windows.Forms.Label label_db2;
         private System.Windows.Forms.Label label_db3;
@@ -808,12 +816,12 @@ namespace proba5._5
         private System.Windows.Forms.Label label_megrendeltdb4;
         private System.Windows.Forms.Label label_megrendeltdb5;
         private System.Windows.Forms.Label label_megrendeltdb6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button_Arufelvitel1;
+        private System.Windows.Forms.Button button_Arufelvitel2;
+        private System.Windows.Forms.Button button_Arufelvitel3;
+        private System.Windows.Forms.Button button_Arufelvitel4;
+        private System.Windows.Forms.Button button_Arufelvitel5;
+        private System.Windows.Forms.Button button_Arufelvitel6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;

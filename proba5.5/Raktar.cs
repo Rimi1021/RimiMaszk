@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,7 @@ namespace proba5._5
         /// Mindegyik sorhoz van egy event a textbox érték manuális megváltoztatása miatt, amit darabszamvaltozas x-nek neveztem el
         /// HIBA!!! Ha karaktert írunk bele KÖLL egy regef feltétel
         /// </summary>
-        
+        #region +- gombok és textChangeeventek 
         //1.Sor
         private void button_1_1plusz_Click(object sender, EventArgs e)
         {
@@ -266,9 +267,115 @@ namespace proba5._5
                 MessageBox.Show("Csak számot írhatsz bele");
             }
         }
-
+        #endregion
         /// <summary>
         /// + -  Gombok és textbocChangek Vége
+        /// /// </summary>
+        /// 
+
+        /// <summary>
+        /// FELTÖLTÉS GOMBOK
+        /// /// </summary>
+        /// 
+
+        private void button_Arufelvitel1_Click(object sender, EventArgs e)
+        {
+            //Budapest
+            if (radioButtonBP.Checked == true)
+            {
+                if (comboBox_Maszktipus.SelectedItem == "Gazmaszk")
+                {
+                    if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999)
+                    {
+                        int valtozo = Convert.ToInt32(textBox_1_1.Text);
+                        for (int i = 0; i < valtozo; i++)
+                        {
+                            try
+                            {
+                                using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                                {
+                                    string Feltoltes = "INSERT INTO MaszkAruk VALUES (@masztipusAdat,@maszknevAdat,@keszletarubpAdat,@keszletarugyAdat,@keszletarudAdat,@ar/dbAdat,@akcioAdat)"; //Adatok feltöltése
+                                    using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                                    {
+                                        Parancs.Parameters.AddWithValue("@masztipusAdat", comboBox_Maszktipus.SelectedItem); //Hivatkozott paraméter értékeinek megadása
+                                        Parancs.Parameters.AddWithValue("@maszknevAdat", label_maszknev1.Text); //Hivatkozott paraméter értékeinek megadása
+                                        Parancs.Parameters.AddWithValue("@keszletarubpAdat", 1);
+                                        Parancs.Parameters.AddWithValue("@keszletarugyAdat", null); 
+                                        Parancs.Parameters.AddWithValue("@keszletarudAdat", null);
+                                        Parancs.Parameters.AddWithValue("@ar/dbAdat", null);
+                                        Parancs.Parameters.AddWithValue("@akcioAdat", null);
+                                        Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                        var result = Parancs.ExecuteNonQuery();
+                                        Parancs.Dispose();
+                                        // Hiba keresés, ha nem lett eredmény
+                                        if (result < 0)
+                                        { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                        MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                        Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                                    }
+                                }
+                            }
+                            catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                            { MessageBox.Show("Nem sikerült a csalakozás"); } //Feltöltési probléma esetén megjelenő üzenet
+                            textBox_1_1.Text = "0"; //Aktuális elemek "kiürítése"
+                        }
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            return;
+                        }
+                    }
+                }
+               /* else if (comboBox_Maszktipus.SelectedItem == "Szelepes")
+                {
+
+                }
+                else if (comboBox_Maszktipus.SelectedItem == "Fashion")
+                {
+
+                }
+                else if (comboBox_Maszktipus.SelectedItem == "Szűrős")
+                {
+
+                }
+                else if (comboBox_Maszktipus.SelectedItem == "Egyszerhasználatos")
+                {
+
+                }
+                else if (comboBox_Maszktipus.SelectedItem == "Mintás")
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Válassza ki a MASZKTÍPUST");
+                }*/
+            }
+           /* //Győr
+            else if (radioButtonGY.Checked == true)
+            {
+
+            }
+            //Debrecen
+            else if (radioButtonD.Checked == true)
+            {
+
+            }
+            //Egyiksem
+            else
+            {
+                MessageBox.Show("Válassza ki a Telephelyet");
+            }*/
+        }
+        
+
+        
+
+        
+        /// <summary>
+        /// FELTÖLTÉS GOMBOK vége
         /// /// </summary>
     }
 }

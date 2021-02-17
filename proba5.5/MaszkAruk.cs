@@ -16,7 +16,6 @@ namespace proba5._5
         private double _Ar_db;
         private double _Akcio;
         private int _Id;
-        private int _Utonvan;
         public int Id
         {
             get
@@ -27,18 +26,6 @@ namespace proba5._5
             {
                 if (value >= 0) _Id = value;
                 else throw new Exception("A ID nem lehet negatív érték!");
-            }
-        }
-        public int Utonvan
-        {
-            get
-            {
-                return _Utonvan;
-            }
-            set
-            {
-                if (value != 1) _Utonvan = value;
-                else throw new Exception("Az útvonal csak 1-es értéket vehet fel, ami azt jelöli hogy úton van az áru!");
             }
         }
 
@@ -131,7 +118,7 @@ namespace proba5._5
                 else throw new Exception("Az akció 1-99 értéket vehet fel!");
             }
         }
-        public MaszkAruk(int Id, string Maszknev, string Maszktipus, int KeszletraktarBudapest, int KeszletraktarGyor, int KeszletraktarDebrecen, double Ar_db, double Akcio, int utonvan)
+        public MaszkAruk(int Id, string Maszknev, string Maszktipus, int KeszletraktarBudapest, int KeszletraktarGyor, int KeszletraktarDebrecen, double Ar_db, double Akcio)
         {
             this.Id = Id;
             this.Maszknev = Maszknev;
@@ -141,7 +128,6 @@ namespace proba5._5
             this.KeszletraktarDebrecen = KeszletraktarDebrecen;
             this.Ar_db = Ar_db;
             this.Akcio = Akcio;
-            this.Utonvan = utonvan;
         }
     }
 }

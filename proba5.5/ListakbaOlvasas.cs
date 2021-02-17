@@ -106,7 +106,7 @@ namespace proba5._5
                     Parancs.Dispose();
                     while (LekerdezesParancs.Read())
                     {
-                        SzerverData.MaszInfokOsszes.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]),Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"]),Convert.ToInt32(LekerdezesParancs["utonvan"])));
+                        SzerverData.MaszInfokOsszes.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]),Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"])));
                     }
                     Csatlakozas.Close();
                 }
@@ -125,7 +125,7 @@ namespace proba5._5
                     Parancs.Dispose();
                     while (LekerdezesParancs.Read())
                     {
-                        SzerverData.MaszInfokBP.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"]), Convert.ToInt32(LekerdezesParancs["utonvan"])));
+                        SzerverData.MaszInfokBP.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"])));
                     }
                     Csatlakozas.Close();
                 }
@@ -144,7 +144,7 @@ namespace proba5._5
                     Parancs.Dispose();
                     while (LekerdezesParancs.Read())
                     {
-                        SzerverData.MaszInfokGY.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"]), Convert.ToInt32(LekerdezesParancs["utonvan"])));
+                        SzerverData.MaszInfokGY.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"])));
                     }
                     Csatlakozas.Close();
                 }
@@ -163,7 +163,7 @@ namespace proba5._5
                     Parancs.Dispose();
                     while (LekerdezesParancs.Read())
                     {
-                        SzerverData.MaszInfokD.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"]), Convert.ToInt32(LekerdezesParancs["utonvan"])));
+                        SzerverData.MaszInfokD.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszknev"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar/db"]), Convert.ToDouble(LekerdezesParancs["akcio"])));
                     }
                     Csatlakozas.Close();
                 }
