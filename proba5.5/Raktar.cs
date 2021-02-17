@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace proba5._5
         {
             InitializeComponent();
         }
+        Regex rg = new Regex(@"^[0-9]+$");
         public static int szam1 = 0;
         public static int szam2 = 0;
         public static int szam3 = 0;
@@ -28,7 +30,7 @@ namespace proba5._5
         /// Elsőnek a + - gombok és a textbox change eventeket írom le az alábbiakban.
         /// A felső public stattic szam x valtozók idejonnek
         /// Mindegyik sorhoz van egy event a textbox érték manuális megváltoztatása miatt, amit darabszamvaltozas x-nek neveztem el
-        /// HIBA!!! Ha A textboxba beleírunk majd kitöröljük az adatot HIBÁS feltételt kapunk
+        /// HIBA!!! Ha karaktert írunk bele KÖLL egy regef feltétel
         /// </summary>
         
         //1.Sor
@@ -39,14 +41,22 @@ namespace proba5._5
         }
         private void darabszamvaltozas(object sender, EventArgs e)
         {
-            if (textBox_1_1.Text == "")
+            if (rg.IsMatch(textBox_1_1.Text))
             {
-                szam1 = 0;
+                if (textBox_1_1.Text == "")
+                {
+                    szam1 = 0;
+                }
+                else
+                {
+                    szam1 = Convert.ToInt32(textBox_1_1.Text);
+                }
             }
             else
             {
-                szam1 = Convert.ToInt32(textBox_1_1.Text);
+                MessageBox.Show("Csak számot írhatsz bele");
             }
+            
         }
 
         private void button1_1minusz_Click(object sender, EventArgs e)
@@ -84,13 +94,20 @@ namespace proba5._5
 
         private void darabszamvaltozas2(object sender, EventArgs e)
         {
-            if (textBox_2_2.Text == "")
+            if (rg.IsMatch(textBox_2_2.Text))
             {
-                szam2 = 0;
+                if (textBox_2_2.Text == "")
+                {
+                    szam2 = 0;
+                }
+                else
+                {
+                    szam2 = Convert.ToInt32(textBox_2_2.Text);
+                }
             }
             else
             {
-                szam2 = Convert.ToInt32(textBox_2_2.Text);
+                MessageBox.Show("Csak számot írhatsz bele");
             }
         }
 
@@ -116,13 +133,20 @@ namespace proba5._5
 
         private void darabszamvaltozas3(object sender, EventArgs e)
         {
-            if (textBox_3_3.Text == "")
+            if (rg.IsMatch(textBox_3_3.Text))
             {
-                szam3 = 0;
+                if (textBox_3_3.Text == "")
+                {
+                    szam3 = 0;
+                }
+                else
+                {
+                    szam3 = Convert.ToInt32(textBox_3_3.Text);
+                }
             }
             else
             {
-                szam3 = Convert.ToInt32(textBox_3_3.Text);
+                MessageBox.Show("Csak számot írhatsz bele");
             }
         }
 
@@ -148,13 +172,20 @@ namespace proba5._5
 
         private void darabszamvaltozas4(object sender, EventArgs e)
         {
-            if (textBox_4_4.Text == "")
+            if (rg.IsMatch(textBox_4_4.Text))
             {
-                szam4 = 0;
+                if (textBox_4_4.Text == "")
+                {
+                    szam4 = 0;
+                }
+                else
+                {
+                    szam4 = Convert.ToInt32(textBox_4_4.Text);
+                }
             }
             else
             {
-                szam4 = Convert.ToInt32(textBox_4_4.Text);
+                MessageBox.Show("Csak számot írhatsz bele");
             }
         }
 
@@ -180,13 +211,20 @@ namespace proba5._5
 
         private void darabszamvaltozas5(object sender, EventArgs e)
         {
-            if (textBox_5_5.Text == "")
+            if (rg.IsMatch(textBox_5_5.Text))
             {
-                szam5 = 0;
+                if (textBox_5_5.Text == "")
+                {
+                    szam5 = 0;
+                }
+                else
+                {
+                    szam5 = Convert.ToInt32(textBox_5_5.Text);
+                }
             }
             else
             {
-                szam5 = Convert.ToInt32(textBox_5_5.Text);
+                MessageBox.Show("Csak számot írhatsz bele");
             }
         }
 
@@ -212,13 +250,20 @@ namespace proba5._5
 
         private void darabszamvaltozas6(object sender, EventArgs e)
         {
-            if (textBox_6_6.Text == "")
+            if (rg.IsMatch(textBox_6_6.Text))
             {
-                szam6 = 0;
+                if (textBox_6_6.Text == "")
+                {
+                    szam6 = 0;
+                }
+                else
+                {
+                    szam6 = Convert.ToInt32(textBox_6_6.Text);
+                }
             }
             else
             {
-                szam6 = Convert.ToInt32(textBox_6_6.Text);
+                MessageBox.Show("Csak számot írhatsz bele");
             }
         }
 
