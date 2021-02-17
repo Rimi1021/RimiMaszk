@@ -35,7 +35,6 @@ namespace proba5._5
             this.radioButtonD = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox_Maszktipus = new System.Windows.Forms.ComboBox();
-            this.button_Listaz = new System.Windows.Forms.Button();
             this.label_db1 = new System.Windows.Forms.Label();
             this.label_db2 = new System.Windows.Forms.Label();
             this.label_db3 = new System.Windows.Forms.Label();
@@ -158,16 +157,7 @@ namespace proba5._5
             this.comboBox_Maszktipus.Name = "comboBox_Maszktipus";
             this.comboBox_Maszktipus.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Maszktipus.TabIndex = 5;
-            // 
-            // button_Listaz
-            // 
-            this.button_Listaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_Listaz.Location = new System.Drawing.Point(243, 51);
-            this.button_Listaz.Name = "button_Listaz";
-            this.button_Listaz.Size = new System.Drawing.Size(69, 30);
-            this.button_Listaz.TabIndex = 6;
-            this.button_Listaz.Text = "Listáz";
-            this.button_Listaz.UseVisualStyleBackColor = true;
+            this.comboBox_Maszktipus.SelectedIndexChanged += new System.EventHandler(this.comboBox_Maszktipus_SelectedIndexChanged);
             // 
             // label_db1
             // 
@@ -756,7 +746,6 @@ namespace proba5._5
             this.Controls.Add(this.label_db3);
             this.Controls.Add(this.label_db2);
             this.Controls.Add(this.label_db1);
-            this.Controls.Add(this.button_Listaz);
             this.Controls.Add(this.comboBox_Maszktipus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.radioButtonD);
@@ -778,7 +767,6 @@ namespace proba5._5
         private System.Windows.Forms.RadioButton radioButtonD;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox_Maszktipus;
-        private System.Windows.Forms.Button button_Listaz;
         private System.Windows.Forms.Label label_db1;
         private System.Windows.Forms.Label label_db2;
         private System.Windows.Forms.Label label_db3;

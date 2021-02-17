@@ -294,16 +294,16 @@ namespace proba5._5
                             {
                                 using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
                                 {
-                                    string Feltoltes = "INSERT INTO MaszkAruk VALUES (@masztipusAdat,@maszknevAdat,@keszletarubpAdat,@keszletarugyAdat,@keszletarudAdat,@ar/dbAdat,@akcioAdat)"; //Adatok feltöltése
+                                    string Feltoltes = "INSERT INTO MaszkAruk VALUES (@masztipusAdat,@maszknevAdat,@keszletarubpAdat,@keszletarugyAdat,@keszletarudAdat,@ardbAdat,@akcioAdat)"; //Adatok feltöltése
                                     using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
                                     {
                                         Parancs.Parameters.AddWithValue("@masztipusAdat", comboBox_Maszktipus.SelectedItem); //Hivatkozott paraméter értékeinek megadása
                                         Parancs.Parameters.AddWithValue("@maszknevAdat", label_maszknev1.Text); //Hivatkozott paraméter értékeinek megadása
-                                        Parancs.Parameters.AddWithValue("@keszletarubpAdat", 1);
-                                        Parancs.Parameters.AddWithValue("@keszletarugyAdat", null); 
-                                        Parancs.Parameters.AddWithValue("@keszletarudAdat", null);
-                                        Parancs.Parameters.AddWithValue("@ar/dbAdat", null);
-                                        Parancs.Parameters.AddWithValue("@akcioAdat", null);
+                                        Parancs.Parameters.AddWithValue("@keszletarubpAdat",1);
+                                        Parancs.Parameters.AddWithValue("@keszletarugyAdat",null); 
+                                        Parancs.Parameters.AddWithValue("@keszletarudAdat",null);
+                                        Parancs.Parameters.AddWithValue("@ardbAdat",null);
+                                        Parancs.Parameters.AddWithValue("@akcioAdat",null);
                                         Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
                                         var result = Parancs.ExecuteNonQuery();
                                         Parancs.Dispose();
@@ -369,13 +369,73 @@ namespace proba5._5
                 MessageBox.Show("Válassza ki a Telephelyet");
             }*/
         }
-        
 
-        
-
-        
         /// <summary>
         /// FELTÖLTÉS GOMBOK vége
         /// /// </summary>
+
+        /// <summary>
+        /// /Combobox textevent
+        /// </summary>
+
+        private void comboBox_Maszktipus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_Maszktipus.SelectedIndex == 0) //gaymasyk
+            {
+                label_maszknev1.Text = "Kék";
+                label_maszknev2.Text = "Terepmintás";
+                label_maszknev3.Text = "Zöld";
+                label_maszknev4.Text = "Fekete";
+                label_maszknev5.Text = "Sárga";
+                label_maszknev6.Text = "Fehér";
+            }
+            else if (comboBox_Maszktipus.SelectedIndex == 1) //szelepes
+            {
+                label_maszknev1.Text = "Kék";
+                label_maszknev2.Text = "Rózsaszin";
+                label_maszknev3.Text = "Zöld";
+                label_maszknev4.Text = "Fekete";
+                label_maszknev5.Text = "Sárga";
+                label_maszknev6.Text = "Fehér";
+            }
+            else if (comboBox_Maszktipus.SelectedIndex == 2) //fashion
+            {
+                label_maszknev1.Text = "Kék";
+                label_maszknev2.Text = "Terepmintás";
+                label_maszknev3.Text = "Zöld";
+                label_maszknev4.Text = "Fekete";
+                label_maszknev5.Text = "Sárga";
+                label_maszknev6.Text = "Fehér";
+            }
+            else if (comboBox_Maszktipus.SelectedIndex == 3) //szuros
+            {
+                label_maszknev1.Text = "Kék";
+                label_maszknev2.Text = "Terepmintás";
+                label_maszknev3.Text = "Zöld";
+                label_maszknev4.Text = "Fekete";
+                label_maszknev5.Text = "Sárga";
+                label_maszknev6.Text = "Fehér";
+            }
+            else if (comboBox_Maszktipus.SelectedIndex == 4) //egyszerhasznalatos
+            {
+                label_maszknev1.Text = "Kék";
+                label_maszknev2.Text = "Hupikék";
+                label_maszknev3.Text = "Zöld";
+                label_maszknev4.Text = "Fekete";
+                label_maszknev5.Text = "Rózsaszín";
+                label_maszknev6.Text = "Fehér";
+            }
+            else if (comboBox_Maszktipus.SelectedIndex == 5) //mintás
+            {
+                label_maszknev1.Text = "Marvel";
+                label_maszknev2.Text = "DC";
+                label_maszknev3.Text = "Frozen";
+                label_maszknev4.Text = "Csipkés";
+                label_maszknev5.Text = "Shrek";
+                label_maszknev6.Text = "Mémes";
+            }
+        }
+
+        
     }
 }
