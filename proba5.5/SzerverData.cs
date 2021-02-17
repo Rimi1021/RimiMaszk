@@ -9,13 +9,19 @@ namespace proba5._5
 {
     class SzerverData
     {
+        //Listák Userek
         public static List<DolgozokAdmin> AdminUserLista = new List<DolgozokAdmin>();
         public static List<DolgozokBP> BPUserLista = new List<DolgozokBP>();
         public static List<DolgozokDebrecen> DebUserLista = new List<DolgozokDebrecen>();
         public static List<DolgozokGYOR> GyorUserLista = new List<DolgozokGYOR>();
-        public static List<MaszkAruk> MaszInfok = new List<MaszkAruk>();
+
+        /// Listák Maszkok
+        public static List<MaszkAruk> MaszInfokOsszes = new List<MaszkAruk>();
+        public static List<MaszkAruk> MaszInfokBP = new List<MaszkAruk>();
+        public static List<MaszkAruk> MaszInfokGY = new List<MaszkAruk>();
+        public static List<MaszkAruk> MaszInfokD = new List<MaszkAruk>();
         ////Databases
-        ///USEREK_Adatbázisa_INFO
+        ///USEREK_Adatbázisa_INFO (rossz az elnevezés(Az összes user ott van))
         public static string FileUtvonalAdmin = Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + "\\DolgozokAdmin.mdf";
         public static string SzerverInfoAdmin = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + FileUtvonalAdmin + ";Integrated Security=True";
         

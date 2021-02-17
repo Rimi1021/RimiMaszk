@@ -224,6 +224,7 @@ namespace proba5._5
             this.button_1_1plusz.TabIndex = 19;
             this.button_1_1plusz.Text = "+";
             this.button_1_1plusz.UseVisualStyleBackColor = true;
+            this.button_1_1plusz.Click += new System.EventHandler(this.button_1_1plusz_Click);
             // 
             // textBox_1_1
             // 
@@ -231,6 +232,9 @@ namespace proba5._5
             this.textBox_1_1.Name = "textBox_1_1";
             this.textBox_1_1.Size = new System.Drawing.Size(25, 20);
             this.textBox_1_1.TabIndex = 20;
+            this.textBox_1_1.Text = "0";
+            this.textBox_1_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_1_1.TextChanged += new System.EventHandler(this.darabszamvaltozas);
             // 
             // button1_1minusz
             // 
@@ -240,6 +244,7 @@ namespace proba5._5
             this.button1_1minusz.TabIndex = 21;
             this.button1_1minusz.Text = "-";
             this.button1_1minusz.UseVisualStyleBackColor = true;
+            this.button1_1minusz.Click += new System.EventHandler(this.button1_1minusz_Click);
             // 
             // button_Hianycikk
             // 
@@ -269,6 +274,7 @@ namespace proba5._5
             this.button_2_2plusz.TabIndex = 30;
             this.button_2_2plusz.Text = "+";
             this.button_2_2plusz.UseVisualStyleBackColor = true;
+            this.button_2_2plusz.Click += new System.EventHandler(this.button_2_2plusz_Click);
             // 
             // textBox_2_2
             // 
@@ -276,6 +282,8 @@ namespace proba5._5
             this.textBox_2_2.Name = "textBox_2_2";
             this.textBox_2_2.Size = new System.Drawing.Size(25, 20);
             this.textBox_2_2.TabIndex = 31;
+            this.textBox_2_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_2_2.TextChanged += new System.EventHandler(this.darabszamvaltozas2);
             // 
             // button2_2minusz
             // 
@@ -285,6 +293,7 @@ namespace proba5._5
             this.button2_2minusz.TabIndex = 32;
             this.button2_2minusz.Text = "-";
             this.button2_2minusz.UseVisualStyleBackColor = true;
+            this.button2_2minusz.Click += new System.EventHandler(this.button2_2minusz_Click);
             // 
             // button_3_3plusz
             // 
@@ -294,6 +303,7 @@ namespace proba5._5
             this.button_3_3plusz.TabIndex = 36;
             this.button_3_3plusz.Text = "+";
             this.button_3_3plusz.UseVisualStyleBackColor = true;
+            this.button_3_3plusz.Click += new System.EventHandler(this.button_3_3plusz_Click);
             // 
             // button_4_4plusz
             // 
@@ -303,6 +313,7 @@ namespace proba5._5
             this.button_4_4plusz.TabIndex = 37;
             this.button_4_4plusz.Text = "+";
             this.button_4_4plusz.UseVisualStyleBackColor = true;
+            this.button_4_4plusz.Click += new System.EventHandler(this.button_4_4plusz_Click);
             // 
             // button_5_5plusz
             // 
@@ -312,6 +323,7 @@ namespace proba5._5
             this.button_5_5plusz.TabIndex = 38;
             this.button_5_5plusz.Text = "+";
             this.button_5_5plusz.UseVisualStyleBackColor = true;
+            this.button_5_5plusz.Click += new System.EventHandler(this.button_5_5plusz_Click);
             // 
             // button_6_6plusz
             // 
@@ -321,6 +333,7 @@ namespace proba5._5
             this.button_6_6plusz.TabIndex = 39;
             this.button_6_6plusz.Text = "+";
             this.button_6_6plusz.UseVisualStyleBackColor = true;
+            this.button_6_6plusz.Click += new System.EventHandler(this.button_6_6plusz_Click);
             // 
             // textBox_3_3
             // 
@@ -328,6 +341,8 @@ namespace proba5._5
             this.textBox_3_3.Name = "textBox_3_3";
             this.textBox_3_3.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_3.TabIndex = 40;
+            this.textBox_3_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_3_3.TextChanged += new System.EventHandler(this.darabszamvaltozas3);
             // 
             // textBox_4_4
             // 
@@ -335,6 +350,8 @@ namespace proba5._5
             this.textBox_4_4.Name = "textBox_4_4";
             this.textBox_4_4.Size = new System.Drawing.Size(25, 20);
             this.textBox_4_4.TabIndex = 41;
+            this.textBox_4_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_4_4.TextChanged += new System.EventHandler(this.darabszamvaltozas4);
             // 
             // textBox_5_5
             // 
@@ -342,6 +359,8 @@ namespace proba5._5
             this.textBox_5_5.Name = "textBox_5_5";
             this.textBox_5_5.Size = new System.Drawing.Size(25, 20);
             this.textBox_5_5.TabIndex = 42;
+            this.textBox_5_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_5_5.TextChanged += new System.EventHandler(this.darabszamvaltozas5);
             // 
             // textBox_6_6
             // 
@@ -349,6 +368,8 @@ namespace proba5._5
             this.textBox_6_6.Name = "textBox_6_6";
             this.textBox_6_6.Size = new System.Drawing.Size(25, 20);
             this.textBox_6_6.TabIndex = 43;
+            this.textBox_6_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_6_6.TextChanged += new System.EventHandler(this.darabszamvaltozas6);
             // 
             // button3_3minusz
             // 
@@ -358,6 +379,7 @@ namespace proba5._5
             this.button3_3minusz.TabIndex = 44;
             this.button3_3minusz.Text = "-";
             this.button3_3minusz.UseVisualStyleBackColor = true;
+            this.button3_3minusz.Click += new System.EventHandler(this.button3_3minusz_Click);
             // 
             // button4_4minusz
             // 
@@ -367,6 +389,7 @@ namespace proba5._5
             this.button4_4minusz.TabIndex = 45;
             this.button4_4minusz.Text = "-";
             this.button4_4minusz.UseVisualStyleBackColor = true;
+            this.button4_4minusz.Click += new System.EventHandler(this.button4_4minusz_Click);
             // 
             // button5_5minusz
             // 
@@ -376,6 +399,7 @@ namespace proba5._5
             this.button5_5minusz.TabIndex = 46;
             this.button5_5minusz.Text = "-";
             this.button5_5minusz.UseVisualStyleBackColor = true;
+            this.button5_5minusz.Click += new System.EventHandler(this.button5_5minusz_Click);
             // 
             // button6_6minusz
             // 
@@ -385,6 +409,7 @@ namespace proba5._5
             this.button6_6minusz.TabIndex = 47;
             this.button6_6minusz.Text = "-";
             this.button6_6minusz.UseVisualStyleBackColor = true;
+            this.button6_6minusz.Click += new System.EventHandler(this.button6_6minusz_Click);
             // 
             // button_Rendeles
             // 
