@@ -298,94 +298,61 @@ namespace proba5._5
 
         private void button_Arufelvitel1_Click(object sender, EventArgs e)
         {
+            int valtozo = Convert.ToInt32(textBox_1_1.Text); // uj aru szam
+            string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
+            string maszknevgui = label_maszknev1.Text.ToString();
+
+            // call methid
+
+            //System.Diagnostics.Debug.WriteLine(maszktipusgui+" maszktipusgui");  maszktipus={maszktipusgui}     maszknev={maszknevgui}
+            //System.Diagnostics.Debug.WriteLine(maszknevgui+ " maszktipusgui");  ///Ez itt jaó
             //Budapest
             if (radioButtonBP.Checked == true)
             {
-                if (comboBox_Maszktipus.SelectedIndex == 0) ///////Gázmaszk
+
+                if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999)
                 {
-                    if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999)
+
+                    // call methid
+                    //update_aru_keszlet(valtozo, maszknevgui, maszktipusgui);
+
+                    try
                     {
-                        int valtozo = Convert.ToInt32(textBox_1_1.Text);
-                        for (int i = 0; i < valtozo; i++)
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
                         {
-                            try
+                            System.Diagnostics.Debug.WriteLine("megtortenik a new Sql peldanzositas");
+                            string Feltoltes = $"UPDATE MaszkAruk SET keszletarubudapest = keszletarubudapest + {valtozo} WHERE maszktipus='{maszktipusgui}' AND maszknev='{maszknevgui}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
                             {
-                                using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
-                                {
-                                    string Feltoltes = "INSERT INTO MaszkAruk VALUES (@masztipusAdat,@maszknevAdat,@keszletarubpAdat,@keszletarugyAdat,@keszletarudAdat,@ardbAdat,@akcioAdat)"; //Adatok feltöltése
-                                    using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
-                                    {
-                                        Parancs.Parameters.AddWithValue("@masztipusAdat", comboBox_Maszktipus.SelectedItem); //Hivatkozott paraméter értékeinek megadása
-                                        Parancs.Parameters.AddWithValue("@maszknevAdat", label_maszknev1.Text); //Hivatkozott paraméter értékeinek megadása
-                                        Parancs.Parameters.AddWithValue("@keszletarubpAdat",1);
-                                        Parancs.Parameters.AddWithValue("@keszletarugyAdat",null); 
-                                        Parancs.Parameters.AddWithValue("@keszletarudAdat",null);
-                                        Parancs.Parameters.AddWithValue("@ardbAdat",null);
-                                        Parancs.Parameters.AddWithValue("@akcioAdat",null);
-                                        Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
-                                        var result = Parancs.ExecuteNonQuery();
-                                        Parancs.Dispose();
-                                        // Hiba keresés, ha nem lett eredmény
-                                        if (result < 0)
-                                        { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
-                                        MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
-                                        Csatlakozas.Close(); //Csatlakozási folyamat lezárása
-                                    }
-                                }
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                System.Diagnostics.Debug.WriteLine("Csatlakoy's open");
+                                var result = Parancs.ExecuteNonQuery(); //itt  baj
+                                System.Diagnostics.Debug.WriteLine("Var result parancs.executequery");
+                                Parancs.Dispose();
+                                System.Diagnostics.Debug.WriteLine("Parancs dispose"); 
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
                             }
-                            catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
-                            { MessageBox.Show("Nem sikerült a csalakozás"); } //Feltöltési probléma esetén megjelenő üzenet
-                            textBox_1_1.Text = "0"; //Aktuális elemek "kiürítése"
                         }
                     }
-                    else
-                    {
-                        if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
-                        {
-                            return;
-                        }
-                    }
-                }
-               /* else if (comboBox_Maszktipus.SelectedItem == "Szelepes")
-                {
-
-                }
-                else if (comboBox_Maszktipus.SelectedItem == "Fashion")
-                {
-
-                }
-                else if (comboBox_Maszktipus.SelectedItem == "Szűrős")
-                {
-
-                }
-                else if (comboBox_Maszktipus.SelectedItem == "Egyszerhasználatos")
-                {
-
-                }
-                else if (comboBox_Maszktipus.SelectedItem == "Mintás")
-                {
-
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); } //Feltöltési probléma esetén megjelenő üzenet
+                    textBox_1_1.Text = "0"; //Aktuális elemek "kiürítése"
                 }
                 else
                 {
-                    MessageBox.Show("Válassza ki a MASZKTÍPUST");
-                }*/
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+                
+               
             }
-           /* //Győr
-            else if (radioButtonGY.Checked == true)
-            {
-
-            }
-            //Debrecen
-            else if (radioButtonD.Checked == true)
-            {
-
-            }
-            //Egyiksem
-            else
-            {
-                MessageBox.Show("Válassza ki a Telephelyet");
-            }*/
+           
         }
 
         /// <summary>
@@ -395,65 +362,74 @@ namespace proba5._5
         /// <summary>
         /// /Combobox textevent
         /// </summary>
-
+        #region combobox selectindex = Maszklabelek;
         private void comboBox_Maszktipus_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox_Maszktipus.SelectedIndex == 0) //gaymasyk
             {
-                label_maszknev1.Text = "Kék";
-                label_maszknev2.Text = "Terepmintás";
-                label_maszknev3.Text = "Zöld";
+                label_maszknev1.Text = "Kek";
+                label_maszknev2.Text = "Terepmintas";
+                label_maszknev3.Text = "Zold";
                 label_maszknev4.Text = "Fekete";
-                label_maszknev5.Text = "Sárga";
+                label_maszknev5.Text = "Piros";
                 label_maszknev6.Text = "Fehér";
             }
             else if (comboBox_Maszktipus.SelectedIndex == 1) //szelepes
             {
-                label_maszknev1.Text = "Kék";
-                label_maszknev2.Text = "Rózsaszin";
+                label_maszknev1.Text = "Kek";
+                label_maszknev2.Text = "Rozsaszin";
                 label_maszknev3.Text = "Zöld";
                 label_maszknev4.Text = "Fekete";
-                label_maszknev5.Text = "Sárga";
-                label_maszknev6.Text = "Fehér";
+                label_maszknev5.Text = "Sarga";
+                label_maszknev6.Text = "Feher";
             }
             else if (comboBox_Maszktipus.SelectedIndex == 2) //fashion
             {
-                label_maszknev1.Text = "Kék";
-                label_maszknev2.Text = "Terepmintás";
-                label_maszknev3.Text = "Zöld";
+                label_maszknev1.Text = "Kek";
+                label_maszknev2.Text = "Terepmintas";
+                label_maszknev3.Text = "Zold";
                 label_maszknev4.Text = "Fekete";
-                label_maszknev5.Text = "Sárga";
-                label_maszknev6.Text = "Fehér";
+                label_maszknev5.Text = "Sarga";
+                label_maszknev6.Text = "Feher";
             }
             else if (comboBox_Maszktipus.SelectedIndex == 3) //szuros
             {
-                label_maszknev1.Text = "Kék";
-                label_maszknev2.Text = "Terepmintás";
-                label_maszknev3.Text = "Zöld";
+                label_maszknev1.Text = "Kek";
+                label_maszknev2.Text = "Terepmintas";
+                label_maszknev3.Text = "Zold";
                 label_maszknev4.Text = "Fekete";
-                label_maszknev5.Text = "Sárga";
-                label_maszknev6.Text = "Fehér";
+                label_maszknev5.Text = "Sarga";
+                label_maszknev6.Text = "Feher";
             }
             else if (comboBox_Maszktipus.SelectedIndex == 4) //egyszerhasznalatos
             {
-                label_maszknev1.Text = "Kék";
-                label_maszknev2.Text = "Hupikék";
-                label_maszknev3.Text = "Zöld";
+                label_maszknev1.Text = "Kek";
+                label_maszknev2.Text = "Hupikek";
+                label_maszknev3.Text = "Zold";
                 label_maszknev4.Text = "Fekete";
-                label_maszknev5.Text = "Rózsaszín";
-                label_maszknev6.Text = "Fehér";
+                label_maszknev5.Text = "Rózsaszin";
+                label_maszknev6.Text = "Feher";
             }
             else if (comboBox_Maszktipus.SelectedIndex == 5) //mintás
             {
                 label_maszknev1.Text = "Marvel";
                 label_maszknev2.Text = "DC";
                 label_maszknev3.Text = "Frozen";
-                label_maszknev4.Text = "Csipkés";
+                label_maszknev4.Text = "Csipkes";
                 label_maszknev5.Text = "Shrek";
-                label_maszknev6.Text = "Mémes";
+                label_maszknev6.Text = "Memes";
             }
         }
+        #endregion
+        /// <summary>
+        /// /Combobox textevent Vége
+        /// </summary>
 
+
+        /// <summary>
+        /// /RadioButton eventek
+        /// </summary>
+        #region radiobutton eventek
         private void radioButtonBP_CheckedChanged(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(64,60,64);
@@ -471,5 +447,11 @@ namespace proba5._5
             this.BackColor = Color.FromArgb(0, 204, 204); ;
             label_Raktar.Text = "Raktár: Debrecen";
         }
+        #endregion
+
+
+        /// <summary>
+        /// /RadioButton eventek vége
+        /// </summary>
     }
 }

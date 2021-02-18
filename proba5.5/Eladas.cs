@@ -16,5 +16,10 @@ namespace proba5._5
         {
             InitializeComponent();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

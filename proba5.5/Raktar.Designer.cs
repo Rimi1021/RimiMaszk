@@ -429,6 +429,7 @@ namespace proba5._5
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(3, 429);
@@ -439,6 +440,7 @@ namespace proba5._5
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Navy;
             this.label4.Location = new System.Drawing.Point(6, 416);
@@ -449,6 +451,7 @@ namespace proba5._5
             // 
             // panel_jelzesmegrendelve
             // 
+            this.panel_jelzesmegrendelve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_jelzesmegrendelve.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel_jelzesmegrendelve.Location = new System.Drawing.Point(125, 416);
             this.panel_jelzesmegrendelve.Name = "panel_jelzesmegrendelve";
@@ -457,6 +460,7 @@ namespace proba5._5
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Lime;
             this.panel1.Location = new System.Drawing.Point(125, 429);
             this.panel1.Name = "panel1";
@@ -604,6 +608,7 @@ namespace proba5._5
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(3, 442);
@@ -614,6 +619,7 @@ namespace proba5._5
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.panel2.Location = new System.Drawing.Point(125, 442);
             this.panel2.Name = "panel2";
@@ -622,6 +628,7 @@ namespace proba5._5
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label6.Location = new System.Drawing.Point(180, 416);
@@ -632,6 +639,7 @@ namespace proba5._5
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel3.Location = new System.Drawing.Point(243, 416);
             this.panel3.Name = "panel3";

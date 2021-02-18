@@ -188,7 +188,7 @@ namespace proba5._5
             this.button_Eladas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.button_Eladas.Size = new System.Drawing.Size(183, 32);
             this.button_Eladas.TabIndex = 0;
-            this.button_Eladas.Text = "Eladás";
+            this.button_Eladas.Text = "Termékek áttekintése";
             this.button_Eladas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Eladas.UseVisualStyleBackColor = true;
             this.button_Eladas.Click += new System.EventHandler(this.button_Eladas_Click);
