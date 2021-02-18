@@ -557,6 +557,7 @@ namespace proba5._5
             this.button_Arufelvitel2.TabIndex = 72;
             this.button_Arufelvitel2.Text = "Áru felvitel";
             this.button_Arufelvitel2.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel2.Click += new System.EventHandler(this.button_Arufelvitel2_Click);
             // 
             // button_Arufelvitel3
             // 
@@ -569,6 +570,7 @@ namespace proba5._5
             this.button_Arufelvitel3.TabIndex = 73;
             this.button_Arufelvitel3.Text = "Áru felvitel";
             this.button_Arufelvitel3.UseVisualStyleBackColor = false;
+            this.button_Arufelvitel3.Click += new System.EventHandler(this.button_Arufelvitel3_Click);
             // 
             // button_Arufelvitel4
             // 
