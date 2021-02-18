@@ -312,6 +312,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    textBox_1_1.Text = "0";
                 }
                 else
                 {
@@ -328,6 +329,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    textBox_1_1.Text = "0";
                 }
                 else
                 {
@@ -344,6 +346,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    textBox_1_1.Text = "0";
                 }
                 else
                 {
@@ -458,13 +461,13 @@ namespace proba5._5
                 label_maszknev3.Text = "Zold";
                 label_maszknev4.Text = "Fekete";
                 label_maszknev5.Text = "Piros";
-                label_maszknev6.Text = "Fehér";
+                label_maszknev6.Text = "Feher";
             }
             else if (comboBox_Maszktipus.SelectedIndex == 1) //szelepes
             {
                 label_maszknev1.Text = "Kek";
                 label_maszknev2.Text = "Rozsaszin";
-                label_maszknev3.Text = "Zöld";
+                label_maszknev3.Text = "Zold";
                 label_maszknev4.Text = "Fekete";
                 label_maszknev5.Text = "Sarga";
                 label_maszknev6.Text = "Feher";
@@ -493,7 +496,7 @@ namespace proba5._5
                 label_maszknev2.Text = "Hupikek";
                 label_maszknev3.Text = "Zold";
                 label_maszknev4.Text = "Fekete";
-                label_maszknev5.Text = "Rózsaszin";
+                label_maszknev5.Text = "Rozsaszin";
                 label_maszknev6.Text = "Feher";
             }
             else if (comboBox_Maszktipus.SelectedIndex == 5) //mintás
@@ -536,7 +539,7 @@ namespace proba5._5
         #endregion
 
 
-        //2.Gomb Felvitel
+        //2.Gomb 
         #region  2.Gomb
         private void button_Arufelvitel2_Click(object sender, EventArgs e)
         {
@@ -554,6 +557,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    textBox_2_2.Text = "0";
                 }
                 else
                 {
@@ -570,6 +574,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    textBox_2_2.Text = "0";
                 }
                 else
                 {
@@ -586,6 +591,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    textBox_2_2.Text = "0";
                 }
                 else
                 {
@@ -603,8 +609,8 @@ namespace proba5._5
         #endregion
 
 
-
         /// 3.Gomb
+
 
         #region 3.Gomb
         private void button_Arufelvitel3_Click(object sender, EventArgs e)
@@ -623,6 +629,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    textBox_3_3.Text = "0";
                 }
                 else
                 {
@@ -639,6 +646,7 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    textBox_3_3.Text = "0";
                 }
                 else
                 {
@@ -651,10 +659,11 @@ namespace proba5._5
             else if (radioButtonD.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_2_2.Text) && Convert.ToInt32(textBox_2_2.Text) > 0 && Convert.ToInt32(textBox_2_2.Text) < 999)
+                if (rg.IsMatch(textBox_3_3.Text) && Convert.ToInt32(textBox_3_3.Text) > 0 && Convert.ToInt32(textBox_3_3.Text) < 999)
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    textBox_3_3.Text = "0";
                 }
                 else
                 {
@@ -671,6 +680,213 @@ namespace proba5._5
         }
         #endregion
 
+
+        //4.Gomb
+        #region 4.gomb
+        private void button_Arufelvitel4_Click(object sender, EventArgs e)
+        {
+            int valtozo = Convert.ToInt32(textBox_4_4.Text); // uj aru szam
+            string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
+            string maszknevgui = label_maszknev4.Text.ToString();
+
+            // call methid
+
+            //Budapest
+            if (radioButtonBP.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    textBox_4_4.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else if (radioButtonGY.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    textBox_4_4.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else if (radioButtonD.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    textBox_4_4.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Válassza ki a régiót");
+            }
+        }
+        #endregion
+
+        //5.Gomb
+        #region 5.Gomb
+        private void button_Arufelvitel5_Click(object sender, EventArgs e)
+        {
+            int valtozo = Convert.ToInt32(textBox_5_5.Text); // uj aru szam
+            string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
+            string maszknevgui = label_maszknev5.Text.ToString();
+
+            // call methid
+
+            //Budapest
+            if (radioButtonBP.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    textBox_5_5.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else if (radioButtonGY.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    textBox_5_5.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else if (radioButtonD.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    textBox_5_5.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Válassza ki a régiót");
+            }
+        }
+        #endregion
+
+        //6.Gomb
+        #region 6.Gomb
+        private void button_Arufelvitel6_Click(object sender, EventArgs e)
+        {
+            int valtozo = Convert.ToInt32(textBox_6_6.Text); // uj aru szam
+            string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
+            string maszknevgui = label_maszknev6.Text.ToString();
+
+            // call methid
+
+            //Budapest
+            if (radioButtonBP.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    textBox_6_6.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else if (radioButtonGY.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    textBox_6_6.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else if (radioButtonD.Checked == true)
+            {
+
+                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999)
+                {
+                    // call method
+                    update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    textBox_6_6.Text = "0";
+                }
+                else
+                {
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Válassza ki a régiót");
+            }
+        }
+        #endregion
 
         /// <summary>
         /// /RadioButton eventek vége
