@@ -256,6 +256,7 @@ namespace proba5._5
             this.button_Hianycikk.TabIndex = 28;
             this.button_Hianycikk.Text = "Hiánycikkek";
             this.button_Hianycikk.UseVisualStyleBackColor = true;
+            this.button_Hianycikk.Click += new System.EventHandler(this.button_Hianycikk_Click);
             // 
             // listBox_Hianycikk
             // 

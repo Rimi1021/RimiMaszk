@@ -62,8 +62,8 @@ namespace proba5._5
             }
             set
             {
-                if (value >= 0 && value <= 1) _KeszletraktarBudapest = value;
-                else throw new Exception("A mennyiseg 1 vagy 0 erteket vehet fel!");
+                if (value >= 0 && value <= 10000000) _KeszletraktarBudapest = value;
+                else throw new Exception("A maxertek 10000000");
             }
         }
 
@@ -75,8 +75,8 @@ namespace proba5._5
             }
             set
             {
-                if (value >= 0 && value <= 1) _KeszletraktarGyor = value;
-                else throw new Exception("A mennyiseg 1 vagy 0 erteket vehet fel!");
+                if (value >= 0 && value <= 100000000) _KeszletraktarGyor = value;
+                else throw new Exception("A maxertek 10000000");
             }
         }
 
@@ -88,8 +88,8 @@ namespace proba5._5
             }
             set
             {
-                if (value >= 0 && value <= 1) _KeszletraktarDebrecen = value;
-                else throw new Exception("A mennyiseg 1 vagy 0 erteket vehet fel!");
+                if (value >= 0 && value <= 100000000) _KeszletraktarDebrecen = value;
+                else throw new Exception("A maxertek 10000000");
             }
         }
 

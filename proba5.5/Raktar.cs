@@ -298,7 +298,13 @@ namespace proba5._5
         #region 1.Feltöltésgom Lajebb van a tobbi
         private void button_Arufelvitel1_Click(object sender, EventArgs e)
         {
-            int valtozo = Convert.ToInt32(textBox_1_1.Text); // uj aru szam
+            bool valtozookes = false;
+            int valtozo = 0; // uj aru szam
+            if (textBox_1_1.Text != null && rg.IsMatch(textBox_1_1.Text))
+            {
+                valtozo = Convert.ToInt32(textBox_1_1.Text);
+                valtozookes = true;
+            }
             string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
             string maszknevgui = label_maszknev1.Text.ToString();
 
@@ -308,15 +314,16 @@ namespace proba5._5
             if (radioButtonBP.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999)
+                if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
                     textBox_1_1.Text = "0";
+                    valtozookes = false;
                 }
                 else
                 {
-                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    if (MessageBox.Show("Hiba a feltöltés során", "A feltöltendő mennyiség 0-1000 közé eshet és csak számot adhatsz meg és válassza ki a maszktípust", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
                     {
                         return;
                     }
@@ -325,7 +332,7 @@ namespace proba5._5
             else if (radioButtonGY.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999)
+                if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
@@ -342,7 +349,7 @@ namespace proba5._5
             else if (radioButtonD.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999)
+                if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
@@ -399,7 +406,7 @@ namespace proba5._5
             {
                 using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
                 {
-                    string Feltoltes = $"UPDATE MaszkAruk SET keszletarugyor = keszletarubudapest + {valtozo} WHERE maszktipus='{maszktipusgui}' AND maszknev='{maszknevgui}'"; //Adatok feltöltése
+                    string Feltoltes = $"UPDATE MaszkAruk SET keszletarugyor = keszletarugyor + {valtozo} WHERE maszktipus='{maszktipusgui}' AND maszknev='{maszknevgui}'"; //Adatok feltöltése
                     using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
                     {
                         Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
@@ -425,7 +432,7 @@ namespace proba5._5
             {
                 using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
                 {
-                    string Feltoltes = $"UPDATE MaszkAruk SET keszletarudebrecen = keszletarubudapest + {valtozo} WHERE maszktipus='{maszktipusgui}' AND maszknev='{maszknevgui}'"; //Adatok feltöltése
+                    string Feltoltes = $"UPDATE MaszkAruk SET keszletarudebrecen = keszletarudebrecen + {valtozo} WHERE maszktipus='{maszktipusgui}' AND maszknev='{maszknevgui}'"; //Adatok feltöltése
                     using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
                     {
                         Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
@@ -543,7 +550,13 @@ namespace proba5._5
         #region  2.Gomb
         private void button_Arufelvitel2_Click(object sender, EventArgs e)
         {
-            int valtozo = Convert.ToInt32(textBox_2_2.Text); // uj aru szam
+            bool valtozookes = false;
+            int valtozo = 0; // uj aru szam
+            if (textBox_2_2.Text != null && rg.IsMatch(textBox_2_2.Text))
+            {
+                valtozo = Convert.ToInt32(textBox_2_2.Text);
+                valtozookes = true;
+            }
             string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
             string maszknevgui = label_maszknev2.Text.ToString();
 
@@ -553,7 +566,7 @@ namespace proba5._5
             if (radioButtonBP.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_2_2.Text) && Convert.ToInt32(textBox_2_2.Text) > 0 && Convert.ToInt32(textBox_2_2.Text) < 999)
+                if (rg.IsMatch(textBox_2_2.Text) && Convert.ToInt32(textBox_2_2.Text) > 0 && Convert.ToInt32(textBox_2_2.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
@@ -570,7 +583,7 @@ namespace proba5._5
             else if (radioButtonGY.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_2_2.Text) && Convert.ToInt32(textBox_2_2.Text) > 0 && Convert.ToInt32(textBox_2_2.Text) < 999)
+                if (rg.IsMatch(textBox_2_2.Text) && Convert.ToInt32(textBox_2_2.Text) > 0 && Convert.ToInt32(textBox_2_2.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
@@ -587,7 +600,7 @@ namespace proba5._5
             else if (radioButtonD.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_2_2.Text) && Convert.ToInt32(textBox_2_2.Text) > 0 && Convert.ToInt32(textBox_2_2.Text) < 999)
+                if (rg.IsMatch(textBox_2_2.Text) && Convert.ToInt32(textBox_2_2.Text) > 0 && Convert.ToInt32(textBox_2_2.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
@@ -615,7 +628,13 @@ namespace proba5._5
         #region 3.Gomb
         private void button_Arufelvitel3_Click(object sender, EventArgs e)
         {
-            int valtozo = Convert.ToInt32(textBox_3_3.Text); // uj aru szam
+            bool valtozookes = false;
+            int valtozo = 0; // uj aru szam
+            if (textBox_3_3.Text != null && rg.IsMatch(textBox_3_3.Text))
+            {
+                valtozo = Convert.ToInt32(textBox_3_3.Text);
+                valtozookes = true;
+            }
             string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
             string maszknevgui = label_maszknev3.Text.ToString();
 
@@ -625,7 +644,7 @@ namespace proba5._5
             if (radioButtonBP.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_3_3.Text) && Convert.ToInt32(textBox_3_3.Text) > 0 && Convert.ToInt32(textBox_3_3.Text) < 999)
+                if (rg.IsMatch(textBox_3_3.Text) && Convert.ToInt32(textBox_3_3.Text) > 0 && Convert.ToInt32(textBox_3_3.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
@@ -642,7 +661,7 @@ namespace proba5._5
             else if (radioButtonGY.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_3_3.Text) && Convert.ToInt32(textBox_3_3.Text) > 0 && Convert.ToInt32(textBox_3_3.Text) < 999)
+                if (rg.IsMatch(textBox_3_3.Text) && Convert.ToInt32(textBox_3_3.Text) > 0 && Convert.ToInt32(textBox_3_3.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
@@ -659,7 +678,7 @@ namespace proba5._5
             else if (radioButtonD.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_3_3.Text) && Convert.ToInt32(textBox_3_3.Text) > 0 && Convert.ToInt32(textBox_3_3.Text) < 999)
+                if (rg.IsMatch(textBox_3_3.Text) && Convert.ToInt32(textBox_3_3.Text) > 0 && Convert.ToInt32(textBox_3_3.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
@@ -685,7 +704,13 @@ namespace proba5._5
         #region 4.gomb
         private void button_Arufelvitel4_Click(object sender, EventArgs e)
         {
-            int valtozo = Convert.ToInt32(textBox_4_4.Text); // uj aru szam
+            bool valtozookes = false;
+            int valtozo = 0; // uj aru szam
+            if (textBox_4_4.Text != null && rg.IsMatch(textBox_4_4.Text))
+            {
+                valtozo = Convert.ToInt32(textBox_4_4.Text);
+                valtozookes = true;
+            }
             string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
             string maszknevgui = label_maszknev4.Text.ToString();
 
@@ -695,7 +720,7 @@ namespace proba5._5
             if (radioButtonBP.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999)
+                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
@@ -712,7 +737,7 @@ namespace proba5._5
             else if (radioButtonGY.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999)
+                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
@@ -729,7 +754,7 @@ namespace proba5._5
             else if (radioButtonD.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999)
+                if (rg.IsMatch(textBox_4_4.Text) && Convert.ToInt32(textBox_4_4.Text) > 0 && Convert.ToInt32(textBox_4_4.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
@@ -754,7 +779,13 @@ namespace proba5._5
         #region 5.Gomb
         private void button_Arufelvitel5_Click(object sender, EventArgs e)
         {
-            int valtozo = Convert.ToInt32(textBox_5_5.Text); // uj aru szam
+            bool valtozookes = false;
+            int valtozo = 0; // uj aru szam
+            if (textBox_5_5.Text != null && rg.IsMatch(textBox_5_5.Text))
+            {
+                valtozo = Convert.ToInt32(textBox_5_5.Text);
+                valtozookes = true;
+            }
             string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
             string maszknevgui = label_maszknev5.Text.ToString();
 
@@ -764,7 +795,7 @@ namespace proba5._5
             if (radioButtonBP.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999)
+                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
@@ -781,7 +812,7 @@ namespace proba5._5
             else if (radioButtonGY.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999)
+                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
@@ -798,7 +829,7 @@ namespace proba5._5
             else if (radioButtonD.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999)
+                if (rg.IsMatch(textBox_5_5.Text) && Convert.ToInt32(textBox_5_5.Text) > 0 && Convert.ToInt32(textBox_5_5.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
@@ -823,7 +854,13 @@ namespace proba5._5
         #region 6.Gomb
         private void button_Arufelvitel6_Click(object sender, EventArgs e)
         {
-            int valtozo = Convert.ToInt32(textBox_6_6.Text); // uj aru szam
+            bool valtozookes = false;
+            int valtozo = 0; // uj aru szam
+            if (textBox_6_6.Text != null && rg.IsMatch(textBox_6_6.Text))
+            {
+                valtozo = Convert.ToInt32(textBox_6_6.Text);
+                valtozookes = true;
+            }
             string maszktipusgui = Convert.ToString(comboBox_Maszktipus.SelectedItem);
             string maszknevgui = label_maszknev6.Text.ToString();
 
@@ -833,7 +870,7 @@ namespace proba5._5
             if (radioButtonBP.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999)
+                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
@@ -850,7 +887,7 @@ namespace proba5._5
             else if (radioButtonGY.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999)
+                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
@@ -867,7 +904,7 @@ namespace proba5._5
             else if (radioButtonD.Checked == true)
             {
 
-                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999)
+                if (rg.IsMatch(textBox_6_6.Text) && Convert.ToInt32(textBox_6_6.Text) > 0 && Convert.ToInt32(textBox_6_6.Text) < 999 && comboBox_Maszktipus.SelectedItem != null && valtozookes == true)
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
@@ -891,5 +928,30 @@ namespace proba5._5
         /// <summary>
         /// /RadioButton eventek vége
         /// </summary>
+
+        //Áruk listaclearing es belefeleolvasas
+        public static void Tisztalista() 
+        {
+            SzerverData.MaszInfokOsszes.Clear();
+            ListakbaOlvasas.MaszarukListabaOlvasas();
+            SzerverData.MaszInfokBP.Clear();
+            ListakbaOlvasas.MaszarukListabaOlvasasBP();
+            SzerverData.MaszInfokGY.Clear();
+            ListakbaOlvasas.MaszarukListabaOlvasasGY();
+            SzerverData.MaszInfokD.Clear();
+            ListakbaOlvasas.MaszarukListabaOlvasasD();
+        }
+        
+        private void button_Hianycikk_Click(object sender, EventArgs e)
+        {
+            Tisztalista();
+            for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+            {
+                if (SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest < 50)
+                {
+                    listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus +";"+ SzerverData.MaszInfokOsszes[i].Maszknev +";"+ SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; BUdapest");
+                }
+            }
+        }
     }
 }
