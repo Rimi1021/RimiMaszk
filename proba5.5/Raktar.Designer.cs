@@ -88,6 +88,7 @@ namespace proba5._5
             this.label_maszknev3 = new System.Windows.Forms.Label();
             this.label_maszknev2 = new System.Windows.Forms.Label();
             this.label_maszknev1 = new System.Windows.Forms.Label();
+            this.label_Raktar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -110,6 +111,7 @@ namespace proba5._5
             this.radioButtonBP.TabStop = true;
             this.radioButtonBP.Text = "Budapest";
             this.radioButtonBP.UseVisualStyleBackColor = true;
+            this.radioButtonBP.CheckedChanged += new System.EventHandler(this.radioButtonBP_CheckedChanged);
             // 
             // radioButtonGY
             // 
@@ -121,6 +123,7 @@ namespace proba5._5
             this.radioButtonGY.TabStop = true;
             this.radioButtonGY.Text = "Győr";
             this.radioButtonGY.UseVisualStyleBackColor = true;
+            this.radioButtonGY.CheckedChanged += new System.EventHandler(this.radioButtonGY_CheckedChanged);
             // 
             // radioButtonD
             // 
@@ -132,6 +135,7 @@ namespace proba5._5
             this.radioButtonD.TabStop = true;
             this.radioButtonD.Text = "Debrecen";
             this.radioButtonD.UseVisualStyleBackColor = true;
+            this.radioButtonD.CheckedChanged += new System.EventHandler(this.radioButtonD_CheckedChanged);
             // 
             // label2
             // 
@@ -279,6 +283,7 @@ namespace proba5._5
             this.textBox_2_2.Name = "textBox_2_2";
             this.textBox_2_2.Size = new System.Drawing.Size(25, 20);
             this.textBox_2_2.TabIndex = 31;
+            this.textBox_2_2.Text = "0";
             this.textBox_2_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_2_2.TextChanged += new System.EventHandler(this.darabszamvaltozas2);
             // 
@@ -338,6 +343,7 @@ namespace proba5._5
             this.textBox_3_3.Name = "textBox_3_3";
             this.textBox_3_3.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_3.TabIndex = 40;
+            this.textBox_3_3.Text = "0";
             this.textBox_3_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_3_3.TextChanged += new System.EventHandler(this.darabszamvaltozas3);
             // 
@@ -347,6 +353,7 @@ namespace proba5._5
             this.textBox_4_4.Name = "textBox_4_4";
             this.textBox_4_4.Size = new System.Drawing.Size(25, 20);
             this.textBox_4_4.TabIndex = 41;
+            this.textBox_4_4.Text = "0";
             this.textBox_4_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_4_4.TextChanged += new System.EventHandler(this.darabszamvaltozas4);
             // 
@@ -356,6 +363,7 @@ namespace proba5._5
             this.textBox_5_5.Name = "textBox_5_5";
             this.textBox_5_5.Size = new System.Drawing.Size(25, 20);
             this.textBox_5_5.TabIndex = 42;
+            this.textBox_5_5.Text = "0";
             this.textBox_5_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_5_5.TextChanged += new System.EventHandler(this.darabszamvaltozas5);
             // 
@@ -365,6 +373,7 @@ namespace proba5._5
             this.textBox_6_6.Name = "textBox_6_6";
             this.textBox_6_6.Size = new System.Drawing.Size(25, 20);
             this.textBox_6_6.TabIndex = 43;
+            this.textBox_6_6.Text = "0";
             this.textBox_6_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_6_6.TextChanged += new System.EventHandler(this.darabszamvaltozas6);
             // 
@@ -461,9 +470,9 @@ namespace proba5._5
             this.label_megrendeltdb1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label_megrendeltdb1.Location = new System.Drawing.Point(271, 140);
             this.label_megrendeltdb1.Name = "label_megrendeltdb1";
-            this.label_megrendeltdb1.Size = new System.Drawing.Size(28, 13);
+            this.label_megrendeltdb1.Size = new System.Drawing.Size(14, 13);
             this.label_megrendeltdb1.TabIndex = 65;
-            this.label_megrendeltdb1.Text = "100";
+            this.label_megrendeltdb1.Text = "0";
             // 
             // label_megrendeltdb2
             // 
@@ -472,9 +481,9 @@ namespace proba5._5
             this.label_megrendeltdb2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label_megrendeltdb2.Location = new System.Drawing.Point(269, 178);
             this.label_megrendeltdb2.Name = "label_megrendeltdb2";
-            this.label_megrendeltdb2.Size = new System.Drawing.Size(28, 13);
+            this.label_megrendeltdb2.Size = new System.Drawing.Size(14, 13);
             this.label_megrendeltdb2.TabIndex = 66;
-            this.label_megrendeltdb2.Text = "100";
+            this.label_megrendeltdb2.Text = "0";
             // 
             // label_megrendeltdb3
             // 
@@ -483,9 +492,9 @@ namespace proba5._5
             this.label_megrendeltdb3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label_megrendeltdb3.Location = new System.Drawing.Point(270, 213);
             this.label_megrendeltdb3.Name = "label_megrendeltdb3";
-            this.label_megrendeltdb3.Size = new System.Drawing.Size(28, 13);
+            this.label_megrendeltdb3.Size = new System.Drawing.Size(14, 13);
             this.label_megrendeltdb3.TabIndex = 67;
-            this.label_megrendeltdb3.Text = "100";
+            this.label_megrendeltdb3.Text = "0";
             // 
             // label_megrendeltdb4
             // 
@@ -494,9 +503,9 @@ namespace proba5._5
             this.label_megrendeltdb4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label_megrendeltdb4.Location = new System.Drawing.Point(271, 253);
             this.label_megrendeltdb4.Name = "label_megrendeltdb4";
-            this.label_megrendeltdb4.Size = new System.Drawing.Size(28, 13);
+            this.label_megrendeltdb4.Size = new System.Drawing.Size(14, 13);
             this.label_megrendeltdb4.TabIndex = 68;
-            this.label_megrendeltdb4.Text = "100";
+            this.label_megrendeltdb4.Text = "0";
             // 
             // label_megrendeltdb5
             // 
@@ -505,9 +514,9 @@ namespace proba5._5
             this.label_megrendeltdb5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label_megrendeltdb5.Location = new System.Drawing.Point(269, 293);
             this.label_megrendeltdb5.Name = "label_megrendeltdb5";
-            this.label_megrendeltdb5.Size = new System.Drawing.Size(28, 13);
+            this.label_megrendeltdb5.Size = new System.Drawing.Size(14, 13);
             this.label_megrendeltdb5.TabIndex = 69;
-            this.label_megrendeltdb5.Text = "100";
+            this.label_megrendeltdb5.Text = "0";
             // 
             // label_megrendeltdb6
             // 
@@ -516,9 +525,9 @@ namespace proba5._5
             this.label_megrendeltdb6.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label_megrendeltdb6.Location = new System.Drawing.Point(269, 333);
             this.label_megrendeltdb6.Name = "label_megrendeltdb6";
-            this.label_megrendeltdb6.Size = new System.Drawing.Size(28, 13);
+            this.label_megrendeltdb6.Size = new System.Drawing.Size(14, 13);
             this.label_megrendeltdb6.TabIndex = 70;
-            this.label_megrendeltdb6.Text = "100";
+            this.label_megrendeltdb6.Text = "0";
             // 
             // button_Arufelvitel1
             // 
@@ -689,10 +698,21 @@ namespace proba5._5
             this.label_maszknev1.TabIndex = 19;
             this.label_maszknev1.Text = "Maszknév";
             // 
+            // label_Raktar
+            // 
+            this.label_Raktar.AutoSize = true;
+            this.label_Raktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_Raktar.Location = new System.Drawing.Point(12, 91);
+            this.label_Raktar.Name = "label_Raktar";
+            this.label_Raktar.Size = new System.Drawing.Size(87, 25);
+            this.label_Raktar.TabIndex = 80;
+            this.label_Raktar.Text = "Raktár: ";
+            // 
             // Raktar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label_Raktar);
             this.Controls.Add(this.label_maszknev6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label_maszknev5);
@@ -820,5 +840,6 @@ namespace proba5._5
         private System.Windows.Forms.Label label_maszknev3;
         private System.Windows.Forms.Label label_maszknev2;
         private System.Windows.Forms.Label label_maszknev1;
+        private System.Windows.Forms.Label label_Raktar;
     }
 }

@@ -44,18 +44,21 @@ namespace proba5._5
         {
             if (rg.IsMatch(textBox_1_1.Text))
             {
-                if (textBox_1_1.Text == "")
+                if (textBox_1_1.Text == "" || Convert.ToInt32(textBox_1_1.Text) == 0)
                 {
                     szam1 = 0;
+                    button_Arufelvitel1.BackColor = Color.FromArgb(255,128,128);
                 }
                 else
                 {
                     szam1 = Convert.ToInt32(textBox_1_1.Text);
+                    button_Arufelvitel1.BackColor = Color.Lime;
                 }
             }
             else
             {
                 MessageBox.Show("Csak számot írhatsz bele");
+                button_Arufelvitel1.BackColor = Color.FromArgb(255, 128, 128);
             }
             
         }
@@ -97,18 +100,21 @@ namespace proba5._5
         {
             if (rg.IsMatch(textBox_2_2.Text))
             {
-                if (textBox_2_2.Text == "")
+                if (textBox_2_2.Text == "" || Convert.ToInt32(textBox_2_2.Text) == 0)
                 {
                     szam2 = 0;
+                    button_Arufelvitel2.BackColor = Color.FromArgb(255, 128, 128);
                 }
                 else
                 {
                     szam2 = Convert.ToInt32(textBox_2_2.Text);
+                    button_Arufelvitel2.BackColor = Color.Lime;
                 }
             }
             else
             {
                 MessageBox.Show("Csak számot írhatsz bele");
+                button_Arufelvitel2.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
 
@@ -136,18 +142,21 @@ namespace proba5._5
         {
             if (rg.IsMatch(textBox_3_3.Text))
             {
-                if (textBox_3_3.Text == "")
+                if (textBox_3_3.Text == "" || Convert.ToInt32(textBox_3_3.Text) == 0)
                 {
                     szam3 = 0;
+                    button_Arufelvitel3.BackColor = Color.FromArgb(255, 128, 128);
                 }
                 else
                 {
                     szam3 = Convert.ToInt32(textBox_3_3.Text);
+                    button_Arufelvitel3.BackColor = Color.Lime;
                 }
             }
             else
             {
                 MessageBox.Show("Csak számot írhatsz bele");
+                button_Arufelvitel3.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
 
@@ -175,18 +184,21 @@ namespace proba5._5
         {
             if (rg.IsMatch(textBox_4_4.Text))
             {
-                if (textBox_4_4.Text == "")
+                if (textBox_4_4.Text == "" || Convert.ToInt32(textBox_4_4.Text) == 0)
                 {
                     szam4 = 0;
+                    button_Arufelvitel4.BackColor = Color.FromArgb(255, 128, 128);
                 }
                 else
                 {
                     szam4 = Convert.ToInt32(textBox_4_4.Text);
+                    button_Arufelvitel4.BackColor = Color.Lime;
                 }
             }
             else
             {
                 MessageBox.Show("Csak számot írhatsz bele");
+                button_Arufelvitel4.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
 
@@ -214,22 +226,25 @@ namespace proba5._5
         {
             if (rg.IsMatch(textBox_5_5.Text))
             {
-                if (textBox_5_5.Text == "")
+                if (textBox_5_5.Text == "" || Convert.ToInt32(textBox_5_5.Text) == 0)
                 {
                     szam5 = 0;
+                    button_Arufelvitel5.BackColor = Color.FromArgb(255, 128, 128);
                 }
                 else
                 {
                     szam5 = Convert.ToInt32(textBox_5_5.Text);
+                    button_Arufelvitel5.BackColor = Color.Lime;
                 }
             }
             else
             {
                 MessageBox.Show("Csak számot írhatsz bele");
+                button_Arufelvitel5.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
 
-        //5.Sor
+        //6.Sor
         private void button_6_6plusz_Click(object sender, EventArgs e)
         {
             szam6++;
@@ -253,18 +268,21 @@ namespace proba5._5
         {
             if (rg.IsMatch(textBox_6_6.Text))
             {
-                if (textBox_6_6.Text == "")
+                if (textBox_6_6.Text == "" || Convert.ToInt32(textBox_6_6.Text) == 0)
                 {
                     szam6 = 0;
+                    button_Arufelvitel6.BackColor = Color.FromArgb(255, 128, 128);
                 }
                 else
                 {
                     szam6 = Convert.ToInt32(textBox_6_6.Text);
+                    button_Arufelvitel6.BackColor = Color.Lime;
                 }
             }
             else
             {
                 MessageBox.Show("Csak számot írhatsz bele");
+                button_Arufelvitel6.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
         #endregion
@@ -283,7 +301,7 @@ namespace proba5._5
             //Budapest
             if (radioButtonBP.Checked == true)
             {
-                if (comboBox_Maszktipus.SelectedItem == "Gazmaszk")
+                if (comboBox_Maszktipus.SelectedIndex == 0) ///////Gázmaszk
                 {
                     if (rg.IsMatch(textBox_1_1.Text) && Convert.ToInt32(textBox_1_1.Text) > 0 && Convert.ToInt32(textBox_1_1.Text) < 999)
                     {
@@ -436,6 +454,22 @@ namespace proba5._5
             }
         }
 
-        
+        private void radioButtonBP_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(64,60,64);
+            label_Raktar.Text = "Raktár: Budapest";
+        }
+
+        private void radioButtonGY_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(97, 201, 35);
+            label_Raktar.Text = "Raktár: Győr";
+        }
+
+        private void radioButtonD_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(0, 204, 204); ;
+            label_Raktar.Text = "Raktár: Debrecen";
+        }
     }
 }
