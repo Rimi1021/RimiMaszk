@@ -101,8 +101,8 @@ namespace proba5._5
             }
             set
             {
-                if (value >= 300 && value <= 5000) _Ar_db = value;
-                else throw new Exception("A Maszk erteke 50 es 5000 k0ze eshet!");
+                if (value >= 50 && value <= 50000) _Ar_db = value;
+                else throw new Exception("A Maszk erteke 50 es 50000 k0ze eshet!");
             }
         }
 
@@ -114,15 +114,15 @@ namespace proba5._5
             }
             set
             {
-                if (value >= 1 && value <= 99) _Akcio = value;
-                else throw new Exception("Az akció 1-99 értéket vehet fel!");
+                if (value >= 0 && value <= 99) _Akcio = value;
+                else throw new Exception("Az akció 0-99 értéket vehet fel!");
             }
         }
-        public MaszkAruk(int Id, string Maszknev, string Maszktipus, int KeszletraktarBudapest, int KeszletraktarGyor, int KeszletraktarDebrecen, double Ar_db, double Akcio)
+        public MaszkAruk(int Id, string Maszktipus, string Maszknev, int KeszletraktarBudapest, int KeszletraktarGyor, int KeszletraktarDebrecen, double Ar_db, double Akcio)
         {
             this.Id = Id;
-            this.Maszknev = Maszknev;
             this.Maszktipus = Maszktipus;
+            this.Maszknev = Maszknev;
             this.KeszletraktarBudapest = KeszletraktarBudapest;
             this.KeszletraktarGyor = KeszletraktarGyor;
             this.KeszletraktarDebrecen = KeszletraktarDebrecen;

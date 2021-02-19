@@ -17,6 +17,8 @@ namespace proba5._5
         public Raktar()
         {
             InitializeComponent();
+            Tisztalista();
+            hianycikk();
         }
         Regex rg = new Regex(@"^[0-9]+$");
         public static int szam1 = 0;
@@ -893,22 +895,132 @@ namespace proba5._5
         {
             SzerverData.MaszInfokOsszes.Clear();
             ListakbaOlvasas.MaszarukListabaOlvasas();
-            SzerverData.MaszInfokBP.Clear();
-            ListakbaOlvasas.MaszarukListabaOlvasasBP();
-            SzerverData.MaszInfokGY.Clear();
-            ListakbaOlvasas.MaszarukListabaOlvasasGY();
-            SzerverData.MaszInfokD.Clear();
-            ListakbaOlvasas.MaszarukListabaOlvasasD();
         }
-        
+
+        #region Hiánycikkbutton
         private void button_Hianycikk_Click(object sender, EventArgs e)
         {
-            Tisztalista();
+            listBox_Hianycikk.Items.Clear();
+
+            if (checkBox_BP.Checked == false && checkBox_D.Checked == false && checkBox_Gy.Checked == false)
+            {
+                MessageBox.Show("Válasszon ki legalább egy db checkboxot");
+            }
+            if (checkBox_BP.Checked == true)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest < 20)
+                    {
+                        listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; BUdapest");
+                    }
+                }
+            }
+            if (checkBox_Gy.Checked == true)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].KeszletraktarGyor < 20)
+                    {
+                        listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; Győr");
+                    }
+                }
+            }
+            if (checkBox_D.Checked == true)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen < 20)
+                    {
+                        listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; Debrecen");
+                    }
+                }
+            }
+            
+        }
+        #endregion
+        public static bool BPpiros = false;
+        public static bool GYpiros = false;
+        public static bool Dpiros = false;
+        #region Hianycikk vizsgalat a hianycikk buttonnnak piros lesz és kiirja hol van baj
+        public void hianycikk() 
+        {
             for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
             {
-                if (SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest < 50)
+                if (SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest < 20)
                 {
-                    listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus +";"+ SzerverData.MaszInfokOsszes[i].Maszknev +";"+ SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; BUdapest");
+                    BPpiros = true;
+                }
+            }
+            for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+            {
+                if (SzerverData.MaszInfokOsszes[i].KeszletraktarGyor < 20)
+                {
+                    GYpiros = true;
+                }
+            }
+            for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+            {
+                if (SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen < 20)
+                {
+                    Dpiros = true;
+                }
+            }
+            if (BPpiros == true)
+            {
+                button_Hianycikk.Text = button_Hianycikk.Text + "; BP";
+                button_Hianycikk.ForeColor = Color.FromArgb(150, 35, 42);
+            }
+            if (GYpiros == true)
+            {
+                button_Hianycikk.Text = button_Hianycikk.Text + "; GY";
+                button_Hianycikk.ForeColor = Color.FromArgb(150, 35, 42);
+            }
+            if (Dpiros == true)
+            {
+                button_Hianycikk.Text = button_Hianycikk.Text + "; D";
+                button_Hianycikk.ForeColor = Color.FromArgb(150, 35, 42);
+            }
+        }
+        #endregion
+
+        private void button_Frissítés_Click(object sender, EventArgs e)
+        {
+            Tisztalista();
+            listBox_Hianycikk.Items.Clear();
+
+            if (checkBox_BP.Checked == false && checkBox_D.Checked == false && checkBox_Gy.Checked == false)
+            {
+                listBox_Hianycikk.Items.Clear();
+            }
+            if (checkBox_BP.Checked == true)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest < 20)
+                    {
+                        listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; BUdapest");
+                    }
+                }
+            }
+            if (checkBox_Gy.Checked == true)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].KeszletraktarGyor < 20)
+                    {
+                        listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; Győr");
+                    }
+                }
+            }
+            if (checkBox_D.Checked == true)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen < 20)
+                    {
+                        listBox_Hianycikk.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "; Debrecen");
+                    }
                 }
             }
         }

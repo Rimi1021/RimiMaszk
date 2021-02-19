@@ -62,15 +62,7 @@ namespace proba5._5
             this.button5_5minusz = new System.Windows.Forms.Button();
             this.button6_6minusz = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel_jelzesmegrendelve = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label_megrendeltdb1 = new System.Windows.Forms.Label();
-            this.label_megrendeltdb2 = new System.Windows.Forms.Label();
-            this.label_megrendeltdb3 = new System.Windows.Forms.Label();
-            this.label_megrendeltdb4 = new System.Windows.Forms.Label();
-            this.label_megrendeltdb5 = new System.Windows.Forms.Label();
-            this.label_megrendeltdb6 = new System.Windows.Forms.Label();
             this.button_Arufelvitel1 = new System.Windows.Forms.Button();
             this.button_Arufelvitel2 = new System.Windows.Forms.Button();
             this.button_Arufelvitel3 = new System.Windows.Forms.Button();
@@ -88,6 +80,10 @@ namespace proba5._5
             this.label_maszknev2 = new System.Windows.Forms.Label();
             this.label_maszknev1 = new System.Windows.Forms.Label();
             this.label_Raktar = new System.Windows.Forms.Label();
+            this.checkBox_BP = new System.Windows.Forms.CheckBox();
+            this.checkBox_Gy = new System.Windows.Forms.CheckBox();
+            this.checkBox_D = new System.Windows.Forms.CheckBox();
+            this.button_Frissítés = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -250,7 +246,7 @@ namespace proba5._5
             // 
             this.button_Hianycikk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Hianycikk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_Hianycikk.Location = new System.Drawing.Point(388, 16);
+            this.button_Hianycikk.Location = new System.Drawing.Point(388, 9);
             this.button_Hianycikk.Name = "button_Hianycikk";
             this.button_Hianycikk.Size = new System.Drawing.Size(271, 27);
             this.button_Hianycikk.TabIndex = 28;
@@ -264,7 +260,7 @@ namespace proba5._5
             this.listBox_Hianycikk.FormattingEnabled = true;
             this.listBox_Hianycikk.Location = new System.Drawing.Point(388, 60);
             this.listBox_Hianycikk.Name = "listBox_Hianycikk";
-            this.listBox_Hianycikk.Size = new System.Drawing.Size(271, 381);
+            this.listBox_Hianycikk.Size = new System.Drawing.Size(271, 368);
             this.listBox_Hianycikk.TabIndex = 29;
             // 
             // button_2_2plusz
@@ -428,26 +424,6 @@ namespace proba5._5
             this.label3.TabIndex = 61;
             this.label3.Text = "Megadott áruk felvitele";
             // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(6, 416);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 13);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Megrendelt áru/db";
-            // 
-            // panel_jelzesmegrendelve
-            // 
-            this.panel_jelzesmegrendelve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel_jelzesmegrendelve.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel_jelzesmegrendelve.Location = new System.Drawing.Point(125, 416);
-            this.panel_jelzesmegrendelve.Name = "panel_jelzesmegrendelve";
-            this.panel_jelzesmegrendelve.Size = new System.Drawing.Size(15, 13);
-            this.panel_jelzesmegrendelve.TabIndex = 63;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -457,78 +433,12 @@ namespace proba5._5
             this.panel1.Size = new System.Drawing.Size(15, 13);
             this.panel1.TabIndex = 64;
             // 
-            // label_megrendeltdb1
-            // 
-            this.label_megrendeltdb1.AutoSize = true;
-            this.label_megrendeltdb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_megrendeltdb1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb1.Location = new System.Drawing.Point(271, 167);
-            this.label_megrendeltdb1.Name = "label_megrendeltdb1";
-            this.label_megrendeltdb1.Size = new System.Drawing.Size(14, 13);
-            this.label_megrendeltdb1.TabIndex = 65;
-            this.label_megrendeltdb1.Text = "0";
-            // 
-            // label_megrendeltdb2
-            // 
-            this.label_megrendeltdb2.AutoSize = true;
-            this.label_megrendeltdb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_megrendeltdb2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb2.Location = new System.Drawing.Point(269, 205);
-            this.label_megrendeltdb2.Name = "label_megrendeltdb2";
-            this.label_megrendeltdb2.Size = new System.Drawing.Size(14, 13);
-            this.label_megrendeltdb2.TabIndex = 66;
-            this.label_megrendeltdb2.Text = "0";
-            // 
-            // label_megrendeltdb3
-            // 
-            this.label_megrendeltdb3.AutoSize = true;
-            this.label_megrendeltdb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_megrendeltdb3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb3.Location = new System.Drawing.Point(270, 240);
-            this.label_megrendeltdb3.Name = "label_megrendeltdb3";
-            this.label_megrendeltdb3.Size = new System.Drawing.Size(14, 13);
-            this.label_megrendeltdb3.TabIndex = 67;
-            this.label_megrendeltdb3.Text = "0";
-            // 
-            // label_megrendeltdb4
-            // 
-            this.label_megrendeltdb4.AutoSize = true;
-            this.label_megrendeltdb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_megrendeltdb4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb4.Location = new System.Drawing.Point(271, 280);
-            this.label_megrendeltdb4.Name = "label_megrendeltdb4";
-            this.label_megrendeltdb4.Size = new System.Drawing.Size(14, 13);
-            this.label_megrendeltdb4.TabIndex = 68;
-            this.label_megrendeltdb4.Text = "0";
-            // 
-            // label_megrendeltdb5
-            // 
-            this.label_megrendeltdb5.AutoSize = true;
-            this.label_megrendeltdb5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_megrendeltdb5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb5.Location = new System.Drawing.Point(269, 320);
-            this.label_megrendeltdb5.Name = "label_megrendeltdb5";
-            this.label_megrendeltdb5.Size = new System.Drawing.Size(14, 13);
-            this.label_megrendeltdb5.TabIndex = 69;
-            this.label_megrendeltdb5.Text = "0";
-            // 
-            // label_megrendeltdb6
-            // 
-            this.label_megrendeltdb6.AutoSize = true;
-            this.label_megrendeltdb6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_megrendeltdb6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_megrendeltdb6.Location = new System.Drawing.Point(269, 360);
-            this.label_megrendeltdb6.Name = "label_megrendeltdb6";
-            this.label_megrendeltdb6.Size = new System.Drawing.Size(14, 13);
-            this.label_megrendeltdb6.TabIndex = 70;
-            this.label_megrendeltdb6.Text = "0";
-            // 
             // button_Arufelvitel1
             // 
             this.button_Arufelvitel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Arufelvitel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Arufelvitel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button_Arufelvitel1.Location = new System.Drawing.Point(307, 162);
+            this.button_Arufelvitel1.Location = new System.Drawing.Point(281, 162);
             this.button_Arufelvitel1.Name = "button_Arufelvitel1";
             this.button_Arufelvitel1.Size = new System.Drawing.Size(75, 23);
             this.button_Arufelvitel1.TabIndex = 71;
@@ -541,7 +451,7 @@ namespace proba5._5
             this.button_Arufelvitel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Arufelvitel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Arufelvitel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button_Arufelvitel2.Location = new System.Drawing.Point(307, 200);
+            this.button_Arufelvitel2.Location = new System.Drawing.Point(281, 200);
             this.button_Arufelvitel2.Name = "button_Arufelvitel2";
             this.button_Arufelvitel2.Size = new System.Drawing.Size(75, 23);
             this.button_Arufelvitel2.TabIndex = 72;
@@ -554,7 +464,7 @@ namespace proba5._5
             this.button_Arufelvitel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Arufelvitel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Arufelvitel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button_Arufelvitel3.Location = new System.Drawing.Point(307, 235);
+            this.button_Arufelvitel3.Location = new System.Drawing.Point(281, 235);
             this.button_Arufelvitel3.Name = "button_Arufelvitel3";
             this.button_Arufelvitel3.Size = new System.Drawing.Size(75, 23);
             this.button_Arufelvitel3.TabIndex = 73;
@@ -567,7 +477,7 @@ namespace proba5._5
             this.button_Arufelvitel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Arufelvitel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Arufelvitel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button_Arufelvitel4.Location = new System.Drawing.Point(307, 271);
+            this.button_Arufelvitel4.Location = new System.Drawing.Point(281, 271);
             this.button_Arufelvitel4.Name = "button_Arufelvitel4";
             this.button_Arufelvitel4.Size = new System.Drawing.Size(75, 23);
             this.button_Arufelvitel4.TabIndex = 74;
@@ -580,7 +490,7 @@ namespace proba5._5
             this.button_Arufelvitel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Arufelvitel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Arufelvitel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button_Arufelvitel5.Location = new System.Drawing.Point(307, 314);
+            this.button_Arufelvitel5.Location = new System.Drawing.Point(281, 314);
             this.button_Arufelvitel5.Name = "button_Arufelvitel5";
             this.button_Arufelvitel5.Size = new System.Drawing.Size(75, 23);
             this.button_Arufelvitel5.TabIndex = 75;
@@ -593,7 +503,7 @@ namespace proba5._5
             this.button_Arufelvitel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_Arufelvitel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Arufelvitel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button_Arufelvitel6.Location = new System.Drawing.Point(307, 354);
+            this.button_Arufelvitel6.Location = new System.Drawing.Point(281, 354);
             this.button_Arufelvitel6.Name = "button_Arufelvitel6";
             this.button_Arufelvitel6.Size = new System.Drawing.Size(75, 23);
             this.button_Arufelvitel6.TabIndex = 76;
@@ -626,7 +536,7 @@ namespace proba5._5
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(180, 416);
+            this.label6.Location = new System.Drawing.Point(3, 415);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 78;
@@ -636,7 +546,7 @@ namespace proba5._5
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(243, 416);
+            this.panel3.Location = new System.Drawing.Point(125, 415);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(15, 13);
             this.panel3.TabIndex = 79;
@@ -711,10 +621,54 @@ namespace proba5._5
             this.label_Raktar.TabIndex = 80;
             this.label_Raktar.Text = "Raktár: ";
             // 
+            // checkBox_BP
+            // 
+            this.checkBox_BP.AutoSize = true;
+            this.checkBox_BP.Location = new System.Drawing.Point(388, 42);
+            this.checkBox_BP.Name = "checkBox_BP";
+            this.checkBox_BP.Size = new System.Drawing.Size(71, 17);
+            this.checkBox_BP.TabIndex = 81;
+            this.checkBox_BP.Text = "Budapest";
+            this.checkBox_BP.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Gy
+            // 
+            this.checkBox_Gy.AutoSize = true;
+            this.checkBox_Gy.Location = new System.Drawing.Point(498, 42);
+            this.checkBox_Gy.Name = "checkBox_Gy";
+            this.checkBox_Gy.Size = new System.Drawing.Size(48, 17);
+            this.checkBox_Gy.TabIndex = 82;
+            this.checkBox_Gy.Text = "Győr";
+            this.checkBox_Gy.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_D
+            // 
+            this.checkBox_D.AutoSize = true;
+            this.checkBox_D.Location = new System.Drawing.Point(579, 42);
+            this.checkBox_D.Name = "checkBox_D";
+            this.checkBox_D.Size = new System.Drawing.Size(73, 17);
+            this.checkBox_D.TabIndex = 83;
+            this.checkBox_D.Text = "Debrecen";
+            this.checkBox_D.UseVisualStyleBackColor = true;
+            // 
+            // button_Frissítés
+            // 
+            this.button_Frissítés.Location = new System.Drawing.Point(584, 429);
+            this.button_Frissítés.Name = "button_Frissítés";
+            this.button_Frissítés.Size = new System.Drawing.Size(75, 23);
+            this.button_Frissítés.TabIndex = 84;
+            this.button_Frissítés.Text = "Frissítés";
+            this.button_Frissítés.UseVisualStyleBackColor = true;
+            this.button_Frissítés.Click += new System.EventHandler(this.button_Frissítés_Click);
+            // 
             // Raktar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button_Frissítés);
+            this.Controls.Add(this.checkBox_D);
+            this.Controls.Add(this.checkBox_Gy);
+            this.Controls.Add(this.checkBox_BP);
             this.Controls.Add(this.label_Raktar);
             this.Controls.Add(this.label_maszknev6);
             this.Controls.Add(this.panel3);
@@ -732,15 +686,7 @@ namespace proba5._5
             this.Controls.Add(this.button_Arufelvitel3);
             this.Controls.Add(this.button_Arufelvitel2);
             this.Controls.Add(this.button_Arufelvitel1);
-            this.Controls.Add(this.label_megrendeltdb6);
-            this.Controls.Add(this.label_megrendeltdb5);
-            this.Controls.Add(this.label_megrendeltdb4);
-            this.Controls.Add(this.label_megrendeltdb3);
-            this.Controls.Add(this.label_megrendeltdb2);
-            this.Controls.Add(this.label_megrendeltdb1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel_jelzesmegrendelve);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button6_6minusz);
             this.Controls.Add(this.button5_5minusz);
@@ -816,15 +762,7 @@ namespace proba5._5
         private System.Windows.Forms.Button button5_5minusz;
         private System.Windows.Forms.Button button6_6minusz;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel_jelzesmegrendelve;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label_megrendeltdb1;
-        private System.Windows.Forms.Label label_megrendeltdb2;
-        private System.Windows.Forms.Label label_megrendeltdb3;
-        private System.Windows.Forms.Label label_megrendeltdb4;
-        private System.Windows.Forms.Label label_megrendeltdb5;
-        private System.Windows.Forms.Label label_megrendeltdb6;
         private System.Windows.Forms.Button button_Arufelvitel1;
         private System.Windows.Forms.Button button_Arufelvitel2;
         private System.Windows.Forms.Button button_Arufelvitel3;
@@ -842,5 +780,9 @@ namespace proba5._5
         private System.Windows.Forms.Label label_maszknev2;
         private System.Windows.Forms.Label label_maszknev1;
         private System.Windows.Forms.Label label_Raktar;
+        private System.Windows.Forms.CheckBox checkBox_BP;
+        private System.Windows.Forms.CheckBox checkBox_Gy;
+        private System.Windows.Forms.CheckBox checkBox_D;
+        private System.Windows.Forms.Button button_Frissítés;
     }
 }

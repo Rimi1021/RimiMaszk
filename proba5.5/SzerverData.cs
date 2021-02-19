@@ -14,12 +14,9 @@ namespace proba5._5
         public static List<DolgozokBP> BPUserLista = new List<DolgozokBP>();
         public static List<DolgozokDebrecen> DebUserLista = new List<DolgozokDebrecen>();
         public static List<DolgozokGYOR> GyorUserLista = new List<DolgozokGYOR>();
-
         /// Listák Maszkok
         public static List<MaszkAruk> MaszInfokOsszes = new List<MaszkAruk>();
-        public static List<MaszkAruk> MaszInfokBP = new List<MaszkAruk>();
-        public static List<MaszkAruk> MaszInfokGY = new List<MaszkAruk>();
-        public static List<MaszkAruk> MaszInfokD = new List<MaszkAruk>();
+        
         ////Databases
         ///USEREK_Adatbázisa_INFO (rossz az elnevezés(Az összes user ott van))
         public static string FileUtvonalAdmin = Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + "\\DolgozokAdmin.mdf";
