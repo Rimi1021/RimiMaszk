@@ -26,7 +26,7 @@ namespace proba5._5
         public static int szam5 = 0;
         public static int szam6 = 0;
 
-
+        //rg.IsMatch(textBox_5_5.Text)
         /// <summary>
         /// Elsőnek a + - gombok és a textbox change eventeket írom le az alábbiakban.
         /// A felső public stattic szam x valtozók idejonnek
@@ -57,7 +57,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Csak számot írhatsz bele");
+                MessageBox.Show("Csak pozitiv számot írhatsz bele");
                 button_Arufelvitel1.BackColor = Color.FromArgb(255, 128, 128);
             }
             
@@ -65,15 +65,8 @@ namespace proba5._5
 
         private void button1_1minusz_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox_1_1.Text) > 0)
-            {
-                szam1--;
-                textBox_1_1.Text = Convert.ToString(szam1);
-            }
-            else
-            {
-                MessageBox.Show("Negatív érték nem lehet");
-            }
+            szam1--;
+            textBox_1_1.Text = Convert.ToString(szam1);
         }
 
         //2.Sor
@@ -85,15 +78,8 @@ namespace proba5._5
 
         private void button2_2minusz_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox_2_2.Text) > 0)
-            {
-                szam2--;
-                textBox_2_2.Text = Convert.ToString(szam2);
-            }
-            else
-            {
-                MessageBox.Show("Negatív érték nem lehet");
-            }
+            szam2--;
+            textBox_2_2.Text = Convert.ToString(szam2);
         }
 
         private void darabszamvaltozas2(object sender, EventArgs e)
@@ -113,7 +99,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Csak számot írhatsz bele");
+                MessageBox.Show("Csak pozitív számot írhatsz bele");
                 button_Arufelvitel2.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
@@ -127,15 +113,10 @@ namespace proba5._5
 
         private void button3_3minusz_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox_3_3.Text) > 0)
-            {
-                szam3--;
-                textBox_3_3.Text = Convert.ToString(szam3);
-            }
-            else
-            {
-                MessageBox.Show("Negatív érték nem lehet");
-            }
+            
+            szam3--;
+            textBox_3_3.Text = Convert.ToString(szam3);
+            
         }
 
         private void darabszamvaltozas3(object sender, EventArgs e)
@@ -155,7 +136,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Csak számot írhatsz bele");
+                MessageBox.Show("Csak pozitív számot írhatsz bele");
                 button_Arufelvitel3.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
@@ -169,15 +150,10 @@ namespace proba5._5
 
         private void button4_4minusz_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox_4_4.Text) > 0)
-            {
-                szam4--;
-                textBox_4_4.Text = Convert.ToString(szam4);
-            }
-            else
-            {
-                MessageBox.Show("Negatív érték nem lehet");
-            }
+            
+            szam4--;
+            textBox_4_4.Text = Convert.ToString(szam4);
+            
         }
 
         private void darabszamvaltozas4(object sender, EventArgs e)
@@ -197,7 +173,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Csak számot írhatsz bele");
+                MessageBox.Show("Csak pozitív számot írhatsz bele");
                 button_Arufelvitel4.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
@@ -211,15 +187,8 @@ namespace proba5._5
 
         private void button5_5minusz_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox_5_5.Text) > 0)
-            {
-                szam5--;
-                textBox_5_5.Text = Convert.ToString(szam5);
-            }
-            else
-            {
-                MessageBox.Show("Negatív érték nem lehet");
-            }
+            szam5--;
+            textBox_5_5.Text = Convert.ToString(szam5);
         }
 
         private void darabszamvaltozas5(object sender, EventArgs e)
@@ -239,7 +208,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Csak számot írhatsz bele");
+                MessageBox.Show("Csak pozitív számot írhatsz bele");
                 button_Arufelvitel5.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
@@ -253,15 +222,8 @@ namespace proba5._5
 
         private void button6_6minusz_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBox_6_6.Text) > 0)
-            {
-                szam6--;
-                textBox_6_6.Text = Convert.ToString(szam6);
-            }
-            else
-            {
-                MessageBox.Show("Negatív érték nem lehet");
-            }
+            szam6--;
+            textBox_6_6.Text = Convert.ToString(szam6);
         }
 
         private void darabszamvaltozas6(object sender, EventArgs e)
@@ -281,7 +243,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Csak számot írhatsz bele");
+                MessageBox.Show("Csak pozitív számot írhatsz bele");
                 button_Arufelvitel6.BackColor = Color.FromArgb(255, 128, 128);
             }
         }
@@ -396,7 +358,6 @@ namespace proba5._5
             }
             catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
             { MessageBox.Show("Nem sikerült a csalakozás"); } //Feltöltési probléma esetén megjelenő üzenet
-            textBox_1_1.Text = "0"; //Aktuális elemek "kiürítése"
         }
 
         //Updat metodus  buttonokra Győebe
@@ -422,7 +383,6 @@ namespace proba5._5
             }
             catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
             { MessageBox.Show("Nem sikerült a csalakozás"); } //Feltöltési probléma esetén megjelenő üzenet
-            textBox_1_1.Text = "0"; //Aktuális elemek "kiürítése"
         }
 
         //Updat metodus  buttonokra Debrecenbe
@@ -448,7 +408,6 @@ namespace proba5._5
             }
             catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
             { MessageBox.Show("Nem sikerült a csalakozás"); } //Feltöltési probléma esetén megjelenő üzenet
-            textBox_1_1.Text = "0"; //Aktuális elemek "kiürítése"
         }
         #endregion
         /// <summary>
