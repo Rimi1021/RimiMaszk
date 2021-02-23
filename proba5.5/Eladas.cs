@@ -94,52 +94,54 @@ namespace proba5._5
             {
                 MessageBox.Show("Válasszon a termék csoprtok közül");
             }
-            else if (radioButton_Osszes.Checked == true && comboBox.SelectedItem == "Osszes") //HA radio és combobox Összes-Összes
+            else if (radioButton_Osszes.Checked == true && comboBox.SelectedItem.ToString() == "Osszes") //HA radio és combobox Összes-Összes
             {
                 Raktar.Tisztalista();
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
-                    listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db +"Ft"+";"+ SzerverData.MaszInfokOsszes[i].Akcio+";BUdapest");
+                    listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db +"Ft"+";"+ SzerverData.MaszInfokOsszes[i].Akcio+ "%_Akcio" + ";BUdapest");
                 }
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
-                    listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarGyor + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db + "Ft" + ";" + SzerverData.MaszInfokOsszes[i].Akcio + ";Győr");
+                    listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarGyor + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db + "Ft" + ";" + SzerverData.MaszInfokOsszes[i].Akcio + "%_Akcio" + ";Győr");
                 }
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
-                    listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db + "Ft" + ";" + SzerverData.MaszInfokOsszes[i].Akcio + ";Debrecen");
+                    listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db + "Ft" + ";" + SzerverData.MaszInfokOsszes[i].Akcio +"%_Akcio"+ ";Debrecen");
                 }
             }
-            else if (radioButton_Osszes.Checked == true && comboBox.SelectedItem != "Osszes") // Ha radio Osszes combo nem Osszes
+            else if (radioButton_Osszes.Checked == true && comboBox.SelectedItem.ToString() != "Osszes") // Ha radio Osszes combo nem Osszes
             {
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
                     if (SzerverData.MaszInfokOsszes[i].Maszktipus == Termek4querry)
                     {
-                        listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + ";BUdapest");
-                        listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarGyor + ";Győr");
-                        listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen + ";Debrecen");
+                        listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db + "Ft" + ";" + SzerverData.MaszInfokOsszes[i].Akcio + "%_Akcio" + ";BUdapest");
+                        listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarGyor + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db + "Ft" + ";" + SzerverData.MaszInfokOsszes[i].Akcio + "%_Akcio" + ";Győr");
+                        listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db + "Ft" + ";" + SzerverData.MaszInfokOsszes[i].Akcio + "%_Akcio" + ";Debrecen");
                     }
                 }
             }
-            else if (radioButton_Osszes.Checked != true && comboBox.SelectedItem == "Osszes") ///Ha Radio nem osszes, de combo igen
+            else if (radioButton_Osszes.Checked != true && comboBox.SelectedItem.ToString() == "Osszes") ///Ha Radio nem osszes, de combo igen
             {
-                string Lekeredezes = $"SELECT * FROM MaszkAruk WHERE COLUMN_NAME='{Location4querry}'";
-                using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
-                {
-                    using (SqlCommand Parancs = new SqlCommand(Lekeredezes, Csatlakozas))
-                    {
-                        Csatlakozas.Open();
-                        SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
-                        Parancs.Dispose();
-                        while (LekerdezesParancs.Read())
-                        {
-                            listBox_Lista.Items.Add(LekerdezesParancs["maszktipus"] + ";" + LekerdezesParancs["maszknev"] + ";" + LekerdezesParancs[Location4querry] + ";" + LekerdezesParancs["ar/db"]+";"+ LekerdezesParancs["akcio"]);
-                        }
-                        MessageBox.Show("Az adatok kiolvasása megtörtént!", "Siker!", MessageBoxButtons.OK);
-                        Csatlakozas.Close();
-                    }
-                }
+                 string Lekeredezes = $"SELECT * FROM MaszkAruk WHERE COLUMN_NAME='{Location4querry}'";
+                 using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                 {
+                     using (SqlCommand Parancs = new SqlCommand(Lekeredezes, Csatlakozas))
+                     {
+                         Csatlakozas.Open();
+                         SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
+                         Parancs.Dispose();
+                         while (LekerdezesParancs.Read())
+                         {
+                             listBox_Lista.Items.Add(LekerdezesParancs["maszktipus"] + ";" + LekerdezesParancs["maszknev"] + ";" + LekerdezesParancs[Location4querry] + ";" + LekerdezesParancs["ar/db"]+";"+ LekerdezesParancs["akcio"]);
+                         }
+                         MessageBox.Show("Az adatok kiolvasása megtörtént!", "Siker!", MessageBoxButtons.OK);
+                         Csatlakozas.Close();
+                     }
+                 }
+                
+
             }
         }
         #region Export
