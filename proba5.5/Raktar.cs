@@ -501,7 +501,7 @@ namespace proba5._5
 
         private void radioButtonD_CheckedChanged(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(0, 204, 204); ;
+            this.BackColor = Color.FromArgb(0, 204, 204); 
             label_Raktar.Text = "Raktár: Debrecen";
         }
         #endregion

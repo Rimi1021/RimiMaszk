@@ -34,15 +34,13 @@ namespace proba5._5
             this.radioButtonBP = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton_Osszes = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button_Listazas = new System.Windows.Forms.Button();
-            this.button_Frissites = new System.Windows.Forms.Button();
-            this.button_elemtorles = new System.Windows.Forms.Button();
             this.button_export = new System.Windows.Forms.Button();
             this.textBox_Export = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox_Lista = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // radioButtonD
@@ -55,6 +53,7 @@ namespace proba5._5
             this.radioButtonD.TabStop = true;
             this.radioButtonD.Text = "Debrecen";
             this.radioButtonD.UseVisualStyleBackColor = true;
+            this.radioButtonD.CheckedChanged += new System.EventHandler(this.hatterszinradiobuttondebrecen);
             // 
             // radioButtonGY
             // 
@@ -66,6 +65,7 @@ namespace proba5._5
             this.radioButtonGY.TabStop = true;
             this.radioButtonGY.Text = "Győr";
             this.radioButtonGY.UseVisualStyleBackColor = true;
+            this.radioButtonGY.CheckedChanged += new System.EventHandler(this.hatterszinradiobuttongyor);
             // 
             // radioButtonBP
             // 
@@ -77,6 +77,7 @@ namespace proba5._5
             this.radioButtonBP.TabStop = true;
             this.radioButtonBP.Text = "Budapest";
             this.radioButtonBP.UseVisualStyleBackColor = true;
+            this.radioButtonBP.CheckedChanged += new System.EventHandler(this.szinvaltozasradiogomb);
             // 
             // label1
             // 
@@ -98,14 +99,24 @@ namespace proba5._5
             this.radioButton_Osszes.TabStop = true;
             this.radioButton_Osszes.Text = "Összes";
             this.radioButton_Osszes.UseVisualStyleBackColor = true;
+            this.radioButton_Osszes.CheckedChanged += new System.EventHandler(this.hatterosszesradiobutton);
             // 
-            // comboBox1
+            // comboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 13;
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Items.AddRange(new object[] {
+            "Gazmaszk",
+            "Szelepes",
+            "Fashion",
+            "Szuros",
+            "Egyszerhasznalatos",
+            "Mintas",
+            "Osszes"});
+            this.comboBox.Location = new System.Drawing.Point(155, 42);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(121, 21);
+            this.comboBox.TabIndex = 13;
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.termekvaltozas);
             // 
             // label2
             // 
@@ -126,37 +137,21 @@ namespace proba5._5
             this.button_Listazas.TabIndex = 15;
             this.button_Listazas.Text = "Listázás";
             this.button_Listazas.UseVisualStyleBackColor = true;
-            // 
-            // button_Frissites
-            // 
-            this.button_Frissites.Location = new System.Drawing.Point(556, 50);
-            this.button_Frissites.Name = "button_Frissites";
-            this.button_Frissites.Size = new System.Drawing.Size(75, 23);
-            this.button_Frissites.TabIndex = 17;
-            this.button_Frissites.Text = "Frissítés";
-            this.button_Frissites.UseVisualStyleBackColor = true;
-            // 
-            // button_elemtorles
-            // 
-            this.button_elemtorles.Location = new System.Drawing.Point(35, 413);
-            this.button_elemtorles.Name = "button_elemtorles";
-            this.button_elemtorles.Size = new System.Drawing.Size(87, 23);
-            this.button_elemtorles.TabIndex = 18;
-            this.button_elemtorles.Text = "Elemtörlés";
-            this.button_elemtorles.UseVisualStyleBackColor = true;
+            this.button_Listazas.Click += new System.EventHandler(this.button_Listazas_Click);
             // 
             // button_export
             // 
-            this.button_export.Location = new System.Drawing.Point(128, 413);
+            this.button_export.Location = new System.Drawing.Point(35, 411);
             this.button_export.Name = "button_export";
             this.button_export.Size = new System.Drawing.Size(125, 23);
             this.button_export.TabIndex = 19;
             this.button_export.Text = "Exportálás";
             this.button_export.UseVisualStyleBackColor = true;
+            this.button_export.Click += new System.EventHandler(this.button_export_Click);
             // 
             // textBox_Export
             // 
-            this.textBox_Export.Location = new System.Drawing.Point(269, 415);
+            this.textBox_Export.Location = new System.Drawing.Point(176, 413);
             this.textBox_Export.Name = "textBox_Export";
             this.textBox_Export.Size = new System.Drawing.Size(100, 20);
             this.textBox_Export.TabIndex = 20;
@@ -164,34 +159,32 @@ namespace proba5._5
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(375, 423);
+            this.label3.Location = new System.Drawing.Point(282, 421);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 21;
             this.label3.Text = ".CSV";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // listBox1
+            // listBox_Lista
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(35, 76);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(596, 329);
-            this.listBox1.TabIndex = 22;
+            this.listBox_Lista.FormattingEnabled = true;
+            this.listBox_Lista.Location = new System.Drawing.Point(35, 76);
+            this.listBox_Lista.Name = "listBox_Lista";
+            this.listBox_Lista.Size = new System.Drawing.Size(596, 329);
+            this.listBox_Lista.TabIndex = 22;
             // 
             // Eladas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBox_Lista);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_Export);
             this.Controls.Add(this.button_export);
-            this.Controls.Add(this.button_elemtorles);
-            this.Controls.Add(this.button_Frissites);
             this.Controls.Add(this.button_Listazas);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox);
             this.Controls.Add(this.radioButton_Osszes);
             this.Controls.Add(this.radioButtonD);
             this.Controls.Add(this.radioButtonGY);
@@ -211,14 +204,12 @@ namespace proba5._5
         private System.Windows.Forms.RadioButton radioButtonBP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton_Osszes;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_Listazas;
-        private System.Windows.Forms.Button button_Frissites;
-        private System.Windows.Forms.Button button_elemtorles;
         private System.Windows.Forms.Button button_export;
         private System.Windows.Forms.TextBox textBox_Export;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox_Lista;
     }
 }
