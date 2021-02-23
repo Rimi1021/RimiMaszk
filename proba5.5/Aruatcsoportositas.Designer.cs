@@ -51,6 +51,11 @@ namespace proba5._5
             this.button_Atcsoportosit = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button_Találat = new System.Windows.Forms.Button();
+            this.label_Honnan = new System.Windows.Forms.Label();
+            this.label_Hova = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,37 +88,40 @@ namespace proba5._5
             // 
             this.radioButton_BP.AutoSize = true;
             this.radioButton_BP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton_BP.Location = new System.Drawing.Point(21, 40);
+            this.radioButton_BP.Location = new System.Drawing.Point(108, 38);
             this.radioButton_BP.Name = "radioButton_BP";
             this.radioButton_BP.Size = new System.Drawing.Size(96, 24);
             this.radioButton_BP.TabIndex = 1;
             this.radioButton_BP.TabStop = true;
             this.radioButton_BP.Text = "Budapest";
             this.radioButton_BP.UseVisualStyleBackColor = true;
+            this.radioButton_BP.CheckedChanged += new System.EventHandler(this.radioButton_BP_CheckedChanged);
             // 
             // radioButton_Gyor
             // 
             this.radioButton_Gyor.AutoSize = true;
             this.radioButton_Gyor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton_Gyor.Location = new System.Drawing.Point(118, 40);
+            this.radioButton_Gyor.Location = new System.Drawing.Point(213, 38);
             this.radioButton_Gyor.Name = "radioButton_Gyor";
             this.radioButton_Gyor.Size = new System.Drawing.Size(61, 24);
             this.radioButton_Gyor.TabIndex = 2;
             this.radioButton_Gyor.TabStop = true;
             this.radioButton_Gyor.Text = "Győr";
             this.radioButton_Gyor.UseVisualStyleBackColor = true;
+            this.radioButton_Gyor.CheckedChanged += new System.EventHandler(this.radioButton_Gyor_CheckedChanged);
             // 
             // radioButton_Debrecen
             // 
             this.radioButton_Debrecen.AutoSize = true;
             this.radioButton_Debrecen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton_Debrecen.Location = new System.Drawing.Point(185, 40);
+            this.radioButton_Debrecen.Location = new System.Drawing.Point(280, 40);
             this.radioButton_Debrecen.Name = "radioButton_Debrecen";
             this.radioButton_Debrecen.Size = new System.Drawing.Size(97, 24);
             this.radioButton_Debrecen.TabIndex = 3;
             this.radioButton_Debrecen.TabStop = true;
             this.radioButton_Debrecen.Text = "Debrecen";
             this.radioButton_Debrecen.UseVisualStyleBackColor = true;
+            this.radioButton_Debrecen.CheckedChanged += new System.EventHandler(this.radioButton_Debrecen_CheckedChanged);
             // 
             // label1
             // 
@@ -129,7 +137,7 @@ namespace proba5._5
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(13, 92);
+            this.label2.Location = new System.Drawing.Point(18, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 18);
             this.label2.TabIndex = 5;
@@ -139,7 +147,7 @@ namespace proba5._5
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(13, 123);
+            this.label3.Location = new System.Drawing.Point(18, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 18);
             this.label3.TabIndex = 6;
@@ -148,6 +156,13 @@ namespace proba5._5
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Gazmaszk",
+            "Szelepes",
+            "Fashion",
+            "Szuros",
+            "Egyszerhasznalatos",
+            "Mintas"});
             this.comboBox1.Location = new System.Drawing.Point(131, 92);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -156,6 +171,22 @@ namespace proba5._5
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Csipkes",
+            "DC",
+            "Feher",
+            "Fekete",
+            "Frozen",
+            "Hupikek",
+            "Kek",
+            "Marvel",
+            "Memes",
+            "Piros",
+            "Rozsaszin",
+            "Sarga",
+            "Shrek",
+            "Terepmintas",
+            "Zold"});
             this.comboBox2.Location = new System.Drawing.Point(131, 120);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
@@ -220,6 +251,7 @@ namespace proba5._5
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Budapest";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -232,6 +264,7 @@ namespace proba5._5
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Győr";
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -244,6 +277,7 @@ namespace proba5._5
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Debrecen";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // button_Atcsoportosit
             // 
@@ -274,10 +308,62 @@ namespace proba5._5
             this.button_Találat.Text = "Raktár";
             this.button_Találat.UseVisualStyleBackColor = true;
             // 
+            // label_Honnan
+            // 
+            this.label_Honnan.AutoSize = true;
+            this.label_Honnan.Location = new System.Drawing.Point(518, 264);
+            this.label_Honnan.Name = "label_Honnan";
+            this.label_Honnan.Size = new System.Drawing.Size(45, 13);
+            this.label_Honnan.TabIndex = 20;
+            this.label_Honnan.Text = "Honnan";
+            // 
+            // label_Hova
+            // 
+            this.label_Hova.AutoSize = true;
+            this.label_Hova.Location = new System.Drawing.Point(602, 264);
+            this.label_Hova.Name = "label_Hova";
+            this.label_Hova.Size = new System.Drawing.Size(33, 13);
+            this.label_Hova.TabIndex = 21;
+            this.label_Hova.Text = "Hova";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(17, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Honnan:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(390, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Hova:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(570, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 13);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "-->";
+            // 
             // Aruatcsoportositas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label_Hova);
+            this.Controls.Add(this.label_Honnan);
             this.Controls.Add(this.button_Találat);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button_Atcsoportosit);
@@ -331,5 +417,10 @@ namespace proba5._5
         private System.Windows.Forms.Button button_Atcsoportosit;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button_Találat;
+        private System.Windows.Forms.Label label_Honnan;
+        private System.Windows.Forms.Label label_Hova;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

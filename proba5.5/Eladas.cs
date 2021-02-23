@@ -134,7 +134,7 @@ namespace proba5._5
                          Parancs.Dispose();
                          while (LekerdezesParancs.Read())
                          {
-                             listBox_Lista.Items.Add(LekerdezesParancs["maszktipus"] + ";" + LekerdezesParancs["maszknev"] + ";" + LekerdezesParancs[Location4querry] + ";" + LekerdezesParancs["ar/db"]+";"+ LekerdezesParancs["akcio"]);
+                             listBox_Lista.Items.Add(LekerdezesParancs["maszktipus"] + ";" + LekerdezesParancs["maszknev"] + ";" + LekerdezesParancs[Location4querry] + ";" + LekerdezesParancs["ar/db"]+";"+ LekerdezesParancs["akcio"]+";"+Location4querry);
                          }
                          MessageBox.Show("Az adatok kiolvasása megtörtént!", "Siker!", MessageBoxButtons.OK);
                          Csatlakozas.Close();
@@ -143,6 +143,7 @@ namespace proba5._5
                 
 
             }
+           
         }
         #region Export
         private void button_export_Click(object sender, EventArgs e)
