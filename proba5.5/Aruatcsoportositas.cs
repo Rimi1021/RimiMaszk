@@ -15,39 +15,117 @@ namespace proba5._5
         public Aruatcsoportositas()
         {
             InitializeComponent();
+            Raktar.Tisztalista();
         }
-
+        public static string Honnan = "";
+        public static string Hova = "";
+        public static string Termektipus = "";
+        public static string Termeknev = "";
+        public static bool maszkkombo = false;
+        public static bool Szallitasra_Alkalmas = false;
+        public static int db = 0;
         #region radiobuttonok
         //VAN picturebox
         private void radioButton_BP_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.FromArgb(64, 60, 64);
+            Honnan = "Budapest";
         }
 
         private void radioButton_Gyor_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.FromArgb(97, 201, 35);
+            Honnan = "Gyor";
         }
 
         private void radioButton_Debrecen_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.FromArgb(0, 204, 204);
+            Honnan = "Debrecen";
         }
 
         ///Raktár bictureBox
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        private void radioButton4_CheckedChanged(object sender, EventArgs e) //BP
         {
             pictureBox1.BackColor = Color.FromArgb(64, 60, 64);
+            Hova = "Budapest";
         }
 
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)//Győr
         {
             pictureBox1.BackColor = Color.FromArgb(97, 201, 35);
+            Hova = "Gyor";
         }
 
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)//Debrecen
         {
             pictureBox1.BackColor = Color.FromArgb(0, 204, 204);
+            Hova = "Debrecen";
+        }
+        #endregion
+
+        //Combobox Events
+        #region Combobox
+        private void MasztipusShange(object sender, EventArgs e)
+        {
+            Termektipus = comboBox_Maszktipus.SelectedItem.ToString();
+        }
+
+        private void Maszknevchange(object sender, EventArgs e)
+        {
+            Termeknev = comboBox_Maszknev.SelectedItem.ToString();
+        }
+
+        #endregion
+
+        private void button_Találat_Click(object sender, EventArgs e)
+        {
+            vizsgalat();
+            if (radioButton_BP.Checked == false && radioButton_Gyor.Checked == false && radioButton_Debrecen.Checked == false) //Ha Radiobutton ures
+            {
+                MessageBox.Show("Válassza ki a telephelyet");
+            }
+            else if (comboBox_Maszktipus.SelectedItem == null || comboBox_Maszknev.SelectedItem == null) //Ha combo űres 
+            {
+                MessageBox.Show("Válassza ki a termék csoportot és termék fajtát");
+            }
+            else if (maszkkombo == true)
+            {
+                MessageBox.Show("Ez jo lesz");
+                Szallitasra_Alkalmas = true;
+                label_Maszktipus.Text = Termektipus;
+                label_Maszknev.Text = Termeknev;
+                label_Maszkdb.Text = Convert.ToString(db);
+            }
+            else
+            {
+                MessageBox.Show("Nem létező maszktípus-név kombináció");
+            }
+            maszkkombo = false;
+        }
+
+        #region Termékkombóvizsgálat
+        public static void vizsgalat() 
+        {
+            for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+            {
+                if (SzerverData.MaszInfokOsszes[i].Maszktipus == Termektipus && SzerverData.MaszInfokOsszes[i].Maszknev == Termeknev)
+                {
+                    maszkkombo = true;
+                    if (Honnan == "Budapest")
+                    {
+                        db = SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest;
+                    }
+                    else if (Honnan == "Gyor")
+                    {
+                        db = SzerverData.MaszInfokOsszes[i].KeszletraktarGyor;
+                    }
+                    else
+                    {
+                        db = SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen;
+                    }
+                }
+            }
         }
         #endregion
     }

@@ -38,8 +38,8 @@ namespace proba5._5
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Maszktipus = new System.Windows.Forms.ComboBox();
+            this.comboBox_Maszknev = new System.Windows.Forms.ComboBox();
             this.label_Maszknev = new System.Windows.Forms.Label();
             this.label_Maszktipus = new System.Windows.Forms.Label();
             this.label_Maszkdb = new System.Windows.Forms.Label();
@@ -153,25 +153,26 @@ namespace proba5._5
             this.label3.TabIndex = 6;
             this.label3.Text = "Maszk típus:";
             // 
-            // comboBox1
+            // comboBox_Maszktipus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_Maszktipus.FormattingEnabled = true;
+            this.comboBox_Maszktipus.Items.AddRange(new object[] {
             "Gazmaszk",
             "Szelepes",
             "Fashion",
             "Szuros",
             "Egyszerhasznalatos",
             "Mintas"});
-            this.comboBox1.Location = new System.Drawing.Point(131, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
+            this.comboBox_Maszktipus.Location = new System.Drawing.Point(131, 92);
+            this.comboBox_Maszktipus.Name = "comboBox_Maszktipus";
+            this.comboBox_Maszktipus.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Maszktipus.TabIndex = 7;
+            this.comboBox_Maszktipus.SelectedIndexChanged += new System.EventHandler(this.MasztipusShange);
             // 
-            // comboBox2
+            // comboBox_Maszknev
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBox_Maszknev.FormattingEnabled = true;
+            this.comboBox_Maszknev.Items.AddRange(new object[] {
             "Csipkes",
             "DC",
             "Feher",
@@ -187,16 +188,17 @@ namespace proba5._5
             "Shrek",
             "Terepmintas",
             "Zold"});
-            this.comboBox2.Location = new System.Drawing.Point(131, 120);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 8;
+            this.comboBox_Maszknev.Location = new System.Drawing.Point(131, 120);
+            this.comboBox_Maszknev.Name = "comboBox_Maszknev";
+            this.comboBox_Maszknev.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Maszknev.TabIndex = 8;
+            this.comboBox_Maszknev.SelectedIndexChanged += new System.EventHandler(this.Maszknevchange);
             // 
             // label_Maszknev
             // 
             this.label_Maszknev.AutoSize = true;
             this.label_Maszknev.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_Maszknev.Location = new System.Drawing.Point(3, 189);
+            this.label_Maszknev.Location = new System.Drawing.Point(105, 189);
             this.label_Maszknev.Name = "label_Maszknev";
             this.label_Maszknev.Size = new System.Drawing.Size(80, 18);
             this.label_Maszknev.TabIndex = 9;
@@ -206,7 +208,7 @@ namespace proba5._5
             // 
             this.label_Maszktipus.AutoSize = true;
             this.label_Maszktipus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_Maszktipus.Location = new System.Drawing.Point(91, 189);
+            this.label_Maszktipus.Location = new System.Drawing.Point(3, 189);
             this.label_Maszktipus.Name = "label_Maszktipus";
             this.label_Maszktipus.Size = new System.Drawing.Size(88, 18);
             this.label_Maszktipus.TabIndex = 10;
@@ -307,6 +309,7 @@ namespace proba5._5
             this.button_Találat.TabIndex = 19;
             this.button_Találat.Text = "Raktár";
             this.button_Találat.UseVisualStyleBackColor = true;
+            this.button_Találat.Click += new System.EventHandler(this.button_Találat_Click);
             // 
             // label_Honnan
             // 
@@ -375,8 +378,8 @@ namespace proba5._5
             this.Controls.Add(this.label_Maszkdb);
             this.Controls.Add(this.label_Maszktipus);
             this.Controls.Add(this.label_Maszknev);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_Maszknev);
+            this.Controls.Add(this.comboBox_Maszktipus);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -404,8 +407,8 @@ namespace proba5._5
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_Maszktipus;
+        private System.Windows.Forms.ComboBox comboBox_Maszknev;
         private System.Windows.Forms.Label label_Maszknev;
         private System.Windows.Forms.Label label_Maszktipus;
         private System.Windows.Forms.Label label_Maszkdb;

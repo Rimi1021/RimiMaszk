@@ -20,7 +20,7 @@ namespace proba5._5
             Tisztalista();
             hianycikk();
         }
-        Regex rg = new Regex(@"^[0-9]+$");
+        public static Regex rg = new Regex(@"^[0-9]+$");
         public static int szam1 = 0;
         public static int szam2 = 0;
         public static int szam3 = 0;

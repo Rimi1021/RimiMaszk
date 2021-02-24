@@ -17,6 +17,7 @@ namespace proba5._5
         public Eladas()
         {
             InitializeComponent();
+            Raktar.Tisztalista();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -99,7 +100,6 @@ namespace proba5._5
 
             else if (radioButton_Osszes.Checked == true && comboBox.SelectedItem.ToString() == "Osszes") //HA radio és combobox Összes-Összes
             {
-                Raktar.Tisztalista();
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
                     listBox_Lista.Items.Add(SzerverData.MaszInfokOsszes[i].Maszktipus + ";" + SzerverData.MaszInfokOsszes[i].Maszknev + ";" + SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest + "db;" + SzerverData.MaszInfokOsszes[i].Ar_db +"Ft"+";"+ SzerverData.MaszInfokOsszes[i].Akcio+ "%_Akcio" + ";BUdapest");
@@ -150,6 +150,8 @@ namespace proba5._5
                     }
                 }
             }
+
+
             else if (radioButton_Osszes.Checked != true && comboBox.SelectedItem.ToString() != "Osszes")
             {
                 if (Location4querry == "keszletarubudapest")
