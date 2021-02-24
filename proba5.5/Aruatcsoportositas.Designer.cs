@@ -231,6 +231,7 @@ namespace proba5._5
             this.textBox_atcsoportositDB.Size = new System.Drawing.Size(59, 20);
             this.textBox_atcsoportositDB.TabIndex = 12;
             this.textBox_atcsoportositDB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_atcsoportositDB.TextChanged += new System.EventHandler(this.textBox_atcsoportositDB_TextChanged);
             // 
             // label7
             // 

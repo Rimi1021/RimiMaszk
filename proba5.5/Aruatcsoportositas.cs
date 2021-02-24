@@ -23,6 +23,7 @@ namespace proba5._5
         public static string Termeknev = "";
         public static bool maszkkombo = false;
         public static bool Szallitasra_Alkalmas = false;
+        public static bool MegadottdbTextboxba = false;
         public static int db = 0;
         #region radiobuttonok
         //VAN picturebox
@@ -30,18 +31,21 @@ namespace proba5._5
         {
             pictureBox2.BackColor = Color.FromArgb(64, 60, 64);
             Honnan = "Budapest";
+            label_Honnan.Text = "Budapest";
         }
 
         private void radioButton_Gyor_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.FromArgb(97, 201, 35);
             Honnan = "Gyor";
+            label_Honnan.Text = "Győr";
         }
 
         private void radioButton_Debrecen_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.FromArgb(0, 204, 204);
             Honnan = "Debrecen";
+            label_Honnan.Text = "Debrecen";
         }
 
         ///Raktár bictureBox
@@ -49,18 +53,21 @@ namespace proba5._5
         {
             pictureBox1.BackColor = Color.FromArgb(64, 60, 64);
             Hova = "Budapest";
+            label_Hova.Text = "Budapest";
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)//Győr
         {
             pictureBox1.BackColor = Color.FromArgb(97, 201, 35);
             Hova = "Gyor";
+            label_Hova.Text = "Győr";
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)//Debrecen
         {
             pictureBox1.BackColor = Color.FromArgb(0, 204, 204);
             Hova = "Debrecen";
+            label_Hova.Text = "Debrecen";
         }
         #endregion
 
@@ -128,5 +135,19 @@ namespace proba5._5
             }
         }
         #endregion
+
+        private void textBox_atcsoportositDB_TextChanged(object sender, EventArgs e)
+        {
+            if (Raktar.rg.IsMatch(textBox_atcsoportositDB.Text) && db >= Convert.ToInt32(textBox_atcsoportositDB.Text) && Convert.ToInt32(textBox_atcsoportositDB.Text) != 0)
+            {
+                MegadottdbTextboxba = true;
+            }
+            else
+            {
+                MessageBox.Show("Csak számot adhatsz meg ami nem lehet 0 és a megadott érték nem lehet nagyobb a jelenlegi darabszámnál");
+                textBox_atcsoportositDB.Text = "";
+                MegadottdbTextboxba = false;
+            }
+        }
     }
 }
