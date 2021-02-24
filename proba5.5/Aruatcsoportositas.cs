@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,7 @@ namespace proba5._5
         public static bool Szallitasra_Alkalmas = false;
         public static bool MegadottdbTextboxba = false;
         public static int db = 0;
+        public static int Atvittdb = 0;
         #region radiobuttonok
         //VAN picturebox
         private void radioButton_BP_CheckedChanged(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace proba5._5
 
         private void button_Találat_Click(object sender, EventArgs e)
         {
+            Raktar.Tisztalista();
             vizsgalat();
             if (radioButton_BP.Checked == false && radioButton_Gyor.Checked == false && radioButton_Debrecen.Checked == false) //Ha Radiobutton ures
             {
@@ -138,16 +141,170 @@ namespace proba5._5
 
         private void textBox_atcsoportositDB_TextChanged(object sender, EventArgs e)
         {
-            if (Raktar.rg.IsMatch(textBox_atcsoportositDB.Text) && db >= Convert.ToInt32(textBox_atcsoportositDB.Text) && Convert.ToInt32(textBox_atcsoportositDB.Text) != 0)
+              if (Raktar.rg.IsMatch(textBox_atcsoportositDB.Text) && db >= Convert.ToInt32(textBox_atcsoportositDB.Text) && Convert.ToInt32(textBox_atcsoportositDB.Text) != 0)
+              {
+                  MegadottdbTextboxba = true;
+                  Atvittdb = Convert.ToInt32(textBox_atcsoportositDB.Text);
+              }
+              else
+              {
+                  MessageBox.Show("Csak számot adhatsz meg ami nem lehet 0 és a megadott érték nem lehet nagyobb a jelenlegi darabszámnál");
+                  textBox_atcsoportositDB.Text = "";
+                  MegadottdbTextboxba = false;
+              }
+            
+        }
+
+        /// ÁRUÁTCSOPORTOSÍTÁS CLICK
+        #region Átcsoportosítás
+        private void button_Atcsoportosit_Click(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked == false && radioButton5.Checked == false && radioButton6.Checked == false || Honnan == Hova)
             {
-                MegadottdbTextboxba = true;
+                MessageBox.Show("Rossz telephelyválasztás","Hiba",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
-            else
+            else if (Szallitasra_Alkalmas == true && MegadottdbTextboxba == true)
             {
-                MessageBox.Show("Csak számot adhatsz meg ami nem lehet 0 és a megadott érték nem lehet nagyobb a jelenlegi darabszámnál");
-                textBox_atcsoportositDB.Text = "";
-                MegadottdbTextboxba = false;
+                if (Honnan == "Budapest")
+                {
+                    try
+                    {
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                        {
+                            string Feltoltes = $"UPDATE MaszkAruk SET keszletarubudapest = keszletarubudapest - {Atvittdb} WHERE maszktipus='{Termektipus}' AND maszknev='{Termeknev}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                            {
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                var result = Parancs.ExecuteNonQuery(); //itt  baj
+                                Parancs.Dispose();
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                            }
+                        }
+                    }
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); }
+                }
+                else if (Honnan == "Gyor")
+                {
+                    try
+                    {
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                        {
+                            string Feltoltes = $"UPDATE MaszkAruk SET keszletarugyor = keszletarugyor - {Atvittdb} WHERE maszktipus='{Termektipus}' AND maszknev='{Termeknev}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                            {
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                var result = Parancs.ExecuteNonQuery(); //itt  baj
+                                Parancs.Dispose();
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                            }
+                        }
+                    }
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); }
+                }
+                else ///Honnan == Debrecen
+                {
+                    try
+                    {
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                        {
+                            string Feltoltes = $"UPDATE MaszkAruk SET keszletardebrecen = keszletarudebrecen - {Atvittdb} WHERE maszktipus='{Termektipus}' AND maszknev='{Termeknev}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                            {
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                var result = Parancs.ExecuteNonQuery(); //itt  baj
+                                Parancs.Dispose();
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                            }
+                        }
+                    }
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); }
+                }
+                if (Hova == "Budapest")
+                {
+                    try
+                    {
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                        {
+                            string Feltoltes = $"UPDATE MaszkAruk SET keszletarubudapest = keszletarubudapest + {Atvittdb} WHERE maszktipus='{Termektipus}' AND maszknev='{Termeknev}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                            {
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                var result = Parancs.ExecuteNonQuery(); //itt  baj
+                                Parancs.Dispose();
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                            }
+                        }
+                    }
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); }
+                }
+                else if (Hova == "Gyor")
+                {
+                    try
+                    {
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                        {
+                            string Feltoltes = $"UPDATE MaszkAruk SET keszletarugyor = keszletarugyor + {Atvittdb} WHERE maszktipus='{Termektipus}' AND maszknev='{Termeknev}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                            {
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                var result = Parancs.ExecuteNonQuery(); //itt  baj
+                                Parancs.Dispose();
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                            }
+                        }
+                    }
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); }
+                }
+                else//Hova == Debrecen
+                {
+                    try
+                    {
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                        {
+                            string Feltoltes = $"UPDATE MaszkAruk SET keszletarudebrecen = keszletarudebrecen + {Atvittdb} WHERE maszktipus='{Termektipus}' AND maszknev='{Termeknev}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                            {
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                var result = Parancs.ExecuteNonQuery(); //itt  baj
+                                Parancs.Dispose();
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                            }
+                        }
+                    }
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); }
+                }
             }
         }
+        #endregion
     }
 }

@@ -291,6 +291,7 @@ namespace proba5._5
             this.button_Atcsoportosit.TabIndex = 17;
             this.button_Atcsoportosit.Text = "Átcsoportosítás";
             this.button_Atcsoportosit.UseVisualStyleBackColor = true;
+            this.button_Atcsoportosit.Click += new System.EventHandler(this.button_Atcsoportosit_Click);
             // 
             // pictureBox2
             // 

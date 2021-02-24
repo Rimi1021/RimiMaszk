@@ -87,6 +87,7 @@ namespace proba5._5
         #region Listazas
         private void button_Listazas_Click(object sender, EventArgs e)
         {
+            Raktar.Tisztalista();
             listBox_Lista.Items.Clear();
             if (radioButtonBP.Checked == false && radioButtonGY.Checked == false && radioButtonD.Checked == false && radioButton_Osszes.Checked == false) //Ha Radiobutton ures
             {
