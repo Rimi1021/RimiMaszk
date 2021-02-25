@@ -98,6 +98,13 @@ namespace proba5._5
             this.label_Brutto3 = new System.Windows.Forms.Label();
             this.label_Brutto2 = new System.Windows.Forms.Label();
             this.label_Brutto1 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button_Mentes2_6 = new System.Windows.Forms.Button();
+            this.button_Mentes2_5 = new System.Windows.Forms.Button();
+            this.button_Mentes2_4 = new System.Windows.Forms.Button();
+            this.button_Mentes2_3 = new System.Windows.Forms.Button();
+            this.button_Mentes2_2 = new System.Windows.Forms.Button();
+            this.button_Mentes2_1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -242,7 +249,7 @@ namespace proba5._5
             // 
             // textBox_3_6
             // 
-            this.textBox_3_6.Location = new System.Drawing.Point(318, 361);
+            this.textBox_3_6.Location = new System.Drawing.Point(362, 360);
             this.textBox_3_6.Name = "textBox_3_6";
             this.textBox_3_6.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_6.TabIndex = 49;
@@ -250,7 +257,7 @@ namespace proba5._5
             // 
             // textBox_3_5
             // 
-            this.textBox_3_5.Location = new System.Drawing.Point(318, 318);
+            this.textBox_3_5.Location = new System.Drawing.Point(362, 317);
             this.textBox_3_5.Name = "textBox_3_5";
             this.textBox_3_5.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_5.TabIndex = 48;
@@ -258,7 +265,7 @@ namespace proba5._5
             // 
             // textBox_3_4
             // 
-            this.textBox_3_4.Location = new System.Drawing.Point(318, 277);
+            this.textBox_3_4.Location = new System.Drawing.Point(362, 276);
             this.textBox_3_4.Name = "textBox_3_4";
             this.textBox_3_4.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_4.TabIndex = 47;
@@ -266,7 +273,7 @@ namespace proba5._5
             // 
             // textBox_3_3
             // 
-            this.textBox_3_3.Location = new System.Drawing.Point(318, 237);
+            this.textBox_3_3.Location = new System.Drawing.Point(362, 236);
             this.textBox_3_3.Name = "textBox_3_3";
             this.textBox_3_3.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_3.TabIndex = 46;
@@ -274,7 +281,7 @@ namespace proba5._5
             // 
             // textBox_3_2
             // 
-            this.textBox_3_2.Location = new System.Drawing.Point(318, 201);
+            this.textBox_3_2.Location = new System.Drawing.Point(362, 200);
             this.textBox_3_2.Name = "textBox_3_2";
             this.textBox_3_2.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_2.TabIndex = 45;
@@ -282,7 +289,7 @@ namespace proba5._5
             // 
             // textBox_3_1
             // 
-            this.textBox_3_1.Location = new System.Drawing.Point(318, 159);
+            this.textBox_3_1.Location = new System.Drawing.Point(362, 158);
             this.textBox_3_1.Name = "textBox_3_1";
             this.textBox_3_1.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_1.TabIndex = 44;
@@ -292,7 +299,7 @@ namespace proba5._5
             // label_nettoakcio1
             // 
             this.label_nettoakcio1.AutoSize = true;
-            this.label_nettoakcio1.Location = new System.Drawing.Point(383, 160);
+            this.label_nettoakcio1.Location = new System.Drawing.Point(453, 160);
             this.label_nettoakcio1.Name = "label_nettoakcio1";
             this.label_nettoakcio1.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio1.TabIndex = 50;
@@ -322,7 +329,7 @@ namespace proba5._5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(304, 115);
+            this.label5.Location = new System.Drawing.Point(329, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 53;
@@ -342,7 +349,7 @@ namespace proba5._5
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(359, 115);
+            this.label7.Location = new System.Drawing.Point(429, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 20);
             this.label7.TabIndex = 55;
@@ -352,7 +359,7 @@ namespace proba5._5
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(606, 115);
+            this.label8.Location = new System.Drawing.Point(14, 56);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 20);
             this.label8.TabIndex = 56;
@@ -362,7 +369,7 @@ namespace proba5._5
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(480, 115);
+            this.label9.Location = new System.Drawing.Point(550, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 20);
             this.label9.TabIndex = 57;
@@ -371,7 +378,7 @@ namespace proba5._5
             // label_nettoakcio2
             // 
             this.label_nettoakcio2.AutoSize = true;
-            this.label_nettoakcio2.Location = new System.Drawing.Point(383, 201);
+            this.label_nettoakcio2.Location = new System.Drawing.Point(453, 201);
             this.label_nettoakcio2.Name = "label_nettoakcio2";
             this.label_nettoakcio2.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio2.TabIndex = 58;
@@ -380,7 +387,7 @@ namespace proba5._5
             // label_nettoakcio3
             // 
             this.label_nettoakcio3.AutoSize = true;
-            this.label_nettoakcio3.Location = new System.Drawing.Point(383, 244);
+            this.label_nettoakcio3.Location = new System.Drawing.Point(453, 244);
             this.label_nettoakcio3.Name = "label_nettoakcio3";
             this.label_nettoakcio3.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio3.TabIndex = 59;
@@ -389,7 +396,7 @@ namespace proba5._5
             // label_nettoakcio4
             // 
             this.label_nettoakcio4.AutoSize = true;
-            this.label_nettoakcio4.Location = new System.Drawing.Point(383, 283);
+            this.label_nettoakcio4.Location = new System.Drawing.Point(453, 283);
             this.label_nettoakcio4.Name = "label_nettoakcio4";
             this.label_nettoakcio4.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio4.TabIndex = 60;
@@ -398,7 +405,7 @@ namespace proba5._5
             // label_nettoakcio5
             // 
             this.label_nettoakcio5.AutoSize = true;
-            this.label_nettoakcio5.Location = new System.Drawing.Point(383, 323);
+            this.label_nettoakcio5.Location = new System.Drawing.Point(453, 323);
             this.label_nettoakcio5.Name = "label_nettoakcio5";
             this.label_nettoakcio5.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio5.TabIndex = 61;
@@ -407,7 +414,7 @@ namespace proba5._5
             // label_nettoakcio6
             // 
             this.label_nettoakcio6.AutoSize = true;
-            this.label_nettoakcio6.Location = new System.Drawing.Point(383, 364);
+            this.label_nettoakcio6.Location = new System.Drawing.Point(453, 364);
             this.label_nettoakcio6.Name = "label_nettoakcio6";
             this.label_nettoakcio6.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio6.TabIndex = 62;
@@ -416,7 +423,7 @@ namespace proba5._5
             // label_bruttoakcio6
             // 
             this.label_bruttoakcio6.AutoSize = true;
-            this.label_bruttoakcio6.Location = new System.Drawing.Point(508, 364);
+            this.label_bruttoakcio6.Location = new System.Drawing.Point(578, 364);
             this.label_bruttoakcio6.Name = "label_bruttoakcio6";
             this.label_bruttoakcio6.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio6.TabIndex = 68;
@@ -425,7 +432,7 @@ namespace proba5._5
             // label_bruttoakcio5
             // 
             this.label_bruttoakcio5.AutoSize = true;
-            this.label_bruttoakcio5.Location = new System.Drawing.Point(508, 324);
+            this.label_bruttoakcio5.Location = new System.Drawing.Point(578, 324);
             this.label_bruttoakcio5.Name = "label_bruttoakcio5";
             this.label_bruttoakcio5.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio5.TabIndex = 67;
@@ -434,7 +441,7 @@ namespace proba5._5
             // label_bruttoakcio4
             // 
             this.label_bruttoakcio4.AutoSize = true;
-            this.label_bruttoakcio4.Location = new System.Drawing.Point(508, 284);
+            this.label_bruttoakcio4.Location = new System.Drawing.Point(578, 284);
             this.label_bruttoakcio4.Name = "label_bruttoakcio4";
             this.label_bruttoakcio4.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio4.TabIndex = 66;
@@ -443,7 +450,7 @@ namespace proba5._5
             // label_bruttoakcio3
             // 
             this.label_bruttoakcio3.AutoSize = true;
-            this.label_bruttoakcio3.Location = new System.Drawing.Point(508, 245);
+            this.label_bruttoakcio3.Location = new System.Drawing.Point(578, 245);
             this.label_bruttoakcio3.Name = "label_bruttoakcio3";
             this.label_bruttoakcio3.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio3.TabIndex = 65;
@@ -452,7 +459,7 @@ namespace proba5._5
             // label_bruttoakcio2
             // 
             this.label_bruttoakcio2.AutoSize = true;
-            this.label_bruttoakcio2.Location = new System.Drawing.Point(508, 202);
+            this.label_bruttoakcio2.Location = new System.Drawing.Point(578, 202);
             this.label_bruttoakcio2.Name = "label_bruttoakcio2";
             this.label_bruttoakcio2.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio2.TabIndex = 64;
@@ -461,7 +468,7 @@ namespace proba5._5
             // label_bruttoakcio1
             // 
             this.label_bruttoakcio1.AutoSize = true;
-            this.label_bruttoakcio1.Location = new System.Drawing.Point(508, 161);
+            this.label_bruttoakcio1.Location = new System.Drawing.Point(578, 161);
             this.label_bruttoakcio1.Name = "label_bruttoakcio1";
             this.label_bruttoakcio1.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio1.TabIndex = 63;
@@ -469,56 +476,56 @@ namespace proba5._5
             // 
             // button_Mentes1
             // 
-            this.button_Mentes1.Location = new System.Drawing.Point(608, 155);
+            this.button_Mentes1.Location = new System.Drawing.Point(306, 158);
             this.button_Mentes1.Name = "button_Mentes1";
-            this.button_Mentes1.Size = new System.Drawing.Size(60, 23);
+            this.button_Mentes1.Size = new System.Drawing.Size(40, 23);
             this.button_Mentes1.TabIndex = 69;
-            this.button_Mentes1.Text = "Mentés";
+            this.button_Mentes1.Text = "save";
             this.button_Mentes1.UseVisualStyleBackColor = true;
             // 
             // button_Mentes2
             // 
-            this.button_Mentes2.Location = new System.Drawing.Point(608, 196);
+            this.button_Mentes2.Location = new System.Drawing.Point(306, 199);
             this.button_Mentes2.Name = "button_Mentes2";
-            this.button_Mentes2.Size = new System.Drawing.Size(60, 23);
+            this.button_Mentes2.Size = new System.Drawing.Size(40, 23);
             this.button_Mentes2.TabIndex = 70;
-            this.button_Mentes2.Text = "Mentés";
+            this.button_Mentes2.Text = "save";
             this.button_Mentes2.UseVisualStyleBackColor = true;
             // 
             // button_Mentes3
             // 
-            this.button_Mentes3.Location = new System.Drawing.Point(608, 238);
+            this.button_Mentes3.Location = new System.Drawing.Point(306, 241);
             this.button_Mentes3.Name = "button_Mentes3";
-            this.button_Mentes3.Size = new System.Drawing.Size(60, 23);
+            this.button_Mentes3.Size = new System.Drawing.Size(40, 23);
             this.button_Mentes3.TabIndex = 71;
-            this.button_Mentes3.Text = "Mentés";
+            this.button_Mentes3.Text = "save";
             this.button_Mentes3.UseVisualStyleBackColor = true;
             // 
             // button_Mentes4
             // 
-            this.button_Mentes4.Location = new System.Drawing.Point(608, 274);
+            this.button_Mentes4.Location = new System.Drawing.Point(306, 277);
             this.button_Mentes4.Name = "button_Mentes4";
-            this.button_Mentes4.Size = new System.Drawing.Size(60, 23);
+            this.button_Mentes4.Size = new System.Drawing.Size(40, 23);
             this.button_Mentes4.TabIndex = 72;
-            this.button_Mentes4.Text = "Mentés";
+            this.button_Mentes4.Text = "save";
             this.button_Mentes4.UseVisualStyleBackColor = true;
             // 
             // button_Mentes5
             // 
-            this.button_Mentes5.Location = new System.Drawing.Point(608, 317);
+            this.button_Mentes5.Location = new System.Drawing.Point(306, 320);
             this.button_Mentes5.Name = "button_Mentes5";
-            this.button_Mentes5.Size = new System.Drawing.Size(60, 23);
+            this.button_Mentes5.Size = new System.Drawing.Size(40, 23);
             this.button_Mentes5.TabIndex = 73;
-            this.button_Mentes5.Text = "Mentés";
+            this.button_Mentes5.Text = "save";
             this.button_Mentes5.UseVisualStyleBackColor = true;
             // 
             // button_Mentes6
             // 
-            this.button_Mentes6.Location = new System.Drawing.Point(608, 358);
+            this.button_Mentes6.Location = new System.Drawing.Point(306, 361);
             this.button_Mentes6.Name = "button_Mentes6";
-            this.button_Mentes6.Size = new System.Drawing.Size(60, 23);
+            this.button_Mentes6.Size = new System.Drawing.Size(40, 23);
             this.button_Mentes6.TabIndex = 74;
-            this.button_Mentes6.Text = "Mentés";
+            this.button_Mentes6.Text = "save";
             this.button_Mentes6.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -632,7 +639,7 @@ namespace proba5._5
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(349, 368);
+            this.label21.Location = new System.Drawing.Point(393, 367);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(15, 13);
             this.label21.TabIndex = 92;
@@ -641,7 +648,7 @@ namespace proba5._5
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(349, 326);
+            this.label22.Location = new System.Drawing.Point(393, 325);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(15, 13);
             this.label22.TabIndex = 91;
@@ -650,7 +657,7 @@ namespace proba5._5
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(349, 285);
+            this.label23.Location = new System.Drawing.Point(393, 284);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(15, 13);
             this.label23.TabIndex = 90;
@@ -659,7 +666,7 @@ namespace proba5._5
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(349, 246);
+            this.label24.Location = new System.Drawing.Point(393, 245);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(15, 13);
             this.label24.TabIndex = 89;
@@ -668,7 +675,7 @@ namespace proba5._5
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(349, 207);
+            this.label25.Location = new System.Drawing.Point(393, 206);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(15, 13);
             this.label25.TabIndex = 88;
@@ -677,7 +684,7 @@ namespace proba5._5
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(349, 166);
+            this.label26.Location = new System.Drawing.Point(393, 165);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(15, 13);
             this.label26.TabIndex = 87;
@@ -737,10 +744,81 @@ namespace proba5._5
             this.label_Brutto1.TabIndex = 93;
             this.label_Brutto1.Text = "0";
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label27.Location = new System.Drawing.Point(73, 58);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(42, 17);
+            this.label27.TabIndex = 99;
+            this.label27.Text = "save";
+            // 
+            // button_Mentes2_6
+            // 
+            this.button_Mentes2_6.Location = new System.Drawing.Point(410, 357);
+            this.button_Mentes2_6.Name = "button_Mentes2_6";
+            this.button_Mentes2_6.Size = new System.Drawing.Size(40, 23);
+            this.button_Mentes2_6.TabIndex = 105;
+            this.button_Mentes2_6.Text = "save";
+            this.button_Mentes2_6.UseVisualStyleBackColor = true;
+            // 
+            // button_Mentes2_5
+            // 
+            this.button_Mentes2_5.Location = new System.Drawing.Point(410, 322);
+            this.button_Mentes2_5.Name = "button_Mentes2_5";
+            this.button_Mentes2_5.Size = new System.Drawing.Size(40, 23);
+            this.button_Mentes2_5.TabIndex = 104;
+            this.button_Mentes2_5.Text = "save";
+            this.button_Mentes2_5.UseVisualStyleBackColor = true;
+            // 
+            // button_Mentes2_4
+            // 
+            this.button_Mentes2_4.Location = new System.Drawing.Point(410, 279);
+            this.button_Mentes2_4.Name = "button_Mentes2_4";
+            this.button_Mentes2_4.Size = new System.Drawing.Size(40, 23);
+            this.button_Mentes2_4.TabIndex = 103;
+            this.button_Mentes2_4.Text = "save";
+            this.button_Mentes2_4.UseVisualStyleBackColor = true;
+            // 
+            // button_Mentes2_3
+            // 
+            this.button_Mentes2_3.Location = new System.Drawing.Point(410, 243);
+            this.button_Mentes2_3.Name = "button_Mentes2_3";
+            this.button_Mentes2_3.Size = new System.Drawing.Size(40, 23);
+            this.button_Mentes2_3.TabIndex = 102;
+            this.button_Mentes2_3.Text = "save";
+            this.button_Mentes2_3.UseVisualStyleBackColor = true;
+            // 
+            // button_Mentes2_2
+            // 
+            this.button_Mentes2_2.Location = new System.Drawing.Point(410, 201);
+            this.button_Mentes2_2.Name = "button_Mentes2_2";
+            this.button_Mentes2_2.Size = new System.Drawing.Size(40, 23);
+            this.button_Mentes2_2.TabIndex = 101;
+            this.button_Mentes2_2.Text = "save";
+            this.button_Mentes2_2.UseVisualStyleBackColor = true;
+            // 
+            // button_Mentes2_1
+            // 
+            this.button_Mentes2_1.Location = new System.Drawing.Point(410, 160);
+            this.button_Mentes2_1.Name = "button_Mentes2_1";
+            this.button_Mentes2_1.Size = new System.Drawing.Size(40, 23);
+            this.button_Mentes2_1.TabIndex = 100;
+            this.button_Mentes2_1.Text = "save";
+            this.button_Mentes2_1.UseVisualStyleBackColor = true;
+            // 
             // Aruvisszavetel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button_Mentes2_6);
+            this.Controls.Add(this.button_Mentes2_5);
+            this.Controls.Add(this.button_Mentes2_4);
+            this.Controls.Add(this.button_Mentes2_3);
+            this.Controls.Add(this.button_Mentes2_2);
+            this.Controls.Add(this.button_Mentes2_1);
+            this.Controls.Add(this.label27);
             this.Controls.Add(this.label_Brutto6);
             this.Controls.Add(this.label_Brutto5);
             this.Controls.Add(this.label_Brutto4);
@@ -887,5 +965,12 @@ namespace proba5._5
         private System.Windows.Forms.Label label_Brutto3;
         private System.Windows.Forms.Label label_Brutto2;
         private System.Windows.Forms.Label label_Brutto1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button_Mentes2_6;
+        private System.Windows.Forms.Button button_Mentes2_5;
+        private System.Windows.Forms.Button button_Mentes2_4;
+        private System.Windows.Forms.Button button_Mentes2_3;
+        private System.Windows.Forms.Button button_Mentes2_2;
+        private System.Windows.Forms.Button button_Mentes2_1;
     }
 }

@@ -301,7 +301,7 @@ namespace proba5._5
 
         private void textBox_3_1_TextChanged(object sender, EventArgs e)
         {
-            Methodtexteventere2(textBox_3_1, button_Mentes1, label_maszknev1);
+            Methodtexteventere2(textBox_3_1, button_Mentes2_1, label_maszknev1);
         }
     }
 }
