@@ -186,5 +186,82 @@ namespace proba5._5
             return osszeg;
         }
 
+        public static void HaBarmiElterazEredetitol() 
+        {
+            
+        }
+
+        /// TextCahnge eventek regex es button zold
+        private void textBox_2_1_TextChanged(object sender, EventArgs e)
+        {
+            /*if (Raktar.rg.IsMatch(textBox_2_1.Text) && Convert.ToInt32(textBox_2_1.Text) >= 50 && Convert.ToInt32(textBox_2_1.Text) <= 50000)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && label_maszknev1.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
+                    {
+                        if (SzerverData.MaszInfokOsszes[i].Ar_db != Convert.ToDouble(textBox_2_1.Text))
+                        {
+                            button_Mentes1.BackColor = Color.FromArgb(5, 6, 4);
+                        }
+                        else
+                        {
+                            button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nem jaó");
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && label_maszknev1.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
+                    {   
+                         textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
+                         button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);   
+                    }
+                }
+            }*/
+            Method4textvhacgeAzelsotexBoxra(textBox_2_1, button_Mentes1, label_maszknev1);
+        }
+
+
+
+        //Method4Textevent
+        #region Metódus texteventre
+        public static void Method4textvhacgeAzelsotexBoxra(TextBox textbox, Button gomb, Label labelka)
+        {
+            if (Raktar.rg.IsMatch(textbox.Text) && Convert.ToInt32(textbox.Text) >= 50 && Convert.ToInt32(textbox.Text) <= 50000)
+            {
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && labelka.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
+                    {
+                        if (SzerverData.MaszInfokOsszes[i].Ar_db != Convert.ToDouble(textbox.Text))
+                        {
+                            gomb.BackColor = Color.FromArgb(153,255,51);
+                        }
+                        else
+                        {
+                            gomb.BackColor = Color.FromKnownColor(KnownColor.Control);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nem jaó");
+                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                {
+                    if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && labelka.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
+                    {
+                        textbox.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
+                        gomb.BackColor = Color.FromKnownColor(KnownColor.Control);
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }

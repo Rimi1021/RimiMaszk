@@ -233,6 +233,7 @@ namespace proba5._5
             this.textBox_2_1.Size = new System.Drawing.Size(54, 20);
             this.textBox_2_1.TabIndex = 27;
             this.textBox_2_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_2_1.TextChanged += new System.EventHandler(this.textBox_2_1_TextChanged);
             // 
             // textBox_3_6
             // 
