@@ -193,6 +193,7 @@ namespace proba5._5
             this.textBox_2_6.Size = new System.Drawing.Size(54, 20);
             this.textBox_2_6.TabIndex = 32;
             this.textBox_2_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_2_6.TextChanged += new System.EventHandler(this.textBox_2_6_TextChanged);
             // 
             // textBox_2_5
             // 
@@ -201,6 +202,7 @@ namespace proba5._5
             this.textBox_2_5.Size = new System.Drawing.Size(54, 20);
             this.textBox_2_5.TabIndex = 31;
             this.textBox_2_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_2_5.TextChanged += new System.EventHandler(this.textBox_2_5_TextChanged);
             // 
             // textBox_2_4
             // 
@@ -209,6 +211,7 @@ namespace proba5._5
             this.textBox_2_4.Size = new System.Drawing.Size(54, 20);
             this.textBox_2_4.TabIndex = 30;
             this.textBox_2_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_2_4.TextChanged += new System.EventHandler(this.textBox_2_4_TextChanged);
             // 
             // textBox_2_3
             // 
@@ -217,6 +220,7 @@ namespace proba5._5
             this.textBox_2_3.Size = new System.Drawing.Size(54, 20);
             this.textBox_2_3.TabIndex = 29;
             this.textBox_2_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_2_3.TextChanged += new System.EventHandler(this.textBox_2_3_TextChanged);
             // 
             // textBox_2_2
             // 
@@ -225,6 +229,7 @@ namespace proba5._5
             this.textBox_2_2.Size = new System.Drawing.Size(54, 20);
             this.textBox_2_2.TabIndex = 28;
             this.textBox_2_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_2_2.TextChanged += new System.EventHandler(this.textBox_2_2_TextChanged);
             // 
             // textBox_2_1
             // 
@@ -282,6 +287,7 @@ namespace proba5._5
             this.textBox_3_1.Size = new System.Drawing.Size(25, 20);
             this.textBox_3_1.TabIndex = 44;
             this.textBox_3_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_3_1.TextChanged += new System.EventHandler(this.textBox_3_1_TextChanged);
             // 
             // label_nettoakcio1
             // 
@@ -401,7 +407,7 @@ namespace proba5._5
             // label_nettoakcio6
             // 
             this.label_nettoakcio6.AutoSize = true;
-            this.label_nettoakcio6.Location = new System.Drawing.Point(383, 357);
+            this.label_nettoakcio6.Location = new System.Drawing.Point(383, 364);
             this.label_nettoakcio6.Name = "label_nettoakcio6";
             this.label_nettoakcio6.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio6.TabIndex = 62;
@@ -410,7 +416,7 @@ namespace proba5._5
             // label_bruttoakcio6
             // 
             this.label_bruttoakcio6.AutoSize = true;
-            this.label_bruttoakcio6.Location = new System.Drawing.Point(508, 358);
+            this.label_bruttoakcio6.Location = new System.Drawing.Point(508, 364);
             this.label_bruttoakcio6.Name = "label_bruttoakcio6";
             this.label_bruttoakcio6.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio6.TabIndex = 68;
@@ -508,7 +514,7 @@ namespace proba5._5
             // 
             // button_Mentes6
             // 
-            this.button_Mentes6.Location = new System.Drawing.Point(608, 352);
+            this.button_Mentes6.Location = new System.Drawing.Point(608, 358);
             this.button_Mentes6.Name = "button_Mentes6";
             this.button_Mentes6.Size = new System.Drawing.Size(60, 23);
             this.button_Mentes6.TabIndex = 74;
