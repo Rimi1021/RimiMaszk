@@ -186,10 +186,6 @@ namespace proba5._5
             return osszeg;
         }
 
-        public static void HaBarmiElterazEredetitol() 
-        {
-            
-        }
 
         /// TextCahnge eventek regex es button zold
         private void textBox_2_1_TextChanged(object sender, EventArgs e)
@@ -267,7 +263,7 @@ namespace proba5._5
         #region Metódus textbox%-ra
         public static void Methodtexteventere2(TextBox textbox, Button gomb, Label labelka) 
         {
-            if (Raktar.rg.IsMatch(textbox.Text) && Convert.ToInt32(textbox.Text) >= 1 && Convert.ToInt32(textbox.Text) <= 99)
+            if (Raktar.rg.IsMatch(textbox.Text) && Convert.ToInt32(textbox.Text) >= 0 && Convert.ToInt32(textbox.Text) <= 99)
             {
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
@@ -299,9 +295,38 @@ namespace proba5._5
         }
         #endregion
 
+
+        //Textboxeventek 2.Column
+        #region
         private void textBox_3_1_TextChanged(object sender, EventArgs e)
         {
             Methodtexteventere2(textBox_3_1, button_Mentes2_1, label_maszknev1);
         }
+
+        private void textBox_3_2_TextChanged(object sender, EventArgs e)
+        {
+            Methodtexteventere2(textBox_3_2, button_Mentes2_2, label_maszknev2);
+        }
+
+        private void textBox_3_3_TextChanged(object sender, EventArgs e)
+        {
+            Methodtexteventere2(textBox_3_3, button_Mentes2_3, label_maszknev3);
+        }
+
+        private void textBox_3_4_TextChanged(object sender, EventArgs e)
+        {
+            Methodtexteventere2(textBox_3_4, button_Mentes2_4, label_maszknev4);
+        }
+
+        private void textBox_3_5_TextChanged(object sender, EventArgs e)
+        {
+            Methodtexteventere2(textBox_3_5, button_Mentes2_5, label_maszknev5);
+        }
+
+        private void textBox_3_6_TextChanged(object sender, EventArgs e)
+        {
+            Methodtexteventere2(textBox_3_6, button_Mentes2_6, label_maszknev6);
+        }
+        #endregion
     }
 }
