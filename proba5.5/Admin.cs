@@ -23,10 +23,13 @@ namespace proba5._5
             aruatcsoportositas1.Hide();
             Design();
             Profilkepalattinev();
+            kezdopanel1.Show();
+            kezdopanel1.BringToFront();
         }
 
         private void button_felhasznalohozzaadas_Click1(object sender, EventArgs e)
         {
+            kezdopanel1.Hide();
             raktar1.Hide();
             aruvisszavetel1.Hide();
             eladas1.Hide();
@@ -37,6 +40,7 @@ namespace proba5._5
 
         private void button_felhasznalohozzaadas_Click_1(object sender, EventArgs e)
         {
+            kezdopanel1.Hide();
             raktar1.Hide();
             aruvisszavetel1.Hide();
             eladas1.Hide();
@@ -90,6 +94,7 @@ namespace proba5._5
         private void button1_Click(object sender, EventArgs e)
         {
             SubMenuHide();
+            kezdopanel1.Hide();
             felhasznalohozzaAdas1.Hide();
             raktar1.Hide();
             aruvisszavetel1.Hide();
@@ -107,6 +112,7 @@ namespace proba5._5
         {
             SubMenuHide();
             raktar1.Hide();
+            kezdopanel1.Hide();
             aruvisszavetel1.Hide();
             listazasTorles1.Hide();
             felhasznalohozzaAdas1.Hide();
@@ -117,6 +123,7 @@ namespace proba5._5
         private void button_Visszavetel_Click(object sender, EventArgs e)
         {
             SubMenuHide();
+            kezdopanel1.Hide();
             felhasznalohozzaAdas1.Hide();
             raktar1.Hide();
             listazasTorles1.Hide();
@@ -128,6 +135,7 @@ namespace proba5._5
         private void button_Raktar_Click(object sender, EventArgs e)
         {
             SubMenuHide();
+            kezdopanel1.Hide();
             eladas1.Hide();
             aruvisszavetel1.Hide();
             listazasTorles1.Hide();
@@ -171,6 +179,7 @@ namespace proba5._5
         private void button_AruAtcsoportositas_Click(object sender, EventArgs e)
         {
             felhasznalohozzaAdas1.Hide();
+            kezdopanel1.Hide();
             listazasTorles1.Hide();
             raktar1.Hide();
             aruvisszavetel1.Hide();

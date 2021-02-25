@@ -119,6 +119,12 @@
     <Compile Include="GyorForm.Designer.cs">
       <DependentUpon>GyorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kezdopanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kezdopanel.Designer.cs">
+      <DependentUpon>Kezdopanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListakbaOlvasas.cs" />
     <Compile Include="ListazasTorles.cs">
       <SubType>UserControl</SubType>
@@ -154,6 +160,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kezdopanel.resx">
+      <DependentUpon>Kezdopanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListazasTorles.resx">
       <DependentUpon>ListazasTorles.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +174,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Raktar.resx">
       <DependentUpon>Raktar.cs</DependentUpon>
@@ -183,6 +193,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\icons8-protection-mask-100.png" />
     <Content Include="DolgozokAdmin.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
