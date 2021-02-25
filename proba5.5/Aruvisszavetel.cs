@@ -37,12 +37,12 @@ namespace proba5._5
                 maszktipus = "Gazmaszk";
 
                 // Adatok kiirasa
-                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_Brutto1);
-                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_Brutto2);
-                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_Brutto3);
-                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_Brutto4);
-                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_Brutto5);
-                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_Brutto6);
+                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_bruttoakcio1);
+                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2);
+                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_bruttoakcio3);
+                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_bruttoakcio4);
+                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_bruttoakcio5);
+                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6);
             }
             else if (comboBox_Maszktipus.SelectedIndex == 1) //szelepes
             {
@@ -53,12 +53,12 @@ namespace proba5._5
                 label_maszknev5.Text = "Sarga";
                 label_maszknev6.Text = "Feher";
                 maszktipus = "Szelepes";
-                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_Brutto1);
-                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_Brutto2);
-                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_Brutto3);
-                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_Brutto4);
-                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_Brutto5);
-                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_Brutto6);
+                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_bruttoakcio1);
+                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2);
+                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_bruttoakcio3);
+                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_bruttoakcio4);
+                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_bruttoakcio5);
+                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6);
             }
             else if (comboBox_Maszktipus.SelectedIndex == 2) //fashion
             {
@@ -69,12 +69,12 @@ namespace proba5._5
                 label_maszknev5.Text = "Sarga";
                 label_maszknev6.Text = "Feher";
                 maszktipus = "Fashion";
-                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_Brutto1);
-                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_Brutto2);
-                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_Brutto3);
-                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_Brutto4);
-                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_Brutto5);
-                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_Brutto6);
+                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_bruttoakcio1);
+                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2);
+                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_bruttoakcio3);
+                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_bruttoakcio4);
+                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_bruttoakcio5);
+                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6);
             }
             else if (comboBox_Maszktipus.SelectedIndex == 3) //szuros
             {
@@ -85,12 +85,12 @@ namespace proba5._5
                 label_maszknev5.Text = "Sarga";
                 label_maszknev6.Text = "Feher";
                 maszktipus = "Szuros";
-                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_Brutto1);
-                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_Brutto2);
-                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_Brutto3);
-                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_Brutto4);
-                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_Brutto5);
-                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_Brutto6);
+                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_bruttoakcio1);
+                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2);
+                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_bruttoakcio3);
+                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_bruttoakcio4);
+                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_bruttoakcio5);
+                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6);
             }
             else if (comboBox_Maszktipus.SelectedIndex == 4) //egyszerhasznalatos
             {
@@ -101,12 +101,12 @@ namespace proba5._5
                 label_maszknev5.Text = "Rozsaszin";
                 label_maszknev6.Text = "Feher";
                 maszktipus = "Egyszerhasznalatos";
-                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_Brutto1);
-                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_Brutto2);
-                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_Brutto3);
-                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_Brutto4);
-                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_Brutto5);
-                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_Brutto6);
+                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_bruttoakcio1);
+                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2);
+                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_bruttoakcio3);
+                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_bruttoakcio4);
+                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_bruttoakcio5);
+                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6);
             }
             else if (comboBox_Maszktipus.SelectedIndex == 5) //mintás
             {
@@ -117,12 +117,12 @@ namespace proba5._5
                 label_maszknev5.Text = "Shrek";
                 label_maszknev6.Text = "Memes";
                 maszktipus = "Mintas";
-                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_Brutto1);
-                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_Brutto2);
-                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_Brutto3);
-                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_Brutto4);
-                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_Brutto5);
-                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_Brutto6);
+                AdatokKiiratasa(label_maszknev1.Text, label_Brutto1, textBox_2_1, textBox_3_1, label_nettoakcio1, label_bruttoakcio1);
+                AdatokKiiratasa(label_maszknev2.Text, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2);
+                AdatokKiiratasa(label_maszknev3.Text, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_bruttoakcio3);
+                AdatokKiiratasa(label_maszknev4.Text, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_bruttoakcio4);
+                AdatokKiiratasa(label_maszknev5.Text, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_bruttoakcio5);
+                AdatokKiiratasa(label_maszknev6.Text, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6);
             }
         }
         #endregion
@@ -162,7 +162,7 @@ namespace proba5._5
                     if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
                     {
                         label2.Text = Convert.ToString(akcio(SzerverData.MaszInfokOsszes[i].Ar_db, SzerverData.MaszInfokOsszes[i].Akcio));
-                        label3.Text = "nope";// Convert.ToString(akcio(Convert.ToDouble(label1.Text), SzerverData.MaszInfokOsszes[i].Akcio)); 
+                        label3.Text = Convert.ToString(akcio(Convert.ToDouble(label1.Text), SzerverData.MaszInfokOsszes[i].Akcio)); 
                     }
                     else
                     {
