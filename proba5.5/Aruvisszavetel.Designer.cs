@@ -499,6 +499,7 @@ namespace proba5._5
             this.button_Mentes2.TabIndex = 70;
             this.button_Mentes2.Text = "save";
             this.button_Mentes2.UseVisualStyleBackColor = true;
+            this.button_Mentes2.Click += new System.EventHandler(this.button_Mentes2_Click);
             // 
             // button_Mentes3
             // 
@@ -508,6 +509,7 @@ namespace proba5._5
             this.button_Mentes3.TabIndex = 71;
             this.button_Mentes3.Text = "save";
             this.button_Mentes3.UseVisualStyleBackColor = true;
+            this.button_Mentes3.Click += new System.EventHandler(this.button_Mentes3_Click);
             // 
             // button_Mentes4
             // 
@@ -517,6 +519,7 @@ namespace proba5._5
             this.button_Mentes4.TabIndex = 72;
             this.button_Mentes4.Text = "save";
             this.button_Mentes4.UseVisualStyleBackColor = true;
+            this.button_Mentes4.Click += new System.EventHandler(this.button_Mentes4_Click);
             // 
             // button_Mentes5
             // 
@@ -526,6 +529,7 @@ namespace proba5._5
             this.button_Mentes5.TabIndex = 73;
             this.button_Mentes5.Text = "save";
             this.button_Mentes5.UseVisualStyleBackColor = true;
+            this.button_Mentes5.Click += new System.EventHandler(this.button_Mentes5_Click);
             // 
             // button_Mentes6
             // 
@@ -535,6 +539,7 @@ namespace proba5._5
             this.button_Mentes6.TabIndex = 74;
             this.button_Mentes6.Text = "save";
             this.button_Mentes6.UseVisualStyleBackColor = true;
+            this.button_Mentes6.Click += new System.EventHandler(this.button_Mentes6_Click);
             // 
             // label1
             // 

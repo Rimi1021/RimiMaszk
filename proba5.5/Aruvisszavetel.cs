@@ -330,14 +330,22 @@ namespace proba5._5
 
         private void button_Mentes1_Click(object sender, EventArgs e)
         {
-            if (button_Mentes1.BackColor == Color.FromArgb(153, 255, 51))
+            GombnyomasFuggveny(label_maszknev1,label_Brutto1 ,textBox_2_1,textBox_3_1, label_nettoakcio1, label_bruttoakcio1,button_Mentes1);
+        }
+
+
+        //Metódus Gomb 1.Oszlop
+        #region Metodus Gom 1.Oszlop
+        public static void GombnyomasFuggveny(Label maszknevecske,Label abruttolabel, TextBox azertek, TextBox atextboxakcio, Label labelnettoakcio, Label labelbruttoakcio,Button agomb)
+        {
+            if (agomb.BackColor == Color.FromArgb(153, 255, 51))
             {
-                string fuggvenymaszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                string maszknev = label_maszknev1.Text;
-                string felvittertek = textBox_2_1.Text;
+                string fuggvenymaszktipus = maszktipus;
+                string maszknev = maszknevecske.Text;
+                string felvittertek = azertek.Text;
                 if (MessageBox.Show("Biztosan Feltölti az új adatokat?", "Megerősítés", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);
+                    agomb.BackColor = Color.FromKnownColor(KnownColor.Control);
                     try
                     {
                         using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
@@ -361,16 +369,17 @@ namespace proba5._5
                     { MessageBox.Show("Nem sikerült a csalakozás"); }
                     for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                     {
-                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == label_maszknev1.Text)
+                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == maszknevecske.Text)
                         {
-                            label_maszknev1.Text = SzerverData.MaszInfokOsszes[i].Maszknev;
-                            label_Brutto1.Text = Convert.ToString(Brutto(SzerverData.MaszInfokOsszes[i].Ar_db));
-                            textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
-                            textBox_3_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio);
+                            maszknevecske.Text = SzerverData.MaszInfokOsszes[i].Maszknev;
+                            abruttolabel.Text = Convert.ToString(Brutto(SzerverData.MaszInfokOsszes[i].Ar_db));
+                            labelbruttoakcio.Text = Convert.ToString(Brutto(SzerverData.MaszInfokOsszes[i].Ar_db));
+                            azertek.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
+                            atextboxakcio.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio);
                             if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
                             {
-                                label_nettoakcio1.Text = Convert.ToString(akcio(SzerverData.MaszInfokOsszes[i].Ar_db, SzerverData.MaszInfokOsszes[i].Akcio));
-                                label_bruttoakcio1.Text = Convert.ToString(akcio(Convert.ToDouble(label_Brutto1.Text), SzerverData.MaszInfokOsszes[i].Akcio));
+                                labelnettoakcio.Text = Convert.ToString(akcio(SzerverData.MaszInfokOsszes[i].Ar_db, SzerverData.MaszInfokOsszes[i].Akcio));
+                                labelbruttoakcio.Text = Convert.ToString(akcio(Convert.ToDouble(labelbruttoakcio.Text), SzerverData.MaszInfokOsszes[i].Akcio));
                             }
                         }
                     }
@@ -379,10 +388,10 @@ namespace proba5._5
                 {
                     for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                     {
-                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && label_maszknev1.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
+                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && maszknevecske.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
                         {
-                            textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
-                            button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);
+                            azertek.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
+                            agomb.BackColor = Color.FromKnownColor(KnownColor.Control);
                         }
                     }
                 }
@@ -392,85 +401,14 @@ namespace proba5._5
                 MessageBox.Show("Nem jó értéket adtál meg");
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
-                    if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && label_maszknev1.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
+                    if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && maszknevecske.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
                     {
-                        textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
+                        azertek.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
                     }
                 }
             }
         }
-
-        /*public static void GombnyomasFuggveny()
-        {
-            if (button_Mentes1.BackColor == Color.FromArgb(153, 255, 51))
-            {
-                string fuggvenymaszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                string maszknev = label_maszknev1.Text;
-                string felvittertek = textBox_2_1.Text;
-                if (MessageBox.Show("Biztosan Feltölti az új adatokat?", "Megerősítés", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                    try
-                    {
-                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
-                        {
-                            string Feltoltes = $"UPDATE MaszkAruk SET ar_db = '{felvittertek}' WHERE maszktipus='{fuggvenymaszktipus}' AND maszknev='{maszknev}'"; //Adatok feltöltése
-                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
-                            {
-                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
-                                var result = Parancs.ExecuteNonQuery(); //itt  baj
-                                Parancs.Dispose();
-                                // Hiba keresés, ha nem lett eredmény
-                                if (result < 0)
-                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
-                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
-                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
-                                Raktar.Tisztalista();
-                            }
-                        }
-                    }
-                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
-                    { MessageBox.Show("Nem sikerült a csalakozás"); }
-                    for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                    {
-                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == label_maszknev1.Text)
-                        {
-                            label_maszknev1.Text = SzerverData.MaszInfokOsszes[i].Maszknev;
-                            label_Brutto1.Text = Convert.ToString(Brutto(SzerverData.MaszInfokOsszes[i].Ar_db));
-                            textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
-                            textBox_3_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio);
-                            if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
-                            {
-                                label_nettoakcio1.Text = Convert.ToString(akcio(SzerverData.MaszInfokOsszes[i].Ar_db, SzerverData.MaszInfokOsszes[i].Akcio));
-                                label_bruttoakcio1.Text = Convert.ToString(akcio(Convert.ToDouble(label_Brutto1.Text), SzerverData.MaszInfokOsszes[i].Akcio));
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                    {
-                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && label_maszknev1.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
-                        {
-                            textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
-                            button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nem jó értéket adtál meg");
-                for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                {
-                    if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && label_maszknev1.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
-                    {
-                        textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
-                    }
-                }
-            }
-        }*/
+        #endregion
 
         private void label_nettoakcio5_Click(object sender, EventArgs e)
         {
@@ -480,6 +418,32 @@ namespace proba5._5
         private void label_bruttoakcio2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //A 1.Oszlop Gombok_CLICK
+        private void button_Mentes2_Click(object sender, EventArgs e)
+        {
+            GombnyomasFuggveny(label_maszknev2, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2, button_Mentes2);
+        }
+
+        private void button_Mentes3_Click(object sender, EventArgs e)
+        {
+            GombnyomasFuggveny(label_maszknev3, label_Brutto3, textBox_2_3, textBox_3_3, label_nettoakcio3, label_bruttoakcio3, button_Mentes3);
+        }
+
+        private void button_Mentes4_Click(object sender, EventArgs e)
+        {
+            GombnyomasFuggveny(label_maszknev4, label_Brutto4, textBox_2_4, textBox_3_4, label_nettoakcio4, label_bruttoakcio4, button_Mentes4);
+        }
+
+        private void button_Mentes5_Click(object sender, EventArgs e)
+        {
+            GombnyomasFuggveny(label_maszknev5, label_Brutto5, textBox_2_5, textBox_3_5, label_nettoakcio5, label_bruttoakcio5, button_Mentes5);
+        }
+
+        private void button_Mentes6_Click(object sender, EventArgs e)
+        {
+            GombnyomasFuggveny(label_maszknev6, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6, button_Mentes6);
         }
     }
 }
