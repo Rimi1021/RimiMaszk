@@ -373,7 +373,6 @@ namespace proba5._5
                         {
                             maszknevecske.Text = SzerverData.MaszInfokOsszes[i].Maszknev;
                             abruttolabel.Text = Convert.ToString(Brutto(SzerverData.MaszInfokOsszes[i].Ar_db));
-                            labelbruttoakcio.Text = Convert.ToString(Brutto(SzerverData.MaszInfokOsszes[i].Ar_db));
                             azertek.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
                             atextboxakcio.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio);
                             if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
