@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -328,5 +329,80 @@ namespace proba5._5
             Methodtexteventere2(textBox_3_6, button_Mentes2_6, label_maszknev6);
         }
         #endregion
+
+        private void button_Mentes1_Click(object sender, EventArgs e)
+        {
+            if (button_Mentes1.BackColor == Color.FromArgb(153, 255, 51))
+            {
+                string fuggvenymaszktipus = comboBox_Maszktipus.SelectedItem.ToString();
+                string maszknev = label_maszknev1.Text;
+                double felvittertek = Convert.ToDouble(textBox_2_1.Text);
+                System.Diagnostics.Debug.WriteLine(fuggvenymaszktipus);
+                System.Diagnostics.Debug.WriteLine(maszknev);
+                System.Diagnostics.Debug.WriteLine(felvittertek);
+                if (MessageBox.Show("Biztosan Feltölti az új adatokat?", "Megerősítés", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);
+                    try
+                    {
+                        using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                        {
+                            string Feltoltes = $"UPDATE MaszkAruk SET ar/db = {felvittertek} WHERE maszktipus='{fuggvenymaszktipus}' AND maszknev='{maszknev}'"; //Adatok feltöltése
+                            using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                            {
+                                Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                var result = Parancs.ExecuteNonQuery();
+                                System.Diagnostics.Debug.WriteLine("Execute wuerrz vegrehajtva");
+                                Parancs.Dispose();
+                                // Hiba keresés, ha nem lett eredmény
+                                if (result < 0)
+                                { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                MessageBox.Show("A feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                            }
+                        }
+                    }
+                    catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                    { MessageBox.Show("Nem sikerült a csalakozás"); }
+                    Raktar.Tisztalista();
+                    for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                    {
+                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == label_maszknev1.Text)
+                        {
+                            label_maszknev1.Text = SzerverData.MaszInfokOsszes[i].Maszknev;
+                            label_Brutto1.Text = Convert.ToString(Brutto(SzerverData.MaszInfokOsszes[i].Ar_db));
+                            textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
+                            textBox_3_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio);
+                            if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
+                            {
+                                label_nettoakcio1.Text = Convert.ToString(akcio(SzerverData.MaszInfokOsszes[i].Ar_db, SzerverData.MaszInfokOsszes[i].Akcio));
+                                label_bruttoakcio1.Text = Convert.ToString(akcio(Convert.ToDouble(label_Brutto1.Text), SzerverData.MaszInfokOsszes[i].Akcio));
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                    {
+                        if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && label_maszknev1.Text == SzerverData.MaszInfokOsszes[i].Maszknev)
+                        {
+                            textBox_2_1.Text = Convert.ToString(SzerverData.MaszInfokOsszes[i].Ar_db);
+                            button_Mentes1.BackColor = Color.FromKnownColor(KnownColor.Control);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void label_nettoakcio5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_bruttoakcio2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

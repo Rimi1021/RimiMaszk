@@ -304,7 +304,7 @@ namespace proba5._5
             // label_nettoakcio1
             // 
             this.label_nettoakcio1.AutoSize = true;
-            this.label_nettoakcio1.Location = new System.Drawing.Point(453, 160);
+            this.label_nettoakcio1.Location = new System.Drawing.Point(465, 170);
             this.label_nettoakcio1.Name = "label_nettoakcio1";
             this.label_nettoakcio1.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio1.TabIndex = 50;
@@ -383,7 +383,7 @@ namespace proba5._5
             // label_nettoakcio2
             // 
             this.label_nettoakcio2.AutoSize = true;
-            this.label_nettoakcio2.Location = new System.Drawing.Point(453, 201);
+            this.label_nettoakcio2.Location = new System.Drawing.Point(465, 211);
             this.label_nettoakcio2.Name = "label_nettoakcio2";
             this.label_nettoakcio2.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio2.TabIndex = 58;
@@ -392,7 +392,7 @@ namespace proba5._5
             // label_nettoakcio3
             // 
             this.label_nettoakcio3.AutoSize = true;
-            this.label_nettoakcio3.Location = new System.Drawing.Point(453, 244);
+            this.label_nettoakcio3.Location = new System.Drawing.Point(465, 253);
             this.label_nettoakcio3.Name = "label_nettoakcio3";
             this.label_nettoakcio3.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio3.TabIndex = 59;
@@ -401,7 +401,7 @@ namespace proba5._5
             // label_nettoakcio4
             // 
             this.label_nettoakcio4.AutoSize = true;
-            this.label_nettoakcio4.Location = new System.Drawing.Point(453, 283);
+            this.label_nettoakcio4.Location = new System.Drawing.Point(465, 291);
             this.label_nettoakcio4.Name = "label_nettoakcio4";
             this.label_nettoakcio4.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio4.TabIndex = 60;
@@ -410,16 +410,17 @@ namespace proba5._5
             // label_nettoakcio5
             // 
             this.label_nettoakcio5.AutoSize = true;
-            this.label_nettoakcio5.Location = new System.Drawing.Point(453, 323);
+            this.label_nettoakcio5.Location = new System.Drawing.Point(465, 332);
             this.label_nettoakcio5.Name = "label_nettoakcio5";
             this.label_nettoakcio5.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio5.TabIndex = 61;
             this.label_nettoakcio5.Text = "Nincs akció";
+            this.label_nettoakcio5.Click += new System.EventHandler(this.label_nettoakcio5_Click);
             // 
             // label_nettoakcio6
             // 
             this.label_nettoakcio6.AutoSize = true;
-            this.label_nettoakcio6.Location = new System.Drawing.Point(453, 364);
+            this.label_nettoakcio6.Location = new System.Drawing.Point(465, 366);
             this.label_nettoakcio6.Name = "label_nettoakcio6";
             this.label_nettoakcio6.Size = new System.Drawing.Size(63, 13);
             this.label_nettoakcio6.TabIndex = 62;
@@ -428,7 +429,7 @@ namespace proba5._5
             // label_bruttoakcio6
             // 
             this.label_bruttoakcio6.AutoSize = true;
-            this.label_bruttoakcio6.Location = new System.Drawing.Point(578, 364);
+            this.label_bruttoakcio6.Location = new System.Drawing.Point(578, 369);
             this.label_bruttoakcio6.Name = "label_bruttoakcio6";
             this.label_bruttoakcio6.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio6.TabIndex = 68;
@@ -437,7 +438,7 @@ namespace proba5._5
             // label_bruttoakcio5
             // 
             this.label_bruttoakcio5.AutoSize = true;
-            this.label_bruttoakcio5.Location = new System.Drawing.Point(578, 324);
+            this.label_bruttoakcio5.Location = new System.Drawing.Point(578, 329);
             this.label_bruttoakcio5.Name = "label_bruttoakcio5";
             this.label_bruttoakcio5.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio5.TabIndex = 67;
@@ -446,7 +447,7 @@ namespace proba5._5
             // label_bruttoakcio4
             // 
             this.label_bruttoakcio4.AutoSize = true;
-            this.label_bruttoakcio4.Location = new System.Drawing.Point(578, 284);
+            this.label_bruttoakcio4.Location = new System.Drawing.Point(578, 289);
             this.label_bruttoakcio4.Name = "label_bruttoakcio4";
             this.label_bruttoakcio4.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio4.TabIndex = 66;
@@ -455,7 +456,7 @@ namespace proba5._5
             // label_bruttoakcio3
             // 
             this.label_bruttoakcio3.AutoSize = true;
-            this.label_bruttoakcio3.Location = new System.Drawing.Point(578, 245);
+            this.label_bruttoakcio3.Location = new System.Drawing.Point(578, 250);
             this.label_bruttoakcio3.Name = "label_bruttoakcio3";
             this.label_bruttoakcio3.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio3.TabIndex = 65;
@@ -464,16 +465,17 @@ namespace proba5._5
             // label_bruttoakcio2
             // 
             this.label_bruttoakcio2.AutoSize = true;
-            this.label_bruttoakcio2.Location = new System.Drawing.Point(578, 202);
+            this.label_bruttoakcio2.Location = new System.Drawing.Point(578, 207);
             this.label_bruttoakcio2.Name = "label_bruttoakcio2";
             this.label_bruttoakcio2.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio2.TabIndex = 64;
             this.label_bruttoakcio2.Text = "Nincs akció";
+            this.label_bruttoakcio2.Click += new System.EventHandler(this.label_bruttoakcio2_Click);
             // 
             // label_bruttoakcio1
             // 
             this.label_bruttoakcio1.AutoSize = true;
-            this.label_bruttoakcio1.Location = new System.Drawing.Point(578, 161);
+            this.label_bruttoakcio1.Location = new System.Drawing.Point(578, 170);
             this.label_bruttoakcio1.Name = "label_bruttoakcio1";
             this.label_bruttoakcio1.Size = new System.Drawing.Size(63, 13);
             this.label_bruttoakcio1.TabIndex = 63;
@@ -487,6 +489,7 @@ namespace proba5._5
             this.button_Mentes1.TabIndex = 69;
             this.button_Mentes1.Text = "save";
             this.button_Mentes1.UseVisualStyleBackColor = true;
+            this.button_Mentes1.Click += new System.EventHandler(this.button_Mentes1_Click);
             // 
             // button_Mentes2
             // 
