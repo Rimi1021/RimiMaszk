@@ -775,6 +775,7 @@ namespace proba5._5
             this.button_Mentes2_6.TabIndex = 105;
             this.button_Mentes2_6.Text = "save";
             this.button_Mentes2_6.UseVisualStyleBackColor = true;
+            this.button_Mentes2_6.Click += new System.EventHandler(this.button_Mentes2_6_Click);
             // 
             // button_Mentes2_5
             // 
@@ -784,6 +785,7 @@ namespace proba5._5
             this.button_Mentes2_5.TabIndex = 104;
             this.button_Mentes2_5.Text = "save";
             this.button_Mentes2_5.UseVisualStyleBackColor = true;
+            this.button_Mentes2_5.Click += new System.EventHandler(this.button_Mentes2_5_Click);
             // 
             // button_Mentes2_4
             // 
@@ -793,6 +795,7 @@ namespace proba5._5
             this.button_Mentes2_4.TabIndex = 103;
             this.button_Mentes2_4.Text = "save";
             this.button_Mentes2_4.UseVisualStyleBackColor = true;
+            this.button_Mentes2_4.Click += new System.EventHandler(this.button_Mentes2_4_Click);
             // 
             // button_Mentes2_3
             // 
@@ -802,6 +805,7 @@ namespace proba5._5
             this.button_Mentes2_3.TabIndex = 102;
             this.button_Mentes2_3.Text = "save";
             this.button_Mentes2_3.UseVisualStyleBackColor = true;
+            this.button_Mentes2_3.Click += new System.EventHandler(this.button_Mentes2_3_Click);
             // 
             // button_Mentes2_2
             // 
@@ -811,6 +815,7 @@ namespace proba5._5
             this.button_Mentes2_2.TabIndex = 101;
             this.button_Mentes2_2.Text = "save";
             this.button_Mentes2_2.UseVisualStyleBackColor = true;
+            this.button_Mentes2_2.Click += new System.EventHandler(this.button_Mentes2_2_Click);
             // 
             // button_Mentes2_1
             // 
@@ -820,6 +825,7 @@ namespace proba5._5
             this.button_Mentes2_1.TabIndex = 100;
             this.button_Mentes2_1.Text = "save";
             this.button_Mentes2_1.UseVisualStyleBackColor = true;
+            this.button_Mentes2_1.Click += new System.EventHandler(this.button_Mentes2_1_Click);
             // 
             // Aruvisszavetel
             // 
