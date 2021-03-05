@@ -282,6 +282,11 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
+
+                    //
                     textBox_1_1.Text = "0";
                     valtozookes = false;
                 }
@@ -300,6 +305,10 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
+
+                    //
                     textBox_1_1.Text = "0";
                 }
                 else
@@ -317,6 +326,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
+
                     textBox_1_1.Text = "0";
                 }
                 else
@@ -531,6 +543,11 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui,szam2);
+
+                    // 
                     textBox_2_2.Text = "0";
                 }
                 else
@@ -548,6 +565,11 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam2);
+                    
+                    //
                     textBox_2_2.Text = "0";
                 }
                 else
@@ -565,6 +587,11 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam2);
+
+                    //
                     textBox_2_2.Text = "0";
                 }
                 else
@@ -609,6 +636,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
+
                     textBox_3_3.Text = "0";
                 }
                 else
@@ -626,6 +656,8 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
                     textBox_3_3.Text = "0";
                 }
                 else
@@ -643,6 +675,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
+
                     textBox_3_3.Text = "0";
                 }
                 else
@@ -685,6 +720,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
+
                     textBox_4_4.Text = "0";
                 }
                 else
@@ -702,6 +740,8 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
                     textBox_4_4.Text = "0";
                 }
                 else
@@ -719,6 +759,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
+
                     textBox_4_4.Text = "0";
                 }
                 else
@@ -760,6 +803,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
+
                     textBox_5_5.Text = "0";
                 }
                 else
@@ -777,6 +823,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
+
                     textBox_5_5.Text = "0";
                 }
                 else
@@ -794,6 +843,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
+
                     textBox_5_5.Text = "0";
                 }
                 else
@@ -835,6 +887,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
+
                     textBox_6_6.Text = "0";
                 }
                 else
@@ -852,6 +907,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
+
                     textBox_6_6.Text = "0";
                 }
                 else
@@ -869,6 +927,9 @@ namespace proba5._5
                 {
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
+                    // call method vonalkod
+                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
+
                     textBox_6_6.Text = "0";
                 }
                 else
@@ -1024,5 +1085,91 @@ namespace proba5._5
                 }
             }
         }
+
+        ///kódgenerátor
+        public static string GazmaszkKodgenerator(string maszktipuska, string maszknevecske)
+        {
+            Random rnd = new Random();
+            
+            string genszamvege = "";
+            //12 számot tesz az azonosítójához 
+            for (int i = 0; i < 12; i++)
+            {
+                genszamvege += Convert.ToString(rnd.Next(0, 9));
+            }
+            string elotag1 = maszktipuska.Substring(0, 2);
+            string elotag2 = maszknevecske.Substring(0, 1);
+            string Generaltkod = elotag1 + elotag2 + genszamvege;
+            System.Diagnostics.Debug.Write(Generaltkod);
+            //return generáltkód
+            return Generaltkod;
+            //text.Text = Generaltkod;
+            //System.Diagnostics.Debug.Write(Generaltkod);
+        }
+
+        public static void termekhozzaadasEgyDarab(string maszktipuska, string maszknevecske, int darabszam)
+        {
+            // Primary ID
+            int maszkaruID = 0;// Maszkaru ID
+            // maszkaru kereses
+            for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+            {
+                if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipuska && SzerverData.MaszInfokOsszes[i].Maszknev == maszknevecske)
+                {
+                    maszkaruID = SzerverData.MaszInfokOsszes[i].Id;
+                }
+            }
+
+            ////// 1 TERMEK //////
+            
+            string vonalkod = "";
+
+            for (int i = 0; i < darabszam; i++)
+            {
+                vonalkod = GazmaszkKodgenerator(maszktipuska, maszknevecske);// VONALKOD
+                try
+                {
+                    using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                    {
+                        string Feltoltes = $"INSERT INTO Vonalkod VALUES (@barcode,@aru)"; //Adatok feltöltése
+                        using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                        {
+                            Parancs.Parameters.AddWithValue("@barcode", vonalkod); //Genralt kód public static fielbe
+                            Parancs.Parameters.AddWithValue("@aru", maszkaruID); //Hivatkozott paraméter értékeinek megadása
+                            System.Diagnostics.Debug.WriteLine(" Ez az ID: " + maszkaruID);
+                            System.Diagnostics.Debug.Write(vonalkod);
+                            Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                            var result = Parancs.ExecuteNonQuery();
+                            Parancs.Dispose();
+                            // Hiba keresés, ha nem lett eredmény
+                            if (result < 0)
+                            { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                            Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                        }
+                    }
+                }
+                catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                { MessageBox.Show("Nem sikerült a vonalkod csalakozás"); }
+            }
+
+
+        }
+
+       /* public static void osszestermekhozzaadas(string maszktipuska, string maszknevecske,int darabszam)
+        {
+
+            /// for loop a darabaszam fuggvenyeben
+            /// 
+            for (int i = 0; i < darabszam; i++)
+            {
+                ////// 1 TERMEK //////
+                // termekhozzadasEgyDarab()
+                termekhozzaadasEgyDarab(maszktipuska,maszknevecske);
+            }
+
+            MessageBox.Show("A vonalkod feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+        }*/
+
+
     }
 }

@@ -492,7 +492,8 @@ namespace proba5._5
 
         }
 
-        //A 1.Oszlop Gombok_CLICK
+        #region Osszes gomb sorban
+        //A 1.Oszlop Gombok_CLICK Az elsogom természetesen elcsúszott és feljebb van
         private void button_Mentes2_Click(object sender, EventArgs e)
         {
             GombnyomasFuggveny(label_maszknev2, label_Brutto2, textBox_2_2, textBox_3_2, label_nettoakcio2, label_bruttoakcio2, button_Mentes2);
@@ -518,6 +519,7 @@ namespace proba5._5
             GombnyomasFuggveny(label_maszknev6, label_Brutto6, textBox_2_6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6, button_Mentes6);
         }
 
+        //A 2.Oszlop Gombok_CLICK
         private void button_Mentes2_1_Click(object sender, EventArgs e)
         {
             szazalekbutton(label_maszknev1, label_Brutto1, textBox_3_1, label_nettoakcio1, label_bruttoakcio1, button_Mentes2_1);
@@ -547,5 +549,6 @@ namespace proba5._5
         {
             szazalekbutton(label_maszknev6, label_Brutto6, textBox_3_6, label_nettoakcio6, label_bruttoakcio6, button_Mentes2_6);
         }
+        #endregion
     }
 }
