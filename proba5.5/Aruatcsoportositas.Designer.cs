@@ -63,12 +63,12 @@ namespace proba5._5
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(8)))), ((int)(((byte)(6)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 296);
+            this.panel1.Location = new System.Drawing.Point(0, 335);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(673, 159);
+            this.panel1.Size = new System.Drawing.Size(707, 159);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -79,7 +79,7 @@ namespace proba5._5
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(280, 37);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -390,7 +390,7 @@ namespace proba5._5
             this.Controls.Add(this.radioButton_BP);
             this.Controls.Add(this.panel1);
             this.Name = "Aruatcsoportositas";
-            this.Size = new System.Drawing.Size(673, 455);
+            this.Size = new System.Drawing.Size(707, 494);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

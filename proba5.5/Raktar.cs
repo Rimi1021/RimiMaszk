@@ -27,6 +27,8 @@ namespace proba5._5
         public static int szam4 = 0;
         public static int szam5 = 0;
         public static int szam6 = 0;
+        public static Random rnd = new Random();
+        
 
         //rg.IsMatch(textBox_5_5.Text)
         /// <summary>
@@ -1089,7 +1091,7 @@ namespace proba5._5
         ///kódgenerátor
         public static string GazmaszkKodgenerator(string maszktipuska, string maszknevecske)
         {
-            Random rnd = new Random();
+            
             
             string genszamvege = "";
             //12 számot tesz az azonosítójához 
@@ -1100,7 +1102,6 @@ namespace proba5._5
             string elotag1 = maszktipuska.Substring(0, 2);
             string elotag2 = maszknevecske.Substring(0, 1);
             string Generaltkod = elotag1 + elotag2 + genszamvege;
-            System.Diagnostics.Debug.Write(Generaltkod);
             //return generáltkód
             return Generaltkod;
             //text.Text = Generaltkod;
@@ -1154,22 +1155,6 @@ namespace proba5._5
 
 
         }
-
-       /* public static void osszestermekhozzaadas(string maszktipuska, string maszknevecske,int darabszam)
-        {
-
-            /// for loop a darabaszam fuggvenyeben
-            /// 
-            for (int i = 0; i < darabszam; i++)
-            {
-                ////// 1 TERMEK //////
-                // termekhozzadasEgyDarab()
-                termekhozzaadasEgyDarab(maszktipuska,maszknevecske);
-            }
-
-            MessageBox.Show("A vonalkod feltöltés megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
-        }*/
-
 
     }
 }
