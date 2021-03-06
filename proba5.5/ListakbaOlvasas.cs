@@ -106,7 +106,7 @@ namespace proba5._5
                     Parancs.Dispose();
                     while (LekerdezesParancs.Read())
                     {
-                        SzerverData.MaszInfokOsszes.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToString(LekerdezesParancs["maszknev"]),Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar_db"]), Convert.ToDouble(LekerdezesParancs["akcio"])));
+                        SzerverData.MaszInfokOsszes.Add(new MaszkAruk(Convert.ToInt32(LekerdezesParancs["id"]), Convert.ToString(LekerdezesParancs["maszktipus"]), Convert.ToString(LekerdezesParancs["maszknev"]),Convert.ToInt32(LekerdezesParancs["keszletarubudapest"]), Convert.ToInt32(LekerdezesParancs["keszletarugyor"]), Convert.ToInt32(LekerdezesParancs["keszletarudebrecen"]), Convert.ToDouble(LekerdezesParancs["ar_db"]), Convert.ToDouble(LekerdezesParancs["akcio"]), Convert.ToString(LekerdezesParancs["maszknev"])));
                     }
                     Csatlakozas.Close();
                 }

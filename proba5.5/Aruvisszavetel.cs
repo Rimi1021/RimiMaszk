@@ -19,7 +19,7 @@ namespace proba5._5
         }
         public static string maszktipus = "";
         const double ADO_KULCS = 0.27;
-
+        
         //ComboboxSelectItem
         #region combobox selectItem
         private void comboBox_Maszktipus_SelectedIndexChanged(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace proba5._5
         private double _Ar_db;
         private double _Akcio;
         private int _Id;
+        private string _Barcode;
         public int Id
         {
             get
@@ -118,7 +119,20 @@ namespace proba5._5
                 else throw new Exception("Az akció 0-99 értéket vehet fel!");
             }
         }
-        public MaszkAruk(int Id, string Maszktipus, string Maszknev, int KeszletraktarBudapest, int KeszletraktarGyor, int KeszletraktarDebrecen, double Ar_db, double Akcio)
+
+        public string Barcode
+        {
+            get
+            {
+                return _Barcode;
+            }
+            set
+            {
+                if (value.Length <= 15) _Barcode = value;
+                else throw new Exception("A mező max 15 karakter hosszú lehet!");
+            }
+        }
+        public MaszkAruk(int Id, string Maszktipus, string Maszknev, int KeszletraktarBudapest, int KeszletraktarGyor, int KeszletraktarDebrecen, double Ar_db, double Akcio, string barcode)
         {
             this.Id = Id;
             this.Maszktipus = Maszktipus;
@@ -128,6 +142,7 @@ namespace proba5._5
             this.KeszletraktarDebrecen = KeszletraktarDebrecen;
             this.Ar_db = Ar_db;
             this.Akcio = Akcio;
+            this.Barcode = barcode;
         }
     }
 }
