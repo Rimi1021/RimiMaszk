@@ -27,7 +27,7 @@ namespace proba5._5
         public static int szam4 = 0;
         public static int szam5 = 0;
         public static int szam6 = 0;
-        public static Random rnd = new Random();
+       // public static Random rnd = new Random();
         
 
         //rg.IsMatch(textBox_5_5.Text)
@@ -286,7 +286,7 @@ namespace proba5._5
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
 
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
 
                     //
                     textBox_1_1.Text = "0";
@@ -308,7 +308,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
 
                     //
                     textBox_1_1.Text = "0";
@@ -329,7 +329,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam1);
 
                     textBox_1_1.Text = "0";
                 }
@@ -547,7 +547,7 @@ namespace proba5._5
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
 
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui,szam2);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui,szam2);
 
                     // 
                     textBox_2_2.Text = "0";
@@ -569,7 +569,7 @@ namespace proba5._5
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
 
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam2);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam2);
                     
                     //
                     textBox_2_2.Text = "0";
@@ -591,7 +591,7 @@ namespace proba5._5
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
 
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam2);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam2);
 
                     //
                     textBox_2_2.Text = "0";
@@ -639,7 +639,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
 
                     textBox_3_3.Text = "0";
                 }
@@ -659,7 +659,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
                     textBox_3_3.Text = "0";
                 }
                 else
@@ -678,7 +678,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam3);
 
                     textBox_3_3.Text = "0";
                 }
@@ -723,7 +723,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
 
                     textBox_4_4.Text = "0";
                 }
@@ -743,7 +743,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
+                   // termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
                     textBox_4_4.Text = "0";
                 }
                 else
@@ -762,7 +762,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam4);
 
                     textBox_4_4.Text = "0";
                 }
@@ -806,7 +806,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
 
                     textBox_5_5.Text = "0";
                 }
@@ -826,7 +826,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
 
                     textBox_5_5.Text = "0";
                 }
@@ -846,7 +846,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam5);
 
                     textBox_5_5.Text = "0";
                 }
@@ -890,7 +890,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletBP(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
 
                     textBox_6_6.Text = "0";
                 }
@@ -910,7 +910,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletGY(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
 
                     textBox_6_6.Text = "0";
                 }
@@ -930,7 +930,7 @@ namespace proba5._5
                     // call method
                     update_aru_keszletdebrecen(valtozo, maszknevgui, maszktipusgui);
                     // call method vonalkod
-                    termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
+                    //termekhozzaadasEgyDarab(maszktipusgui, maszknevgui, szam6);
 
                     textBox_6_6.Text = "0";
                 }
@@ -1089,13 +1089,13 @@ namespace proba5._5
         }
 
         ///kódgenerátor
-        public static string GazmaszkKodgenerator(string maszktipuska, string maszknevecske)
+       /* public static string GazmaszkKodgenerator(string maszktipuska, string maszknevecske)
         {
             
             
             string genszamvege = "";
             //12 számot tesz az azonosítójához 
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 10; i++)
             {
                 genszamvege += Convert.ToString(rnd.Next(0, 9));
             }
@@ -1154,7 +1154,7 @@ namespace proba5._5
             }
 
 
-        }
+        }*/
 
     }
 }
