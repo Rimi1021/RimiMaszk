@@ -109,6 +109,7 @@ namespace proba5._5
                         {
                             index = i;
                             vane = true;
+                            profilnev = SzerverData.BPUserLista[i].Nev;
                         }
                     }
                     if (vane == true)
@@ -150,6 +151,7 @@ namespace proba5._5
                         {
                             index = i;
                             vane = true;
+                            profilnev = SzerverData.GyorUserLista[i].Nev;
                         }
                     }
                     if (vane == true)
@@ -191,6 +193,7 @@ namespace proba5._5
                         {
                             index = i;
                             vane = true;
+                            profilnev = SzerverData.DebUserLista[i].Nev;
                         }
                     }
                     if (vane == true)

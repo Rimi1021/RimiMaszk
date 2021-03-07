@@ -29,12 +29,178 @@ namespace proba5._5
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BudapestForm));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button_Aruk = new System.Windows.Forms.Button();
+            this.button_Eladas = new System.Windows.Forms.Button();
+            this.label_Nev = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button_Kijelentkezes = new System.Windows.Forms.Button();
+            this.button_Kilepes = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1074, 631);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.button_Aruk, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.button_Eladas, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label_Nev, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_Kijelentkezes, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.button_Kilepes, 0, 6);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(214, 631);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // button_Aruk
+            // 
+            this.button_Aruk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_Aruk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Aruk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Aruk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(237)))), ((int)(((byte)(23)))));
+            this.button_Aruk.Location = new System.Drawing.Point(0, 143);
+            this.button_Aruk.Margin = new System.Windows.Forms.Padding(0);
+            this.button_Aruk.Name = "button_Aruk";
+            this.button_Aruk.Size = new System.Drawing.Size(214, 53);
+            this.button_Aruk.TabIndex = 1;
+            this.button_Aruk.Text = "Áruk áttekintése";
+            this.button_Aruk.UseVisualStyleBackColor = true;
+            // 
+            // button_Eladas
+            // 
+            this.button_Eladas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_Eladas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Eladas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Eladas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(237)))), ((int)(((byte)(23)))));
+            this.button_Eladas.Location = new System.Drawing.Point(0, 90);
+            this.button_Eladas.Margin = new System.Windows.Forms.Padding(0);
+            this.button_Eladas.Name = "button_Eladas";
+            this.button_Eladas.Size = new System.Drawing.Size(214, 53);
+            this.button_Eladas.TabIndex = 0;
+            this.button_Eladas.Text = "Eladás";
+            this.button_Eladas.UseVisualStyleBackColor = true;
+            // 
+            // label_Nev
+            // 
+            this.label_Nev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Nev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_Nev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(237)))), ((int)(((byte)(23)))));
+            this.label_Nev.Location = new System.Drawing.Point(3, 53);
+            this.label_Nev.Name = "label_Nev";
+            this.label_Nev.Size = new System.Drawing.Size(208, 37);
+            this.label_Nev.TabIndex = 2;
+            this.label_Nev.Text = "Név";
+            this.label_Nev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(217, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(854, 625);
+            this.panel1.TabIndex = 1;
+            // 
+            // button_Kijelentkezes
+            // 
+            this.button_Kijelentkezes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_Kijelentkezes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Kijelentkezes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Kijelentkezes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(237)))), ((int)(((byte)(23)))));
+            this.button_Kijelentkezes.Location = new System.Drawing.Point(0, 530);
+            this.button_Kijelentkezes.Margin = new System.Windows.Forms.Padding(0);
+            this.button_Kijelentkezes.Name = "button_Kijelentkezes";
+            this.button_Kijelentkezes.Size = new System.Drawing.Size(214, 50);
+            this.button_Kijelentkezes.TabIndex = 4;
+            this.button_Kijelentkezes.Text = "Kijelentkezés";
+            this.button_Kijelentkezes.UseVisualStyleBackColor = true;
+            this.button_Kijelentkezes.Click += new System.EventHandler(this.button_Kijelentkezes_Click);
+            // 
+            // button_Kilepes
+            // 
+            this.button_Kilepes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_Kilepes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Kilepes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Kilepes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(237)))), ((int)(((byte)(23)))));
+            this.button_Kilepes.Location = new System.Drawing.Point(0, 580);
+            this.button_Kilepes.Margin = new System.Windows.Forms.Padding(0);
+            this.button_Kilepes.Name = "button_Kilepes";
+            this.button_Kilepes.Size = new System.Drawing.Size(214, 51);
+            this.button_Kilepes.TabIndex = 5;
+            this.button_Kilepes.Text = "Kilépés";
+            this.button_Kilepes.UseVisualStyleBackColor = true;
+            this.button_Kilepes.Click += new System.EventHandler(this.button_Kilepes_Click);
+            // 
+            // BudapestForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1074, 631);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(832, 529);
+            this.Name = "BudapestForm";
             this.Text = "BudapestForm";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button button_Eladas;
+        private System.Windows.Forms.Button button_Aruk;
+        private System.Windows.Forms.Label label_Nev;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button_Kijelentkezes;
+        private System.Windows.Forms.Button button_Kilepes;
     }
 }

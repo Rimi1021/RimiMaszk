@@ -151,6 +151,9 @@
     <EmbeddedResource Include="Aruvisszavetel.resx">
       <DependentUpon>Aruvisszavetel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BudapestForm.resx">
+      <DependentUpon>BudapestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Eladas.resx">
       <DependentUpon>Eladas.cs</DependentUpon>
     </EmbeddedResource>
