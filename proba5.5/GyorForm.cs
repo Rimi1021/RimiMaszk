@@ -15,6 +15,44 @@ namespace proba5._5
         public GyorForm()
         {
             InitializeComponent();
+            gykezdopanel1.Show();
+            gykezdopanel1.BringToFront();
+        }
+
+        private void button_Eladas_Click(object sender, EventArgs e)
+        {
+            gykezdopanel1.Hide();
+            gyAruattekintes1.Hide();
+            gyeladas1.Show();
+            gyeladas1.BringToFront();
+        }
+
+        private void button_Aruk_Click(object sender, EventArgs e)
+        {
+            gykezdopanel1.Hide();
+            gyeladas1.Hide();
+            gyAruattekintes1.Show();
+            gyAruattekintes1.BringToFront();
+        }
+
+        private void button_Kijelentkezes_Click(object sender, EventArgs e)
+        {
+            Form1 Bejelentkezes = new Form1();
+            this.Hide();
+            Bejelentkezes.Show();
+            Bejelentkezes.BringToFront();
+        }
+
+        private void button_Kilepes_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Biztosan ki szeretne lépni?", "Megerősítés", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close(); //Ha a „No” kattintunk, akkor nem csinálunk semmit, a feltétel miatt, ez persze lehet másik „gomb” is!
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

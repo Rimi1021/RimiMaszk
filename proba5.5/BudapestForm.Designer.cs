@@ -38,10 +38,10 @@ namespace proba5._5
             this.button_Kijelentkezes = new System.Windows.Forms.Button();
             this.button_Kilepes = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bpAruattekintes1 = new proba5._5.BPAruattekintes();
+            this.bpEladas1 = new proba5._5.BPEladas();
             this.bpkezdopanel1 = new proba5._5.Bpkezdopanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bpEladas1 = new proba5._5.BPEladas();
-            this.bpAruattekintes1 = new proba5._5.BPAruattekintes();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,7 +61,7 @@ namespace proba5._5
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1074, 631);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1068, 631);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -164,17 +164,38 @@ namespace proba5._5
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.bpAruattekintes1);
             this.panel1.Controls.Add(this.bpEladas1);
             this.panel1.Controls.Add(this.bpkezdopanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(217, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 625);
             this.panel1.TabIndex = 1;
             // 
+            // bpAruattekintes1
+            // 
+            this.bpAruattekintes1.BackColor = System.Drawing.Color.White;
+            this.bpAruattekintes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bpAruattekintes1.Location = new System.Drawing.Point(0, 0);
+            this.bpAruattekintes1.Margin = new System.Windows.Forms.Padding(0);
+            this.bpAruattekintes1.Name = "bpAruattekintes1";
+            this.bpAruattekintes1.Size = new System.Drawing.Size(854, 625);
+            this.bpAruattekintes1.TabIndex = 2;
+            // 
+            // bpEladas1
+            // 
+            this.bpEladas1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bpEladas1.Location = new System.Drawing.Point(0, 0);
+            this.bpEladas1.Name = "bpEladas1";
+            this.bpEladas1.Size = new System.Drawing.Size(854, 625);
+            this.bpEladas1.TabIndex = 1;
+            // 
             // bpkezdopanel1
             // 
+            this.bpkezdopanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.bpkezdopanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bpkezdopanel1.Location = new System.Drawing.Point(0, 0);
             this.bpkezdopanel1.Name = "bpkezdopanel1";
@@ -192,27 +213,11 @@ namespace proba5._5
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // bpEladas1
-            // 
-            this.bpEladas1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bpEladas1.Location = new System.Drawing.Point(0, 0);
-            this.bpEladas1.Name = "bpEladas1";
-            this.bpEladas1.Size = new System.Drawing.Size(854, 625);
-            this.bpEladas1.TabIndex = 1;
-            // 
-            // bpAruattekintes1
-            // 
-            this.bpAruattekintes1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bpAruattekintes1.Location = new System.Drawing.Point(0, 0);
-            this.bpAruattekintes1.Name = "bpAruattekintes1";
-            this.bpAruattekintes1.Size = new System.Drawing.Size(854, 625);
-            this.bpAruattekintes1.TabIndex = 2;
-            // 
             // BudapestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 631);
+            this.ClientSize = new System.Drawing.Size(1068, 631);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(832, 529);
             this.Name = "BudapestForm";

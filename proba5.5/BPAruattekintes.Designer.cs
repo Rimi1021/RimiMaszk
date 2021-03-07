@@ -33,21 +33,21 @@ namespace proba5._5
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button_listboxtorles = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button_export = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton_BP = new System.Windows.Forms.RadioButton();
             this.radioButton_GY = new System.Windows.Forms.RadioButton();
             this.radioButton_D = new System.Windows.Forms.RadioButton();
-            this.comboBox_Type = new System.Windows.Forms.ComboBox();
-            this.comboBox_Nev = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox_Type = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox_Nev = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button_Listazas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -114,16 +114,6 @@ namespace proba5._5
             this.tableLayoutPanel3.Size = new System.Drawing.Size(427, 63);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // listBox1
-            // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(427, 562);
-            this.listBox1.TabIndex = 1;
-            // 
             // button_listboxtorles
             // 
             this.button_listboxtorles.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -168,6 +158,16 @@ namespace proba5._5
             this.button_export.TabIndex = 3;
             this.button_export.Text = "Exportálás";
             this.button_export.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(0, 0);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(427, 562);
+            this.listBox1.TabIndex = 1;
             // 
             // tableLayoutPanel4
             // 
@@ -259,28 +259,6 @@ namespace proba5._5
             this.radioButton_D.Text = "Debrecen";
             this.radioButton_D.UseVisualStyleBackColor = true;
             // 
-            // comboBox_Type
-            // 
-            this.comboBox_Type.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox_Type.FormattingEnabled = true;
-            this.comboBox_Type.Location = new System.Drawing.Point(3, 3);
-            this.comboBox_Type.Name = "comboBox_Type";
-            this.comboBox_Type.Size = new System.Drawing.Size(207, 24);
-            this.comboBox_Type.TabIndex = 1;
-            this.comboBox_Type.Text = "Maszktípus";
-            // 
-            // comboBox_Nev
-            // 
-            this.comboBox_Nev.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_Nev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox_Nev.FormattingEnabled = true;
-            this.comboBox_Nev.Location = new System.Drawing.Point(3, 3);
-            this.comboBox_Nev.Name = "comboBox_Nev";
-            this.comboBox_Nev.Size = new System.Drawing.Size(207, 24);
-            this.comboBox_Nev.TabIndex = 2;
-            this.comboBox_Nev.Text = "Maszknev";
-            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
@@ -296,6 +274,17 @@ namespace proba5._5
             this.tableLayoutPanel6.Size = new System.Drawing.Size(427, 50);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
+            // comboBox_Type
+            // 
+            this.comboBox_Type.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox_Type.FormattingEnabled = true;
+            this.comboBox_Type.Location = new System.Drawing.Point(3, 3);
+            this.comboBox_Type.Name = "comboBox_Type";
+            this.comboBox_Type.Size = new System.Drawing.Size(207, 24);
+            this.comboBox_Type.TabIndex = 1;
+            this.comboBox_Type.Text = "Maszktípus";
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
@@ -310,6 +299,17 @@ namespace proba5._5
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(427, 50);
             this.tableLayoutPanel7.TabIndex = 4;
+            // 
+            // comboBox_Nev
+            // 
+            this.comboBox_Nev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_Nev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox_Nev.FormattingEnabled = true;
+            this.comboBox_Nev.Location = new System.Drawing.Point(3, 3);
+            this.comboBox_Nev.Name = "comboBox_Nev";
+            this.comboBox_Nev.Size = new System.Drawing.Size(207, 24);
+            this.comboBox_Nev.TabIndex = 2;
+            this.comboBox_Nev.Text = "Maszknev";
             // 
             // tableLayoutPanel8
             // 

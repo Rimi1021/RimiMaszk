@@ -131,6 +131,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GyAruattekintes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GyAruattekintes.Designer.cs">
+      <DependentUpon>GyAruattekintes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gyeladas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gyeladas.Designer.cs">
+      <DependentUpon>Gyeladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gykezdopanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gykezdopanel.Designer.cs">
+      <DependentUpon>Gykezdopanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="GyorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +207,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GyAruattekintes.resx">
+      <DependentUpon>GyAruattekintes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gyeladas.resx">
+      <DependentUpon>Gyeladas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gykezdopanel.resx">
+      <DependentUpon>Gykezdopanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GyorForm.resx">
+      <DependentUpon>GyorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kezdopanel.resx">
       <DependentUpon>Kezdopanel.cs</DependentUpon>
