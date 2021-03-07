@@ -35,12 +35,16 @@ namespace proba5._5
             this.button_Aruk = new System.Windows.Forms.Button();
             this.button_Eladas = new System.Windows.Forms.Button();
             this.label_Nev = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button_Kijelentkezes = new System.Windows.Forms.Button();
             this.button_Kilepes = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bpkezdopanel1 = new proba5._5.Bpkezdopanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bpEladas1 = new proba5._5.BPEladas();
+            this.bpAruattekintes1 = new proba5._5.BPAruattekintes();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +103,7 @@ namespace proba5._5
             this.button_Aruk.TabIndex = 1;
             this.button_Aruk.Text = "Áruk áttekintése";
             this.button_Aruk.UseVisualStyleBackColor = true;
+            this.button_Aruk.Click += new System.EventHandler(this.button_Aruk_Click);
             // 
             // button_Eladas
             // 
@@ -113,6 +118,7 @@ namespace proba5._5
             this.button_Eladas.TabIndex = 0;
             this.button_Eladas.Text = "Eladás";
             this.button_Eladas.UseVisualStyleBackColor = true;
+            this.button_Eladas.Click += new System.EventHandler(this.button_Eladas_Click);
             // 
             // label_Nev
             // 
@@ -125,25 +131,6 @@ namespace proba5._5
             this.label_Nev.TabIndex = 2;
             this.label_Nev.Text = "Név";
             this.label_Nev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(217, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 625);
-            this.panel1.TabIndex = 1;
             // 
             // button_Kijelentkezes
             // 
@@ -175,6 +162,52 @@ namespace proba5._5
             this.button_Kilepes.UseVisualStyleBackColor = true;
             this.button_Kilepes.Click += new System.EventHandler(this.button_Kilepes_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bpAruattekintes1);
+            this.panel1.Controls.Add(this.bpEladas1);
+            this.panel1.Controls.Add(this.bpkezdopanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(217, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(854, 625);
+            this.panel1.TabIndex = 1;
+            // 
+            // bpkezdopanel1
+            // 
+            this.bpkezdopanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bpkezdopanel1.Location = new System.Drawing.Point(0, 0);
+            this.bpkezdopanel1.Name = "bpkezdopanel1";
+            this.bpkezdopanel1.Size = new System.Drawing.Size(854, 625);
+            this.bpkezdopanel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bpEladas1
+            // 
+            this.bpEladas1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bpEladas1.Location = new System.Drawing.Point(0, 0);
+            this.bpEladas1.Name = "bpEladas1";
+            this.bpEladas1.Size = new System.Drawing.Size(854, 625);
+            this.bpEladas1.TabIndex = 1;
+            // 
+            // bpAruattekintes1
+            // 
+            this.bpAruattekintes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bpAruattekintes1.Location = new System.Drawing.Point(0, 0);
+            this.bpAruattekintes1.Name = "bpAruattekintes1";
+            this.bpAruattekintes1.Size = new System.Drawing.Size(854, 625);
+            this.bpAruattekintes1.TabIndex = 2;
+            // 
             // BudapestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +219,7 @@ namespace proba5._5
             this.Text = "BudapestForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -202,5 +236,8 @@ namespace proba5._5
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button_Kijelentkezes;
         private System.Windows.Forms.Button button_Kilepes;
+        private Bpkezdopanel bpkezdopanel1;
+        private BPAruattekintes bpAruattekintes1;
+        private BPEladas bpEladas1;
     }
 }

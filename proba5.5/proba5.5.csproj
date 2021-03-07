@@ -79,6 +79,24 @@
     <Compile Include="Aruvisszavetel.Designer.cs">
       <DependentUpon>Aruvisszavetel.cs</DependentUpon>
     </Compile>
+    <Compile Include="BPAruattekintes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BPAruattekintes.Designer.cs">
+      <DependentUpon>BPAruattekintes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BPEladas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BPEladas.Designer.cs">
+      <DependentUpon>BPEladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bpkezdopanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bpkezdopanel.Designer.cs">
+      <DependentUpon>Bpkezdopanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="BudapestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aruvisszavetel.resx">
       <DependentUpon>Aruvisszavetel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPAruattekintes.resx">
+      <DependentUpon>BPAruattekintes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BPEladas.resx">
+      <DependentUpon>BPEladas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bpkezdopanel.resx">
+      <DependentUpon>Bpkezdopanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BudapestForm.resx">
       <DependentUpon>BudapestForm.cs</DependentUpon>

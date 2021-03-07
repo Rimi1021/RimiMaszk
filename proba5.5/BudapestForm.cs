@@ -16,6 +16,8 @@ namespace proba5._5
         {
             InitializeComponent();
             Nev(label_Nev);
+            bpkezdopanel1.Show();
+            bpkezdopanel1.BringToFront();
         }
         public static void Nev(Label nev)
         {
@@ -40,6 +42,22 @@ namespace proba5._5
             this.Hide();
             Bejelentkezes.Show();
             Bejelentkezes.BringToFront();
+        }
+
+        private void button_Eladas_Click(object sender, EventArgs e)
+        {
+            bpkezdopanel1.Hide();
+            bpAruattekintes1.Hide();
+            bpEladas1.BringToFront();
+            bpEladas1.Show();
+        }
+
+        private void button_Aruk_Click(object sender, EventArgs e)
+        {
+            bpkezdopanel1.Hide();
+            bpEladas1.Hide();
+            bpAruattekintes1.Show();
+            bpAruattekintes1.BringToFront();
         }
     }
 }
