@@ -32,20 +32,20 @@ namespace proba5._5
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GyorForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelnev = new System.Windows.Forms.Label();
             this.button_Eladas = new System.Windows.Forms.Button();
             this.button_Aruk = new System.Windows.Forms.Button();
             this.button_Kijelentkezes = new System.Windows.Forms.Button();
             this.button_Kilepes = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gykezdopanel1 = new proba5._5.Gykezdopanel();
-            this.gyeladas1 = new proba5._5.Gyeladas();
             this.gyAruattekintes1 = new proba5._5.GyAruattekintes();
+            this.gyeladas1 = new proba5._5.Gyeladas();
+            this.gykezdopanel1 = new proba5._5.Gykezdopanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,7 +70,7 @@ namespace proba5._5
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.labelnev, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.button_Eladas, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.button_Aruk, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.button_Kijelentkezes, 0, 5);
@@ -90,18 +90,30 @@ namespace proba5._5
             this.tableLayoutPanel2.Size = new System.Drawing.Size(208, 631);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(24)))), ((int)(((byte)(32)))));
-            this.label1.Location = new System.Drawing.Point(0, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Név";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelnev
+            // 
+            this.labelnev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelnev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelnev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(24)))), ((int)(((byte)(32)))));
+            this.labelnev.Location = new System.Drawing.Point(0, 53);
+            this.labelnev.Margin = new System.Windows.Forms.Padding(0);
+            this.labelnev.Name = "labelnev";
+            this.labelnev.Size = new System.Drawing.Size(208, 37);
+            this.labelnev.TabIndex = 1;
+            this.labelnev.Text = "Név";
+            this.labelnev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button_Eladas
             // 
@@ -174,25 +186,13 @@ namespace proba5._5
             this.panel1.Size = new System.Drawing.Size(830, 625);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox1
+            // gyAruattekintes1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // gykezdopanel1
-            // 
-            this.gykezdopanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gykezdopanel1.Location = new System.Drawing.Point(0, 0);
-            this.gykezdopanel1.Name = "gykezdopanel1";
-            this.gykezdopanel1.Size = new System.Drawing.Size(830, 625);
-            this.gykezdopanel1.TabIndex = 0;
+            this.gyAruattekintes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gyAruattekintes1.Location = new System.Drawing.Point(0, 0);
+            this.gyAruattekintes1.Name = "gyAruattekintes1";
+            this.gyAruattekintes1.Size = new System.Drawing.Size(830, 625);
+            this.gyAruattekintes1.TabIndex = 2;
             // 
             // gyeladas1
             // 
@@ -202,13 +202,14 @@ namespace proba5._5
             this.gyeladas1.Size = new System.Drawing.Size(830, 625);
             this.gyeladas1.TabIndex = 1;
             // 
-            // gyAruattekintes1
+            // gykezdopanel1
             // 
-            this.gyAruattekintes1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gyAruattekintes1.Location = new System.Drawing.Point(0, 0);
-            this.gyAruattekintes1.Name = "gyAruattekintes1";
-            this.gyAruattekintes1.Size = new System.Drawing.Size(830, 625);
-            this.gyAruattekintes1.TabIndex = 2;
+            this.gykezdopanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(24)))), ((int)(((byte)(32)))));
+            this.gykezdopanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gykezdopanel1.Location = new System.Drawing.Point(0, 0);
+            this.gykezdopanel1.Name = "gykezdopanel1";
+            this.gykezdopanel1.Size = new System.Drawing.Size(830, 625);
+            this.gykezdopanel1.TabIndex = 0;
             // 
             // GyorForm
             // 
@@ -221,8 +222,8 @@ namespace proba5._5
             this.Text = "GyorForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -232,7 +233,7 @@ namespace proba5._5
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelnev;
         private System.Windows.Forms.Button button_Eladas;
         private System.Windows.Forms.Button button_Aruk;
         private System.Windows.Forms.Button button_Kijelentkezes;

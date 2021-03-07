@@ -17,6 +17,7 @@ namespace proba5._5
             InitializeComponent();
             gykezdopanel1.Show();
             gykezdopanel1.BringToFront();
+            BudapestForm.Nev(labelnev);
         }
 
         private void button_Eladas_Click(object sender, EventArgs e)

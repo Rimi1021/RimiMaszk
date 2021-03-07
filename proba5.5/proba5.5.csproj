@@ -103,11 +103,29 @@
     <Compile Include="BudapestForm.Designer.cs">
       <DependentUpon>BudapestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DebEladas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DebEladas.Designer.cs">
+      <DependentUpon>DebEladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debraktarattekintes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debraktarattekintes.Designer.cs">
+      <DependentUpon>Debraktarattekintes.cs</DependentUpon>
+    </Compile>
     <Compile Include="DebrecenForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DebrecenForm.Designer.cs">
       <DependentUpon>DebrecenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debrecenkezdopanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debrecenkezdopanel.Designer.cs">
+      <DependentUpon>Debrecenkezdopanel.cs</DependentUpon>
     </Compile>
     <Compile Include="DolgozokAdmin.cs" />
     <Compile Include="DolgozokBP.cs" />
@@ -198,6 +216,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BudapestForm.resx">
       <DependentUpon>BudapestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebEladas.resx">
+      <DependentUpon>DebEladas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debraktarattekintes.resx">
+      <DependentUpon>Debraktarattekintes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebrecenForm.resx">
+      <DependentUpon>DebrecenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debrecenkezdopanel.resx">
+      <DependentUpon>Debrecenkezdopanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eladas.resx">
       <DependentUpon>Eladas.cs</DependentUpon>
