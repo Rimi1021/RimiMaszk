@@ -317,11 +317,20 @@ namespace proba5._5
             this.comboBox_Maszktipus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox_Maszktipus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBox_Maszktipus.FormattingEnabled = true;
+            this.comboBox_Maszktipus.Items.AddRange(new object[] {
+            "Gazmaszk",
+            "Szelepes",
+            "Fashion",
+            "Szuros",
+            "Egyszerhasznalatos",
+            "Mintas",
+            "Összes"});
             this.comboBox_Maszktipus.Location = new System.Drawing.Point(3, 3);
             this.comboBox_Maszktipus.Name = "comboBox_Maszktipus";
             this.comboBox_Maszktipus.Size = new System.Drawing.Size(207, 24);
             this.comboBox_Maszktipus.TabIndex = 0;
             this.comboBox_Maszktipus.Text = "Maszktípus";
+            this.comboBox_Maszktipus.SelectedIndexChanged += new System.EventHandler(this.comboBox_Maszktipus_SelectedIndexChanged);
             // 
             // comboBox_Maszknev
             // 
@@ -333,6 +342,7 @@ namespace proba5._5
             this.comboBox_Maszknev.Size = new System.Drawing.Size(207, 24);
             this.comboBox_Maszknev.TabIndex = 0;
             this.comboBox_Maszknev.Text = "Maszknév";
+            this.comboBox_Maszknev.SelectedIndexChanged += new System.EventHandler(this.comboBox_Maszknev_SelectedIndexChanged);
             // 
             // button_Listazas
             // 

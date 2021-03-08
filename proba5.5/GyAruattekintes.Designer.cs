@@ -45,10 +45,10 @@ namespace proba5._5
             this.radioButton_GY = new System.Windows.Forms.RadioButton();
             this.radioButtonD = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox_Masktipus = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox_Maszknev = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button_Listazas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -270,6 +270,25 @@ namespace proba5._5
             this.tableLayoutPanel6.Size = new System.Drawing.Size(415, 50);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
+            // comboBox_Masktipus
+            // 
+            this.comboBox_Masktipus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_Masktipus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox_Masktipus.FormattingEnabled = true;
+            this.comboBox_Masktipus.Items.AddRange(new object[] {
+            "G\'zmaszk",
+            "Szelepes",
+            "Fashion",
+            "Szűros",
+            "Egyszerhasználatos",
+            "Mintás",
+            "Összes"});
+            this.comboBox_Masktipus.Location = new System.Drawing.Point(3, 3);
+            this.comboBox_Masktipus.Name = "comboBox_Masktipus";
+            this.comboBox_Masktipus.Size = new System.Drawing.Size(201, 24);
+            this.comboBox_Masktipus.TabIndex = 0;
+            this.comboBox_Masktipus.Text = "Maszktípus";
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
@@ -285,6 +304,17 @@ namespace proba5._5
             this.tableLayoutPanel7.Size = new System.Drawing.Size(415, 50);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
+            // comboBox_Maszknev
+            // 
+            this.comboBox_Maszknev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_Maszknev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox_Maszknev.FormattingEnabled = true;
+            this.comboBox_Maszknev.Location = new System.Drawing.Point(3, 3);
+            this.comboBox_Maszknev.Name = "comboBox_Maszknev";
+            this.comboBox_Maszknev.Size = new System.Drawing.Size(201, 24);
+            this.comboBox_Maszknev.TabIndex = 0;
+            this.comboBox_Maszknev.Text = "Maszknév";
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 2;
@@ -299,28 +329,6 @@ namespace proba5._5
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(415, 50);
             this.tableLayoutPanel8.TabIndex = 3;
-            // 
-            // comboBox_Masktipus
-            // 
-            this.comboBox_Masktipus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_Masktipus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox_Masktipus.FormattingEnabled = true;
-            this.comboBox_Masktipus.Location = new System.Drawing.Point(3, 3);
-            this.comboBox_Masktipus.Name = "comboBox_Masktipus";
-            this.comboBox_Masktipus.Size = new System.Drawing.Size(201, 24);
-            this.comboBox_Masktipus.TabIndex = 0;
-            this.comboBox_Masktipus.Text = "Maszktípus";
-            // 
-            // comboBox_Maszknev
-            // 
-            this.comboBox_Maszknev.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_Maszknev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox_Maszknev.FormattingEnabled = true;
-            this.comboBox_Maszknev.Location = new System.Drawing.Point(3, 3);
-            this.comboBox_Maszknev.Name = "comboBox_Maszknev";
-            this.comboBox_Maszknev.Size = new System.Drawing.Size(201, 24);
-            this.comboBox_Maszknev.TabIndex = 0;
-            this.comboBox_Maszknev.Text = "Maszknév";
             // 
             // button_Listazas
             // 

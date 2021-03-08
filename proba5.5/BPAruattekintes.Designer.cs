@@ -279,6 +279,14 @@ namespace proba5._5
             this.comboBox_Type.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBox_Type.FormattingEnabled = true;
+            this.comboBox_Type.Items.AddRange(new object[] {
+            "G\'zmaszk",
+            "Szelepes",
+            "Fashion",
+            "Szűros",
+            "Egyszerhasználatos",
+            "Mintás",
+            "Összes"});
             this.comboBox_Type.Location = new System.Drawing.Point(3, 3);
             this.comboBox_Type.Name = "comboBox_Type";
             this.comboBox_Type.Size = new System.Drawing.Size(207, 24);
