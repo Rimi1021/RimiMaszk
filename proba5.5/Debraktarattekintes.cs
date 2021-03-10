@@ -22,105 +22,7 @@ namespace proba5._5
         public static string txtboxdefault = "Áru";
         private void comboBox_Maszktipus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox_Maszktipus.SelectedIndex == 0)
-            {
-                comboBox_Maszknev.Items.Clear();
-                Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                comboBox_Maszknev.Items.Add("Kek");
-                comboBox_Maszknev.Items.Add("Terepmintas");
-                comboBox_Maszknev.Items.Add("Zold");
-                comboBox_Maszknev.Items.Add("Fekete");
-                comboBox_Maszknev.Items.Add("Piros");
-                comboBox_Maszknev.Items.Add("Feher");
-                comboBox_Maszknev.Items.Add("Osszes");
-                comboBox_Maszknev.Text = "Maszknév";
-            }
-            else if (comboBox_Maszktipus.SelectedIndex == 1)
-            {
-                comboBox_Maszknev.Items.Clear();
-                Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                comboBox_Maszknev.Items.Add("Kek");
-                comboBox_Maszknev.Items.Add("Rozsaszin");
-                comboBox_Maszknev.Items.Add("Zold");
-                comboBox_Maszknev.Items.Add("Fekete");
-                comboBox_Maszknev.Items.Add("Sarga");
-                comboBox_Maszknev.Items.Add("Feher");
-                comboBox_Maszknev.Items.Add("Osszes");
-                comboBox_Maszknev.Text = "Maszknév";
-            }
-            else if (comboBox_Maszktipus.SelectedIndex == 2)
-            {
-                comboBox_Maszknev.Items.Clear();
-                Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                comboBox_Maszknev.Items.Add("Kek");
-                comboBox_Maszknev.Items.Add("Terepmintas");
-                comboBox_Maszknev.Items.Add("Zold");
-                comboBox_Maszknev.Items.Add("Fekete");
-                comboBox_Maszknev.Items.Add("Sarga");
-                comboBox_Maszknev.Items.Add("Feher");
-                comboBox_Maszknev.Items.Add("Osszes");
-                comboBox_Maszknev.Text = "Maszknév";
-            }
-            else if (comboBox_Maszktipus.SelectedIndex == 3)
-            {
-                comboBox_Maszknev.Items.Clear();
-                Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                comboBox_Maszknev.Items.Add("Kek");
-                comboBox_Maszknev.Items.Add("Terepmintas");
-                comboBox_Maszknev.Items.Add("Zold");
-                comboBox_Maszknev.Items.Add("Fekete");
-                comboBox_Maszknev.Items.Add("Sarga");
-                comboBox_Maszknev.Items.Add("Feher");
-                comboBox_Maszknev.Items.Add("Osszes");
-                comboBox_Maszknev.Text = "Maszknév";
-            }
-            else if (comboBox_Maszktipus.SelectedIndex == 4)
-            {
-                comboBox_Maszknev.Items.Clear();
-                Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                comboBox_Maszknev.Items.Add("Kek");
-                comboBox_Maszknev.Items.Add("Hupikek");
-                comboBox_Maszknev.Items.Add("Zold");
-                comboBox_Maszknev.Items.Add("Fekete");
-                comboBox_Maszknev.Items.Add("Rozsaszin");
-                comboBox_Maszknev.Items.Add("Feher");
-                comboBox_Maszknev.Items.Add("Osszes");
-                comboBox_Maszknev.Text = "Maszknév";
-            }
-            else if (comboBox_Maszktipus.SelectedIndex == 5)
-            {
-                comboBox_Maszknev.Items.Clear();
-                Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                comboBox_Maszknev.Items.Add("Marvel");
-                comboBox_Maszknev.Items.Add("DC");
-                comboBox_Maszknev.Items.Add("Frozen");
-                comboBox_Maszknev.Items.Add("Csipkes");
-                comboBox_Maszknev.Items.Add("Shrek");
-                comboBox_Maszknev.Items.Add("Memes");
-                comboBox_Maszknev.Items.Add("Osszes");
-                comboBox_Maszknev.Text = "Maszknév";
-            }
-            else
-            {
-                comboBox_Maszknev.Items.Clear();
-                Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
-                comboBox_Maszknev.Items.Add("Marvel");
-                comboBox_Maszknev.Items.Add("DC");
-                comboBox_Maszknev.Items.Add("Frozen");
-                comboBox_Maszknev.Items.Add("Csipkes");
-                comboBox_Maszknev.Items.Add("Shrek");
-                comboBox_Maszknev.Items.Add("Memes");
-                comboBox_Maszknev.Items.Add("Kek");
-                comboBox_Maszknev.Items.Add("Terepmintas");
-                comboBox_Maszknev.Items.Add("Zold");
-                comboBox_Maszknev.Items.Add("Fekete");
-                comboBox_Maszknev.Items.Add("Sarga");
-                comboBox_Maszknev.Items.Add("Feher");
-                comboBox_Maszknev.Items.Add("Piros");
-                comboBox_Maszknev.Items.Add("Hupikek");
-                comboBox_Maszknev.Items.Add("Osszes");
-                comboBox_Maszknev.Items.Add("Rozsaszin");
-            }
+            Fuggvenycoboboxra(comboBox_Maszktipus, comboBox_Maszknev);
         }
 
         private void comboBox_Maszknev_SelectedIndexChanged(object sender, EventArgs e)
@@ -334,6 +236,110 @@ namespace proba5._5
                         }
                     }
                 }
+            }
+        }
+
+        //Fuggveny a comboboxokra
+        public static void Fuggvenycoboboxra(ComboBox combomaszktipus, ComboBox combomaszknev)
+        {
+            if (combomaszktipus.SelectedIndex == 0)
+            {
+                combomaszknev.Items.Clear();
+                Maszktipus = combomaszktipus.SelectedItem.ToString();
+                combomaszknev.Items.Add("Kek");
+                combomaszknev.Items.Add("Terepmintas");
+                combomaszknev.Items.Add("Zold");
+                combomaszknev.Items.Add("Fekete");
+                combomaszknev.Items.Add("Piros");
+                combomaszknev.Items.Add("Feher");
+                combomaszknev.Items.Add("Osszes");
+                combomaszknev.Text = "Maszknév";
+            }
+            else if (combomaszktipus.SelectedIndex == 1)
+            {
+                combomaszknev.Items.Clear();
+                Maszktipus = combomaszktipus.SelectedItem.ToString();
+                combomaszknev.Items.Add("Kek");
+                combomaszknev.Items.Add("Rozsaszin");
+                combomaszknev.Items.Add("Zold");
+                combomaszknev.Items.Add("Fekete");
+                combomaszknev.Items.Add("Sarga");
+                combomaszknev.Items.Add("Feher");
+                combomaszknev.Items.Add("Osszes");
+                combomaszknev.Text = "Maszknév";
+            }
+            else if (combomaszktipus.SelectedIndex == 2)
+            {
+                combomaszknev.Items.Clear();
+                Maszktipus = combomaszktipus.SelectedItem.ToString();
+                combomaszknev.Items.Add("Kek");
+                combomaszknev.Items.Add("Terepmintas");
+                combomaszknev.Items.Add("Zold");
+                combomaszknev.Items.Add("Fekete");
+                combomaszknev.Items.Add("Sarga");
+                combomaszknev.Items.Add("Feher");
+                combomaszknev.Items.Add("Osszes");
+                combomaszknev.Text = "Maszknév";
+            }
+            else if (combomaszktipus.SelectedIndex == 3)
+            {
+                combomaszknev.Items.Clear();
+                Maszktipus = combomaszktipus.SelectedItem.ToString();
+                combomaszknev.Items.Add("Kek");
+                combomaszknev.Items.Add("Terepmintas");
+                combomaszknev.Items.Add("Zold");
+                combomaszknev.Items.Add("Fekete");
+                combomaszknev.Items.Add("Sarga");
+                combomaszknev.Items.Add("Feher");
+                combomaszknev.Items.Add("Osszes");
+                combomaszknev.Text = "Maszknév";
+            }
+            else if (combomaszktipus.SelectedIndex == 4)
+            {
+                combomaszknev.Items.Clear();
+                Maszktipus = combomaszktipus.SelectedItem.ToString();
+                combomaszknev.Items.Add("Kek");
+                combomaszknev.Items.Add("Hupikek");
+                combomaszknev.Items.Add("Zold");
+                combomaszknev.Items.Add("Fekete");
+                combomaszknev.Items.Add("Rozsaszin");
+                combomaszknev.Items.Add("Feher");
+                combomaszknev.Items.Add("Osszes");
+                combomaszknev.Text = "Maszknév";
+            }
+            else if (combomaszktipus.SelectedIndex == 5)
+            {
+                combomaszknev.Items.Clear();
+                Maszktipus = combomaszktipus.SelectedItem.ToString();
+                combomaszknev.Items.Add("Marvel");
+                combomaszknev.Items.Add("DC");
+                combomaszknev.Items.Add("Frozen");
+                combomaszknev.Items.Add("Csipkes");
+                combomaszknev.Items.Add("Shrek");
+                combomaszknev.Items.Add("Memes");
+                combomaszknev.Items.Add("Osszes");
+                combomaszknev.Text = "Maszknév";
+            }
+            else
+            {
+                combomaszknev.Items.Clear();
+                Maszktipus = combomaszktipus.SelectedItem.ToString();
+                combomaszknev.Items.Add("Marvel");
+                combomaszknev.Items.Add("DC");
+                combomaszknev.Items.Add("Frozen");
+                combomaszknev.Items.Add("Csipkes");
+                combomaszknev.Items.Add("Shrek");
+                combomaszknev.Items.Add("Memes");
+                combomaszknev.Items.Add("Kek");
+                combomaszknev.Items.Add("Terepmintas");
+                combomaszknev.Items.Add("Zold");
+                combomaszknev.Items.Add("Fekete");
+                combomaszknev.Items.Add("Sarga");
+                combomaszknev.Items.Add("Feher");
+                combomaszknev.Items.Add("Piros");
+                combomaszknev.Items.Add("Hupikek");
+                combomaszknev.Items.Add("Rozsaszin");
+                combomaszknev.Items.Add("Osszes");
             }
         }
     }
