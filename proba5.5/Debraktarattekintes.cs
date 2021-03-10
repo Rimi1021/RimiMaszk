@@ -130,159 +130,7 @@ namespace proba5._5
 
         private void button_Listazas_Click(object sender, EventArgs e)
         {
-            if (radioButton_BP.Checked == false && radioButton_GY.Checked == false && radioButton_Debrecen.Checked == false)
-            {
-                MessageBox.Show("Válassza ki melyik telephelyen lévő raktárkészletre kíváncsi!");
-            }
-            else if (Maszktipus == "" || Masznev == "")
-            {
-                MessageBox.Show("Válassza ki melyik terméktipusokat szertné kilistázni");
-            }
-            else
-            {
-                Raktar.Tisztalista();
-
-                ///Budapest
-                if (radioButton_BP.Checked == true)
-                {
-                    listBox1.Items.Add("Budapesti készlet:");
-                    if (Maszktipus == "Osszes" && Masznev != "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszknev == Masznev)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                    else if (Masznev == "Osszes" && Maszktipus != "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == Maszktipus)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                    else if (Masznev == "Osszes" && Maszktipus == "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == Maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == Masznev)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                }
-
-                /// Győr
-                else if (radioButton_GY.Checked == true)
-                {
-                    listBox1.Items.Add("Győri készlet:");
-                    if (Maszktipus == "Osszes" && Masznev != "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszknev == Masznev)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                    else if (Masznev == "Osszes" && Maszktipus != "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == Maszktipus)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                    else if (Masznev == "Osszes" && Maszktipus == "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == Maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == Masznev)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                }
-
-                //Debrecen
-                else
-                {
-                    listBox1.Items.Add("Debreceni készlet:");
-                    if (Maszktipus == "Osszes" && Masznev != "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszknev == Masznev)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                    else if (Masznev == "Osszes" && Maszktipus != "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == Maszktipus)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                    else if (Masznev == "Osszes" && Maszktipus == "Osszes")
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-                        {
-                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == Maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == Masznev)
-                            {
-                                listBox1.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
-                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
-                            }
-                        }
-                    }
-                }
-            }
+            Listazasfuggveny(radioButton_BP,radioButton_GY, radioButton_Debrecen, listBox1, Maszktipus, Masznev);
         }
 
         private void button_Torles_Click(object sender, EventArgs e)
@@ -319,6 +167,174 @@ namespace proba5._5
         private void textBox_Export_TextChanged(object sender, EventArgs e)
         {
             txtboxdefault = textBox_Export.Text;
+        }
+
+
+
+        /// <summary>
+        /// Listázás fuggveny
+        /// </summary>
+        public static void Listazasfuggveny(RadioButton BP, RadioButton GY, RadioButton D, ListBox LB, string masktype, string maskname) 
+        {
+            if (BP.Checked == false && GY.Checked == false && D.Checked == false)
+            {
+                MessageBox.Show("Válassza ki melyik telephelyen lévő raktárkészletre kíváncsi!");
+            }
+            else if (masktype == "" || maskname == "")
+            {
+                MessageBox.Show("Válassza ki melyik terméktipusokat szertné kilistázni");
+            }
+            else
+            {
+                Raktar.Tisztalista();
+
+                ///Budapest
+                if (BP.Checked == true)
+                {
+                    LB.Items.Add("Budapesti készlet:");
+                    if (masktype == "Osszes" && maskname != "Osszes")
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszknev == maskname)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                    else if (maskname == "Osszes" && masktype != "Osszes")
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == masktype)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                    else if (maskname == "Osszes" && masktype == "Osszes")
+                    {
+                        LB.Items.Clear();
+                        LB.Items.Add("Összes Maszktípus/Maszknev:");
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == masktype && SzerverData.MaszInfokOsszes[i].Maszknev == maskname)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                }
+
+                /// Győr
+                else if (GY.Checked == true)
+                {
+                    LB.Items.Add("Győri készlet:");
+                    if (masktype == "Osszes" && maskname != "Osszes")
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszknev == maskname)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                    else if (maskname == "Osszes" && masktype != "Osszes")
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == masktype)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                    else if (maskname == "Osszes" && masktype == "Osszes")
+                    {
+                        LB.Items.Clear();
+                        LB.Items.Add("Összes Maszktípus/Maszknev:");
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == masktype && SzerverData.MaszInfokOsszes[i].Maszknev == maskname)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                }
+
+                //Debrecen
+                else
+                {
+                    LB.Items.Add("Debreceni készlet:");
+                    if (masktype == "Osszes" && Masznev != "Osszes")
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszknev == maskname)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                    else if (maskname == "Osszes" && masktype != "Osszes")
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == masktype)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                    $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                    else if (maskname == "Osszes" && masktype == "Osszes")
+                    {
+                        LB.Items.Clear();
+                        LB.Items.Add("Összes Maszktípus/Maszknev:");
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            if (SzerverData.MaszInfokOsszes[i].Maszktipus == masktype && SzerverData.MaszInfokOsszes[i].Maszknev == maskname)
+                            {
+                                LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarDebrecen} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
