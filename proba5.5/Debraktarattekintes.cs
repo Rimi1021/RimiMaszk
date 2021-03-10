@@ -43,7 +43,7 @@ namespace proba5._5
 
         private void button_Export_Click(object sender, EventArgs e)
         {
-            if (txtboxdefault != "")
+            if (txtboxdefault != "" && BPAruattekintes.rx.IsMatch(txtboxdefault)) //Regex a budapestAruattekintesbol
             {
                 txtboxdefault += ".csv";
                 if (listBox1.Items != null)
@@ -63,7 +63,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Adjon nevet a CSV fájlnak");
+                MessageBox.Show("Adjon nevet a CSV fájlnak és ne használjon speciális karaktereket");
             }
         }
 

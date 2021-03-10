@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +21,8 @@ namespace proba5._5
         public static string Maszktipus = "";
         public static string Masznev = "";
         public static string txtboxdefault = "Áru";
+        public static  Regex rx = new Regex(@"^[a-zA-Z0-9]+$");
+       
 
         private void comboBox_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -51,7 +54,7 @@ namespace proba5._5
 
         private void button_export_Click(object sender, EventArgs e)
         {
-            if (txtboxdefault != "")
+            if (txtboxdefault != "" && rx.IsMatch(txtboxdefault))
             {
                 txtboxdefault += ".csv";
                 if (listBox1.Items != null)
@@ -71,7 +74,7 @@ namespace proba5._5
             }
             else
             {
-                MessageBox.Show("Adjon nevet a CSV fájlnak");
+                MessageBox.Show("Adjon nevet a CSV fájlnak, ne használjon speciális karaktert!");
             }
         }
     }
