@@ -34,7 +34,7 @@ namespace proba5._5
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button_listboxtorles = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Export = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button_export = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -102,7 +102,7 @@ namespace proba5._5
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Controls.Add(this.button_listboxtorles, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox_Export, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.button_export, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -125,17 +125,19 @@ namespace proba5._5
             this.button_listboxtorles.TabIndex = 0;
             this.button_listboxtorles.Text = "Törlés";
             this.button_listboxtorles.UseVisualStyleBackColor = true;
+            this.button_listboxtorles.Click += new System.EventHandler(this.button_listboxtorles_Click);
             // 
-            // textBox1
+            // textBox_Export
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox1.Location = new System.Drawing.Point(215, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Áru";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_Export.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox_Export.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox_Export.Location = new System.Drawing.Point(215, 40);
+            this.textBox_Export.Name = "textBox_Export";
+            this.textBox_Export.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Export.TabIndex = 1;
+            this.textBox_Export.Text = "Áru";
+            this.textBox_Export.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_Export.TextChanged += new System.EventHandler(this.textBox_Export_TextChanged);
             // 
             // label1
             // 
@@ -158,6 +160,7 @@ namespace proba5._5
             this.button_export.TabIndex = 3;
             this.button_export.Text = "Exportálás";
             this.button_export.UseVisualStyleBackColor = true;
+            this.button_export.Click += new System.EventHandler(this.button_export_Click);
             // 
             // listBox1
             // 
@@ -280,18 +283,19 @@ namespace proba5._5
             this.comboBox_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBox_Type.FormattingEnabled = true;
             this.comboBox_Type.Items.AddRange(new object[] {
-            "G\'zmaszk",
+            "Gazmaszk",
             "Szelepes",
             "Fashion",
-            "Szűros",
-            "Egyszerhasználatos",
-            "Mintás",
-            "Összes"});
+            "Szuros",
+            "Egyszerhasznalatos",
+            "Mintas",
+            "Osszes"});
             this.comboBox_Type.Location = new System.Drawing.Point(3, 3);
             this.comboBox_Type.Name = "comboBox_Type";
             this.comboBox_Type.Size = new System.Drawing.Size(207, 24);
             this.comboBox_Type.TabIndex = 1;
             this.comboBox_Type.Text = "Maszktípus";
+            this.comboBox_Type.SelectedIndexChanged += new System.EventHandler(this.comboBox_Type_SelectedIndexChanged);
             // 
             // tableLayoutPanel7
             // 
@@ -318,6 +322,7 @@ namespace proba5._5
             this.comboBox_Nev.Size = new System.Drawing.Size(207, 24);
             this.comboBox_Nev.TabIndex = 2;
             this.comboBox_Nev.Text = "Maszknev";
+            this.comboBox_Nev.SelectedIndexChanged += new System.EventHandler(this.comboBox_Nev_SelectedIndexChanged);
             // 
             // tableLayoutPanel8
             // 
@@ -345,6 +350,7 @@ namespace proba5._5
             this.button_Listazas.TabIndex = 0;
             this.button_Listazas.Text = "Listázás";
             this.button_Listazas.UseVisualStyleBackColor = true;
+            this.button_Listazas.Click += new System.EventHandler(this.button_Listazas_Click);
             // 
             // pictureBox1
             // 
@@ -385,7 +391,7 @@ namespace proba5._5
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button button_listboxtorles;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Export;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_export;
         private System.Windows.Forms.ListBox listBox1;

@@ -23,6 +23,7 @@ namespace proba5._5
         private void comboBox_Maszktipus_SelectedIndexChanged(object sender, EventArgs e)
         {
             Fuggvenycoboboxra(comboBox_Maszktipus, comboBox_Maszknev);
+            Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
         }
 
         private void comboBox_Maszknev_SelectedIndexChanged(object sender, EventArgs e)
@@ -245,7 +246,6 @@ namespace proba5._5
             if (combomaszktipus.SelectedIndex == 0)
             {
                 combomaszknev.Items.Clear();
-                Maszktipus = combomaszktipus.SelectedItem.ToString();
                 combomaszknev.Items.Add("Kek");
                 combomaszknev.Items.Add("Terepmintas");
                 combomaszknev.Items.Add("Zold");
@@ -258,7 +258,6 @@ namespace proba5._5
             else if (combomaszktipus.SelectedIndex == 1)
             {
                 combomaszknev.Items.Clear();
-                Maszktipus = combomaszktipus.SelectedItem.ToString();
                 combomaszknev.Items.Add("Kek");
                 combomaszknev.Items.Add("Rozsaszin");
                 combomaszknev.Items.Add("Zold");
@@ -271,7 +270,6 @@ namespace proba5._5
             else if (combomaszktipus.SelectedIndex == 2)
             {
                 combomaszknev.Items.Clear();
-                Maszktipus = combomaszktipus.SelectedItem.ToString();
                 combomaszknev.Items.Add("Kek");
                 combomaszknev.Items.Add("Terepmintas");
                 combomaszknev.Items.Add("Zold");
@@ -284,7 +282,6 @@ namespace proba5._5
             else if (combomaszktipus.SelectedIndex == 3)
             {
                 combomaszknev.Items.Clear();
-                Maszktipus = combomaszktipus.SelectedItem.ToString();
                 combomaszknev.Items.Add("Kek");
                 combomaszknev.Items.Add("Terepmintas");
                 combomaszknev.Items.Add("Zold");
@@ -297,7 +294,6 @@ namespace proba5._5
             else if (combomaszktipus.SelectedIndex == 4)
             {
                 combomaszknev.Items.Clear();
-                Maszktipus = combomaszktipus.SelectedItem.ToString();
                 combomaszknev.Items.Add("Kek");
                 combomaszknev.Items.Add("Hupikek");
                 combomaszknev.Items.Add("Zold");
@@ -310,7 +306,6 @@ namespace proba5._5
             else if (combomaszktipus.SelectedIndex == 5)
             {
                 combomaszknev.Items.Clear();
-                Maszktipus = combomaszktipus.SelectedItem.ToString();
                 combomaszknev.Items.Add("Marvel");
                 combomaszknev.Items.Add("DC");
                 combomaszknev.Items.Add("Frozen");
@@ -323,7 +318,6 @@ namespace proba5._5
             else
             {
                 combomaszknev.Items.Clear();
-                Maszktipus = combomaszktipus.SelectedItem.ToString();
                 combomaszknev.Items.Add("Marvel");
                 combomaszknev.Items.Add("DC");
                 combomaszknev.Items.Add("Frozen");
