@@ -43,7 +43,7 @@ namespace proba5._5
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton_BP = new System.Windows.Forms.RadioButton();
             this.radioButton_GY = new System.Windows.Forms.RadioButton();
-            this.radioButtonD = new System.Windows.Forms.RadioButton();
+            this.radioButton_D = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox_Masktipus = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -143,6 +143,7 @@ namespace proba5._5
             this.textBox_export.TabIndex = 2;
             this.textBox_export.Text = "Áru";
             this.textBox_export.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_export.TextChanged += new System.EventHandler(this.textBox_export_TextChanged);
             // 
             // button_Listboxtorles
             // 
@@ -154,6 +155,7 @@ namespace proba5._5
             this.button_Listboxtorles.TabIndex = 0;
             this.button_Listboxtorles.Text = "Törlés";
             this.button_Listboxtorles.UseVisualStyleBackColor = true;
+            this.button_Listboxtorles.Click += new System.EventHandler(this.button_Listboxtorles_Click);
             // 
             // button_Export
             // 
@@ -165,6 +167,7 @@ namespace proba5._5
             this.button_Export.TabIndex = 1;
             this.button_Export.Text = "Exportálás";
             this.button_Export.UseVisualStyleBackColor = true;
+            this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -198,7 +201,7 @@ namespace proba5._5
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.radioButton_BP, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.radioButton_GY, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.radioButtonD, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.radioButton_D, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -243,17 +246,17 @@ namespace proba5._5
             this.radioButton_GY.Text = "Győr";
             this.radioButton_GY.UseVisualStyleBackColor = true;
             // 
-            // radioButtonD
+            // radioButton_D
             // 
-            this.radioButtonD.AutoSize = true;
-            this.radioButtonD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButtonD.Location = new System.Drawing.Point(312, 3);
-            this.radioButtonD.Name = "radioButtonD";
-            this.radioButtonD.Size = new System.Drawing.Size(100, 44);
-            this.radioButtonD.TabIndex = 3;
-            this.radioButtonD.TabStop = true;
-            this.radioButtonD.Text = "Debrecen";
-            this.radioButtonD.UseVisualStyleBackColor = true;
+            this.radioButton_D.AutoSize = true;
+            this.radioButton_D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton_D.Location = new System.Drawing.Point(312, 3);
+            this.radioButton_D.Name = "radioButton_D";
+            this.radioButton_D.Size = new System.Drawing.Size(100, 44);
+            this.radioButton_D.TabIndex = 3;
+            this.radioButton_D.TabStop = true;
+            this.radioButton_D.Text = "Debrecen";
+            this.radioButton_D.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel6
             // 
@@ -288,6 +291,7 @@ namespace proba5._5
             this.comboBox_Masktipus.Size = new System.Drawing.Size(201, 24);
             this.comboBox_Masktipus.TabIndex = 0;
             this.comboBox_Masktipus.Text = "Maszktípus";
+            this.comboBox_Masktipus.SelectedIndexChanged += new System.EventHandler(this.comboBox_Masktipus_SelectedIndexChanged);
             // 
             // tableLayoutPanel7
             // 
@@ -314,6 +318,7 @@ namespace proba5._5
             this.comboBox_Maszknev.Size = new System.Drawing.Size(201, 24);
             this.comboBox_Maszknev.TabIndex = 0;
             this.comboBox_Maszknev.Text = "Maszknév";
+            this.comboBox_Maszknev.SelectedIndexChanged += new System.EventHandler(this.comboBox_Maszknev_SelectedIndexChanged);
             // 
             // tableLayoutPanel8
             // 
@@ -340,6 +345,7 @@ namespace proba5._5
             this.button_Listazas.TabIndex = 0;
             this.button_Listazas.Text = "Listázás";
             this.button_Listazas.UseVisualStyleBackColor = true;
+            this.button_Listazas.Click += new System.EventHandler(this.button_Listazas_Click);
             // 
             // pictureBox1
             // 
@@ -389,7 +395,7 @@ namespace proba5._5
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton_BP;
         private System.Windows.Forms.RadioButton radioButton_GY;
-        private System.Windows.Forms.RadioButton radioButtonD;
+        private System.Windows.Forms.RadioButton radioButton_D;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;

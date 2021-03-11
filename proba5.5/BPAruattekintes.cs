@@ -33,8 +33,6 @@ namespace proba5._5
         private void button_Listazas_Click(object sender, EventArgs e)
         {
             Debraktarattekintes.Listazasfuggveny(radioButton_BP, radioButton_GY, radioButton_D, listBox1, Maszktipus, Masznev);
-            System.Diagnostics.Debug.WriteLine($"Maszktipus: {Maszktipus}");
-            System.Diagnostics.Debug.WriteLine($"Maszknev: {Masznev}");
         }
 
         private void comboBox_Nev_SelectedIndexChanged(object sender, EventArgs e)
