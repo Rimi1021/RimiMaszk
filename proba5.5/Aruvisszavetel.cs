@@ -181,6 +181,7 @@ namespace proba5._5
             return BruttoOsszeg;
         }
 
+        // Az "osszeg" paraméter a bruttó összegnek kell lennie
         public static double akcio(double osszeg, double magaazakcio)
         {
             osszeg = Math.Round(osszeg - (magaazakcio / 100 * osszeg));

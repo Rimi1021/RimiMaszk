@@ -225,6 +225,9 @@ namespace proba5._5
                                 SzerverData.MaszInfokOsszes[j].KeszletraktarBudapest = MaxFelvihetoOsszeg;
                                 label_Osszesar.Text = Convert.ToString(Nettoosszeg + SzerverData.MaszInfokOsszes[j].Ar_db);
                                 Nettoosszeg = Convert.ToInt32(label_Osszesar.Text);
+                                double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[j].Ar_db);
+                                Bruttoosszeg += Aruvisszavetel.akcio(bruttoar, SzerverData.MaszInfokOsszes[j].Akcio);
+                                label_Osszesbrutto.Text = Convert.ToString(Bruttoosszeg);
                             }
                         }
                     }
@@ -266,6 +269,11 @@ namespace proba5._5
                         textBox_Kosarba.Text = "";
                         label_Adottarubrutto.Text = "";
                         label_Adottarubruttoakcio.Text = "";
+                        label_Osszesar.Text = Convert.ToString(Nettoosszeg + SzerverData.MaszInfokOsszes[i].Ar_db);
+                        Nettoosszeg = Convert.ToInt32(label_Osszesar.Text);
+                        double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db);
+                        Bruttoosszeg += Aruvisszavetel.akcio(bruttoar, SzerverData.MaszInfokOsszes[i].Akcio);
+                        label_Osszesbrutto.Text = Convert.ToString(Bruttoosszeg);
                     }
                 }
             }
