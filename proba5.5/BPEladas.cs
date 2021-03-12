@@ -24,6 +24,10 @@ namespace proba5._5
         public static string MaszknevEladas = "";
         public static int MaxFelvihetoOsszeg = 0;
         public static int Felvittdb = 0;
+        
+        // A listbox alatt lévő labelhez tartozik az összes áru nettó és bruttó(Ha van akció akkor azzal szamol) osszege
+        public static double Nettoosszeg = 0;
+        public static double Bruttoosszeg = 0;
 
 
         /// Encode Decode gombok
@@ -205,10 +209,10 @@ namespace proba5._5
                     MaxFelvihetoOsszeg = Convert.ToInt32(SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest);
                 }
             }
-            System.Diagnostics.Debug.WriteLine($"max db: {MaxFelvihetoOsszeg}");
+            
             if (MaszktipusEladas != "" && MaszknevEladas != "")
             {
-                if (Raktar.rg.IsMatch(textBox1.Text) && Convert.ToInt32(textBox1.Text) <= MaxFelvihetoOsszeg)
+                if (Raktar.rg.IsMatch(textBox1.Text) && Felvittdb <= MaxFelvihetoOsszeg)
                 {
                     for (int i = 0; i < Felvittdb; i++)
                     {
@@ -216,11 +220,11 @@ namespace proba5._5
                         {
                             if (SzerverData.MaszInfokOsszes[j].Maszktipus == MaszktipusEladas && SzerverData.MaszInfokOsszes[j].Maszknev == MaszknevEladas)
                             {
-                                System.Diagnostics.Debug.WriteLine($"bpkeszlet: {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest}");
                                 listBox_Kosar.Items.Add($"{SzerverData.MaszInfokOsszes[j].Maszktipus}; {SzerverData.MaszInfokOsszes[j].Maszknev}; {SzerverData.MaszInfokOsszes[j].Ar_db}Ft; {SzerverData.MaszInfokOsszes[j].Akcio}%; {SzerverData.MaszInfokOsszes[j].Barcode}");
-                                //MaxFelvihetoOsszeg = MaxFelvihetoOsszeg - Felvittdb;
-                                SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest = SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest - Felvittdb;
-                                System.Diagnostics.Debug.WriteLine($"bpkeszlet: {SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest}");
+                                MaxFelvihetoOsszeg = MaxFelvihetoOsszeg - 1;
+                                SzerverData.MaszInfokOsszes[j].KeszletraktarBudapest = MaxFelvihetoOsszeg;
+                                label_Osszesar.Text = Convert.ToString(Nettoosszeg + SzerverData.MaszInfokOsszes[j].Ar_db);
+                                Nettoosszeg = Convert.ToInt32(label_Osszesar.Text);
                             }
                         }
                     }
@@ -240,6 +244,10 @@ namespace proba5._5
         {
             Raktar.Tisztalista();
             listBox_Kosar.Items.Clear();
+            Nettoosszeg = 0;
+            label_Osszesar.Text = "0Ft";
+            Bruttoosszeg = 0;
+            label_Osszesbrutto.Text = "0Ft";
         }
 
         private void button_Hozzaadas2_Click(object sender, EventArgs e)
