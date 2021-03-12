@@ -177,13 +177,13 @@ namespace proba5._5
         //System.Diagnostics.Debug.WriteLine("megtortenikbudapest");
         public static double Brutto(double NettoOsszeg) 
         {
-            double BruttoOsszeg =  NettoOsszeg * (1 + ADO_KULCS) ;
+            double BruttoOsszeg =  Math.Round(NettoOsszeg * (1 + ADO_KULCS)) ;
             return BruttoOsszeg;
         }
 
         public static double akcio(double osszeg, double magaazakcio)
         {
-            osszeg = osszeg - (magaazakcio / 100 * osszeg);
+            osszeg = Math.Round(osszeg - (magaazakcio / 100 * osszeg));
             return osszeg;
         }
 

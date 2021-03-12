@@ -64,7 +64,7 @@ namespace proba5._5
             set
             {
                 if (value >= 0 && value <= 10000000) _KeszletraktarBudapest = value;
-                else throw new Exception("A maxertek 10000000");
+                else throw new Exception("A maxertek 10000000 A minertek 0");
             }
         }
 
@@ -77,7 +77,7 @@ namespace proba5._5
             set
             {
                 if (value >= 0 && value <= 100000000) _KeszletraktarGyor = value;
-                else throw new Exception("A maxertek 10000000");
+                else throw new Exception("A maxertek 10000000 A minertek 0");
             }
         }
 
@@ -90,7 +90,7 @@ namespace proba5._5
             set
             {
                 if (value >= 0 && value <= 100000000) _KeszletraktarDebrecen = value;
-                else throw new Exception("A maxertek 10000000");
+                else throw new Exception("A maxertek 10000000 A minertek 0");
             }
         }
 

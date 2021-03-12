@@ -63,6 +63,7 @@ namespace proba5._5
             this.label_Adottarubrutto = new System.Windows.Forms.Label();
             this.label_Adottarubruttoakcio = new System.Windows.Forms.Label();
             this.textBox_Kosarba = new System.Windows.Forms.TextBox();
+            this.label_akcio = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -129,12 +130,20 @@ namespace proba5._5
             // 
             this.comboBox_Maszktipus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox_Maszktipus.FormattingEnabled = true;
+            this.comboBox_Maszktipus.Items.AddRange(new object[] {
+            "Gazmaszk",
+            "Szelepes",
+            "Fashion",
+            "Szuros",
+            "Egyszerhasznalatos",
+            "Mintas"});
             this.comboBox_Maszktipus.Location = new System.Drawing.Point(349, 0);
             this.comboBox_Maszktipus.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox_Maszktipus.Name = "comboBox_Maszktipus";
             this.comboBox_Maszktipus.Size = new System.Drawing.Size(153, 21);
             this.comboBox_Maszktipus.TabIndex = 1;
             this.comboBox_Maszktipus.Text = "Terméktípus";
+            this.comboBox_Maszktipus.SelectedIndexChanged += new System.EventHandler(this.comboBox_Maszktipus_SelectedIndexChanged);
             // 
             // comboBox_Maszknev
             // 
@@ -146,6 +155,7 @@ namespace proba5._5
             this.comboBox_Maszknev.Size = new System.Drawing.Size(153, 21);
             this.comboBox_Maszknev.TabIndex = 2;
             this.comboBox_Maszknev.Text = "Terméknév";
+            this.comboBox_Maszknev.SelectedIndexChanged += new System.EventHandler(this.comboBox_Maszknev_SelectedIndexChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -182,6 +192,7 @@ namespace proba5._5
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button_Hozzaadas
             // 
@@ -193,6 +204,7 @@ namespace proba5._5
             this.button_Hozzaadas.TabIndex = 4;
             this.button_Hozzaadas.Text = "Kosárba";
             this.button_Hozzaadas.UseVisualStyleBackColor = true;
+            this.button_Hozzaadas.Click += new System.EventHandler(this.button_Hozzaadas_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -270,6 +282,7 @@ namespace proba5._5
             this.button_Torle.TabIndex = 0;
             this.button_Torle.Text = "Kosár Ürítése";
             this.button_Torle.UseVisualStyleBackColor = true;
+            this.button_Torle.Click += new System.EventHandler(this.button_Torle_Click);
             // 
             // button_Elad
             // 
@@ -439,6 +452,7 @@ namespace proba5._5
             this.button_Hozzaadas2.TabIndex = 5;
             this.button_Hozzaadas2.Text = "Kosárba tesz";
             this.button_Hozzaadas2.UseVisualStyleBackColor = true;
+            this.button_Hozzaadas2.Click += new System.EventHandler(this.button_Hozzaadas2_Click);
             // 
             // tableLayoutPanel10
             // 
@@ -449,6 +463,7 @@ namespace proba5._5
             this.tableLayoutPanel10.Controls.Add(this.label_Adottarubrutto, 0, 3);
             this.tableLayoutPanel10.Controls.Add(this.label_Adottarubruttoakcio, 0, 4);
             this.tableLayoutPanel10.Controls.Add(this.textBox_Kosarba, 0, 5);
+            this.tableLayoutPanel10.Controls.Add(this.label_akcio, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(341, 0);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
@@ -516,6 +531,17 @@ namespace proba5._5
             this.textBox_Kosarba.TabIndex = 4;
             this.textBox_Kosarba.TextChanged += new System.EventHandler(this.textBox_Kosarba_TextChanged);
             // 
+            // label_akcio
+            // 
+            this.label_akcio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_akcio.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_akcio.Location = new System.Drawing.Point(3, 0);
+            this.label_akcio.Name = "label_akcio";
+            this.label_akcio.Size = new System.Drawing.Size(216, 367);
+            this.label_akcio.TabIndex = 5;
+            this.label_akcio.Text = "Akció:";
+            this.label_akcio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // BPEladas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,5 +604,6 @@ namespace proba5._5
         private System.Windows.Forms.Label label_Adottarubrutto;
         private System.Windows.Forms.Label label_Adottarubruttoakcio;
         private System.Windows.Forms.TextBox textBox_Kosarba;
+        private System.Windows.Forms.Label label_akcio;
     }
 }
