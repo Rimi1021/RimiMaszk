@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace proba5._5
 {
@@ -34,18 +36,26 @@ namespace proba5._5
         #region Encode Decode buttonok
         private void button_Encode_Click(object sender, EventArgs e)
         {
-            BarcodeWriter writer = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
-            if (textBox_Encode.Text != "")
+            try
             {
-                pictureBox_Barcode.Image = writer.Write(textBox_Encode.Text);
-                textBox_Kosarba.Text = textBox_Encode.Text;
+                BarcodeWriter writer = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
+                if (textBox_Encode.Text != "")
+                {
+                    pictureBox_Barcode.Image = writer.Write(textBox_Encode.Text);
+                    textBox_Kosarba.Text = textBox_Encode.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Nincs Kódolandó vonalkód!");
+                    pictureBox_Barcode.Image = null;
+                    textBox_Kosarba.Text = "";
+                }
             }
-            else
+            catch (ArgumentException)
             {
-                MessageBox.Show("Nincs Kódolandó vonalkód!");
-                pictureBox_Barcode.Image = null;
-                textBox_Kosarba.Text = "";
+                MessageBox.Show("Nem található vonalkód");
             }
+            
         }
 
         private void button_Decode_Click(object sender, EventArgs e)
@@ -200,6 +210,7 @@ namespace proba5._5
             MaszknevEladas = comboBox_Maszknev.SelectedItem.ToString();
         }
 
+        //Manuális hozzáadás gomb
         private void button_Hozzaadas_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
@@ -243,6 +254,7 @@ namespace proba5._5
             }
         }
 
+        //Lista osszes elem torlese es a kijelző elemek és az osszeg számlálók 0-ázása
         private void button_Torle_Click(object sender, EventArgs e)
         {
             Raktar.Tisztalista();
@@ -251,6 +263,7 @@ namespace proba5._5
             label_Osszesar.Text = "0Ft";
             Bruttoosszeg = 0;
             label_Osszesbrutto.Text = "0Ft";
+            textBox1.Text = "0";
         }
 
         private void button_Hozzaadas2_Click(object sender, EventArgs e)
@@ -274,12 +287,100 @@ namespace proba5._5
                         double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db);
                         Bruttoosszeg += Aruvisszavetel.akcio(bruttoar, SzerverData.MaszInfokOsszes[i].Akcio);
                         label_Osszesbrutto.Text = Convert.ToString(Bruttoosszeg);
+                        label_akcio.Text = "Akció:";
                     }
                 }
             }
             else
             {
                 MessageBox.Show("Nincs ilyen termék! Rossz Vonalkód!");
+            }
+        }
+
+        private void button_Elad_Click(object sender, EventArgs e)
+        {
+            List<string> vonalkodok = new List<string>();
+            for (int i = 0; i < listBox_Kosar.Items.Count; i++)
+            {
+                string Sor = (string)listBox_Kosar.Items[i];
+                string[] SorElemek = Sor.Split(';');
+                vonalkodok.Add(SorElemek[4]);
+            }
+            for (int i = 0; i < vonalkodok.Count; i++)
+            {
+                //System.Diagnostics.Debug.WriteLine(vonalkodok[i]);
+                for (int j = 0; j < SzerverData.MaszInfokOsszes.Count; j++)
+                {
+                    if (SzerverData.MaszInfokOsszes[j].Barcode == vonalkodok[i].Trim())
+                    {
+                       try
+                       {
+                            using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                            {
+                                string Feltoltes = $"UPDATE MaszkAruk SET keszletarubudapest = keszletarubudapest - 1 WHERE barcode = '{vonalkodok[i].Trim()}'"; //Adatok feltöltése
+                                using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                                {
+                                    Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                    var result = Parancs.ExecuteNonQuery(); 
+                                    Parancs.Dispose();
+                                    // Hiba keresés, ha nem lett eredmény
+                                    if (result < 0)
+                                    { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                    MessageBox.Show("Az eladás megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                    Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                                }
+                            }
+                       }
+                       catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                       { MessageBox.Show("Nem sikerült a csalakozás"); }
+                    }
+                }
+            }
+            Raktar.Tisztalista();
+            listBox_Kosar.Items.Clear();
+            Nettoosszeg = 0;
+            label_Osszesar.Text = "0Ft";
+            Bruttoosszeg = 0;
+            label_Osszesbrutto.Text = "0Ft";
+            textBox1.Text = "0";
+        }
+
+        private void listBox_Kosar_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox_Kosar.SelectedItem != null) //Ha van kiválasztva lista item a dupla klikkeléskor
+            {
+                MessageBox.Show(listBox_Kosar.SelectedItem.ToString()); //Kiíratom a kijelölt listaelem adatait
+                if (MessageBox.Show("Biztosan töli az elemet?", "Elem törlése kosárból", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string vonalkod = "";
+                    
+                    string Sor = listBox_Kosar.SelectedItem.ToString();
+                    string[] SorElemek = Sor.Split(';');
+                    vonalkod=(SorElemek[4]);
+                    for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                    {
+                        if (vonalkod.Trim() == SzerverData.MaszInfokOsszes[i].Barcode)
+                        {
+                            SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest += 1;
+                            Nettoosszeg = Nettoosszeg - SzerverData.MaszInfokOsszes[i].Ar_db;
+                            label_Osszesar.Text = Convert.ToString(Nettoosszeg);
+                            double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db);
+                            Bruttoosszeg = Bruttoosszeg - Aruvisszavetel.akcio(bruttoar, SzerverData.MaszInfokOsszes[i].Akcio);
+                            label_Osszesbrutto.Text = Convert.ToString(Bruttoosszeg);
+                        }
+                    }
+                    
+                    listBox_Kosar.Items.Remove(listBox_Kosar.SelectedItem);
+                }
+                else
+                {
+                    return;
+                }
+                
+            }
+            else //Különben eset, ha az elem üres lenne
+            {
+                MessageBox.Show("Nincs kijelölt elem!"); //Hiba visszajelzése, ha üres az elem
             }
         }
     }

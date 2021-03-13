@@ -24,11 +24,13 @@ namespace proba5._5
         {
             Fuggvenycoboboxra(comboBox_Maszktipus, comboBox_Maszknev);
             Maszktipus = comboBox_Maszktipus.SelectedItem.ToString();
+            System.Diagnostics.Debug.WriteLine($"Tipus: {Maszktipus}");
         }
 
         private void comboBox_Maszknev_SelectedIndexChanged(object sender, EventArgs e)
         {
             Masznev = comboBox_Maszknev.SelectedItem.ToString();
+            System.Diagnostics.Debug.WriteLine($"Nev: {Masznev}");
         }
 
         private void button_Listazas_Click(object sender, EventArgs e)
@@ -217,6 +219,15 @@ namespace proba5._5
                     }
                     else if (maskname == "Osszes" && masktype == "Osszes")
                     {
+                        /*
+                         LB.Items.Clear();
+                        LB.Items.Add("Összes Maszktípus/Maszknev:");
+                        for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+                        {
+                            LB.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].KeszletraktarGyor} db; {SzerverData.MaszInfokOsszes[i].Ar_db} FT;" +
+                                   $"{SzerverData.MaszInfokOsszes[i].Akcio}%; Vonalkód: {SzerverData.MaszInfokOsszes[i].Barcode} ");
+                        }
+                         */
                         LB.Items.Clear();
                         LB.Items.Add("Összes Maszktípus/Maszknev:");
                         for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)

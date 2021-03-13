@@ -254,6 +254,7 @@ namespace proba5._5
             this.listBox_Kosar.Name = "listBox_Kosar";
             this.listBox_Kosar.Size = new System.Drawing.Size(291, 395);
             this.listBox_Kosar.TabIndex = 0;
+            this.listBox_Kosar.DoubleClick += new System.EventHandler(this.listBox_Kosar_DoubleClick);
             // 
             // tableLayoutPanel6
             // 
@@ -295,6 +296,7 @@ namespace proba5._5
             this.button_Elad.TabIndex = 1;
             this.button_Elad.Text = "Eladás";
             this.button_Elad.UseVisualStyleBackColor = true;
+            this.button_Elad.Click += new System.EventHandler(this.button_Elad_Click);
             // 
             // tableLayoutPanel7
             // 
