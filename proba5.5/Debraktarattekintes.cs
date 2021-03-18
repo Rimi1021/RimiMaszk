@@ -195,7 +195,7 @@ namespace proba5._5
                 else
                 {
                     LB.Items.Add("Debreceni készlet:");
-                    if (masktype == "Osszes" && Masznev != "Osszes")
+                    if (masktype == "Osszes" && maskname != "Osszes")
                     {
                         for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                         {
