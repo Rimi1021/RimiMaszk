@@ -21,7 +21,6 @@ namespace proba5._5
             Raktar.Tisztalista();
         }
         public static bool vanilyenbarcode = false;
-        const double ADO_KULCS = 0.27;
         public static string MaszktipusEladas = "";
         public static string MaszknevEladas = "";
         public static int MaxFelvihetoOsszeg = 0;
@@ -165,7 +164,7 @@ namespace proba5._5
         #endregion
 
 
-        // Nem használt text event
+        // db text event
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (Raktar.rg.IsMatch(textBox1.Text))
@@ -182,7 +181,7 @@ namespace proba5._5
         //Manuális hozzáadás gomb
         private void button_Hozzaadas_Click(object sender, EventArgs e)
         {
-            Manualishozzaadasgomb(MaszktipusEladas, MaszknevEladas, textBox1, listBox_Kosar, label_Osszesar, label_Osszesbrutto);
+            Manualishozzaadasgomb(MaszktipusEladas, MaszknevEladas, MaxFelvihetoOsszeg, Felvittdb, textBox1, listBox_Kosar, label_Osszesar, label_Osszesbrutto);
         }
 
         //Lista osszes elem torlese es a kijelző elemek és az osszeg számlálók 0-ázása
@@ -221,13 +220,13 @@ namespace proba5._5
              {
                  MessageBox.Show("Nincs ilyen termék! Rossz Vonalkód!");
              }*/
-            TermekHozzadas2(vanilyenbarcode, textBox_Kosarba, textBox_Encode, textBox_Decode, listBox_Kosar, pictureBox_Barcode
+            TermekHozzadas2(textBox_Kosarba, textBox_Encode, textBox_Decode, listBox_Kosar, pictureBox_Barcode
              , label_Adottarubrutto, label_Adottarubruttoakcio, label_Osszesar, label_Osszesbrutto, label_akcio);
         }
 
         private void button_Elad_Click(object sender, EventArgs e)
         {
-            /* List<string> vonalkodok = new List<string>();
+             /*List<string> vonalkodok = new List<string>();
              for (int i = 0; i < listBox_Kosar.Items.Count; i++)
              {
                  string Sor = (string)listBox_Kosar.Items[i];
@@ -264,8 +263,8 @@ namespace proba5._5
                      }
                  }
              }
-             Raktar.Tisztalista();
-             listBox_Kosar.Items.Clear();*/
+            Raktar.Tisztalista();
+            listBox_Kosar.Items.Clear();*/
             EladasGombfuggveny(listBox_Kosar, telephelyarudb);
             Nettoosszeg = 0;
             label_Osszesar.Text = "0Ft";
@@ -396,29 +395,29 @@ namespace proba5._5
 
         //Manualis hozzaadas Gomb
         //
-        public static void Manualishozzaadasgomb(string maszktipus, string maszknev, TextBox textbxdb, ListBox kosar, Label osszesar, Label osszesbrutto) 
+        public static void Manualishozzaadasgomb(string maszktipus, string maszknev, int max,int felvihetodb, TextBox textbxdb, ListBox kosar, Label osszesar, Label osszesbrutto) 
         {
             for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
             {
                 if (SzerverData.MaszInfokOsszes[i].Maszktipus == maszktipus && SzerverData.MaszInfokOsszes[i].Maszknev == maszknev)
                 {
-                    MaxFelvihetoOsszeg = Convert.ToInt32(SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest);
+                    max = Convert.ToInt32(SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest);
                 }
             }
 
             if (maszktipus != "" && maszknev != "")
             {
-                if (Raktar.rg.IsMatch(textbxdb.Text) && Felvittdb <= MaxFelvihetoOsszeg)
+                if (Raktar.rg.IsMatch(textbxdb.Text) && felvihetodb <= max)
                 {
-                    for (int i = 0; i < Felvittdb; i++)
+                    for (int i = 0; i < felvihetodb; i++)
                     {
                         for (int j = 0; j < SzerverData.MaszInfokOsszes.Count; j++)
                         {
                             if (SzerverData.MaszInfokOsszes[j].Maszktipus == maszktipus && SzerverData.MaszInfokOsszes[j].Maszknev == maszknev)
                             {
                                 kosar.Items.Add($"{SzerverData.MaszInfokOsszes[j].Maszktipus}; {SzerverData.MaszInfokOsszes[j].Maszknev}; {SzerverData.MaszInfokOsszes[j].Ar_db}Ft; {SzerverData.MaszInfokOsszes[j].Akcio}%; {SzerverData.MaszInfokOsszes[j].Barcode}");
-                                MaxFelvihetoOsszeg = MaxFelvihetoOsszeg - 1;
-                                SzerverData.MaszInfokOsszes[j].KeszletraktarBudapest = MaxFelvihetoOsszeg;
+                                max = max - 1;
+                                SzerverData.MaszInfokOsszes[j].KeszletraktarBudapest = max;
                                 osszesar.Text = Convert.ToString(Nettoosszeg + SzerverData.MaszInfokOsszes[j].Ar_db);
                                 Nettoosszeg = Convert.ToInt32(osszesar.Text);
                                 double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[j].Ar_db);
@@ -440,10 +439,10 @@ namespace proba5._5
         }
 
         //Button hozzaadas2 Gomb
-        public static void TermekHozzadas2(bool vanilyenbrcode, TextBox kosartxt,TextBox encode, TextBox decode, ListBox listbx, PictureBox picbox
+        public static void TermekHozzadas2(TextBox kosartxt,TextBox encode, TextBox decode, ListBox listbx, PictureBox picbox
             ,Label adottbrutto, Label adottbruttoakcio, Label osszesar, Label osszesbrutto, Label akcio) 
         {
-            if (vanilyenbrcode == true)
+            if (vanilyenbarcode == true)
             {
                 for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
                 {
@@ -452,7 +451,7 @@ namespace proba5._5
                         if (SzerverData.MaszInfokOsszes[i].KeszletraktarBudapest > 0)
                         {
                             listbx.Items.Add($"{SzerverData.MaszInfokOsszes[i].Maszktipus}; {SzerverData.MaszInfokOsszes[i].Maszknev}; {SzerverData.MaszInfokOsszes[i].Ar_db}Ft; {SzerverData.MaszInfokOsszes[i].Akcio}%; {SzerverData.MaszInfokOsszes[i].Barcode}");
-                            vanilyenbrcode = false;
+                            vanilyenbarcode = false;
                             picbox.Image = null;
                             encode.Text = "";
                             decode.Text = "";
@@ -523,7 +522,7 @@ namespace proba5._5
                                     // Hiba keresés, ha nem lett eredmény
                                     if (result < 0)
                                     { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
-                                    MessageBox.Show("Az eladás megtörtént!"); //Sikeres feltöltés esetén megjelenő üzenet
+                                    //Sikeres feltöltés esetén megjelenő üzenet
                                     Csatlakozas.Close(); //Csatlakozási folyamat lezárása
                                 }
                             }
@@ -533,6 +532,7 @@ namespace proba5._5
                     }
                 }
             }
+            MessageBox.Show("Az eladás megtörtént!");
             Raktar.Tisztalista();
             listabox.Items.Clear();
         }
