@@ -163,9 +163,9 @@ namespace proba5._5
             this.label_db1.AutoSize = true;
             this.label_db1.Location = new System.Drawing.Point(106, 167);
             this.label_db1.Name = "label_db1";
-            this.label_db1.Size = new System.Drawing.Size(42, 13);
+            this.label_db1.Size = new System.Drawing.Size(22, 13);
             this.label_db1.TabIndex = 13;
-            this.label_db1.Text = "555/db";
+            this.label_db1.Text = "DB";
             // 
             // label_db2
             // 

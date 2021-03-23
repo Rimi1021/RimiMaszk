@@ -85,9 +85,9 @@ namespace proba5._5
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(16, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 8;
-            this.label1.Text = "LOCATION";
+            this.label1.Text = "Telephely";
             // 
             // radioButton_Osszes
             // 
