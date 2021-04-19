@@ -18,10 +18,10 @@ namespace proba5._5
             InitializeComponent();
 
             // listak feltoltese
-            ListakbaOlvasas.AdminListabaOlvasas();
-            ListakbaOlvasas.BudapestUsersListabaOlvasas();
-            ListakbaOlvasas.GyorUsersListabaOlvasas();
-            ListakbaOlvasas.DebrecenUsersListabaOlvasas();
+            SzerverData.AdminListabaOlvasas();
+            SzerverData.BudapestUsersListabaOlvasas();
+            SzerverData.GyorUsersListabaOlvasas();
+            SzerverData.DebrecenUsersListabaOlvasas();
         }
 
         private void button_kilepes_Click(object sender, EventArgs e)

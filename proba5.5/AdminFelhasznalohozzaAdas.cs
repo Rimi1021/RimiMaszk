@@ -58,7 +58,7 @@ namespace proba5._5
                         // clear
                         SzerverData.AdminUserLista.Clear();
                         // listakbaolvasas
-                        ListakbaOlvasas.AdminListabaOlvasas();
+                        SzerverData.AdminListabaOlvasas();
                         
 
                     }

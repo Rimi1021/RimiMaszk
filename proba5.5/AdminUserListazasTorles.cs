@@ -96,10 +96,10 @@ namespace proba5._5
             SzerverData.BPUserLista.Clear();
             SzerverData.GyorUserLista.Clear();
             SzerverData.DebUserLista.Clear();
-            ListakbaOlvasas.AdminListabaOlvasas();
-            ListakbaOlvasas.DebrecenUsersListabaOlvasas();
-            ListakbaOlvasas.BudapestUsersListabaOlvasas();
-            ListakbaOlvasas.GyorUsersListabaOlvasas();
+            SzerverData.AdminListabaOlvasas();
+            SzerverData.DebrecenUsersListabaOlvasas();
+            SzerverData.BudapestUsersListabaOlvasas();
+            SzerverData.GyorUsersListabaOlvasas();
             checkboxvizsgalat();
             MessageBox.Show("A frissítés megtörtént");
         }

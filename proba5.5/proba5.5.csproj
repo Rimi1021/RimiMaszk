@@ -186,7 +186,6 @@
     <Compile Include="AdminKezdopanel.Designer.cs">
       <DependentUpon>AdminKezdopanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListakbaOlvasas.cs" />
     <Compile Include="AdminUserListazasTorles.cs">
       <SubType>UserControl</SubType>
     </Compile>

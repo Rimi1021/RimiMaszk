@@ -957,7 +957,7 @@ namespace proba5._5
         public static void Tisztalista() 
         {
             SzerverData.MaszInfokOsszes.Clear();
-            ListakbaOlvasas.MaszarukListabaOlvasas();
+            SzerverData.MaszarukListabaOlvasas();
         }
 
         #region Hiánycikkbutton
