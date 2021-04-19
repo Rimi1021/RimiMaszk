@@ -19,7 +19,7 @@ namespace proba5._5
         
         ////Databases
         ///USEREK_Adatbázisa_INFO (rossz az elnevezés(Az összes user ott van))
-        public static string FileUtvonalAdmin = Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + "\\DolgozokAdmin.mdf";
+        private static string FileUtvonalAdmin = Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + "\\DolgozokAdmin.mdf";
         public static string SzerverInfoAdmin = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + FileUtvonalAdmin + ";Integrated Security=True";
         
     }

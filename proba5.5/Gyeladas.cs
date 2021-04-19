@@ -15,19 +15,19 @@ namespace proba5._5
         public Gyeladas()
         {
             InitializeComponent();
-            Raktar.Tisztalista();
+            AdminRaktar.Tisztalista();
         }
 
-        public static bool vanilyenbarcode = false;
-        public static string MaszktipusEladas = "";
-        public static string MaszknevEladas = "";
-        public static int MaxFelvihetoOsszeg = 0;
-        public static int Felvittdb = 0;
-        public static string telephelyarudb = "keszletarugyor";
+        private static bool vanilyenbarcode = false;
+        private static string MaszktipusEladas = "";
+        private static string MaszknevEladas = "";
+        private static int MaxFelvihetoOsszeg = 0;
+        private static int Felvittdb = 0;
+        private static string telephelyarudb = "keszletarugyor";
 
         // A listbox alatt lévő labelhez tartozik az összes áru nettó és bruttó(Ha van akció akkor azzal szamol) osszege
-        public static double Nettoosszeg = 0;
-        public static double Bruttoosszeg = 0;
+        private static double Nettoosszeg = 0;
+        private static double Bruttoosszeg = 0;
 
         //
         //Függvények
@@ -40,10 +40,10 @@ namespace proba5._5
                 {
                     akcio.Text = "Akció:" + Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio) + "%";
                     vanilyenbarcode = true;
-                    adottbrutto.Text = Convert.ToString(Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db)) + " Ft";
+                    adottbrutto.Text = Convert.ToString(AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db)) + " Ft";
                     if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
                     {
-                        adottbruttoakcio.Text = Convert.ToString(Aruvisszavetel.akcio(Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db), SzerverData.MaszInfokOsszes[i].Akcio)) + " Ft";
+                        adottbruttoakcio.Text = Convert.ToString(AdminArAkcio.akcio(AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db), SzerverData.MaszInfokOsszes[i].Akcio)) + " Ft";
                     }
                     else
                     {
@@ -74,7 +74,7 @@ namespace proba5._5
 
             if (maszktipus != "" && maszknev != "")
             {
-                if (Raktar.rg.IsMatch(textbxdb.Text) && felvihetodb <= max)
+                if (AdminRaktar.rg.IsMatch(textbxdb.Text) && felvihetodb <= max)
                 {
                     for (int i = 0; i < felvihetodb; i++)
                     {
@@ -87,8 +87,8 @@ namespace proba5._5
                                 SzerverData.MaszInfokOsszes[j].KeszletraktarGyor = max;
                                 osszesar.Text = Convert.ToString(Nettoosszeg + SzerverData.MaszInfokOsszes[j].Ar_db);
                                 Nettoosszeg = Convert.ToInt32(osszesar.Text);
-                                double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[j].Ar_db);
-                                Bruttoosszeg += Aruvisszavetel.akcio(bruttoar, SzerverData.MaszInfokOsszes[j].Akcio);
+                                double bruttoar = AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[j].Ar_db);
+                                Bruttoosszeg += AdminArAkcio.akcio(bruttoar, SzerverData.MaszInfokOsszes[j].Akcio);
                                 osszesbrutto.Text = Convert.ToString(Bruttoosszeg);
                             }
                         }
@@ -128,8 +128,8 @@ namespace proba5._5
                             SzerverData.MaszInfokOsszes[i].KeszletraktarGyor = SzerverData.MaszInfokOsszes[i].KeszletraktarGyor - 1;
                             osszesar.Text = Convert.ToString(Nettoosszeg + SzerverData.MaszInfokOsszes[i].Ar_db);
                             Nettoosszeg = Convert.ToInt32(osszesar.Text);
-                            double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db);
-                            Bruttoosszeg += Aruvisszavetel.akcio(bruttoar, SzerverData.MaszInfokOsszes[i].Akcio);
+                            double bruttoar = AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db);
+                            Bruttoosszeg += AdminArAkcio.akcio(bruttoar, SzerverData.MaszInfokOsszes[i].Akcio);
                             osszesbrutto.Text = Convert.ToString(Bruttoosszeg);
                             akcio.Text = "Akció:";
                         }
@@ -149,7 +149,7 @@ namespace proba5._5
         //listabox elemek ürítése
         public static void Listboxelemektorles(ListBox listbx, Label osszesar, Label osszesbrutto, TextBox txtbxdb)
         {
-            Raktar.Tisztalista();
+            AdminRaktar.Tisztalista();
             listbx.Items.Clear();
             Nettoosszeg = 0;
             osszesar.Text = "0Ft";
@@ -178,10 +178,10 @@ namespace proba5._5
                 {
                     label_akcio.Text = "Akció:" + Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio) + "%";
                     vanilyenbarcode = true;
-                    label_adottarubrutt.Text = Convert.ToString(Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db)) + " Ft";
+                    label_adottarubrutt.Text = Convert.ToString(AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db)) + " Ft";
                     if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
                     {
-                        label_Adottarubruttoakcio.Text = Convert.ToString(Aruvisszavetel.akcio(Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db), SzerverData.MaszInfokOsszes[i].Akcio)) + " Ft";
+                        label_Adottarubruttoakcio.Text = Convert.ToString(AdminArAkcio.akcio(AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db), SzerverData.MaszInfokOsszes[i].Akcio)) + " Ft";
                     }
                     else
                     {
@@ -207,7 +207,7 @@ namespace proba5._5
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (Raktar.rg.IsMatch(textBox1.Text))
+            if (AdminRaktar.rg.IsMatch(textBox1.Text))
             {
                 Felvittdb = Convert.ToInt32(textBox1.Text);
             }
@@ -263,8 +263,8 @@ namespace proba5._5
                             SzerverData.MaszInfokOsszes[i].KeszletraktarGyor += 1;
                             Nettoosszeg = Nettoosszeg - SzerverData.MaszInfokOsszes[i].Ar_db;
                             label_Osszesar.Text = Convert.ToString(Nettoosszeg);
-                            double bruttoar = Aruvisszavetel.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db);
-                            Bruttoosszeg = Bruttoosszeg - Aruvisszavetel.akcio(bruttoar, SzerverData.MaszInfokOsszes[i].Akcio);
+                            double bruttoar = AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db);
+                            Bruttoosszeg = Bruttoosszeg - AdminArAkcio.akcio(bruttoar, SzerverData.MaszInfokOsszes[i].Akcio);
                             label_Osszesbrutto.Text = Convert.ToString(Bruttoosszeg);
                         }
                     }

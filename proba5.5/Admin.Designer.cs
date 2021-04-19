@@ -49,13 +49,13 @@ namespace proba5._5
             this.pictureBox_Profile = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.aruatcsoportositas1 = new proba5._5.Aruatcsoportositas();
-            this.raktar1 = new proba5._5.Raktar();
-            this.eladas1 = new proba5._5.Eladas();
-            this.aruvisszavetel1 = new proba5._5.Aruvisszavetel();
-            this.listazasTorles1 = new proba5._5.ListazasTorles();
-            this.felhasznalohozzaAdas1 = new proba5._5.FelhasznalohozzaAdas();
-            this.kezdopanel1 = new proba5._5.Kezdopanel();
+            this.kezdopanel1 = new proba5._5.AdminKezdopanel();
+            this.eladas1 = new proba5._5.AdminAruattekintes();
+            this.aruvisszavetel1 = new proba5._5.AdminArAkcio();
+            this.listazasTorles1 = new proba5._5.AdminUserListazasTorles();
+            this.felhasznalohozzaAdas1 = new proba5._5.AdminFelhasznalohozzaAdas();
+            this.raktar1 = new proba5._5.AdminRaktar();
+            this.aruatcsoportositas1 = new proba5._5.AdminAruatcsoportositas();
             this.panel_SideMenuPanel.SuspendLayout();
             this.panel_Lenyilo2.SuspendLayout();
             this.panel_Userlenyilo.SuspendLayout();
@@ -78,9 +78,8 @@ namespace proba5._5
             this.panel_SideMenuPanel.Controls.Add(this.panel_Logo);
             this.panel_SideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_SideMenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.panel_SideMenuPanel.MaximumSize = new System.Drawing.Size(183, 455);
             this.panel_SideMenuPanel.Name = "panel_SideMenuPanel";
-            this.panel_SideMenuPanel.Size = new System.Drawing.Size(183, 455);
+            this.panel_SideMenuPanel.Size = new System.Drawing.Size(183, 505);
             this.panel_SideMenuPanel.TabIndex = 1;
             // 
             // button_Kijelentkezes
@@ -90,7 +89,7 @@ namespace proba5._5
             this.button_Kijelentkezes.FlatAppearance.BorderSize = 0;
             this.button_Kijelentkezes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Kijelentkezes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Kijelentkezes.Location = new System.Drawing.Point(0, 375);
+            this.button_Kijelentkezes.Location = new System.Drawing.Point(0, 425);
             this.button_Kijelentkezes.Name = "button_Kijelentkezes";
             this.button_Kijelentkezes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button_Kijelentkezes.Size = new System.Drawing.Size(183, 40);
@@ -107,7 +106,7 @@ namespace proba5._5
             this.button_Kilepes.FlatAppearance.BorderSize = 0;
             this.button_Kilepes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Kilepes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Kilepes.Location = new System.Drawing.Point(0, 415);
+            this.button_Kilepes.Location = new System.Drawing.Point(0, 465);
             this.button_Kilepes.Name = "button_Kilepes";
             this.button_Kilepes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button_Kilepes.Size = new System.Drawing.Size(183, 40);
@@ -326,22 +325,22 @@ namespace proba5._5
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(856, 455);
+            this.panel3.Size = new System.Drawing.Size(856, 505);
             this.panel3.TabIndex = 2;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.aruatcsoportositas1);
-            this.panel1.Controls.Add(this.raktar1);
-            this.panel1.Controls.Add(this.eladas1);
             this.panel1.Controls.Add(this.kezdopanel1);
+            this.panel1.Controls.Add(this.eladas1);
             this.panel1.Controls.Add(this.aruvisszavetel1);
+            this.panel1.Controls.Add(this.raktar1);
+            this.panel1.Controls.Add(this.aruatcsoportositas1);
             this.panel1.Controls.Add(this.listazasTorles1);
             this.panel1.Controls.Add(this.felhasznalohozzaAdas1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(183, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(673, 455);
+            this.panel1.Size = new System.Drawing.Size(673, 505);
             this.panel1.TabIndex = 2;
             // 
             // aruatcsoportositas1
@@ -349,31 +348,40 @@ namespace proba5._5
             this.aruatcsoportositas1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aruatcsoportositas1.Location = new System.Drawing.Point(0, 0);
             this.aruatcsoportositas1.Name = "aruatcsoportositas1";
-            this.aruatcsoportositas1.Size = new System.Drawing.Size(673, 455);
-            this.aruatcsoportositas1.TabIndex = 5;
-            // 
-            // raktar1
-            // 
-            this.raktar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.raktar1.Location = new System.Drawing.Point(0, 0);
-            this.raktar1.Name = "raktar1";
-            this.raktar1.Size = new System.Drawing.Size(673, 455);
-            this.raktar1.TabIndex = 4;
+            this.aruatcsoportositas1.Size = new System.Drawing.Size(673, 505);
+            this.aruatcsoportositas1.TabIndex = 6;
             // 
             // eladas1
             // 
             this.eladas1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eladas1.Location = new System.Drawing.Point(0, 0);
             this.eladas1.Name = "eladas1";
-            this.eladas1.Size = new System.Drawing.Size(673, 455);
-            this.eladas1.TabIndex = 3;
+            this.eladas1.Size = new System.Drawing.Size(673, 505);
+            this.eladas1.TabIndex = 5;
+            // 
+            // raktar1
+            // 
+            this.raktar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.raktar1.Location = new System.Drawing.Point(0, 0);
+            this.raktar1.Name = "raktar1";
+            this.raktar1.Size = new System.Drawing.Size(673, 505);
+            this.raktar1.TabIndex = 4;
+            // 
+            // kezdopanel1
+            // 
+            this.kezdopanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.kezdopanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kezdopanel1.Location = new System.Drawing.Point(0, 0);
+            this.kezdopanel1.Name = "kezdopanel1";
+            this.kezdopanel1.Size = new System.Drawing.Size(673, 505);
+            this.kezdopanel1.TabIndex = 3;
             // 
             // aruvisszavetel1
             // 
             this.aruvisszavetel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aruvisszavetel1.Location = new System.Drawing.Point(0, 0);
             this.aruvisszavetel1.Name = "aruvisszavetel1";
-            this.aruvisszavetel1.Size = new System.Drawing.Size(673, 455);
+            this.aruvisszavetel1.Size = new System.Drawing.Size(673, 505);
             this.aruvisszavetel1.TabIndex = 2;
             // 
             // listazasTorles1
@@ -381,7 +389,7 @@ namespace proba5._5
             this.listazasTorles1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listazasTorles1.Location = new System.Drawing.Point(0, 0);
             this.listazasTorles1.Name = "listazasTorles1";
-            this.listazasTorles1.Size = new System.Drawing.Size(673, 455);
+            this.listazasTorles1.Size = new System.Drawing.Size(673, 505);
             this.listazasTorles1.TabIndex = 1;
             // 
             // felhasznalohozzaAdas1
@@ -389,26 +397,17 @@ namespace proba5._5
             this.felhasznalohozzaAdas1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.felhasznalohozzaAdas1.Location = new System.Drawing.Point(0, 0);
             this.felhasznalohozzaAdas1.Name = "felhasznalohozzaAdas1";
-            this.felhasznalohozzaAdas1.Size = new System.Drawing.Size(673, 455);
+            this.felhasznalohozzaAdas1.Size = new System.Drawing.Size(673, 505);
             this.felhasznalohozzaAdas1.TabIndex = 0;
-            // 
-            // kezdopanel1
-            // 
-            this.kezdopanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kezdopanel1.Location = new System.Drawing.Point(0, 0);
-            this.kezdopanel1.Name = "kezdopanel1";
-            this.kezdopanel1.Size = new System.Drawing.Size(673, 455);
-            this.kezdopanel1.TabIndex = 3;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(856, 455);
+            this.ClientSize = new System.Drawing.Size(970, 505);
             this.Controls.Add(this.panel3);
-            this.MaximumSize = new System.Drawing.Size(872, 494);
-            this.MinimumSize = new System.Drawing.Size(872, 494);
+            this.MinimumSize = new System.Drawing.Size(970, 610);
             this.Name = "Admin";
             this.Text = "Admin";
             this.panel_SideMenuPanel.ResumeLayout(false);
@@ -440,16 +439,16 @@ namespace proba5._5
         private System.Windows.Forms.Panel panel_Logo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private ListazasTorles listazasTorles1;
-        private FelhasznalohozzaAdas felhasznalohozzaAdas1;
-        private Aruvisszavetel aruvisszavetel1;
-        private Raktar raktar1;
-        private Eladas eladas1;
+        private AdminUserListazasTorles listazasTorles1;
+        private AdminFelhasznalohozzaAdas felhasznalohozzaAdas1;
+        private AdminArAkcio aruvisszavetel1;
+        private AdminRaktar raktar1;
+        private AdminAruattekintes eladas1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label_provilnev;
         private System.Windows.Forms.PictureBox pictureBox_Profile;
         private System.Windows.Forms.Button button_AruAtcsoportositas;
-        private Aruatcsoportositas aruatcsoportositas1;
-        private Kezdopanel kezdopanel1;
+        private AdminAruatcsoportositas aruatcsoportositas1;
+        private AdminKezdopanel kezdopanel1;
     }
 }

@@ -87,7 +87,7 @@ namespace proba5._5
 
         private void Profilkepalattinev() 
         {
-            label_provilnev.Text = Form1.profilnev;
+            label_provilnev.Text = LoginForm.profilnev;
         }
 
         // listazas torles event handler
@@ -147,7 +147,7 @@ namespace proba5._5
         private void button_Kijelentkezes_Click(object sender, EventArgs e)
         {
             SubMenuHide();
-            Form1 Bejelentkezes = new Form1();
+            LoginForm Bejelentkezes = new LoginForm();
             this.Hide();
             Bejelentkezes.Show();
             Bejelentkezes.BringToFront();
@@ -178,6 +178,7 @@ namespace proba5._5
 
         private void button_AruAtcsoportositas_Click(object sender, EventArgs e)
         {
+            SubMenuHide();
             felhasznalohozzaAdas1.Hide();
             kezdopanel1.Hide();
             listazasTorles1.Hide();

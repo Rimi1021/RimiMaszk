@@ -73,17 +73,17 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aruatcsoportositas.cs">
+    <Compile Include="AdminAruatcsoportositas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Aruatcsoportositas.Designer.cs">
-      <DependentUpon>Aruatcsoportositas.cs</DependentUpon>
+    <Compile Include="AdminAruatcsoportositas.Designer.cs">
+      <DependentUpon>AdminAruatcsoportositas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aruvisszavetel.cs">
+    <Compile Include="AdminArAkcio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Aruvisszavetel.Designer.cs">
-      <DependentUpon>Aruvisszavetel.cs</DependentUpon>
+    <Compile Include="AdminArAkcio.Designer.cs">
+      <DependentUpon>AdminArAkcio.cs</DependentUpon>
     </Compile>
     <Compile Include="BPAruattekintes.cs">
       <SubType>UserControl</SubType>
@@ -115,11 +115,11 @@
     <Compile Include="DebEladas.Designer.cs">
       <DependentUpon>DebEladas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Debraktarattekintes.cs">
+    <Compile Include="DebAruattekintes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Debraktarattekintes.Designer.cs">
-      <DependentUpon>Debraktarattekintes.cs</DependentUpon>
+    <Compile Include="DebAruattekintes.Designer.cs">
+      <DependentUpon>DebAruattekintes.cs</DependentUpon>
     </Compile>
     <Compile Include="DebrecenForm.cs">
       <SubType>Form</SubType>
@@ -137,23 +137,23 @@
     <Compile Include="DolgozokBP.cs" />
     <Compile Include="DolgozokDebrecen.cs" />
     <Compile Include="DolgozokGYOR.cs" />
-    <Compile Include="Eladas.cs">
+    <Compile Include="AdminAruattekintes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Eladas.Designer.cs">
-      <DependentUpon>Eladas.cs</DependentUpon>
+    <Compile Include="AdminAruattekintes.Designer.cs">
+      <DependentUpon>AdminAruattekintes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FelhasznalohozzaAdas.cs">
+    <Compile Include="AdminFelhasznalohozzaAdas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FelhasznalohozzaAdas.Designer.cs">
-      <DependentUpon>FelhasznalohozzaAdas.cs</DependentUpon>
+    <Compile Include="AdminFelhasznalohozzaAdas.Designer.cs">
+      <DependentUpon>AdminFelhasznalohozzaAdas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GyAruattekintes.cs">
       <SubType>UserControl</SubType>
@@ -179,37 +179,37 @@
     <Compile Include="GyorForm.Designer.cs">
       <DependentUpon>GyorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kezdopanel.cs">
+    <Compile Include="AdminKezdopanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kezdopanel.Designer.cs">
-      <DependentUpon>Kezdopanel.cs</DependentUpon>
+    <Compile Include="AdminKezdopanel.Designer.cs">
+      <DependentUpon>AdminKezdopanel.cs</DependentUpon>
     </Compile>
     <Compile Include="ListakbaOlvasas.cs" />
-    <Compile Include="ListazasTorles.cs">
+    <Compile Include="AdminUserListazasTorles.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ListazasTorles.Designer.cs">
-      <DependentUpon>ListazasTorles.cs</DependentUpon>
+    <Compile Include="AdminUserListazasTorles.Designer.cs">
+      <DependentUpon>AdminUserListazasTorles.cs</DependentUpon>
     </Compile>
     <Compile Include="MaszkAruk.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Raktar.cs">
+    <Compile Include="AdminRaktar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Raktar.Designer.cs">
-      <DependentUpon>Raktar.cs</DependentUpon>
+    <Compile Include="AdminRaktar.Designer.cs">
+      <DependentUpon>AdminRaktar.cs</DependentUpon>
     </Compile>
     <Compile Include="SzerverData.cs" />
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aruatcsoportositas.resx">
-      <DependentUpon>Aruatcsoportositas.cs</DependentUpon>
+    <EmbeddedResource Include="AdminAruatcsoportositas.resx">
+      <DependentUpon>AdminAruatcsoportositas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aruvisszavetel.resx">
-      <DependentUpon>Aruvisszavetel.cs</DependentUpon>
+    <EmbeddedResource Include="AdminArAkcio.resx">
+      <DependentUpon>AdminArAkcio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BPAruattekintes.resx">
       <DependentUpon>BPAruattekintes.cs</DependentUpon>
@@ -226,8 +226,8 @@
     <EmbeddedResource Include="DebEladas.resx">
       <DependentUpon>DebEladas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Debraktarattekintes.resx">
-      <DependentUpon>Debraktarattekintes.cs</DependentUpon>
+    <EmbeddedResource Include="DebAruattekintes.resx">
+      <DependentUpon>DebAruattekintes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DebrecenForm.resx">
       <DependentUpon>DebrecenForm.cs</DependentUpon>
@@ -235,14 +235,14 @@
     <EmbeddedResource Include="Debrecenkezdopanel.resx">
       <DependentUpon>Debrecenkezdopanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eladas.resx">
-      <DependentUpon>Eladas.cs</DependentUpon>
+    <EmbeddedResource Include="AdminAruattekintes.resx">
+      <DependentUpon>AdminAruattekintes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FelhasznalohozzaAdas.resx">
-      <DependentUpon>FelhasznalohozzaAdas.cs</DependentUpon>
+    <EmbeddedResource Include="AdminFelhasznalohozzaAdas.resx">
+      <DependentUpon>AdminFelhasznalohozzaAdas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GyAruattekintes.resx">
       <DependentUpon>GyAruattekintes.cs</DependentUpon>
@@ -256,11 +256,11 @@
     <EmbeddedResource Include="GyorForm.resx">
       <DependentUpon>GyorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kezdopanel.resx">
-      <DependentUpon>Kezdopanel.cs</DependentUpon>
+    <EmbeddedResource Include="AdminKezdopanel.resx">
+      <DependentUpon>AdminKezdopanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListazasTorles.resx">
-      <DependentUpon>ListazasTorles.cs</DependentUpon>
+    <EmbeddedResource Include="AdminUserListazasTorles.resx">
+      <DependentUpon>AdminUserListazasTorles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -272,8 +272,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Raktar.resx">
-      <DependentUpon>Raktar.cs</DependentUpon>
+    <EmbeddedResource Include="AdminRaktar.resx">
+      <DependentUpon>AdminRaktar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -297,27 +297,6 @@
     <Content Include="DolgozokAdmin_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DolgozokAdmin.mdf</DependentUpon>
-    </Content>
-    <Content Include="DolgozokBP.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DolgozokBP_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DolgozokBP.mdf</DependentUpon>
-    </Content>
-    <Content Include="DolgozokD.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DolgozokD_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DolgozokD.mdf</DependentUpon>
-    </Content>
-    <Content Include="DolgozokGY.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DolgozokGY_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DolgozokGY.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -18,21 +18,21 @@ namespace proba5._5
         {
             InitializeComponent();
         }
-        public static string Maszktipus = "";
-        public static string Masznev = "";
-        public static string txtboxdefault = "Áru";
+        private static string Maszktipus = "";
+        private static string Masznev = "";
+        private static string txtboxdefault = "Áru";
         public static  Regex rx = new Regex(@"^[a-zA-Z0-9]+$");
        
 
         private void comboBox_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Debraktarattekintes.Fuggvenycoboboxra(comboBox_Type, comboBox_Nev);
+            DebAruattekintes.Fuggvenycoboboxra(comboBox_Type, comboBox_Nev);
             Maszktipus = comboBox_Type.SelectedItem.ToString();
         }
 
         private void button_Listazas_Click(object sender, EventArgs e)
         {
-            Debraktarattekintes.Listazasfuggveny(radioButton_BP, radioButton_GY, radioButton_D, listBox1, Maszktipus, Masznev);
+            DebAruattekintes.Listazasfuggveny(radioButton_BP, radioButton_GY, radioButton_D, listBox1, Maszktipus, Masznev);
         }
 
         private void comboBox_Nev_SelectedIndexChanged(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace proba5._5
         }
         public static void Nev(Label nev)
         {
-            nev.Text = Form1.profilnev;
+            nev.Text = LoginForm.profilnev;
         }
 
         private void button_Kilepes_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace proba5._5
 
         private void button_Kijelentkezes_Click(object sender, EventArgs e)
         {
-            Form1 Bejelentkezes = new Form1();
+            LoginForm Bejelentkezes = new LoginForm();
             this.Hide();
             Bejelentkezes.Show();
             Bejelentkezes.BringToFront();

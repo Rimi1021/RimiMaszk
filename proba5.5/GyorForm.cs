@@ -38,7 +38,7 @@ namespace proba5._5
 
         private void button_Kijelentkezes_Click(object sender, EventArgs e)
         {
-            Form1 Bejelentkezes = new Form1();
+            LoginForm Bejelentkezes = new LoginForm();
             this.Hide();
             Bejelentkezes.Show();
             Bejelentkezes.BringToFront();

@@ -39,7 +39,7 @@ namespace proba5._5
             this.button_Kijelentkezes = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.debraktarattekintes1 = new proba5._5.Debraktarattekintes();
+            this.debraktarattekintes1 = new proba5._5.DebAruattekintes();
             this.debEladas1 = new proba5._5.DebEladas();
             this.debrecenkezdopanel1 = new proba5._5.Debrecenkezdopanel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -238,7 +238,7 @@ namespace proba5._5
         private System.Windows.Forms.Button button_Kijelentkezes;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
-        private Debraktarattekintes debraktarattekintes1;
+        private DebAruattekintes debraktarattekintes1;
         private DebEladas debEladas1;
         private Debrecenkezdopanel debrecenkezdopanel1;
     }
