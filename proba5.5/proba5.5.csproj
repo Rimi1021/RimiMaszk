@@ -149,6 +149,7 @@
     <Compile Include="AdminFelhasznalohozzaAdas.Designer.cs">
       <DependentUpon>AdminFelhasznalohozzaAdas.cs</DependentUpon>
     </Compile>
+    <Compile Include="IEladas.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

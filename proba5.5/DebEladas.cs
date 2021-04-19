@@ -12,7 +12,7 @@ using ZXing;
 
 namespace proba5._5
 {
-    public partial class DebEladas : UserControl
+    public partial class DebEladas : UserControl, IEladas
     {
         public DebEladas()
         {
@@ -199,7 +199,7 @@ namespace proba5._5
         }*/
 
         //Kosarbateves textchange event
-        public static void Kosarevent(TextBox kosatextbx, TextBox encode, TextBox decode, Label akcio, Label adottbrutto, Label adottbruttoakcio)
+        public void Kosarevent(TextBox kosatextbx, TextBox encode, TextBox decode, Label akcio, Label adottbrutto, Label adottbruttoakcio)
         {
             for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
             {
@@ -229,7 +229,7 @@ namespace proba5._5
 
         //Manualis hozzaadas Gomb
         //
-        public static void Manualishozzaadasgomb(string maszktipus, string maszknev, int max, int felvihetodb, TextBox textbxdb, ListBox kosar, Label osszesar, Label osszesbrutto)
+        public void Manualishozzaadasgomb(string maszktipus, string maszknev, int max, int felvihetodb, TextBox textbxdb, ListBox kosar, Label osszesar, Label osszesbrutto)
         {
             for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
             {
@@ -273,7 +273,7 @@ namespace proba5._5
         }
 
         //Button hozzaadas2 Gomb
-        public static void TermekHozzadas2(TextBox kosartxt, TextBox encode, TextBox decode, ListBox listbx, PictureBox picbox
+        public void TermekHozzadas2(TextBox kosartxt, TextBox encode, TextBox decode, ListBox listbx, PictureBox picbox
             , Label adottbrutto, Label adottbruttoakcio, Label osszesar, Label osszesbrutto, Label akcio)
         {
             if (vanilyenbarcode == true)
@@ -314,7 +314,7 @@ namespace proba5._5
         }
 
         //listabox elemek ürítése
-        public static void Listboxelemektorles(ListBox listbx, Label osszesar, Label osszesbrutto, TextBox txtbxdb)
+        public void Listboxelemektorles(ListBox listbx, Label osszesar, Label osszesbrutto, TextBox txtbxdb)
         {
             AdminRaktar.Tisztalista();
             listbx.Items.Clear();
