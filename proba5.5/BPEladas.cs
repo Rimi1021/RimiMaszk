@@ -48,7 +48,7 @@ namespace proba5._5
         ///Kosárba tevés melletti textboxBarcode vizsgálat
         private void textBox_Kosarba_TextChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
+           /* for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
             {
                 if (SzerverData.MaszInfokOsszes[i].Barcode == textBox_Kosarba.Text)
                 {
@@ -71,9 +71,9 @@ namespace proba5._5
                 textBox_Decode.Text = "";
                 textBox_Encode.Text = "";
                 textBox_Kosarba.Text = "";
-            }
+            }*/
             // Kosarevent(TextBox kosatextbx,TextBox encode,TextBox decode,bool vaneilyenbarcode, Label akcio, Label adottbrutto, Label adottbruttoakcio)
-            //Kosarevent(textBox_Kosarba, textBox_Encode, textBox_Decode, label_akcio, label_Adottarubrutto, label_Adottarubruttoakcio);
+            Kosarevent(textBox_Kosarba, textBox_Encode, textBox_Decode, label_akcio, label_Adottarubrutto, label_Adottarubruttoakcio);
         }
 
         private void comboBox_Maszktipus_SelectedIndexChanged(object sender, EventArgs e)
@@ -493,7 +493,7 @@ namespace proba5._5
 
         //Eladas GOMB
 
-        public static void EladasGombfuggveny(ListBox listabox,string keszletarutelephely) 
+        public  void EladasGombfuggveny(ListBox listabox,string keszletarutelephely) 
         {
             List<string> vonalkodok = new List<string>();
             for (int i = 0; i < listabox.Items.Count; i++)

@@ -236,9 +236,10 @@ namespace proba5._5
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(316, 186);
+            this.label7.Location = new System.Drawing.Point(15, 277);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 18);
             this.label7.TabIndex = 13;
@@ -249,7 +250,7 @@ namespace proba5._5
             this.radioButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton4.Location = new System.Drawing.Point(16, 272);
+            this.radioButton4.Location = new System.Drawing.Point(102, 273);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(88, 22);
             this.radioButton4.TabIndex = 14;
@@ -263,7 +264,7 @@ namespace proba5._5
             this.radioButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton5.Location = new System.Drawing.Point(16, 305);
+            this.radioButton5.Location = new System.Drawing.Point(102, 306);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(59, 22);
             this.radioButton5.TabIndex = 15;
@@ -277,7 +278,7 @@ namespace proba5._5
             this.radioButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton6.AutoSize = true;
             this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton6.Location = new System.Drawing.Point(16, 342);
+            this.radioButton6.Location = new System.Drawing.Point(102, 343);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(90, 22);
             this.radioButton6.TabIndex = 16;
@@ -290,7 +291,7 @@ namespace proba5._5
             // 
             this.button_Atcsoportosit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_Atcsoportosit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_Atcsoportosit.Location = new System.Drawing.Point(127, 272);
+            this.button_Atcsoportosit.Location = new System.Drawing.Point(213, 273);
             this.button_Atcsoportosit.Name = "button_Atcsoportosit";
             this.button_Atcsoportosit.Size = new System.Drawing.Size(147, 92);
             this.button_Atcsoportosit.TabIndex = 17;
@@ -302,7 +303,7 @@ namespace proba5._5
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(281, 272);
+            this.pictureBox2.Location = new System.Drawing.Point(367, 273);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(96, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -323,7 +324,7 @@ namespace proba5._5
             // 
             this.label_Honnan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Honnan.AutoSize = true;
-            this.label_Honnan.Location = new System.Drawing.Point(140, 380);
+            this.label_Honnan.Location = new System.Drawing.Point(226, 381);
             this.label_Honnan.Name = "label_Honnan";
             this.label_Honnan.Size = new System.Drawing.Size(45, 13);
             this.label_Honnan.TabIndex = 20;
@@ -333,7 +334,7 @@ namespace proba5._5
             // 
             this.label_Hova.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Hova.AutoSize = true;
-            this.label_Hova.Location = new System.Drawing.Point(224, 380);
+            this.label_Hova.Location = new System.Drawing.Point(310, 381);
             this.label_Hova.Name = "label_Hova";
             this.label_Hova.Size = new System.Drawing.Size(33, 13);
             this.label_Hova.TabIndex = 21;
@@ -354,7 +355,7 @@ namespace proba5._5
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(12, 249);
+            this.label5.Location = new System.Drawing.Point(98, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 23;
@@ -364,13 +365,13 @@ namespace proba5._5
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(192, 379);
+            this.label6.Location = new System.Drawing.Point(278, 380);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(19, 13);
             this.label6.TabIndex = 24;
             this.label6.Text = "-->";
             // 
-            // Aruatcsoportositas
+            // AdminAruatcsoportositas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -399,7 +400,7 @@ namespace proba5._5
             this.Controls.Add(this.radioButton_Gyor);
             this.Controls.Add(this.radioButton_BP);
             this.Controls.Add(this.panel1);
-            this.Name = "Aruatcsoportositas";
+            this.Name = "AdminAruatcsoportositas";
             this.Size = new System.Drawing.Size(805, 576);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

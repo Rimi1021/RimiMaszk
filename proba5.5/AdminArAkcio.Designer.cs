@@ -957,14 +957,14 @@ namespace proba5._5
             this.tableLayoutPanel1.Size = new System.Drawing.Size(728, 366);
             this.tableLayoutPanel1.TabIndex = 106;
             // 
-            // Admin_ArAkcio
+            // AdminArAkcio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.comboBox_Maszktipus);
             this.Controls.Add(this.label2);
-            this.Name = "Admin_ArAkcio";
+            this.Name = "AdminArAkcio";
             this.Size = new System.Drawing.Size(807, 574);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

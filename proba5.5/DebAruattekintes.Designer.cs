@@ -360,12 +360,12 @@ namespace proba5._5
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Debraktarattekintes
+            // DebAruattekintes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Debraktarattekintes";
+            this.Name = "DebAruattekintes";
             this.Size = new System.Drawing.Size(855, 631);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

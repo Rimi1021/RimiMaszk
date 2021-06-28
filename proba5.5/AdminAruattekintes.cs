@@ -207,6 +207,26 @@ namespace proba5._5
             {
                 MessageBox.Show("Először listázza ki az exportálandó adatokat");/////Ez a része nem jó
             }
+            /*
+              StreamWriter Iro = new StreamWriter(textBox1.Text + ".csv", false, Encoding.Default);
+            if (Diaklistbox.Items != null) //Ha van kiválasztva lista item a dupla klikkeléskor
+            {
+                if (textBox1.Text != null || textBox1.Text !="")
+                {
+                    for (int i = 0; i < Diaklistbox.Items.Count; i++)
+                    {
+                        Iro.WriteLine(Diaklistbox.Items.ToString()); //Fájlba írás elvégzése
+                    }
+                    Iro.Close();
+                    MessageBox.Show("Az írási folyamat végrehajtva!");
+
+                }
+                else
+                {
+                    MessageBox.Show("Adjon nevet a fájlnak");
+                }
+            }
+             */
         }
         #endregion
     }

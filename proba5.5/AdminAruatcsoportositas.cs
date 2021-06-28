@@ -101,7 +101,6 @@ namespace proba5._5
             }
             else if (maszkkombo == true)
             {
-                MessageBox.Show("Ez jo lesz");
                 Szallitasra_Alkalmas = true;
                 label_Maszktipus.Text = Termektipus;
                 label_Maszknev.Text = Termeknev;
@@ -139,6 +138,7 @@ namespace proba5._5
         }
         #endregion
 
+         
         private void textBox_atcsoportositDB_TextChanged(object sender, EventArgs e)
         {
               if (AdminRaktar.rg.IsMatch(textBox_atcsoportositDB.Text) && db >= Convert.ToInt32(textBox_atcsoportositDB.Text) && Convert.ToInt32(textBox_atcsoportositDB.Text) != 0)

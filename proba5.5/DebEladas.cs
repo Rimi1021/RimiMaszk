@@ -408,30 +408,7 @@ namespace proba5._5
 
         private void textBox_Kosarba_TextChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < SzerverData.MaszInfokOsszes.Count; i++)
-            {
-                if (SzerverData.MaszInfokOsszes[i].Barcode == textBox_Kosarba.Text)
-                {
-                    label_akcio.Text = "Akció:" + Convert.ToString(SzerverData.MaszInfokOsszes[i].Akcio) + "%";
-                    vanilyenbarcode = true;
-                    label_Adottarubrutto.Text = Convert.ToString(AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db)) + " Ft";
-                    if (SzerverData.MaszInfokOsszes[i].Akcio != 0)
-                    {
-                        label_Adottarubruttoakcio.Text = Convert.ToString(AdminArAkcio.akcio(AdminArAkcio.Brutto(SzerverData.MaszInfokOsszes[i].Ar_db), SzerverData.MaszInfokOsszes[i].Akcio)) + " Ft";
-                    }
-                    else
-                    {
-                        label_Adottarubruttoakcio.Text = "Nincs akció";
-                    }
-                }
-            }
-            if (vanilyenbarcode == false && textBox_Kosarba.Text != "")
-            {
-                MessageBox.Show("Nem létezik ilyen vonalkód, használja a manuális termékkiválasztás opciót");
-                textBox_Decode.Text = "";
-                textBox_Encode.Text = "";
-                textBox_Kosarba.Text = "";
-            }
+            Kosarevent(textBox_Kosarba, textBox_Encode, textBox_Decode, label_akcio, label_Adottarubrutto, label_Adottarubruttoakcio);
         }
 
         private void comboBox_Maszktipus_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -472,7 +449,7 @@ namespace proba5._5
 
         private void button_Elad_Click(object sender, EventArgs e)
         {
-            BPEladas.EladasGombfuggveny(listBox_Kosar, telephelyarudb);
+            EladasGombfuggveny(listBox_Kosar, telephelyarudb);
             Nettoosszeg = 0;
             label_Osszesar.Text = "0Ft";
             Bruttoosszeg = 0;
@@ -517,6 +494,50 @@ namespace proba5._5
             {
                 MessageBox.Show("Nincs kijelölt elem!"); //Hiba visszajelzése, ha üres az elem
             }
+        }
+
+        public  void EladasGombfuggveny(ListBox listabox, string keszletarutelephely)
+        {
+            List<string> vonalkodok = new List<string>();
+            for (int i = 0; i < listabox.Items.Count; i++)
+            {
+                string Sor = (string)listabox.Items[i];
+                string[] SorElemek = Sor.Split(';');
+                vonalkodok.Add(SorElemek[4]);
+            }
+            for (int i = 0; i < vonalkodok.Count; i++)
+            {
+                //System.Diagnostics.Debug.WriteLine(vonalkodok[i]);
+                for (int j = 0; j < SzerverData.MaszInfokOsszes.Count; j++)
+                {
+                    if (SzerverData.MaszInfokOsszes[j].Barcode == vonalkodok[i].Trim())
+                    {
+                        try
+                        {
+                            using (SqlConnection Csatlakozas = new SqlConnection(SzerverData.SzerverInfoAdmin))
+                            {
+                                string Feltoltes = $"UPDATE MaszkAruk SET {keszletarutelephely} = {keszletarutelephely} - 1 WHERE barcode = '{vonalkodok[i].Trim()}'"; //Adatok feltöltése
+                                using (SqlCommand Parancs = new SqlCommand(Feltoltes, Csatlakozas))
+                                {
+                                    Csatlakozas.Open(); //Csatlakozási folyamat megnyitása
+                                    var result = Parancs.ExecuteNonQuery();
+                                    Parancs.Dispose();
+                                    // Hiba keresés, ha nem lett eredmény
+                                    if (result < 0)
+                                    { MessageBox.Show("Hiba az adatfeltöltés során!"); } //Hibaüzenet
+                                    //Sikeres feltöltés esetén megjelenő üzenet
+                                    Csatlakozas.Close(); //Csatlakozási folyamat lezárása
+                                }
+                            }
+                        }
+                        catch (Exception) //Kivétel megadása, ha a try részben lévő kód nem fut le.
+                        { MessageBox.Show("Nem sikerült a csalakozás"); }
+                    }
+                }
+            }
+            MessageBox.Show("Az eladás megtörtént!");
+            AdminRaktar.Tisztalista();
+            listabox.Items.Clear();
         }
     }
 }

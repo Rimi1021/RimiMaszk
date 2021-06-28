@@ -192,14 +192,14 @@ namespace proba5._5
         /// TextCahnge eventek regex es button zold
         private void textBox_2_1_TextChanged(object sender, EventArgs e)
         {
-            Method4textvhacgeAzelsotexBoxra(textBox_2_1, button_Mentes1, label_maszknev1);
+            SzinvaltozasArValtozasra(textBox_2_1, button_Mentes1, label_maszknev1);
         }
 
 
 
         //Method4Textevent
         #region Metódus texteventre 1.oszlop
-        public static void Method4textvhacgeAzelsotexBoxra(TextBox textbox, Button gomb, Label labelka)
+        public static void SzinvaltozasArValtozasra(TextBox textbox, Button gomb, Label labelka)
         {
             if (AdminRaktar.rg.IsMatch(textbox.Text) && Convert.ToInt32(textbox.Text) >= 50 && Convert.ToInt32(textbox.Text) <= 50000)
             {
@@ -235,33 +235,33 @@ namespace proba5._5
         #region Textevents 2-6
         private void textBox_2_2_TextChanged(object sender, EventArgs e)
         {
-            Method4textvhacgeAzelsotexBoxra(textBox_2_2, button_Mentes2, label_maszknev2);
+            SzinvaltozasArValtozasra(textBox_2_2, button_Mentes2, label_maszknev2);
         }
 
         private void textBox_2_3_TextChanged(object sender, EventArgs e)
         {
-            Method4textvhacgeAzelsotexBoxra(textBox_2_3, button_Mentes3, label_maszknev3);
+            SzinvaltozasArValtozasra(textBox_2_3, button_Mentes3, label_maszknev3);
         }
 
         private void textBox_2_4_TextChanged(object sender, EventArgs e)
         {
-            Method4textvhacgeAzelsotexBoxra(textBox_2_4, button_Mentes4, label_maszknev4);
+            SzinvaltozasArValtozasra(textBox_2_4, button_Mentes4, label_maszknev4);
         }
 
         private void textBox_2_5_TextChanged(object sender, EventArgs e)
         {
-            Method4textvhacgeAzelsotexBoxra(textBox_2_5, button_Mentes5, label_maszknev5);
+            SzinvaltozasArValtozasra(textBox_2_5, button_Mentes5, label_maszknev5);
         }
 
         private void textBox_2_6_TextChanged(object sender, EventArgs e)
         {
-            Method4textvhacgeAzelsotexBoxra(textBox_2_6, button_Mentes6, label_maszknev6);
+            SzinvaltozasArValtozasra(textBox_2_6, button_Mentes6, label_maszknev6);
         }
         #endregion
 
         //Methodus texteventre 2.Oszlo textboxok
         #region Metódus textbox%-ra
-        public static void Methodtexteventere2(TextBox textbox, Button gomb, Label labelka) 
+        public static void SzinvaltozasAkcioValtozasra(TextBox textbox, Button gomb, Label labelka) 
         {
             if (AdminRaktar.rg.IsMatch(textbox.Text) && Convert.ToInt32(textbox.Text) >= 0 && Convert.ToInt32(textbox.Text) <= 99)
             {
@@ -298,32 +298,32 @@ namespace proba5._5
         #region
         private void textBox_3_1_TextChanged(object sender, EventArgs e)
         {
-            Methodtexteventere2(textBox_3_1, button_Mentes2_1, label_maszknev1);
+            SzinvaltozasAkcioValtozasra(textBox_3_1, button_Mentes2_1, label_maszknev1);
         }
 
         private void textBox_3_2_TextChanged(object sender, EventArgs e)
         {
-            Methodtexteventere2(textBox_3_2, button_Mentes2_2, label_maszknev2);
+            SzinvaltozasAkcioValtozasra(textBox_3_2, button_Mentes2_2, label_maszknev2);
         }
 
         private void textBox_3_3_TextChanged(object sender, EventArgs e)
         {
-            Methodtexteventere2(textBox_3_3, button_Mentes2_3, label_maszknev3);
+            SzinvaltozasAkcioValtozasra(textBox_3_3, button_Mentes2_3, label_maszknev3);
         }
 
         private void textBox_3_4_TextChanged(object sender, EventArgs e)
         {
-            Methodtexteventere2(textBox_3_4, button_Mentes2_4, label_maszknev4);
+            SzinvaltozasAkcioValtozasra(textBox_3_4, button_Mentes2_4, label_maszknev4);
         }
 
         private void textBox_3_5_TextChanged(object sender, EventArgs e)
         {
-            Methodtexteventere2(textBox_3_5, button_Mentes2_5, label_maszknev5);
+            SzinvaltozasAkcioValtozasra(textBox_3_5, button_Mentes2_5, label_maszknev5);
         }
 
         private void textBox_3_6_TextChanged(object sender, EventArgs e)
         {
-            Methodtexteventere2(textBox_3_6, button_Mentes2_6, label_maszknev6);
+            SzinvaltozasAkcioValtozasra(textBox_3_6, button_Mentes2_6, label_maszknev6);
         }
         #endregion
 
